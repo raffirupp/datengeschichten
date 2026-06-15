@@ -1,4 +1,4 @@
-@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/fraunces/opsz.css";
 @import "@fontsource/geist/400.css";
 @import "@fontsource/geist/500.css";
 @import "@fontsource/geist/600.css";
@@ -12,6 +12,8 @@
   --color-accent: #1C5D57;
   --color-rule: #D8D2C4;
   --color-muted: #6B6658;
+  --color-accentWarm: #BE5A3C;
+  --color-accentGold: #C08A1E;
 
   --font-display: "Fraunces Variable", Georgia, serif;
   --font-sans: "Geist", system-ui, sans-serif;

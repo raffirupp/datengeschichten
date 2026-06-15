@@ -1,11 +1,53 @@
 import { useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import govData from '../../data/europe-governments.json'
+import EuropeGeoMap from '../../components/EuropeGeoMap.jsx'
 import EuropeColorMap from '../../components/EuropeColorMap.jsx'
 import YearTimeline from '../../components/YearTimeline.jsx'
 
+function ViewToggle({ view, onChange }) {
+  const btn = (id, label) => (
+    <button
+      key={id}
+      onClick={() => onChange(id)}
+      style={{
+        fontFamily: 'var(--font-mono)',
+        fontSize: '11px',
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        padding: '4px 12px',
+        borderRadius: '99px',
+        border: 'none',
+        cursor: 'pointer',
+        transition: 'background-color 0.15s, color 0.15s',
+        backgroundColor: view === id ? 'var(--color-accent)' : 'transparent',
+        color: view === id ? 'var(--color-paper)' : 'var(--color-muted)',
+      }}
+    >
+      {label}
+    </button>
+  )
+
+  return (
+    <div
+      style={{
+        display: 'inline-flex',
+        gap: '2px',
+        padding: '3px',
+        borderRadius: '99px',
+        border: '1px solid var(--color-rule)',
+        backgroundColor: 'var(--color-paper)',
+      }}
+    >
+      {btn('geo', 'geografisch')}
+      {btn('tiles', 'Kacheln')}
+    </div>
+  )
+}
+
 export default function EuropeStory() {
   const [year, setYear] = useState(govData.meta.years[0])
+  const [view, setView] = useState('geo')
   const handleChange = useCallback((v) => setYear(v), [])
 
   const dataForYear = govData.byYear[String(year)]
@@ -54,8 +96,16 @@ export default function EuropeStory() {
         </p>
       </header>
 
-      <section className="flex flex-col gap-6">
-        <EuropeColorMap dataForYear={dataForYear} meta={govData.meta} />
+      <section className="flex flex-col gap-4">
+        <div>
+          <ViewToggle view={view} onChange={setView} />
+        </div>
+
+        {view === 'geo'
+          ? <EuropeGeoMap dataForYear={dataForYear} meta={govData.meta} />
+          : <EuropeColorMap dataForYear={dataForYear} meta={govData.meta} />
+        }
+
         <YearTimeline
           years={govData.meta.years}
           year={year}

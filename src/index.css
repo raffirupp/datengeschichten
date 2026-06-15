@@ -1,0 +1,30 @@
+@import "@fontsource-variable/fraunces";
+@import "@fontsource/geist/400.css";
+@import "@fontsource/geist/500.css";
+@import "@fontsource/geist/600.css";
+@import "@fontsource/geist-mono/400.css";
+
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F4EC;
+  --color-ink: #17150F;
+  --color-accent: #1C5D57;
+  --color-rule: #D8D2C4;
+  --color-muted: #6B6658;
+
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
+html {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}

@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "data:europe": "node data-prep/build-europe-governments.mjs",
-    "data:geo": "node data-prep/build-europe-geo.mjs"
+    "data:geo": "node data-prep/build-europe-geo.mjs",
+    "data:polls": "node data-prep/build-polls.mjs"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",
@@ -17,7 +18,10 @@
     "@fontsource/geist": "^5.2.9",
     "@fontsource/geist-mono": "^5.2.8",
     "@tailwindcss/vite": "^4.3.1",
+    "d3-array": "^3.2.4",
     "d3-geo": "^3.1.1",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.17.0",

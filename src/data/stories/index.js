@@ -9,6 +9,14 @@ const stories = [
     status: 'live',
   },
   {
+    key: 'wahltrend-bundestag',
+    title: 'Wahltrend zur Bundestagswahl',
+    teaser: 'Alle Umfragen, ein klarer Trend — laufend aktualisiert.',
+    category: 'Deutschland',
+    kicker: 'Wahltrend · Bundestag',
+    status: 'live',
+  },
+  {
     key: 'bundestag-sprache',
     title: 'Worüber Deutschland spricht',
     teaser: '75 Jahre Bundestagsreden — welche Themen kommen und gehen.',

@@ -5,7 +5,7 @@ export default function MapLegend() {
         style={{
           height: '8px',
           borderRadius: '4px',
-          background: 'linear-gradient(to right, #1C5D57, #EDE7D7, #BE5A3C)',
+          background: 'linear-gradient(to right, #C0392B, #EDE7D7, #1E3A6E)',
         }}
       />
       <div

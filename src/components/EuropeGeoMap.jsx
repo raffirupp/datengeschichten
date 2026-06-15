@@ -49,7 +49,7 @@ export default function EuropeGeoMap({ dataForYear, meta }) {
               fill={color}
               stroke="#F7F4EC"
               strokeWidth={isHovered ? 0 : 0.8}
-              style={{ transition: 'fill 0.35s ease', cursor: 'default' }}
+              style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1)', cursor: 'default' }}
               onMouseEnter={() => setHovered(iso3)}
               onMouseLeave={() => setHovered(null)}
             >

@@ -45,7 +45,7 @@ export default function EuropeColorMap({ dataForYear, meta }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  transition: 'background-color 0.4s ease',
+                  transition: 'background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
                 }}
               >
                 <span

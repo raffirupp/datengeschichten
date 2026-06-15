@@ -18,7 +18,7 @@ export default function YearTimeline({ years, year, onChange }) {
           }
           return prev + 1
         })
-      }, 900)
+      }, 1200)
     }
     return () => clearInterval(intervalRef.current)
   }, [playing, max, onChange])

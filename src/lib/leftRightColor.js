@@ -1,6 +1,6 @@
-const LEFT_HEX  = '#1C5D57'  // Petrol
+const LEFT_HEX  = '#C0392B'  // Rot
 const MID_HEX   = '#EDE7D7'  // Creme
-const RIGHT_HEX = '#BE5A3C'  // Korall
+const RIGHT_HEX = '#1E3A6E'  // Dunkelblau
 const NULL_HEX  = '#F2EEE3'  // Neutral / kein Wert
 
 function hexToRgb(hex) {

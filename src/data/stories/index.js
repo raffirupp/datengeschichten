@@ -6,7 +6,7 @@ const stories = [
     category: 'Europa',
     kicker: 'Leitgeschichte · Europa',
     featured: true,
-    status: 'geplant',
+    status: 'live',
   },
   {
     key: 'bundestag-sprache',

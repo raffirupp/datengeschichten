@@ -17,6 +17,14 @@ const stories = [
     status: 'live',
   },
   {
+    key: 'laender-faerben',
+    title: 'Die Länder wechseln die Farbe',
+    teaser: '25 Jahre Machtwechsel in den 16 Ländern — Ost und West.',
+    category: 'Deutschland',
+    kicker: 'Deutschland · Länder',
+    status: 'live',
+  },
+  {
     key: 'bundestag-sprache',
     title: 'Worüber Deutschland spricht',
     teaser: '75 Jahre Bundestagsreden — welche Themen kommen und gehen.',

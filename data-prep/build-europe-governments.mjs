@@ -7,6 +7,7 @@ const __dir = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dir, '..')
 const RAW_DIR = resolve(__dir, 'raw')
 const RAW_CSV = resolve(RAW_DIR, 'view_cabinet.csv')
+const RECENT_CHANGES_JSON = resolve(RAW_DIR, 'europe-recent-changes.json')
 const OUT_JSON = resolve(ROOT, 'src', 'data', 'europe-governments.json')
 const CSV_URL = 'https://www.parlgov.org/data/parlgov-development_csv-utf-8/view_cabinet.csv'
 
@@ -111,6 +112,23 @@ for (const cab of cabinetMap.values()) {
 }
 console.log(`Kabinette mit Wert: ${cabinets.length}`)
 
+// — Step 4b: manuell gepflegte Regierungswechsel über das ParlGov-Ende hinaus einhängen —
+let manualCount = 0
+if (existsSync(RECENT_CHANGES_JSON)) {
+  const recentChanges = JSON.parse(readFileSync(RECENT_CHANGES_JSON, 'utf-8'))
+  for (const change of recentChanges) {
+    cabinets.push({
+      country: change.iso3,
+      startDate: change.start_date,
+      value: change.left_right,
+    })
+    manualCount++
+  }
+  console.log(`Manuell ergänzte Regierungswechsel: ${manualCount}`)
+} else {
+  console.log('Keine manuellen Regierungswechsel gefunden (europe-recent-changes.json fehlt).')
+}
+
 // — Step 5: sort per country, compute validity intervals —
 const byCountry = {}
 for (const c of cabinets) {
@@ -158,6 +176,7 @@ const output = {
     valueMin: Math.round(valueMin * 100) / 100,
     valueMax: Math.round(valueMax * 100) / 100,
     mid: 5,
+    sourceNote: 'ParlGov (Döring & Manow); 2024–2025 fortgeschrieben, einzelne Wechsel manuell ergänzt',
   },
   byYear,
 }

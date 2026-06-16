@@ -5,7 +5,7 @@ import MapLegend from './MapLegend.jsx'
 const MAX_COL = Math.max(...Object.values(layout).map(([c]) => c))
 const MAX_ROW = Math.max(...Object.values(layout).map(([, r]) => r))
 
-export default function EuropeColorMap({ dataForYear, meta }) {
+export default function EuropeColorMap({ dataForYear, meta, highlightIso3 = null }) {
   const cols = MAX_COL + 1
   const rows = MAX_ROW + 1
 
@@ -34,6 +34,8 @@ export default function EuropeColorMap({ dataForYear, meta }) {
             if (!cell) {
               return <div key={`${col},${row}`} style={{ aspectRatio: '1' }} />
             }
+            const isHighlighted = highlightIso3 === cell.code
+            const isDimmed = highlightIso3 && !isHighlighted
             return (
               <div
                 key={cell.code}
@@ -45,7 +47,10 @@ export default function EuropeColorMap({ dataForYear, meta }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  transition: 'background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+                  border: isHighlighted ? '2px solid var(--color-ink)' : '2px solid transparent',
+                  opacity: isDimmed ? 0.45 : 1,
+                  transform: isHighlighted ? 'scale(1.08)' : 'scale(1)',
+                  transition: 'background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s ease',
                 }}
               >
                 <span

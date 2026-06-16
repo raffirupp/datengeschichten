@@ -17,7 +17,7 @@ const PATHS = geojson.features.map((feat) => ({
   d: pathGen(feat),
 }))
 
-export default function EuropeGeoMap({ dataForYear, meta }) {
+export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }) {
   const [hovered, setHovered] = useState(null)
 
   const fills = useMemo(() => {
@@ -42,6 +42,7 @@ export default function EuropeGeoMap({ dataForYear, meta }) {
           if (!d) return null
           const { color, value } = fills[iso3] ?? { color: '#F2EEE3', value: null }
           const isHovered = hovered === iso3
+          const isDimmed = highlightIso3 && highlightIso3 !== iso3
           return (
             <path
               key={iso3}
@@ -49,7 +50,8 @@ export default function EuropeGeoMap({ dataForYear, meta }) {
               fill={color}
               stroke="#F7F4EC"
               strokeWidth={isHovered ? 0 : 0.8}
-              style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1)', cursor: 'default' }}
+              opacity={isDimmed ? 0.45 : 1}
+              style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(iso3)}
               onMouseLeave={() => setHovered(null)}
             >
@@ -59,8 +61,30 @@ export default function EuropeGeoMap({ dataForYear, meta }) {
             </path>
           )
         })}
+        {/* Highlight-Overlay: gehört zum aktiven Scroll-Beat */}
+        {highlightIso3 && (() => {
+          const feat = PATHS.find(p => p.iso3 === highlightIso3)
+          if (!feat?.d) return null
+          const { color } = fills[highlightIso3] ?? { color: '#F2EEE3' }
+          return (
+            <path
+              key={`highlight-${highlightIso3}`}
+              d={feat.d}
+              fill={color}
+              stroke="#17150F"
+              strokeWidth={2.2}
+              style={{
+                pointerEvents: 'none',
+                transformBox: 'fill-box',
+                transformOrigin: 'center',
+                transform: 'scale(1.03)',
+                transition: 'fill 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+              }}
+            />
+          )
+        })()}
         {/* Hover-Overlay: drawn on top with ink stroke */}
-        {hovered && (() => {
+        {hovered && hovered !== highlightIso3 && (() => {
           const feat = PATHS.find(p => p.iso3 === hovered)
           if (!feat?.d) return null
           const { color } = fills[hovered] ?? { color: '#F2EEE3' }

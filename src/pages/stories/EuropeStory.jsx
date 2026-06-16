@@ -1,9 +1,11 @@
 import { useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import govData from '../../data/europe-governments.json'
+import europeBeats from '../../data/europeBeats.js'
+import ScrollMap from '../../components/ScrollMap.jsx'
+import YearTimeline from '../../components/YearTimeline.jsx'
 import EuropeGeoMap from '../../components/EuropeGeoMap.jsx'
 import EuropeColorMap from '../../components/EuropeColorMap.jsx'
-import YearTimeline from '../../components/YearTimeline.jsx'
 
 function ViewToggle({ view, onChange }) {
   const btn = (id, label) => (
@@ -46,14 +48,28 @@ function ViewToggle({ view, onChange }) {
 }
 
 export default function EuropeStory() {
-  const [year, setYear] = useState(govData.meta.years[0])
+  const [year, setYear] = useState(europeBeats[0].year)
   const [view, setView] = useState('geo')
-  const handleChange = useCallback((v) => setYear(v), [])
+  const [manualYear, setManualYear] = useState(null)
 
-  const dataForYear = govData.byYear[String(year)]
+  // Manuelles Ziehen am Zeitstrahl überschreibt vorübergehend das Scroll-Jahr,
+  // bis der nächste Beat beim Scrollen wieder die Führung übernimmt.
+  const handleChange = useCallback((v) => {
+    setYear((prev) => {
+      const next = typeof v === 'function' ? v(prev) : v
+      setManualYear(next)
+      return next
+    })
+  }, [])
+
+  const handleActiveBeatChange = useCallback((beat) => {
+    if (!beat) return
+    setYear(beat.year)
+    setManualYear(null)
+  }, [])
 
   return (
-    <article className="flex flex-col gap-8 max-w-3xl">
+    <article className="flex flex-col gap-8 max-w-5xl">
       <div>
         <Link
           to="/"
@@ -89,22 +105,31 @@ export default function EuropeStory() {
           className="text-base leading-relaxed max-w-prose"
           style={{ color: 'var(--color-muted)' }}
         >
-          Welche Parteifamilien regieren Europa? Diese Karte zeigt für jedes Land die
-          politische Ausrichtung der Regierung — von links nach rechts auf der ParlGov-Skala,
-          gewichtet nach Sitzanteilen der Koalitionspartner. Wähle ein Jahr oder lass die
-          Karte laufen.
+          Welche Parteifamilien regieren Europa? Beim Scrollen wandert die Karte durch 25 Jahre
+          prägender Regierungswechsel — von Schwarz-Blau in Österreich bis zum aktuellen
+          deutschen Kabinett. Du kannst auch selbst ein Jahr wählen oder die Karte laufen lassen.
         </p>
       </header>
 
-      <section className="flex flex-col gap-4">
-        <div>
-          <ViewToggle view={view} onChange={setView} />
-        </div>
-
-        {view === 'geo'
-          ? <EuropeGeoMap dataForYear={dataForYear} meta={govData.meta} />
-          : <EuropeColorMap dataForYear={dataForYear} meta={govData.meta} />
-        }
+      <section className="flex flex-col gap-6">
+        <ScrollMap
+          beats={europeBeats}
+          highlightKey="iso3"
+          manualYear={manualYear}
+          onActiveBeatChange={handleActiveBeatChange}
+          renderMap={(year, iso3) => {
+            const dataForYear = govData.byYear[String(year)]
+            return (
+              <div className="flex flex-col gap-4">
+                <ViewToggle view={view} onChange={setView} />
+                {view === 'tiles'
+                  ? <EuropeColorMap dataForYear={dataForYear} meta={govData.meta} highlightIso3={iso3} />
+                  : <EuropeGeoMap dataForYear={dataForYear} meta={govData.meta} highlightIso3={iso3} />
+                }
+              </div>
+            )
+          }}
+        />
 
         <YearTimeline
           years={govData.meta.years}
@@ -121,7 +146,7 @@ export default function EuropeStory() {
           color: 'var(--color-muted)',
         }}
       >
-        Quelle: ParlGov · Döring &amp; Manow (parlgov.org) · Daten: view_cabinet, Stand 2025
+        Quelle: ParlGov · Döring &amp; Manow; jüngste Wechsel manuell ergänzt
       </footer>
     </article>
   )

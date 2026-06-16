@@ -63,7 +63,8 @@
     ],
     "valueMin": 1.05,
     "valueMax": 8.8,
-    "mid": 5
+    "mid": 5,
+    "sourceNote": "ParlGov (Döring & Manow); 2024–2025 fortgeschrieben, einzelne Wechsel manuell ergänzt"
   },
   "byYear": {
     "2000": {
@@ -898,7 +899,7 @@
       "CHE": 5.23,
       "CYP": 8.68,
       "CZE": 6.54,
-      "DEU": 3.95,
+      "DEU": 5.6,
       "DNK": 5.1,
       "ESP": 3.54,
       "EST": 6.9,

@@ -48,6 +48,14 @@ const stories = [
     kicker: 'Deutschland–Frankreich',
     status: 'geplant',
   },
+  {
+    key: 'nachrichten-signal',
+    title: 'Stimmung in den Nachrichten',
+    teaser: 'Ein offenes Experiment: Atmet das Nachrichten-Signal mit den Umfragen mit?',
+    category: 'Labor',
+    kicker: 'Labor · Experiment',
+    status: 'experiment',
+  },
 ]
 
 export default stories

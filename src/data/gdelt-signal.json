@@ -1,0 +1,1921 @@
+{
+  "meta": {
+    "weeks": [
+      "2025-06-30",
+      "2025-07-07",
+      "2025-07-14",
+      "2025-07-21",
+      "2025-07-28",
+      "2025-08-04",
+      "2025-08-11",
+      "2025-08-18",
+      "2025-08-25",
+      "2025-09-01",
+      "2025-09-08",
+      "2025-09-15",
+      "2025-09-22",
+      "2025-09-29",
+      "2025-10-06",
+      "2025-10-13",
+      "2025-10-20",
+      "2025-10-27",
+      "2025-11-03",
+      "2025-11-10",
+      "2025-11-17",
+      "2025-11-24",
+      "2025-12-01",
+      "2025-12-08",
+      "2025-12-15",
+      "2025-12-22",
+      "2025-12-29",
+      "2026-01-05",
+      "2026-01-12",
+      "2026-01-19",
+      "2026-01-26",
+      "2026-02-02",
+      "2026-02-09",
+      "2026-02-16",
+      "2026-02-23",
+      "2026-03-02",
+      "2026-03-09",
+      "2026-03-16",
+      "2026-03-23",
+      "2026-03-30",
+      "2026-04-06",
+      "2026-04-13",
+      "2026-04-20",
+      "2026-04-27",
+      "2026-05-04",
+      "2026-05-11",
+      "2026-05-18",
+      "2026-05-25",
+      "2026-06-01",
+      "2026-06-08",
+      "2026-06-15"
+    ],
+    "parties": [
+      "CDU",
+      "CSU",
+      "SPD",
+      "GRÜNE",
+      "FDP",
+      "AfD",
+      "LINKE",
+      "BSW"
+    ],
+    "generatedAt": "2026-06-16T13:32:27.953Z",
+    "sourceNote": "GDELT DOC 2.0 API"
+  },
+  "byParty": {
+    "CDU": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.169,
+        "articles": 710,
+        "tone": -2.49
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.199,
+        "articles": 1310,
+        "tone": -1.86
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.191,
+        "articles": 1009,
+        "tone": -1.11
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.225,
+        "articles": 1006,
+        "tone": -1.51
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.194,
+        "articles": 860,
+        "tone": -1.45
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.222,
+        "articles": 1215,
+        "tone": -1.26
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.281,
+        "articles": 1441,
+        "tone": -0.52
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.26,
+        "articles": 1316,
+        "tone": -1.37
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.238,
+        "articles": 1297,
+        "tone": -1.67
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.205,
+        "articles": 1236,
+        "tone": -1.23
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.224,
+        "articles": 1467,
+        "tone": -2.03
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.222,
+        "articles": 1394,
+        "tone": -1.47
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.268,
+        "articles": 1958,
+        "tone": -1.37
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.255,
+        "articles": 1274,
+        "tone": -1.7
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.195,
+        "articles": 1209,
+        "tone": -1.48
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.228,
+        "articles": 1473,
+        "tone": -1.61
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.249,
+        "articles": 1573,
+        "tone": -2.08
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.225,
+        "articles": 998,
+        "tone": -2.01
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.22,
+        "articles": 1137,
+        "tone": -1.49
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.204,
+        "articles": 1321,
+        "tone": -1.09
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.174,
+        "articles": 818,
+        "tone": -1.2
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.134,
+        "articles": 834,
+        "tone": -1.28
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.223,
+        "articles": 1269,
+        "tone": -1.45
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.22,
+        "articles": 1124,
+        "tone": -1.21
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.21,
+        "articles": 1154,
+        "tone": -1.22
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.226,
+        "articles": 837,
+        "tone": -0.95
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.185,
+        "articles": 653,
+        "tone": -0.9
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.222,
+        "articles": 1187,
+        "tone": -2.28
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.25,
+        "articles": 1245,
+        "tone": -1.83
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.222,
+        "articles": 757,
+        "tone": -1.08
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.305,
+        "articles": 1469,
+        "tone": -1.75
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.264,
+        "articles": 1084,
+        "tone": -1.69
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.262,
+        "articles": 1022,
+        "tone": -0.61
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.344,
+        "articles": 1676,
+        "tone": -0.33
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.232,
+        "articles": 972,
+        "tone": -1.27
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.26,
+        "articles": 1847,
+        "tone": -1.37
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.226,
+        "articles": 1502,
+        "tone": -0.89
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.221,
+        "articles": 1495,
+        "tone": -1.13
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.204,
+        "articles": 1109,
+        "tone": -1.45
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.234,
+        "articles": 640,
+        "tone": -1.16
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.224,
+        "articles": 568,
+        "tone": -1.79
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.244,
+        "articles": 848,
+        "tone": -1.35
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.283,
+        "articles": 1368,
+        "tone": -1.2
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.249,
+        "articles": 937,
+        "tone": -0.97
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.227,
+        "articles": 1112,
+        "tone": -1.42
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.181,
+        "articles": 686,
+        "tone": -1.25
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.262,
+        "articles": 1035,
+        "tone": -1.76
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.236,
+        "articles": 892,
+        "tone": -1.19
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.221,
+        "articles": 919,
+        "tone": -1.07
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.209,
+        "articles": 820,
+        "tone": -1.43
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.201,
+        "articles": 145,
+        "tone": -1.49
+      }
+    ],
+    "CSU": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.333,
+        "articles": 1401,
+        "tone": -2.15
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.33,
+        "articles": 2174,
+        "tone": -1.5
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.358,
+        "articles": 1891,
+        "tone": -1.41
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.267,
+        "articles": 1194,
+        "tone": -1.15
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.324,
+        "articles": 1436,
+        "tone": -1.44
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.34,
+        "articles": 1861,
+        "tone": -1.73
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.268,
+        "articles": 1375,
+        "tone": -1.72
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.282,
+        "articles": 1427,
+        "tone": -2.45
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.277,
+        "articles": 1510,
+        "tone": -1.84
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.311,
+        "articles": 1873,
+        "tone": -1.74
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.221,
+        "articles": 1450,
+        "tone": -1.51
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.24,
+        "articles": 1508,
+        "tone": -1.15
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.217,
+        "articles": 1582,
+        "tone": -1.34
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.304,
+        "articles": 1517,
+        "tone": -2.33
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.314,
+        "articles": 1946,
+        "tone": -2.11
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.266,
+        "articles": 1713,
+        "tone": -1.96
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.3,
+        "articles": 1896,
+        "tone": -1.7
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.285,
+        "articles": 1263,
+        "tone": -1.5
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.274,
+        "articles": 1413,
+        "tone": -2.06
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.307,
+        "articles": 1986,
+        "tone": -1.31
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.279,
+        "articles": 1311,
+        "tone": -2.12
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.272,
+        "articles": 1692,
+        "tone": -1.5
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.268,
+        "articles": 1528,
+        "tone": -1.28
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.323,
+        "articles": 1651,
+        "tone": -1.55
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.272,
+        "articles": 1493,
+        "tone": -1.41
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.269,
+        "articles": 996,
+        "tone": -1.43
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.282,
+        "articles": 993,
+        "tone": -1.98
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.242,
+        "articles": 1290,
+        "tone": -1.93
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.26,
+        "articles": 1297,
+        "tone": -1.73
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.225,
+        "articles": 767,
+        "tone": -1.29
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.22,
+        "articles": 1062,
+        "tone": -1
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.242,
+        "articles": 995,
+        "tone": -1.67
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.184,
+        "articles": 718,
+        "tone": -0.88
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.201,
+        "articles": 978,
+        "tone": -0.82
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.22,
+        "articles": 921,
+        "tone": -1.61
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.198,
+        "articles": 1402,
+        "tone": -0.86
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.239,
+        "articles": 1589,
+        "tone": -0.4
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.211,
+        "articles": 1431,
+        "tone": -0.78
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.238,
+        "articles": 1291,
+        "tone": -1.25
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.233,
+        "articles": 637,
+        "tone": -1.06
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.218,
+        "articles": 553,
+        "tone": -1.1
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.297,
+        "articles": 1034,
+        "tone": -1.11
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.239,
+        "articles": 1158,
+        "tone": -1.28
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.269,
+        "articles": 1013,
+        "tone": -1.04
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.256,
+        "articles": 1251,
+        "tone": -1.53
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.26,
+        "articles": 986,
+        "tone": -1.43
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.257,
+        "articles": 1015,
+        "tone": -1.61
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.213,
+        "articles": 804,
+        "tone": -1.51
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.213,
+        "articles": 885,
+        "tone": -1.63
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.245,
+        "articles": 960,
+        "tone": -1.72
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.317,
+        "articles": 228,
+        "tone": -1.61
+      }
+    ],
+    "SPD": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.17,
+        "articles": 714,
+        "tone": -1.45
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.179,
+        "articles": 1179,
+        "tone": -1.9
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.194,
+        "articles": 1027,
+        "tone": -2.08
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.204,
+        "articles": 911,
+        "tone": -2.17
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.21,
+        "articles": 931,
+        "tone": -1.66
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.167,
+        "articles": 915,
+        "tone": -1.65
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.159,
+        "articles": 817,
+        "tone": -1.12
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.177,
+        "articles": 893,
+        "tone": -1.41
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.22,
+        "articles": 1196,
+        "tone": -1.98
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.189,
+        "articles": 1138,
+        "tone": -1.74
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.17,
+        "articles": 1118,
+        "tone": -1.92
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.184,
+        "articles": 1159,
+        "tone": -1.1
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.197,
+        "articles": 1440,
+        "tone": -1.06
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.162,
+        "articles": 809,
+        "tone": -1.09
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.225,
+        "articles": 1399,
+        "tone": -2.03
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.221,
+        "articles": 1423,
+        "tone": -1.67
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.137,
+        "articles": 863,
+        "tone": -1.81
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.189,
+        "articles": 837,
+        "tone": -1.64
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.168,
+        "articles": 869,
+        "tone": -1.56
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.183,
+        "articles": 1183,
+        "tone": -1.04
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.215,
+        "articles": 1012,
+        "tone": -1.07
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.159,
+        "articles": 988,
+        "tone": -1.17
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.179,
+        "articles": 1021,
+        "tone": -2.14
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.127,
+        "articles": 650,
+        "tone": -1.04
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.162,
+        "articles": 892,
+        "tone": -1.11
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.159,
+        "articles": 588,
+        "tone": -0.68
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.153,
+        "articles": 537,
+        "tone": -1.23
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.174,
+        "articles": 929,
+        "tone": -1.95
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.194,
+        "articles": 967,
+        "tone": -1.47
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.223,
+        "articles": 759,
+        "tone": -1.38
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.156,
+        "articles": 753,
+        "tone": -1.37
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.15,
+        "articles": 616,
+        "tone": -1.94
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.166,
+        "articles": 648,
+        "tone": -0.88
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.137,
+        "articles": 665,
+        "tone": -0.68
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.155,
+        "articles": 651,
+        "tone": -0.91
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.147,
+        "articles": 1045,
+        "tone": -1.19
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.165,
+        "articles": 1096,
+        "tone": -0.87
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.214,
+        "articles": 1446,
+        "tone": -1.21
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.253,
+        "articles": 1376,
+        "tone": -1.56
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.192,
+        "articles": 526,
+        "tone": -1.59
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.251,
+        "articles": 635,
+        "tone": -1.87
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.174,
+        "articles": 604,
+        "tone": -1.92
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.233,
+        "articles": 1129,
+        "tone": -1.41
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.24,
+        "articles": 905,
+        "tone": -1.45
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.201,
+        "articles": 983,
+        "tone": -1.73
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.19,
+        "articles": 720,
+        "tone": -1.88
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.167,
+        "articles": 661,
+        "tone": -1.55
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.195,
+        "articles": 734,
+        "tone": -1.17
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.209,
+        "articles": 869,
+        "tone": -1.58
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.21,
+        "articles": 823,
+        "tone": -1.27
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.151,
+        "articles": 109,
+        "tone": -1.34
+      }
+    ],
+    "GRÜNE": [],
+    "FDP": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.034,
+        "articles": 142,
+        "tone": -2.07
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.018,
+        "articles": 118,
+        "tone": -1.32
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.025,
+        "articles": 132,
+        "tone": -1.9
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.027,
+        "articles": 121,
+        "tone": -1.26
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.033,
+        "articles": 145,
+        "tone": -1.67
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.013,
+        "articles": 71,
+        "tone": -1.71
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.03,
+        "articles": 154,
+        "tone": -0.88
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.028,
+        "articles": 141,
+        "tone": -1.65
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.023,
+        "articles": 123,
+        "tone": -1.18
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.022,
+        "articles": 130,
+        "tone": -0.61
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.027,
+        "articles": 174,
+        "tone": -1.23
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.032,
+        "articles": 202,
+        "tone": -0.81
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.032,
+        "articles": 233,
+        "tone": -1.82
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.02,
+        "articles": 98,
+        "tone": -0.89
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.024,
+        "articles": 149,
+        "tone": -1.77
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.026,
+        "articles": 169,
+        "tone": -2.13
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.025,
+        "articles": 161,
+        "tone": -1.18
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.024,
+        "articles": 105,
+        "tone": -1.3
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.024,
+        "articles": 124,
+        "tone": -0.93
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.02,
+        "articles": 127,
+        "tone": -2.07
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.031,
+        "articles": 145,
+        "tone": -2.05
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.021,
+        "articles": 133,
+        "tone": -1.82
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.024,
+        "articles": 137,
+        "tone": -2.03
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.025,
+        "articles": 127,
+        "tone": -1.87
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.027,
+        "articles": 148,
+        "tone": -1.39
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.029,
+        "articles": 109,
+        "tone": -1.17
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.032,
+        "articles": 113,
+        "tone": -1.5
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.023,
+        "articles": 122,
+        "tone": -1.1
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.025,
+        "articles": 123,
+        "tone": -1.53
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.024,
+        "articles": 81,
+        "tone": -0.65
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.023,
+        "articles": 110,
+        "tone": -0.81
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.021,
+        "articles": 88,
+        "tone": -1.89
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.018,
+        "articles": 70,
+        "tone": -1.09
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.017,
+        "articles": 83,
+        "tone": -0.98
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.025,
+        "articles": 105,
+        "tone": -1.54
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.041,
+        "articles": 294,
+        "tone": -0.52
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.048,
+        "articles": 322,
+        "tone": -1.67
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.031,
+        "articles": 210,
+        "tone": -0.92
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.042,
+        "articles": 226,
+        "tone": -1.45
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.043,
+        "articles": 117,
+        "tone": -1.51
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.043,
+        "articles": 110,
+        "tone": -0.29
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.036,
+        "articles": 124,
+        "tone": -1.12
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.028,
+        "articles": 137,
+        "tone": -0.74
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.02,
+        "articles": 74,
+        "tone": -2.22
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.034,
+        "articles": 164,
+        "tone": -2.36
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.027,
+        "articles": 101,
+        "tone": -2.13
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.017,
+        "articles": 67,
+        "tone": -1.32
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.059,
+        "articles": 224,
+        "tone": -1.15
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.03,
+        "articles": 123,
+        "tone": -1.13
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.022,
+        "articles": 88,
+        "tone": -0.84
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.011,
+        "articles": 8,
+        "tone": -1.49
+      }
+    ],
+    "AfD": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.231,
+        "articles": 969,
+        "tone": -1.78
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.244,
+        "articles": 1612,
+        "tone": -1.88
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.185,
+        "articles": 978,
+        "tone": -1.86
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.231,
+        "articles": 1030,
+        "tone": -2.5
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.199,
+        "articles": 884,
+        "tone": -1.51
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.21,
+        "articles": 1147,
+        "tone": -1.74
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.219,
+        "articles": 1121,
+        "tone": -1.48
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.194,
+        "articles": 983,
+        "tone": -1.78
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.192,
+        "articles": 1047,
+        "tone": -1.86
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.22,
+        "articles": 1326,
+        "tone": -1.69
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.308,
+        "articles": 2023,
+        "tone": -1.19
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.264,
+        "articles": 1658,
+        "tone": -1.19
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.248,
+        "articles": 1809,
+        "tone": -0.92
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.223,
+        "articles": 1112,
+        "tone": -1.33
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.203,
+        "articles": 1260,
+        "tone": -1.67
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.233,
+        "articles": 1499,
+        "tone": -1.81
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.256,
+        "articles": 1616,
+        "tone": -1.94
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.214,
+        "articles": 950,
+        "tone": -1.49
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.228,
+        "articles": 1175,
+        "tone": -1.6
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.202,
+        "articles": 1306,
+        "tone": -1.79
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.23,
+        "articles": 1083,
+        "tone": -1.47
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.364,
+        "articles": 2265,
+        "tone": -1.85
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.241,
+        "articles": 1370,
+        "tone": -1.67
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.246,
+        "articles": 1254,
+        "tone": -1.02
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.258,
+        "articles": 1419,
+        "tone": -1.78
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.251,
+        "articles": 932,
+        "tone": -1.24
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.272,
+        "articles": 958,
+        "tone": -1.26
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.206,
+        "articles": 1097,
+        "tone": -1.67
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.209,
+        "articles": 1042,
+        "tone": -1.19
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.262,
+        "articles": 893,
+        "tone": -1.29
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.252,
+        "articles": 1215,
+        "tone": -1.55
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.264,
+        "articles": 1085,
+        "tone": -1.44
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.323,
+        "articles": 1257,
+        "tone": -1.39
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.256,
+        "articles": 1244,
+        "tone": -0.95
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.33,
+        "articles": 1382,
+        "tone": -1.02
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.305,
+        "articles": 2166,
+        "tone": -0.88
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.283,
+        "articles": 1881,
+        "tone": -0.52
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.29,
+        "articles": 1966,
+        "tone": -0.76
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.237,
+        "articles": 1285,
+        "tone": -1.47
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.236,
+        "articles": 644,
+        "tone": -1.66
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.229,
+        "articles": 579,
+        "tone": -1.46
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.229,
+        "articles": 795,
+        "tone": -1.2
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.193,
+        "articles": 931,
+        "tone": -1.55
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.19,
+        "articles": 717,
+        "tone": -0.96
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.25,
+        "articles": 1222,
+        "tone": -1.27
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.286,
+        "articles": 1085,
+        "tone": -1.24
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.247,
+        "articles": 973,
+        "tone": -1.76
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.27,
+        "articles": 1020,
+        "tone": -1.22
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.289,
+        "articles": 1200,
+        "tone": -1.54
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.278,
+        "articles": 1091,
+        "tone": -1.69
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.281,
+        "articles": 202,
+        "tone": -1.37
+      }
+    ],
+    "LINKE": [],
+    "BSW": [
+      {
+        "week": "2025-06-30",
+        "attentionShare": 0.063,
+        "articles": 265,
+        "tone": -0.84
+      },
+      {
+        "week": "2025-07-07",
+        "attentionShare": 0.031,
+        "articles": 204,
+        "tone": -0.49
+      },
+      {
+        "week": "2025-07-14",
+        "attentionShare": 0.046,
+        "articles": 244,
+        "tone": -0.91
+      },
+      {
+        "week": "2025-07-21",
+        "attentionShare": 0.045,
+        "articles": 203,
+        "tone": -0.76
+      },
+      {
+        "week": "2025-07-28",
+        "attentionShare": 0.041,
+        "articles": 180,
+        "tone": -0.08
+      },
+      {
+        "week": "2025-08-04",
+        "attentionShare": 0.048,
+        "articles": 263,
+        "tone": -1.07
+      },
+      {
+        "week": "2025-08-11",
+        "attentionShare": 0.042,
+        "articles": 217,
+        "tone": -1.02
+      },
+      {
+        "week": "2025-08-18",
+        "attentionShare": 0.059,
+        "articles": 296,
+        "tone": -1.72
+      },
+      {
+        "week": "2025-08-25",
+        "attentionShare": 0.05,
+        "articles": 272,
+        "tone": -1.39
+      },
+      {
+        "week": "2025-09-01",
+        "attentionShare": 0.054,
+        "articles": 323,
+        "tone": -1.23
+      },
+      {
+        "week": "2025-09-08",
+        "attentionShare": 0.05,
+        "articles": 329,
+        "tone": -1.58
+      },
+      {
+        "week": "2025-09-15",
+        "attentionShare": 0.059,
+        "articles": 370,
+        "tone": -1.13
+      },
+      {
+        "week": "2025-09-22",
+        "attentionShare": 0.038,
+        "articles": 275,
+        "tone": -0.93
+      },
+      {
+        "week": "2025-09-29",
+        "attentionShare": 0.036,
+        "articles": 180,
+        "tone": -0.71
+      },
+      {
+        "week": "2025-10-06",
+        "attentionShare": 0.039,
+        "articles": 242,
+        "tone": -0.87
+      },
+      {
+        "week": "2025-10-13",
+        "attentionShare": 0.026,
+        "articles": 170,
+        "tone": -0.81
+      },
+      {
+        "week": "2025-10-20",
+        "attentionShare": 0.034,
+        "articles": 212,
+        "tone": -1.42
+      },
+      {
+        "week": "2025-10-27",
+        "attentionShare": 0.064,
+        "articles": 282,
+        "tone": -1.86
+      },
+      {
+        "week": "2025-11-03",
+        "attentionShare": 0.085,
+        "articles": 441,
+        "tone": -0.74
+      },
+      {
+        "week": "2025-11-10",
+        "attentionShare": 0.086,
+        "articles": 556,
+        "tone": -2.01
+      },
+      {
+        "week": "2025-11-17",
+        "attentionShare": 0.071,
+        "articles": 333,
+        "tone": -1.62
+      },
+      {
+        "week": "2025-11-24",
+        "attentionShare": 0.05,
+        "articles": 311,
+        "tone": -1.29
+      },
+      {
+        "week": "2025-12-01",
+        "attentionShare": 0.064,
+        "articles": 366,
+        "tone": -1.56
+      },
+      {
+        "week": "2025-12-08",
+        "attentionShare": 0.059,
+        "articles": 300,
+        "tone": -1.27
+      },
+      {
+        "week": "2025-12-15",
+        "attentionShare": 0.071,
+        "articles": 391,
+        "tone": -1.62
+      },
+      {
+        "week": "2025-12-22",
+        "attentionShare": 0.066,
+        "articles": 245,
+        "tone": -0.68
+      },
+      {
+        "week": "2025-12-29",
+        "attentionShare": 0.076,
+        "articles": 267,
+        "tone": -0.7
+      },
+      {
+        "week": "2026-01-05",
+        "attentionShare": 0.133,
+        "articles": 712,
+        "tone": -1.38
+      },
+      {
+        "week": "2026-01-12",
+        "attentionShare": 0.061,
+        "articles": 305,
+        "tone": -0.97
+      },
+      {
+        "week": "2026-01-19",
+        "attentionShare": 0.043,
+        "articles": 147,
+        "tone": -0.8
+      },
+      {
+        "week": "2026-01-26",
+        "attentionShare": 0.044,
+        "articles": 211,
+        "tone": -1.09
+      },
+      {
+        "week": "2026-02-02",
+        "attentionShare": 0.058,
+        "articles": 239,
+        "tone": -1.07
+      },
+      {
+        "week": "2026-02-09",
+        "attentionShare": 0.047,
+        "articles": 182,
+        "tone": -1.26
+      },
+      {
+        "week": "2026-02-16",
+        "attentionShare": 0.045,
+        "articles": 221,
+        "tone": -0.82
+      },
+      {
+        "week": "2026-02-23",
+        "attentionShare": 0.037,
+        "articles": 157,
+        "tone": -0.56
+      },
+      {
+        "week": "2026-03-02",
+        "attentionShare": 0.048,
+        "articles": 339,
+        "tone": -0.76
+      },
+      {
+        "week": "2026-03-09",
+        "attentionShare": 0.039,
+        "articles": 258,
+        "tone": -0.64
+      },
+      {
+        "week": "2026-03-16",
+        "attentionShare": 0.033,
+        "articles": 224,
+        "tone": -0.32
+      },
+      {
+        "week": "2026-03-23",
+        "attentionShare": 0.026,
+        "articles": 142,
+        "tone": -1.42
+      },
+      {
+        "week": "2026-03-30",
+        "attentionShare": 0.062,
+        "articles": 169,
+        "tone": -0.89
+      },
+      {
+        "week": "2026-04-06",
+        "attentionShare": 0.034,
+        "articles": 87,
+        "tone": -1.6
+      },
+      {
+        "week": "2026-04-13",
+        "attentionShare": 0.021,
+        "articles": 73,
+        "tone": -0.5
+      },
+      {
+        "week": "2026-04-20",
+        "attentionShare": 0.023,
+        "articles": 113,
+        "tone": -1.46
+      },
+      {
+        "week": "2026-04-27",
+        "attentionShare": 0.032,
+        "articles": 120,
+        "tone": -1.37
+      },
+      {
+        "week": "2026-05-04",
+        "attentionShare": 0.033,
+        "articles": 159,
+        "tone": -1.29
+      },
+      {
+        "week": "2026-05-11",
+        "attentionShare": 0.056,
+        "articles": 213,
+        "tone": -1.35
+      },
+      {
+        "week": "2026-05-18",
+        "attentionShare": 0.05,
+        "articles": 196,
+        "tone": -2.2
+      },
+      {
+        "week": "2026-05-25",
+        "attentionShare": 0.026,
+        "articles": 99,
+        "tone": -1.82
+      },
+      {
+        "week": "2026-06-01",
+        "attentionShare": 0.038,
+        "articles": 157,
+        "tone": -1.61
+      },
+      {
+        "week": "2026-06-08",
+        "attentionShare": 0.036,
+        "articles": 142,
+        "tone": -1.25
+      },
+      {
+        "week": "2026-06-15",
+        "attentionShare": 0.039,
+        "articles": 28,
+        "tone": -1.66
+      }
+    ]
+  }
+}

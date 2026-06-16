@@ -2,14 +2,19 @@ import { Link } from 'react-router-dom'
 import { colorsFor } from '../lib/categoryColors.js'
 import StoryMotif from './StoryMotif.jsx'
 
-function Badge({ color }) {
+function Badge({ status, color }) {
+  const isExperiment = status === 'experiment'
   return (
     <span
-      className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full border"
-      style={{ borderColor: 'var(--color-rule)', color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}
+      className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full"
+      style={{
+        border: isExperiment ? '1px dashed var(--color-muted)' : '1px solid var(--color-rule)',
+        color: 'var(--color-muted)',
+        fontFamily: 'var(--font-mono)',
+      }}
     >
-      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
-      geplant
+      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: isExperiment ? 'var(--color-muted)' : color }} />
+      {isExperiment ? 'Experiment' : 'geplant'}
     </span>
   )
 }
@@ -62,7 +67,7 @@ function CardInner({ story, variant, colors }) {
             )}
             {story.status !== 'live' && (
               <div className="mt-auto pt-2">
-                <Badge color={colors.color} />
+                <Badge status={story.status} color={colors.color} />
               </div>
             )}
           </div>
@@ -99,7 +104,7 @@ function CardInner({ story, variant, colors }) {
           )}
           {story.status !== 'live' && (
             <div className="mt-auto pt-1">
-              <Badge color={colors.color} />
+              <Badge status={story.status} color={colors.color} />
             </div>
           )}
         </div>
@@ -111,7 +116,7 @@ function CardInner({ story, variant, colors }) {
 export default function StoryCard({ story, variant = 'small' }) {
   const colors = colorsFor(story.category)
 
-  if (story.status === 'live') {
+  if (story.status === 'live' || story.status === 'experiment') {
     return (
       <Link to={`/story/${story.key}`} className="no-underline block">
         <CardInner story={story} variant={variant} colors={colors} />

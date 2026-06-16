@@ -55,6 +55,26 @@ const werkstatt = [
       'Geplanter nächster Schritt: Korrektur von Instituts-Schlagseiten (House-Effects) und ein Modell, das Trend UND Unsicherheit gemeinsam schätzt.',
     ],
   },
+  {
+    id: 'nachrichten-signal',
+    title: 'Stimmung in den Nachrichten',
+    storyKey: 'nachrichten-signal',
+    summary: 'Ein offenes Experiment: das Nachrichten-Signal aus GDELT (Aufmerksamkeit + Ton) neben dem DAWUM-Umfragetrend — ohne Vorhersage, ohne Modell.',
+    sources: [
+      { name: 'GDELT DOC 2.0 API', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
+    ],
+    steps: [
+      'Pro Partei zwei Abrufe an die GDELT-Schnittstelle: einmal die Artikelzahl (Aufmerksamkeit), einmal den durchschnittlichen Ton deutschsprachiger Berichterstattung.',
+      'Beide Reihen auf Wochen gemittelt; die Aufmerksamkeit zusätzlich als Anteil an allen Parteien-Erwähnungen dieser Woche normiert.',
+      'Das Ergebnis unverändert neben den DAWUM-Umfragetrend derselben Partei gestellt — keine Verrechnung, keine Vorhersage.',
+    ],
+    caveats: [
+      'Die GDELT-Schnittstelle liefert nur ein rollierendes, jüngeres Zeitfenster; eine längere Historie wäre erst über GDELT BigQuery möglich.',
+      'Die Suchbegriffe je Partei sind mehrdeutig (z. B. überschneiden sich Berichte über die Partei mit Berichten über einzelne Politiker:innen); Ton ist außerdem keine Richtungsangabe — negative Berichterstattung kann z. B. auch Kritik an Gegnern meinen.',
+      'Für Grüne und Linke liefert die GDELT-Schnittstelle aktuell durchgängig eine Leerantwort — in jeder getesteten Schreibweise (Vollname, Kurzform, mit/ohne Anführungszeichen). Andere Parteien sind davon nicht betroffen; die Ursache liegt vermutlich an der GDELT-Indexierung selbst, nicht an unserer Abfrage. Für diese beiden Parteien zeigt die Seite deshalb ehrlich „kein verwertbares Signal" statt erfundener Werte.',
+      'Noch nicht validiert: Ob das Signal den Umfragen vorausläuft, ist eine offene Frage, kein geprüftes Ergebnis. Nächster Schritt wäre ein Modell mit Out-of-Sample-Test gegen eine einfache Basislinie.',
+    ],
+  },
 ]
 
 export default werkstatt

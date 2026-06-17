@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import sourcesData from '../../data/gdelt-sources.json'
 import { colorsFor } from '../../lib/categoryColors.js'
@@ -82,7 +82,6 @@ function StackedPartyBar({ domain }) {
   const entry = sourcesData.byDomain[domain]
   if (!entry) return null
   const total = entry.total
-  let x = 0
   const segments = PARTIES
     .map(p => ({ party: p, value: entry.parties[p]?.total ?? 0 }))
     .filter(s => s.value > 0)
@@ -94,8 +93,6 @@ function StackedPartyBar({ domain }) {
         {segments.map(({ party, value }) => {
           const pct = (value / total) * 100
           const color = partyColor(DAWUM_KEY[party])
-          const left = x
-          x += pct
           return (
             <div
               key={party}
@@ -152,7 +149,7 @@ function ByPartyView() {
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           Top 10 Quellen · {PARTY_LABELS[party]} · Jan 2025–Jun 2026 · Erwähnungen gesamt
         </span>
-        {sources.map((s, i) => (
+        {sources.map((s) => (
           <Bar
             key={s.domain}
             label={s.domain}

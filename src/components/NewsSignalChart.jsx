@@ -16,7 +16,7 @@ function parseWeek(str) {
 export default function NewsSignalChart({ points, color, peaks = [], onPeakClick }) {
   const [hoveredIdx, setHoveredIdx] = useState(null)
 
-  const { xScale, yAttention, xTicks, attentionPath, peakDots } = useMemo(() => {
+  const { xScale, xTicks, attentionPath, peakDots } = useMemo(() => {
     const dates = points.map((p) => parseWeek(p.week))
     const xScale = scaleTime().domain(extent(dates)).range([0, IW])
 
@@ -42,7 +42,6 @@ export default function NewsSignalChart({ points, color, peaks = [], onPeakClick
 
     return {
       xScale,
-      yAttention,
       xTicks: xScale.ticks(5),
       attentionPath: attentionLine(points),
       peakDots,

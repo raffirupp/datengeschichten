@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { colorsFor } from '../lib/categoryColors.js'
 import StoryMotif from './StoryMotif.jsx'
 
-function Badge({ status, isNew }) {
+function Badge({ isNew }) {
   if (isNew) {
     return (
       <span

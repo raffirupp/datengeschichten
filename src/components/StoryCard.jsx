@@ -2,19 +2,32 @@ import { Link } from 'react-router-dom'
 import { colorsFor } from '../lib/categoryColors.js'
 import StoryMotif from './StoryMotif.jsx'
 
-function Badge({ status, color }) {
-  const isExperiment = status === 'experiment'
+function Badge({ status, isNew }) {
+  if (isNew) {
+    return (
+      <span
+        className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full"
+        style={{
+          border: '1px solid var(--color-accent)',
+          color: 'var(--color-accent)',
+          fontFamily: 'var(--font-mono)',
+        }}
+      >
+        neu
+      </span>
+    )
+  }
   return (
     <span
       className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full"
       style={{
-        border: isExperiment ? '1px dashed var(--color-muted)' : '1px solid var(--color-rule)',
+        border: '1px dashed var(--color-muted)',
         color: 'var(--color-muted)',
         fontFamily: 'var(--font-mono)',
       }}
     >
-      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: isExperiment ? 'var(--color-muted)' : color }} />
-      {isExperiment ? 'Experiment' : 'geplant'}
+      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--color-muted)' }} />
+      Experiment
     </span>
   )
 }
@@ -67,7 +80,7 @@ function CardInner({ story, variant, colors }) {
             )}
             {story.status !== 'live' && (
               <div className="mt-auto pt-2">
-                <Badge status={story.status} color={colors.color} />
+                <Badge status={story.status} isNew={story.isNew} />
               </div>
             )}
           </div>
@@ -102,11 +115,9 @@ function CardInner({ story, variant, colors }) {
               {story.teaser}
             </p>
           )}
-          {story.status !== 'live' && (
-            <div className="mt-auto pt-1">
-              <Badge status={story.status} color={colors.color} />
-            </div>
-          )}
+          <div className="mt-auto pt-1">
+            <Badge status={story.status} isNew={story.isNew} />
+          </div>
         </div>
       )}
     </div>

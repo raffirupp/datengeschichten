@@ -11,7 +11,7 @@ const stories = [
   {
     key: 'wahltrend-bundestag',
     title: 'Wahltrend zur Bundestagswahl',
-    teaser: 'Alle Umfragen, ein klarer Trend — laufend aktualisiert.',
+    teaser: 'Alle Sonntagsfragen auf einen Blick, geglättet zu einem Trend — wird laufend aktualisiert.',
     category: 'Deutschland',
     kicker: 'Wahltrend · Bundestag',
     status: 'live',
@@ -19,7 +19,7 @@ const stories = [
   {
     key: 'laender-faerben',
     title: 'Die Länder wechseln die Farbe',
-    teaser: '25 Jahre Machtwechsel in den 16 Ländern — Ost und West.',
+    teaser: '25 Jahre Machtwechsel in den 16 Bundesländern — wer regierte wann, auf einen Blick.',
     category: 'Deutschland',
     kicker: 'Deutschland · Länder',
     status: 'live',
@@ -27,31 +27,15 @@ const stories = [
   {
     key: 'bundestag-sprache',
     title: 'Worüber Deutschland spricht',
-    teaser: '75 Jahre Bundestagsreden — welche Themen kommen und gehen.',
+    teaser: 'Über 75.000 Bundestagsreden aus zwölf Jahren — welche Themen wann die Debatten prägen.',
     category: 'Deutschland',
     kicker: 'Deutschland · Sprache',
     status: 'live',
   },
   {
-    key: 'volkswirtschaften',
-    title: 'Volkswirtschaften im Maßstab',
-    teaser: 'Europas Wirtschaften in ihrer wahren Größe — über die Zeit.',
-    category: 'Wirtschaft',
-    kicker: 'Wirtschaft',
-    status: 'geplant',
-  },
-  {
-    key: 'de-fr-portraet',
-    title: 'Doppelporträt',
-    teaser: 'Zwei Nachbarn in Zahlen — die Kennziffern, die wirklich zählen.',
-    category: 'Europa',
-    kicker: 'Deutschland–Frankreich',
-    status: 'geplant',
-  },
-  {
     key: 'nachrichten-signal',
-    title: 'Stimmung in den Nachrichten',
-    teaser: 'Ein offenes Experiment: Atmet das Nachrichten-Signal mit den Umfragen mit?',
+    title: 'Nachrichten-Signal',
+    teaser: 'Wie viel Aufmerksamkeit kriegt welche Partei — und läuft das den Umfragen voraus? Ein Versuch.',
     category: 'Labor',
     kicker: 'Labor · Experiment',
     status: 'experiment',
@@ -59,10 +43,11 @@ const stories = [
   {
     key: 'nachrichten-quellen',
     title: 'Wer schreibt worüber?',
-    teaser: 'Welche Medien berichten am meisten über welche Partei — und was verrät das über die Medienlandschaft?',
+    teaser: 'Wir haben GDELT gefragt, welche Nachrichtenseiten am meisten über welche Partei berichten. Das Ergebnis hat uns überrascht.',
     category: 'Labor',
     kicker: 'Labor · Medien',
     status: 'experiment',
+    isNew: true,
   },
 ]
 

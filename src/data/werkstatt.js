@@ -64,25 +64,24 @@ const werkstatt = [
   },
   {
     id: 'nachrichten-signal',
-    title: 'Stimmung in den Nachrichten',
+    title: 'Nachrichten-Signal',
     storyKey: 'nachrichten-signal',
-    summary: 'Ein offenes Experiment: das Nachrichten-Signal aus GDELT (Aufmerksamkeit + Ton) neben dem DAWUM-Umfragetrend — ohne Vorhersage, ohne Modell.',
+    summary: 'Wir haben GDELT Web NGrams via BigQuery befragt: wie oft taucht eine Partei pro Woche in deutschsprachigen Nachrichtentexten auf? Die Häufigkeit haben wir neben die Sonntagsfragen gelegt — und markiert, wo Peaks auf konkrete Ereignisse zurückgehen.',
     sources: [
-      { name: 'GDELT DOC 2.0 API', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
+      { name: 'GDELT Web NGrams 3.0 (via Google BigQuery)', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
+      { name: 'DAWUM (Sonntagsfragen)', url: 'https://dawum.de', license: 'ODbL (mit Quellenangabe)' },
     ],
     steps: [
-      'GDELT (Global Database of Events, Language, and Tone) durchsucht kontinuierlich Nachrichtenseiten weltweit und indexiert Inhalte nach Thema, Tonlage und Ort. Wir nutzen die öffentliche DOC 2.0 API, die für beliebige Suchanfragen tägliche Zeitreihen über die letzten zwölf Monate liefert.',
-      'Pro Partei werden zwei Abfragen gestellt: eine für die Artikelzahl (wie viel wird über diese Partei berichtet?) und eine für den Ton (positiv oder negativ im Durchschnitt?). Beide beschränken sich auf deutschsprachige Quellen.',
-      'CDU, CSU, SPD, FDP, AfD und BSW werden über ihre Kürzel und gängige Langformen gesucht. Für Grüne und Linke werden stattdessen eindeutige Partei-Komposita verwendet (z. B. „Grünen-Fraktion", „Linken-Chef"), weil die Vollnamen in der GDELT-Indexierung kein zuverlässiges Signal liefern — ihr Aufmerksamkeits-Anteil ist dadurch eine konservative untere Schätzung.',
-      'Die täglichen Werte werden auf Kalenderwochen gemittelt. Der Aufmerksamkeitswert wird zusätzlich normiert: Gezeigt wird nicht die absolute Artikelzahl, sondern der Anteil an allen Parteien-Erwähnungen dieser Woche — damit sind Wochen mit insgesamt viel oder wenig Politikberichterstattung miteinander vergleichbar.',
-      'Die wöchentliche Reihe wird unverändert neben den DAWUM-Umfragetrend derselben Partei gestellt. Keine Verrechnung, keine Vorhersage — nur die Gegenüberstellung.',
+      'GDELT (Global Database of Events, Language, and Tone) erfasst Wortfrequenzen in frei zugänglichen Nachrichtentexten. Wir haben das BigQuery-Dataset "gdeltv2.webngrams" abgefragt — für alle acht Parteien, deutschsprachige Quellen, 2020 bis 2026.',
+      'Pro Woche wird der Erwähnungsanteil einer Partei berechnet: Erwähnungen der Partei / Summe aller Parteierwähnungen dieser Woche. Das macht Wochen mit viel oder wenig Politikberichterstattung vergleichbar — zeigt aber nur relative Verschiebungen, keine absoluten Mengen.',
+      'Peaks (lokale Hochpunkte im Signal) wurden manuell mit tatsächlichen Ereignissen verglichen und in einer Datenbank erfasst. Jeder Punkt auf dem Chart lässt sich anklicken — dann erscheint der Kontext plus ein Ausschnitt aus dem DAWUM-Umfragetrend um den Zeitpunkt des Ereignisses.',
+      'Die DAWUM-Daten (Sonntagsfragen seit 2019) werden parallel als 21-Tage-gleitender Durchschnitt dargestellt — gewichtet nach Stichprobengröße.',
     ],
     caveats: [
-      'GDELT indexiert nicht alle deutschsprachigen Nachrichtenquellen gleichmäßig. Große überregionale Titel sind besser abgedeckt als Regionalzeitungen oder Nachrichtenagenturen. Das Signal ist kein repräsentativer Querschnitt der deutschen Presselandschaft.',
-      'Die GDELT DOC 2.0 API liefert nur ein rollendes Zeitfenster der letzten zwölf Monate; eine längere Historie wäre erst über den GDELT-Datensatz auf Google BigQuery möglich.',
-      'Ton ist keine Richtungsangabe: Ein negativer Tonwert bedeutet nicht, dass die Presse gegen eine Partei ist — negative Formulierungen können auch Berichte sein, in denen die Partei ihrerseits Kritik übt oder Krisen kommentiert.',
-      'Für Grüne und Linke liefert die GDELT-Schnittstelle selbst mit Komposita-Suche kein verwertbares Signal — die Seite zeigt das ehrlich statt erfundener Werte. Die Ursache liegt wahrscheinlich in der ungleichmäßigen GDELT-Indexierung deutschsprachiger Quellen für diese Parteien.',
-      'Noch nicht validiert: Ob das Signal den Umfragen vorausläuft, ist eine offene Frage, kein geprüftes Ergebnis. Nächster Schritt wäre ein Modell mit Out-of-Sample-Test gegen eine einfache Basislinie.',
+      'GDELT erfasst nur, was frei im Web steht. Spiegel, SZ, Zeit — alles hinter Paywalls fehlt größtenteils. Das Signal repräsentiert das offene Nachrichtennetz, nicht die gesamte deutschsprachige Presselandschaft.',
+      'Der Aufmerksamkeitsanteil ist ein Nullsummenspiel: Steigt eine Partei, fallen automatisch die anderen. Das macht echte parallele Ausschläge unsichtbar.',
+      '"Grüne" und "Linke" als Suchbegriffe sind problematisch, weil sie auch als Adjektive vorkommen. Wir suchen deshalb über charakteristische Komposita — was den Anteil dieser Parteien systematisch etwas unterbewertet.',
+      'Ob Medienpräsenz den Umfragen vorausläuft, bleibt offen. Das wäre der nächste Schritt — ein Modell, das sich statistisch testen lässt.',
     ],
   },
   {
@@ -113,6 +112,25 @@ const werkstatt = [
       'Keyword-Suche, keine Sprachverarbeitung: ein Wort wie „Migration" zählt, egal ob die Rede Migration befürwortet oder ablehnt — es zählt nur das Thema, nicht die Position.',
       'Das Lexikon ist eine redaktionelle Auswahl, keine linguistische Norm. Themen überschneiden sich (z. B. Gesundheit und Wirtschaft). Die Treffermengen sind untereinander nicht direkt vergleichbar — sinnvoll ist der Verlauf je Thema über die Zeit.',
       'CPP-BT deckt nur die Wahlperioden 18–21 (ab 2013) als maschinenlesbares CSV ab, weil der Bundestag frühere Protokolle nicht in diesem Format veröffentlicht hat. Der Titel „75 Jahre" ist eine redaktionelle Aspiration; die Datenlage reicht zwölf Jahre zurück.',
+    ],
+  },
+  {
+    id: 'nachrichten-quellen',
+    title: 'Wer schreibt worüber?',
+    storyKey: 'nachrichten-quellen',
+    summary: 'Wir haben GDELT nach den häufigsten Quellen pro Partei gefragt — und dabei vor allem gelernt, was der Datensatz nicht kann.',
+    sources: [
+      { name: 'GDELT Web NGrams 3.0 (via Google BigQuery)', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
+    ],
+    steps: [
+      'Aus dem GDELT-BigQuery-Dataset haben wir für Jan 2025–Jun 2026 pro Partei und Domain gezählt, wie oft der Parteiname auf einer URL auftaucht.',
+      'Die Domains wurden manuell Mediengruppen zugeordnet (Ippen Digital, Axel Springer, RTL/ntv, öffentlich-rechtlich u.a.) um Konzernstrukturen sichtbar zu machen.',
+      'Dargestellt wird: Top 10 Quellen je Partei, und umgekehrt der Parteimix je Domain.',
+    ],
+    caveats: [
+      'Paywalled Medien fehlen fast vollständig. Der Spiegel taucht bei GDELT auf Rang 78 auf — weil seine Inhalte größtenteils nicht frei zugänglich sind. Das verzerrt das Bild erheblich.',
+      'Die Ippen Digital Mediengruppe dominiert die Ergebnisse — nicht weil sie besonders wichtig ist, sondern weil sie viele regional verteilte, werbefinanzierte Sites betreibt, die GDELT crawlen kann.',
+      'Die Auswertung zeigt Rohhäufigkeiten, keine redaktionelle Gewichtung. Ob eine Domain "wichtig" ist, lässt sich daraus nicht ablesen.',
     ],
   },
 ]

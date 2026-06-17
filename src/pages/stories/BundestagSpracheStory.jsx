@@ -78,9 +78,10 @@ export default function BundestagSpracheStory() {
           className="text-base leading-relaxed max-w-prose"
           style={{ color: 'var(--color-muted)' }}
         >
-          Über 75.000 Bundestagsreden aus zwölf Jahren — welche Themen wann die Plenardebatten prägen.
-          Gemessen an Keyword-Erwähnungen pro Million Tokens, normalisiert nach Redeumfang.
-          Datengrundlage: Wahlperioden 18–21 (2014–2025).
+          Über 75.000 Bundestagsreden aus zwölf Jahren — welche Themen wann die Plenardebatte prägen.
+          Wir haben Keyword-Listen gebaut, die Reden damit durchsucht und gezählt, wie oft ein Thema
+          auftaucht — relativ zur Menge der Reden im jeweiligen Jahr.
+          So wird sichtbar: Wann kam Migration hoch? Wann verschwand Klima wieder?
         </p>
       </header>
 

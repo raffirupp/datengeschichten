@@ -40,10 +40,9 @@ export default function Layout({ children }) {
         }}
       >
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
-          <span>Quelle: —</span>
+          <span>Daten, Karten, Experimente — datengeschichten.eu</span>
           <div className="flex items-center gap-4">
             <NavLink to="/werkstatt">Werkstatt</NavLink>
-            <span>datengeschichten.eu</span>
           </div>
         </div>
       </footer>

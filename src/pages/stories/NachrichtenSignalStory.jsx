@@ -34,11 +34,10 @@ function ExperimentNotice() {
         className="text-xs tracking-[.14em] uppercase"
         style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)', fontWeight: 600 }}
       >
-        Experiment
+        Experiment · in Arbeit
       </span>
       <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-        Dies ist ein offenes Experiment. Gezeigt wird ein rohes Nachrichten-Signal neben den
-        Umfragen — KEINE Vorhersage und kein validiertes Modell. Stand der Forschung, kein Ergebnis.
+        Kein fertiges Ergebnis, kein Modell — wir schauen, was der Datensatz hergibt. Die Punkte auf den Charts lassen sich anklicken.
       </p>
     </div>
   )
@@ -145,14 +144,13 @@ export default function NachrichtenSignalStory() {
             margin: 0,
           }}
         >
-          Stimmung in den Nachrichten
+          Nachrichten-Signal
         </h1>
         <p className="text-base leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
-          GDELT durchsucht weltweit Nachrichtenseiten und misst zweierlei: wie viel über eine
-          Partei berichtet wird (Aufmerksamkeit) und in welchem Ton (positiv oder negativ).
-          DAWUM misst dagegen, wen die Menschen tatsächlich wählen würden. Die offene Frage,
-          die wir hier untersuchen: Atmet das Nachrichten-Signal mit den Umfragen mit — und
-          läuft es ihnen vielleicht sogar voraus?
+          GDELT durchsucht laufend das freie Web und zählt, wie oft eine Partei in
+          Nachrichtentexten auftaucht. Wir haben diese Häufigkeit neben die DAWUM-Umfragedaten
+          gestellt — und markiert, wo die Ausschläge auf reale Ereignisse zurückgehen.
+          Die Frage dahinter: Bewegt sich Medienpräsenz mit den Umfragen — oder läuft sie ihnen voraus?
         </p>
       </header>
 
@@ -189,21 +187,17 @@ export default function NachrichtenSignalStory() {
           className="text-xs tracking-[.12em] uppercase"
           style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
         >
-          Was das ist — und was es (noch) nicht ist
+          Einschränkungen, die wir kennen
         </span>
         <ul className="flex flex-col gap-1.5">
           <li className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            Ein rohes Signal aus Nachrichtenartikeln, sonst nichts — keine Bereinigung, keine
-            Gewichtung nach Quellen, kein Modell.
+            Der Aufmerksamkeitsanteil ist relativ: Er misst den Anteil einer Partei an allen acht beobachteten — steigt eine, fallen automatisch andere. Nicht jeder Ausschlag ist ein echter Ausschlag.
           </li>
           <li className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            Ton ist keine Richtungsangabe: negative Berichterstattung über eine Partei kann auch
-            Berichte über deren Kritik an anderen meinen.
+            GDELT erfasst nur frei zugängliche Seiten. Paywalled Qualitätsmedien fehlen größtenteils — was zählt, stammt also eher aus dem offenen Nachrichtennetz als aus Spiegel oder SZ.
           </li>
           <li className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            Ob das Signal den Umfragen vorausläuft, ist nicht geprüft — das wäre ein validiertes
-            Modell mit Out-of-Sample-Vergleich gegen eine einfache Basislinie. Das ist der
-            nächste Schritt, nicht dieser hier.
+            Ob Medienpräsenz den Umfragen vorausläuft, bleibt offen. Das wäre der nächste Schritt — ein echtes Modell, das sich testen lässt. Noch sind wir beim Hinschauen.
           </li>
         </ul>
       </div>

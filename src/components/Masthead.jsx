@@ -11,7 +11,7 @@ export default function Masthead() {
           className="text-xs tracking-widest uppercase"
           style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
         >
-          Ausgabe 01
+          laufend aktualisiert
         </span>
         <span
           className="text-xs"
@@ -45,7 +45,7 @@ export default function Masthead() {
         className="mb-5 text-sm"
         style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
       >
-        Storytelling mit Daten&nbsp;&middot;&nbsp;data stories&nbsp;&middot;&nbsp;histoires de données
+        Karten, Diagramme, Experimente — wir basteln an Geschichten aus Daten.
       </p>
 
       <div className="flex h-1 rounded-sm overflow-hidden gap-px">

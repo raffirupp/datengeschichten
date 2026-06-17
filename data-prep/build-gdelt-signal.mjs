@@ -21,10 +21,13 @@ const PARTY_TERMS = {
   CDU: ['CDU', '"Christlich Demokratische Union"'],
   CSU: ['CSU', '"Christlich-Soziale Union"'],
   SPD: ['SPD', 'Sozialdemokraten'],
-  GRÜNE: ['"Bündnis 90/Die Grünen"', '"Die Grünen"'],
+  // "Bündnis 90/Die Grünen" und "Die Grünen" liefern bei GDELT leere Antworten (Slash, kurzer Artikel).
+  // Komposita sind eindeutig partei-spezifisch und werden zuverlässig indexiert.
+  GRÜNE: ['"Bündnis 90"', '"Grünen-Fraktion"', '"Grünen-Chef"', '"Grünen-Politiker"', '"Grünen-Abgeordnete"'],
   FDP: ['FDP', '"Freie Demokraten"'],
   AfD: ['AfD', '"Alternative für Deutschland"'],
-  LINKE: ['"Die Linke"', 'Linkspartei'],
+  // "Die Linke" und "linke" (Adj.) sind zu generisch. Linkspartei + Komposita sind eindeutig.
+  LINKE: ['Linkspartei', '"Linken-Fraktion"', '"Linken-Chef"', '"Linken-Politiker"', '"Linken-Abgeordnete"'],
   BSW: ['"Bündnis Sahra Wagenknecht"', 'BSW'],
 }
 

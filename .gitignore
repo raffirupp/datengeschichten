@@ -15,6 +15,12 @@ dist-ssr
 # Großer Rohkorpus (CPP-BT Bundestagsreden) — Pipeline lädt ihn bei Bedarf neu, gehört nicht ins Repo
 data-prep/raw/cpp-bt/
 
+# GDELT-Rohdaten — BigQuery-Exporte, lokal halten
+data-prep/raw/gdelt-ngrams/
+
+# Scratch-Skripte (temporär, nicht produktiv)
+data-prep/scratch/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

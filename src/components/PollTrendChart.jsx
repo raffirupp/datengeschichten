@@ -12,7 +12,7 @@ const IH = H - MARGIN.top - MARGIN.bottom
 
 function parseDate(str) { return new Date(str + 'T12:00:00Z') }
 
-export default function PollTrendChart({ polls, trend, parties }) {
+export default function PollTrendChart({ polls, trend, parties, markerDate }) {
   const [tooltip, setTooltip] = useState(null)
   const svgRef = useRef(null)
 
@@ -157,6 +157,20 @@ export default function PollTrendChart({ polls, trend, parties }) {
               </g>
             )
           })}
+
+          {/* Ereignis-Marker */}
+          {markerDate && (() => {
+            const mx = xScale(parseDate(markerDate))
+            if (mx < 0 || mx > IW) return null
+            return (
+              <g pointerEvents="none">
+                <line x1={mx} x2={mx} y1={0} y2={IH} stroke="var(--color-ink)" strokeWidth={1.5} strokeDasharray="4,3" opacity={0.5} />
+                <text x={mx + 5} y={10} style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', fill: 'var(--color-muted)' }}>
+                  Ereignis
+                </text>
+              </g>
+            )
+          })()}
 
           {/* Tooltip hairline */}
           {tooltip && (

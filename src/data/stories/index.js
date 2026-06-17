@@ -56,6 +56,14 @@ const stories = [
     kicker: 'Labor · Experiment',
     status: 'experiment',
   },
+  {
+    key: 'nachrichten-quellen',
+    title: 'Wer schreibt worüber?',
+    teaser: 'Welche Medien berichten am meisten über welche Partei — und was verrät das über die Medienlandschaft?',
+    category: 'Labor',
+    kicker: 'Labor · Medien',
+    status: 'experiment',
+  },
 ]
 
 export default stories

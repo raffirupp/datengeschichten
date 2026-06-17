@@ -8,7 +8,7 @@ const RAW    = resolve(__dir, 'raw', 'dawum.json')
 const DAWUM_URL = 'https://api.dawum.de/'
 
 const PARLIAMENT_NAME = process.argv[2] ?? 'Bundestag'
-const WINDOW_YEARS    = 3
+const WINDOW_YEARS    = 7
 const TREND_DAYS      = 21
 
 const dayMs = 86_400_000

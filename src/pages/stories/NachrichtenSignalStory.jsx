@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import gdeltData from '../../data/gdelt-signal.json'
 import pollData from '../../data/polls-bundestag.json'
+import { PEAKS } from '../../data/gdelt-peaks.js'
 import { colorsFor } from '../../lib/categoryColors.js'
 import { partyColor } from '../../lib/partyColors.js'
 import NewsSignalChart from '../../components/NewsSignalChart.jsx'
+import NewsSignalOverviewChart from '../../components/NewsSignalOverviewChart.jsx'
+import PeakPanel from '../../components/PeakPanel.jsx'
 import PollTrendChart from '../../components/PollTrendChart.jsx'
 
 const catColors = colorsFor('Labor')
@@ -40,11 +44,12 @@ function ExperimentNotice() {
   )
 }
 
-function PartyPanel({ party }) {
+function PartyPanel({ party, onPeakClick }) {
   const points = gdeltData.byParty[party] ?? []
   const dawumKey = PARTY_TO_DAWUM[party]
   const color = partyColor(dawumKey)
   const hasSignal = points.some((p) => p.attentionShare != null)
+  const partyPeaks = PEAKS.filter((p) => p.party === party)
 
   return (
     <div className="flex flex-col gap-3 py-6" style={{ borderTop: '1px solid var(--color-rule)' }}>
@@ -75,10 +80,10 @@ function PartyPanel({ party }) {
             className="text-xs tracking-[.1em] uppercase"
             style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
           >
-            Nachrichten-Signal (GDELT)
+            Nachrichten-Signal (GDELT) · Punkte anklicken
           </span>
           {hasSignal
-            ? <NewsSignalChart points={points} color={color} />
+            ? <NewsSignalChart points={points} color={color} peaks={partyPeaks} onPeakClick={onPeakClick} />
             : (
               <p className="text-sm italic" style={{ color: 'var(--color-muted)' }}>
                 Kein verwertbares Signal für diese Partei.
@@ -105,6 +110,8 @@ function PartyPanel({ party }) {
 }
 
 export default function NachrichtenSignalStory() {
+  const [selectedPeak, setSelectedPeak] = useState(null)
+
   return (
     <article className="flex flex-col gap-8 max-w-4xl">
       <div>
@@ -149,9 +156,28 @@ export default function NachrichtenSignalStory() {
         </p>
       </header>
 
+      <section className="flex flex-col gap-3">
+        <span
+          className="text-xs tracking-[.1em] uppercase"
+          style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
+        >
+          Aufmerksamkeitsanteil im Vergleich — alle Parteien
+        </span>
+        <NewsSignalOverviewChart
+          byParty={gdeltData.byParty}
+          parties={gdeltData.meta.parties}
+        />
+        <PeakPanel
+          peak={selectedPeak}
+          polls={pollData.polls}
+          trend={pollData.trend}
+          onClose={() => setSelectedPeak(null)}
+        />
+      </section>
+
       <section className="flex flex-col">
         {gdeltData.meta.parties.map((party) => (
-          <PartyPanel key={party} party={party} />
+          <PartyPanel key={party} party={party} onPeakClick={setSelectedPeak} />
         ))}
       </section>
 
@@ -190,7 +216,7 @@ export default function NachrichtenSignalStory() {
           color: 'var(--color-muted)',
         }}
       >
-        Quellen: GDELT DOC 2.0 API (Nachrichten); DAWUM/ODbL (Umfragen)
+        Quellen: GDELT Web NGrams 3.0 via BigQuery (Nachrichten, deutschsprachig, 2020–2026); DAWUM/ODbL (Umfragen)
       </footer>
     </article>
   )

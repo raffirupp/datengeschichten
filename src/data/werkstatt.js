@@ -59,8 +59,8 @@ const werkstatt = [
       'Stabilitäts-Check: Wir teilen den Zeitraum in drei Perioden (vor Bundestagswahl 2021, zwischen den Wahlen 2021–2025, seit Bundestagswahl 2025) und prüfen, ob die Abweichung in allen Perioden in dieselbe Richtung zeigt. Wechselt die Richtung, markieren wir die Zelle als instabil.',
     ],
     caveats: [
-      'Der Konsens ist kein unabhängiger externer Maßstab — er wird aus den anderen Instituten berechnet. Wenn sich mehrere Institute zusammen irren, sieht das in dieser Analyse wie Konsens aus.',
-      'House-Effects und tatsächliche Wahlergebnisse sind zwei verschiedene Dinge. Ob ein Institut, das im Instituts-Vergleich hoch liegt, damit auch näher am wahren Ergebnis liegt, lässt sich hieraus nicht ablesen.',
+      'Diese Analyse misst Abweichungen vom Instituts-Konsens — nicht von der Wahrheit. Ein Institut, das +2 PP über den anderen liegt, muss damit nicht falsch liegen: vielleicht liegen die anderen alle falsch. Ob der Konsens stimmt, lässt sich nur an echten Wahlergebnissen prüfen.',
+      'Der Konsens ist kein unabhängiger externer Maßstab — er wird aus den anderen Instituten berechnet. Wenn sich mehrere Institute zusammen irren (etwa durch ähnliche Methoden oder ähnliche Stichprobenrahmen), sieht das in dieser Analyse wie Konsens aus.',
       'Für BSW (seit 2024 im Bundestag) sind die Stichproben in allen Instituten kleiner. Frühe BSW-Werte — aus einer Phase, als die Partei gerade gegründet wurde und Umfrageerfahrung fehlte — können das Bild verzerren.',
       'Kleine Institute mit wenigen Umfragen (Institut Wahlkreisprognose, GMS, Civey) zeigen teils auffällige Werte — die Stichprobe ist aber zu klein, um daraus eine verlässliche Charakterisierung abzuleiten.',
       'Die Trendlinie im oberen Teil der Story ist nicht House-Effect-bereinigt. Das ist der nächste sinnvolle Schritt: einen Trend bauen, der die hier sichtbaren Schlagseiten herausrechnet.',

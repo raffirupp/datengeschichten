@@ -67,7 +67,7 @@ function CellTooltip({ cell, meta, rect }) {
       ) : (
         <>
           <div style={{ marginBottom: 8, color: 'var(--color-ink)' }}>
-            Abweichung: <strong>{fmt(cell.mean)} PP</strong>
+            vs. andere Institute: <strong>{fmt(cell.mean)} PP</strong>
             <span style={{ color: 'var(--color-muted)', marginLeft: 4 }}>
               (±{cell.se.toFixed(2)}, n={cell.n})
             </span>
@@ -278,7 +278,7 @@ function DotPlot({ cells, institutes, party, meta }) {
             {tooltip.institute}
           </div>
           <div style={{ marginBottom: 6, color: 'var(--color-ink)' }}>
-            {fmt(tooltip.mean)} PP
+            vs. andere: <strong>{fmt(tooltip.mean)} PP</strong>
             <span style={{ color: 'var(--color-muted)', marginLeft: 4 }}>
               ±{tooltip.se.toFixed(2)}, n={tooltip.n}
             </span>
@@ -315,11 +315,11 @@ function DotPlot({ cells, institutes, party, meta }) {
       }}>
         <span>
           <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: `rgb(${CORAL.join(',')})`, marginRight: 4, verticalAlign: 'middle' }} />
-          überschätzt
+          liegt höher als andere Institute
         </span>
         <span>
           <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: `rgb(${PETROL.join(',')})`, marginRight: 4, verticalAlign: 'middle' }} />
-          unterschätzt
+          liegt niedriger als andere Institute
         </span>
         <span>~ = Richtung wechselt je nach Zeitraum</span>
       </div>
@@ -449,14 +449,14 @@ export default function HouseEffectsChart({ data }) {
 
       {/* Farbskala-Legende */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--color-muted)' }}>
-        <span>unterschätzt</span>
+        <span>niedriger als andere Institute</span>
         <div style={{
           width: 160,
           height: 8,
           borderRadius: 4,
           background: `linear-gradient(to right, rgb(${PETROL.join(',')}), rgb(${PAPER.join(',')}), rgb(${CORAL.join(',')}))`,
         }} />
-        <span>überschätzt</span>
+        <span>höher als andere Institute</span>
         <span style={{ marginLeft: 8, opacity: 0.5 }}>max ±{MAX_ABS} PP</span>
       </div>
 

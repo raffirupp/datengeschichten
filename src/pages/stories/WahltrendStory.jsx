@@ -106,13 +106,13 @@ export default function WahltrendStory() {
             className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}
           >
-            Manche Institute liegen im Vergleich zu den anderen systematisch höher
-            oder niedriger — das sind die sogenannten House-Effects. Wir haben das
-            für alle Institute und alle Parteien ausgerechnet.
-            Jeder Wert zeigt, um wie viele Prozentpunkte ein Institut im Schnitt
-            vom gleichzeitigen Konsens der anderen Institute abweicht.
-            Positive Zahlen bedeuten: das Institut schätzt diese Partei höher ein
-            als die Kollegen; negative Zahlen bedeuten das Gegenteil.
+            Manche Institute lagen in der Vergangenheit im Vergleich zu den anderen
+            systematisch höher oder niedriger — das nennt man House-Effects. Wir haben
+            das für alle Institute und alle Parteien ausgerechnet. Jeder Wert zeigt,
+            um wie viele Prozentpunkte ein Institut im Schnitt vom gleichzeitigen
+            Durchschnitt der anderen Institute abweicht. Was das <em>nicht</em> bedeutet:
+            dass ein Institut näher an der Wahrheit liegt. Ob der Konsens der Institute
+            stimmt, lässt sich nur an echten Wahlergebnissen prüfen — und nur dann.
           </p>
         </header>
 

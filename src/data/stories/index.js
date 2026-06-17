@@ -30,7 +30,7 @@ const stories = [
     teaser: '75 Jahre Bundestagsreden — welche Themen kommen und gehen.',
     category: 'Deutschland',
     kicker: 'Deutschland · Sprache',
-    status: 'geplant',
+    status: 'live',
   },
   {
     key: 'volkswirtschaften',

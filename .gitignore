@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Großer Rohkorpus (CPP-BT Bundestagsreden) — Pipeline lädt ihn bei Bedarf neu, gehört nicht ins Repo
+data-prep/raw/cpp-bt/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

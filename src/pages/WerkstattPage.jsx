@@ -109,8 +109,8 @@ export default function WerkstattPage() {
           Werkstatt
         </h1>
         <p className="text-base leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
-          Was hinter den Geschichten steckt: woher die Daten kommen, wie wir sie verarbeitet haben
-          — und wo wir Entscheidungen getroffen haben, die man auch anders hätte treffen können.
+          Was hinter den Geschichten steckt: woher die Daten kommen, wie ich sie verarbeitet habe
+          — und wo ich Entscheidungen getroffen habe, die man auch anders hätte treffen können.
         </p>
       </header>
 

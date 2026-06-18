@@ -267,7 +267,7 @@ export default function NachrichtenQuellenStory() {
           Labor · Datensatz-Showcase
         </span>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-          Wir haben versucht, mit GDELT zu rekonstruieren, wer über welche Partei berichtet. Was wir dabei über den Datensatz gelernt haben, ist mindestens so interessant wie die Ergebnisse selbst.
+          Ich habe versucht, mit GDELT zu rekonstruieren, wer über welche Partei berichtet. Was ich dabei über den Datensatz gelernt habe, ist mindestens so interessant wie die Ergebnisse selbst.
         </p>
       </div>
 

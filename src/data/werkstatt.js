@@ -54,11 +54,11 @@ const werkstatt = [
     steps: [
       'Die Rohdaten kommen von DAWUM — alle veröffentlichten Sonntagsfragen zur Bundestagswahl seit Juni 2019 (1.943 Umfragen von 12 Instituten). Pro Umfrage: Datum, Institut, Stichprobengröße, Prozentwerte je Partei.',
       'Für den Trend wird für jeden Umfragetag ein gewichteter Mittelwert über alle Umfragen der vorangegangenen 21 Tage berechnet. Neuere Umfragen und solche mit größerer Stichprobe gehen stärker ein.',
-      'Für die House-Effects-Analyse verwenden wir Leave-One-Out: Beim Berechnen des Konsens für Institut X schließen wir alle Umfragen von X selbst aus dem Fenster aus. So kann ein Institut seine eigene Baseline nicht aufblasen.',
+      'Für die House-Effects-Analyse verwende ich Leave-One-Out: Beim Berechnen des Konsens für Institut X schließe ich alle Umfragen von X selbst aus dem Fenster aus. So kann ein Institut seine eigene Baseline nicht aufblasen.',
       'Stabilitäts-Check: Der Zeitraum ist in drei Perioden geteilt (vor BTW 2021, 2021–2025, seit BTW 2025). Wechselt die Richtung einer Abweichung zwischen Perioden, gilt sie als instabil.',
-      'Wahlgenauigkeit: Für die Bundestagswahlen 2017, 2021 und 2025 haben wir die letzte Umfrage je Institut vor dem Wahltag mit dem amtlichen Ergebnis verglichen. Quelle: wahlrecht.de, aufbereitet aus Screenshots.',
-      'Reaktionsgeschwindigkeit (Cross-Korrelation): Für jedes Institut berechnen wir wöchentlich einen 21-Tage-Trend. Dann berechnen wir die Cross-Korrelation der wöchentlichen Erstdifferenzen (Woche-über-Woche-Änderungen) zwischen jedem Institut und dem LOO-Konsens bei Lags von −6 bis +6 Wochen. Der Lag mit der höchsten Korrelation zeigt, ob ein Institut früher oder später auf Stimmungsänderungen reagiert als die anderen.',
-      'Reaktionsgeschwindigkeit (Threshold-Crossing): Zweite Methode, robuster. Wir identifizieren "echte Trendwenden" als Momente, in denen der Gesamt-Konsens sich innerhalb von 8 Wochen um ≥ 1,5 PP verschiebt. Dann messen wir für jedes Institut, wann es die Hälfte dieser Bewegung überschritten hatte. Positive Lead-Zeit bedeutet: Institut war früher dran als der Konsens.',
+      'Wahlgenauigkeit: Für die Bundestagswahlen 2017, 2021 und 2025 habe ich die letzte Umfrage je Institut vor dem Wahltag mit dem amtlichen Ergebnis verglichen. Quelle: wahlrecht.de, aufbereitet aus Screenshots.',
+      'Reaktionsgeschwindigkeit (Cross-Korrelation): Für jedes Institut berechne ich wöchentlich einen 21-Tage-Trend. Dann berechne ich die Cross-Korrelation der wöchentlichen Erstdifferenzen (Woche-über-Woche-Änderungen) zwischen jedem Institut und dem LOO-Konsens bei Lags von −6 bis +6 Wochen. Der Lag mit der höchsten Korrelation zeigt, ob ein Institut früher oder später auf Stimmungsänderungen reagiert als die anderen.',
+      'Reaktionsgeschwindigkeit (Threshold-Crossing): Zweite Methode, robuster. Ich identifiziere "echte Trendwenden" als Momente, in denen der Gesamt-Konsens sich innerhalb von 8 Wochen um ≥ 1,5 PP verschiebt. Dann messe ich für jedes Institut, wann es die Hälfte dieser Bewegung überschritten hatte. Positive Lead-Zeit bedeutet: Institut war früher dran als der Konsens.',
       'Bundesländer-House-Effects: Dieselbe LOO-Methode für 7 Bundesländer mit ≥ 60 Umfragen und mindestens 2 vergleichbaren Instituten (Bayern, Berlin, NRW, Hessen, BaWü, Sachsen, Thüringen). Zellen mit n < 5 Messungen werden ausgeblendet.',
     ],
     caveats: [
@@ -76,13 +76,13 @@ const werkstatt = [
     id: 'nachrichten-signal',
     title: 'Nachrichten-Signal',
     storyKey: 'nachrichten-signal',
-    summary: 'Wir haben GDELT Web NGrams via BigQuery befragt: wie oft taucht eine Partei pro Woche in deutschsprachigen Nachrichtentexten auf? Die Häufigkeit haben wir neben die Sonntagsfragen gelegt — und markiert, wo Peaks auf konkrete Ereignisse zurückgehen.',
+    summary: 'Ich habe GDELT Web NGrams via BigQuery befragt: wie oft taucht eine Partei pro Woche in deutschsprachigen Nachrichtentexten auf? Die Häufigkeit habe ich neben die Sonntagsfragen gelegt — und markiert, wo Peaks auf konkrete Ereignisse zurückgehen.',
     sources: [
       { name: 'GDELT Web NGrams 3.0 (via Google BigQuery)', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
       { name: 'DAWUM (Sonntagsfragen)', url: 'https://dawum.de', license: 'ODbL (mit Quellenangabe)' },
     ],
     steps: [
-      'GDELT (Global Database of Events, Language, and Tone) erfasst Wortfrequenzen in frei zugänglichen Nachrichtentexten. Wir haben das BigQuery-Dataset "gdeltv2.webngrams" abgefragt — für alle acht Parteien, deutschsprachige Quellen, 2020 bis 2026.',
+      'GDELT (Global Database of Events, Language, and Tone) erfasst Wortfrequenzen in frei zugänglichen Nachrichtentexten. Ich habe das BigQuery-Dataset "gdeltv2.webngrams" abgefragt — für alle acht Parteien, deutschsprachige Quellen, 2020 bis 2026.',
       'Pro Woche wird der Erwähnungsanteil einer Partei berechnet: Erwähnungen der Partei / Summe aller Parteierwähnungen dieser Woche. Das macht Wochen mit viel oder wenig Politikberichterstattung vergleichbar — zeigt aber nur relative Verschiebungen, keine absoluten Mengen.',
       'Peaks (lokale Hochpunkte im Signal) wurden manuell mit tatsächlichen Ereignissen verglichen und in einer Datenbank erfasst. Jeder Punkt auf dem Chart lässt sich anklicken — dann erscheint der Kontext plus ein Ausschnitt aus dem DAWUM-Umfragetrend um den Zeitpunkt des Ereignisses.',
       'Die DAWUM-Daten (Sonntagsfragen seit 2019) werden parallel als 21-Tage-gleitender Durchschnitt dargestellt — gewichtet nach Stichprobengröße.',
@@ -90,7 +90,7 @@ const werkstatt = [
     caveats: [
       'GDELT erfasst nur, was frei im Web steht. Spiegel, SZ, Zeit — alles hinter Paywalls fehlt größtenteils. Das Signal repräsentiert das offene Nachrichtennetz, nicht die gesamte deutschsprachige Presselandschaft.',
       'Der Aufmerksamkeitsanteil ist ein Nullsummenspiel: Steigt eine Partei, fallen automatisch die anderen. Das macht echte parallele Ausschläge unsichtbar.',
-      '"Grüne" und "Linke" als Suchbegriffe sind problematisch, weil sie auch als Adjektive vorkommen. Wir suchen deshalb über charakteristische Komposita — was den Anteil dieser Parteien systematisch etwas unterbewertet.',
+      '"Grüne" und "Linke" als Suchbegriffe sind problematisch, weil sie auch als Adjektive vorkommen. Ich suche deshalb über charakteristische Komposita — was den Anteil dieser Parteien systematisch etwas unterbewertet.',
       'Ob Medienpräsenz den Umfragen vorausläuft, bleibt offen. Das wäre der nächste Schritt — ein Modell, das sich statistisch testen lässt.',
     ],
   },
@@ -128,12 +128,12 @@ const werkstatt = [
     id: 'nachrichten-quellen',
     title: 'Wer schreibt worüber?',
     storyKey: 'nachrichten-quellen',
-    summary: 'Wir haben GDELT nach den häufigsten Quellen pro Partei gefragt — und dabei vor allem gelernt, was der Datensatz nicht kann.',
+    summary: 'Ich habe GDELT nach den häufigsten Quellen pro Partei gefragt — und dabei vor allem gelernt, was der Datensatz nicht kann.',
     sources: [
       { name: 'GDELT Web NGrams 3.0 (via Google BigQuery)', url: 'https://www.gdeltproject.org', license: 'frei nutzbar (Forschungsprojekt)' },
     ],
     steps: [
-      'Aus dem GDELT-BigQuery-Dataset haben wir für Jan 2025–Jun 2026 pro Partei und Domain gezählt, wie oft der Parteiname auf einer URL auftaucht.',
+      'Aus dem GDELT-BigQuery-Dataset habe ich für Jan 2025–Jun 2026 pro Partei und Domain gezählt, wie oft der Parteiname auf einer URL auftaucht.',
       'Die Domains wurden manuell Mediengruppen zugeordnet (Ippen Digital, Axel Springer, RTL/ntv, öffentlich-rechtlich u.a.) um Konzernstrukturen sichtbar zu machen.',
       'Dargestellt wird: Top 10 Quellen je Partei, und umgekehrt der Parteimix je Domain.',
     ],

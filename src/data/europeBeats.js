@@ -18,5 +18,5 @@ export default [
   { year: 2021, iso3: 'DEU', headline: 'Ampel statt Merkel', text: 'Olaf Scholz\' Dreierbündnis aus SPD, Grünen und FDP löst die Ära Merkel ab. Erstmals regiert im Bund eine Ampel-Koalition.' },
   { year: 2022, iso3: 'ITA', headline: 'Meloni und die Zeitenwende', text: 'Giorgia Meloni wird erste postfaschistisch verwurzelte Regierungschefin Italiens. Zugleich ordnet Russlands Angriff auf die Ukraine Europas Regierungen bei Energie und Verteidigung komplett neu.' },
   { year: 2023, iso3: 'POL', headline: 'Tusks Rückkehr', text: 'Donald Tusk kehrt an die Macht zurück und verspricht die Aussöhnung mit Brüssel. Die Wahl zeigt: Auch der illiberale Trend ist umkehrbar.' },
-  { year: 2025, iso3: 'DEU', headline: 'Merz übernimmt', text: 'Nach der Bundestagswahl 2025 wird Friedrich Merz Kanzler einer CDU/CSU-geführten Koalition. Deutschland rückt wieder Richtung Mitte-rechts — der Schlusspunkt unserer Reise.' },
+  { year: 2025, iso3: 'DEU', headline: 'Merz übernimmt', text: 'Nach der Bundestagswahl 2025 wird Friedrich Merz Kanzler einer CDU/CSU-geführten Koalition. Deutschland rückt wieder Richtung Mitte-rechts — der Schlusspunkt dieser Reise.' },
 ]

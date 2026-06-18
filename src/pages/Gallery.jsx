@@ -45,6 +45,40 @@ export default function Gallery() {
           </div>
         </div>
       ))}
+
+      <div
+        className="flex flex-col gap-4 pt-8"
+        style={{ borderTop: '1px solid var(--color-rule)' }}
+      >
+        <span
+          className="text-xs tracking-[.12em] uppercase"
+          style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
+        >
+          Über diese Seite
+        </span>
+        <div className="flex flex-col gap-3 max-w-prose">
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            Hi, ich bin Raffael — ich versuche gerne Dinge mit Daten. Alles, was du hier siehst,
+            sind Experimente: Ich versuche etwas herauszufinden, lerne dabei und hoffe,
+            dass am Ende eine Datengeschichte steht, aus der wir beide etwas mitnehmen.
+          </p>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            Wenn du die Arbeit unterstützen möchtest, kannst du mich gerne auf einen Kaffee einladen:{' '}
+            <a
+              href="https://ko-fi.com/wer_wird_diplomatin"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--color-ink)', textDecoration: 'underline' }}
+            >
+              ko-fi.com/wer_wird_diplomatin
+            </a>
+          </p>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            Vor Weiterverbreitung der Inhalte bitte kurz anfragen. Ich freue mich auch
+            über Anfragen zur Zusammenarbeit — freiberuflich für Daten- und KI-Projekte.
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

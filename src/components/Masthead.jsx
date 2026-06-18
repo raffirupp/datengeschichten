@@ -45,7 +45,7 @@ export default function Masthead() {
         className="mb-5 text-sm"
         style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
       >
-        Karten, Diagramme, Experimente — wir basteln an Geschichten aus Daten.
+        Karten, Diagramme, Experimente — ich bastle an Geschichten aus Daten.
       </p>
 
       <div className="flex h-1 rounded-sm overflow-hidden gap-px">

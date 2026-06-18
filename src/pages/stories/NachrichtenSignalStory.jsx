@@ -37,7 +37,7 @@ function ExperimentNotice() {
         Experiment · in Arbeit
       </span>
       <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-        Kein fertiges Ergebnis, kein Modell — wir schauen, was der Datensatz hergibt. Die Punkte auf den Charts lassen sich anklicken.
+        Kein fertiges Ergebnis, kein Modell — ich schaue, was der Datensatz hergibt. Die Punkte auf den Charts lassen sich anklicken.
       </p>
     </div>
   )
@@ -148,7 +148,7 @@ export default function NachrichtenSignalStory() {
         </h1>
         <p className="text-base leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
           GDELT durchsucht laufend das freie Web und zählt, wie oft eine Partei in
-          Nachrichtentexten auftaucht. Wir haben diese Häufigkeit neben die DAWUM-Umfragedaten
+          Nachrichtentexten auftaucht. Ich habe diese Häufigkeit neben die DAWUM-Umfragedaten
           gestellt — und markiert, wo die Ausschläge auf reale Ereignisse zurückgehen.
           Die Frage dahinter: Bewegt sich Medienpräsenz mit den Umfragen — oder läuft sie ihnen voraus?
         </p>
@@ -187,7 +187,7 @@ export default function NachrichtenSignalStory() {
           className="text-xs tracking-[.12em] uppercase"
           style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}
         >
-          Einschränkungen, die wir kennen
+          Einschränkungen, die ich kenne
         </span>
         <ul className="flex flex-col gap-1.5">
           <li className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
@@ -197,7 +197,7 @@ export default function NachrichtenSignalStory() {
             GDELT erfasst nur frei zugängliche Seiten. Paywalled Qualitätsmedien fehlen größtenteils — was zählt, stammt also eher aus dem offenen Nachrichtennetz als aus Spiegel oder SZ.
           </li>
           <li className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            Ob Medienpräsenz den Umfragen vorausläuft, bleibt offen. Das wäre der nächste Schritt — ein echtes Modell, das sich testen lässt. Noch sind wir beim Hinschauen.
+            Ob Medienpräsenz den Umfragen vorausläuft, bleibt offen. Das wäre der nächste Schritt — ein echtes Modell, das sich testen lässt. Noch bin ich beim Hinschauen.
           </li>
         </ul>
       </div>

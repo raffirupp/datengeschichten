@@ -43,7 +43,7 @@ const stories = [
   {
     key: 'nachrichten-quellen',
     title: 'Wer schreibt worüber?',
-    teaser: 'Wir haben GDELT gefragt, welche Nachrichtenseiten am meisten über welche Partei berichten. Das Ergebnis hat uns überrascht.',
+    teaser: 'Ich habe GDELT gefragt, welche Nachrichtenseiten am meisten über welche Partei berichten. Das Ergebnis hat mich überrascht.',
     category: 'Labor',
     kicker: 'Labor · Medien',
     status: 'experiment',

@@ -158,9 +158,9 @@ export default function WahltrendStory() {
           <SectionHeading>Wer war bei echten Trendwenden zuerst da?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
-            Robusterer Ansatz: Wir suchen Momente, in denen der Gesamt-Konsens sich innerhalb
+            Robusterer Ansatz: Ich suche Momente, in denen der Gesamt-Konsens sich innerhalb
             von acht Wochen um mindestens 1,5 Prozentpunkte verschiebt — das ist eine echte
-            Bewegung jenseits normaler Schwankungen. Dann messen wir, wann jedes Institut
+            Bewegung jenseits normaler Schwankungen. Dann messe ich, wann jedes Institut
             die Halbzeit dieser Bewegung überschritten hatte. Lead-Zeit positiv = Institut war
             früher dran. Caveat: häufig publizierende Institute haben strukturell einen Vorteil.
           </p>

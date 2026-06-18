@@ -3,14 +3,14 @@ import pollData              from '../../data/polls-bundestag.json'
 import houseData             from '../../data/house-effects.json'
 import accuracyData          from '../../data/election-accuracy.json'
 import leadLagData           from '../../data/lead-lag.json'
-import firstMoverData        from '../../data/first-mover.json'
+import grangerData           from '../../data/granger.json'
 import laenderHouseData      from '../../data/laender-house-effects.json'
 import PollSnapshot              from '../../components/PollSnapshot.jsx'
 import PollTrendChart            from '../../components/PollTrendChart.jsx'
 import HouseEffectsChart         from '../../components/HouseEffectsChart.jsx'
 import ElectionAccuracyChart     from '../../components/ElectionAccuracyChart.jsx'
 import LeadLagChart              from '../../components/LeadLagChart.jsx'
-import FirstMoverChart           from '../../components/FirstMoverChart.jsx'
+import GrangerChart              from '../../components/GrangerChart.jsx'
 import LaenderHouseEffectsChart  from '../../components/LaenderHouseEffectsChart.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
@@ -151,21 +151,57 @@ export default function WahltrendStory() {
 
       <Divider />
 
-      {/* ── 4b: First-Mover (Threshold-Crossing) ── */}
+      {/* ── 4b: Granger-Kausalität ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
-          <SectionHeading>Wer war bei echten Trendwenden zuerst da?</SectionHeading>
+          <SectionHeading>Welches Institut bewegt den Konsens — und welches folgt ihm?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
-            Robusterer Ansatz: Ich suche Momente, in denen der Gesamt-Konsens sich innerhalb
-            von acht Wochen um mindestens 1,5 Prozentpunkte verschiebt — das ist eine echte
-            Bewegung jenseits normaler Schwankungen. Dann messe ich, wann jedes Institut
-            die Halbzeit dieser Bewegung überschritten hatte. Lead-Zeit positiv = Institut war
-            früher dran. Caveat: häufig publizierende Institute haben strukturell einen Vorteil.
+            Statt einzelne Trendwenden zu zählen, stelle ich eine statistischere Frage: Sagen
+            die vergangenen Werte eines Instituts den künftigen Konsens vorher — über das
+            hinaus, was der Konsens selbst vorhersagt? Das nennt sich{' '}
+            <em>Granger-Kausalität</em>. Ich berechne zwei Richtungen: Institut → Konsens
+            (Vorlauf-Signal) und Konsens → Institut (Institut folgt). Gemessen wird auf
+            wöchentlichen Erstdifferenzen mit Lag 2, VAR(2)-Modell.
+          </p>
+          <p className="text-sm leading-relaxed max-w-prose"
+            style={{ color: 'var(--color-muted)' }}>
+            Entscheidend: Der Konsens wird hier ohne das getestete Institut berechnet
+            (Leave-One-Out). Damit fällt der Frequenz-Bias weg, der die frühere Analyse
+            verzerrt hatte — häufig publizierende Institute erschienen als "Vorreiter",
+            weil sie den Konsens schlicht mitgebaut hatten.
           </p>
         </header>
-        <FirstMoverChart data={firstMoverData} />
+        <GrangerChart data={grangerData} />
+
+        {/* Methodische Einordnung */}
+        <div className="flex flex-col gap-3 pl-4 py-2 max-w-prose"
+          style={{ borderLeft: '2px solid var(--color-rule)' }}>
+          <span className="text-xs tracking-[.12em] uppercase"
+            style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}>
+            Was die Ergebnisse bedeuten
+          </span>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            <strong style={{ color: 'var(--color-ink)' }}>Forsa und INSA sind bidirektional:</strong>{' '}
+            Ihr Signal läuft dem Konsens voraus — aber der Konsens greift auch auf sie zurück.
+            Das ist kein Widerspruch: Wer jede Woche publiziert, ist so stark im Konsens
+            vertreten, dass Bewegungen gegenseitig sind. Statistisch nicht von Endogenität
+            zu trennen.
+          </p>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            <strong style={{ color: 'var(--color-ink)' }}>Die meisten Institute folgen dem Konsens:</strong>{' '}
+            Sie bewegen sich, nachdem der Gesamtmarkt bereits gedreht hat. Das ist kein
+            Qualitätsmangel — es zeigt eher, dass der Konsens robuster ist als einzelne
+            Messwerte.
+          </p>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            <strong style={{ color: 'var(--color-ink)' }}>Granger ≠ echte Kausalität:</strong>{' '}
+            Der Test misst Vorhersagekraft in der Vergangenheit, nicht kausale Mechanismen.
+            Gemeinsame Ursachen (z.B. ein großes politisches Ereignis) können beide Serien
+            gleichzeitig bewegen und zu scheinbaren Granger-Signalen führen.
+          </p>
+        </div>
       </section>
 
       <Divider />

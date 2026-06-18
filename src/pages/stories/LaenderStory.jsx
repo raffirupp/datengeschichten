@@ -89,7 +89,7 @@ export default function LaenderStory() {
           onActiveBeatChange={handleActiveBeatChange}
           renderMap={(year, code) => {
             const dataForYear = govData.byYear[String(year)]
-            return <LaenderGeoMap dataForYear={dataForYear} meta={govData.meta} highlightCode={code} />
+            return <LaenderGeoMap dataForYear={dataForYear} highlightCode={code} />
           }}
         />
 

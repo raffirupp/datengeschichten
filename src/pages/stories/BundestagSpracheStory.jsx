@@ -72,7 +72,7 @@ export default function BundestagSpracheStory() {
             margin: 0,
           }}
         >
-          Worüber Deutschland spricht
+          Worüber der Bundestag spricht
         </h1>
         <p
           className="text-base leading-relaxed max-w-prose"

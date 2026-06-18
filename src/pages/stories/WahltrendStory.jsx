@@ -4,14 +4,12 @@ import houseData             from '../../data/house-effects.json'
 import accuracyData          from '../../data/election-accuracy.json'
 import leadLagData           from '../../data/lead-lag.json'
 import grangerData           from '../../data/granger.json'
-import laenderHouseData      from '../../data/laender-house-effects.json'
 import PollSnapshot              from '../../components/PollSnapshot.jsx'
 import PollTrendChart            from '../../components/PollTrendChart.jsx'
 import HouseEffectsChart         from '../../components/HouseEffectsChart.jsx'
 import ElectionAccuracyChart     from '../../components/ElectionAccuracyChart.jsx'
 import LeadLagChart              from '../../components/LeadLagChart.jsx'
 import GrangerChart              from '../../components/GrangerChart.jsx'
-import LaenderHouseEffectsChart  from '../../components/LaenderHouseEffectsChart.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const { meta, polls, trend } = pollData
@@ -78,7 +76,7 @@ export default function WahltrendStory() {
           style={{ color: 'var(--color-muted)' }}>
           Alle Umfragen seit 2019 — geglättet zum Trend, und darunter:
           was die Institute voneinander unterscheidet, wie nah sie bei echten Wahlen lagen,
-          wer Trendwenden zuerst erfasst, und wie sich das auf Bundesländer überträgt.
+          wer Trendwenden zuerst erfasst und welche Institute systematisch abweichen.
           Stand: {meta.lastUpdated}.
         </p>
       </header>
@@ -202,25 +200,6 @@ export default function WahltrendStory() {
             gleichzeitig bewegen und zu scheinbaren Granger-Signalen führen.
           </p>
         </div>
-      </section>
-
-      <Divider />
-
-      {/* ── 5: Bundesländer House Effects ── */}
-      <section className="flex flex-col gap-6">
-        <header className="flex flex-col gap-3">
-          <SectionLabel>Bundesländer</SectionLabel>
-          <SectionHeading>House-Effects in Landtags-Umfragen</SectionHeading>
-          <p className="text-sm leading-relaxed max-w-prose"
-            style={{ color: 'var(--color-muted)' }}>
-            Dieselbe Analyse für Landtagsumfragen: Welches Institut schätzt welche Partei
-            systematisch höher oder niedriger ein als die Kollegen? Nur Bundesländer mit
-            genug Daten (≥ 60 Umfragen, mind. 2 vergleichbare Institute) sind enthalten.
-            Die Datenlage ist deutlich dünner als auf Bundesebene — Zellen mit n &lt; 5
-            werden ausgeblendet.
-          </p>
-        </header>
-        <LaenderHouseEffectsChart data={laenderHouseData} />
       </section>
 
       <footer className="text-xs pt-4" style={{

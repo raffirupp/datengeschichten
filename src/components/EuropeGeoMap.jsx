@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { geoIdentity, geoPath } from 'd3-geo'
 import geojson from '../data/europe-geo.json'
-import { leftRightColor } from '../lib/leftRightColor.js'
+import { partyFamilyColor } from '../lib/leftRightColor.js'
 import MapLegend from './MapLegend.jsx'
 
 const W = 800
@@ -24,7 +24,7 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }
     const map = {}
     for (const { iso3 } of PATHS) {
       const value = dataForYear?.[iso3]
-      map[iso3] = { color: leftRightColor(value ?? null, meta), value: value ?? null }
+      map[iso3] = { color: partyFamilyColor(value ?? null), value: value ?? null }
     }
     return map
   }, [dataForYear, meta])

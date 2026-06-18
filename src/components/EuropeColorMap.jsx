@@ -1,5 +1,5 @@
 import layout from '../data/europeTileLayout.js'
-import { leftRightColor, textColorFor } from '../lib/leftRightColor.js'
+import { partyFamilyColor, partyFamilyTextColor } from '../lib/leftRightColor.js'
 import MapLegend from './MapLegend.jsx'
 
 const MAX_COL = Math.max(...Object.values(layout).map(([c]) => c))
@@ -13,8 +13,8 @@ export default function EuropeColorMap({ dataForYear, meta, highlightIso3 = null
   const cells = {}
   for (const [code, [col, row]] of Object.entries(layout)) {
     const value = dataForYear?.[code]
-    const bg = leftRightColor(value ?? null, meta)
-    const fg = textColorFor(bg)
+    const bg = partyFamilyColor(value ?? null)
+    const fg = partyFamilyTextColor(value ?? null)
     cells[`${col},${row}`] = { code, value, bg, fg }
   }
 

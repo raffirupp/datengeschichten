@@ -26,7 +26,7 @@ const stories = [
   },
   {
     key: 'bundestag-sprache',
-    title: 'Worüber Deutschland spricht',
+    title: 'Worüber der Bundestag spricht',
     teaser: 'Über 75.000 Bundestagsreden aus zwölf Jahren — welche Themen wann die Debatten prägen.',
     category: 'Deutschland',
     kicker: 'Deutschland · Sprache',

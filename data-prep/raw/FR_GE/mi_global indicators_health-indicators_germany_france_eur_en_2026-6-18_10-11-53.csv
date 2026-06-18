@@ -1,0 +1,39 @@
+﻿Region,Market,Chart,Name,Unit,Source,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031
+Germany,Health Indicators,Total Healthcare Spending,Total Healthcare Spending,billion EUR (€),Statista Market Insights|World Bank|WHO,475.02,503.06,497.88,508.65,545.98,579.91,598.33,617.63,637.38,655.52,671.58
+France,Health Indicators,Total Healthcare Spending,Total Healthcare Spending,billion EUR (€),Statista Market Insights|World Bank|WHO,308.25,315.3,336.51,350.27,376.1,400.58,414.79,430.06,446.55,462.56,476.96
+Germany,Health Indicators,Health Expenditure,Health Expenditure,percent,Statista Market Insights|World Bank|WHO,12.9,12.61,11.8,11.71,11.69,11.67,11.65,11.64,11.63,11.63,11.63
+France,Health Indicators,Health Expenditure,Health Expenditure,percent,Statista Market Insights|World Bank|WHO,12.29,11.88,11.89,11.95,12.01,12.07,12.13,12.19,12.25,12.31,12.36
+Germany,Health Indicators,Medical Products Spending,Medical Products Spending,EUR (€),Statista Market Insights|World Bank,475.71,570.19,627.97,636.92,691.51,739.41,763.51,788.49,815.43,840.7,863.8
+France,Health Indicators,Medical Products Spending,Medical Products Spending,EUR (€),Statista Market Insights|World Bank,293.6,358.27,396.6,396.94,421.18,442.64,450.3,458.48,467.88,476.51,483.78
+Germany,Health Indicators,Medical Services Spending,Medical Services Spending,EUR (€),Statista Market Insights|United Nations Conference on Trade and Development,723.55,670.19,681.02,720.97,786.35,850.46,892.96,933.9,975.31,"1,013.23","1,048.33"
+France,Health Indicators,Medical Services Spending,Medical Services Spending,EUR (€),Statista Market Insights|United Nations Conference on Trade and Development,536.61,492.26,520.38,551.71,590.96,628.59,652,676.69,703.02,728.45,751.7
+Germany,Health Indicators,Tobacco Spending,Tobacco Spending,EUR (€),Statista Market Insights|IMF,398.28,389.35,412.19,424.48,458.36,489.23,505.8,521.86,538.52,553.51,566.94
+France,Health Indicators,Tobacco Spending,Tobacco Spending,EUR (€),Statista Market Insights|IMF,399.32,370.39,432.23,446.58,475.53,502.47,516.48,531.6,548.3,564.45,579.13
+Germany,Health Indicators,Daily Smokers Rate,Daily Smokers Rate,percent,Statista Market Insights|World Bank|WHO,21.71,21.21,21.26,20.9,20.51,20.09,19.66,19.24,18.8,18.37,17.94
+France,Health Indicators,Daily Smokers Rate,Daily Smokers Rate,percent,Statista Market Insights|World Bank|WHO,34.45,34.56,34.55,34.6,34.65,34.69,34.72,34.75,34.75,34.77,34.77
+Germany,Health Indicators,Male Smoking Rate,Male Smoking Rate,percent,Statista Market Insights|World Bank|WHO,23.8,23.2,23.25,22.84,22.37,21.89,21.39,20.9,20.39,19.89,19.39
+France,Health Indicators,Male Smoking Rate,Male Smoking Rate,percent,Statista Market Insights|World Bank|WHO,35.6,35.5,35.5,35.45,35.39,35.34,35.28,35.22,35.15,35.09,35.03
+Germany,Health Indicators,Female Smoking Rate,Female Smoking Rate,percent,Statista Market Insights|World Bank|WHO,19.7,19.3,19.34,19.04,18.71,18.36,18,17.64,17.27,16.91,16.54
+France,Health Indicators,Female Smoking Rate,Female Smoking Rate,percent,Statista Market Insights|World Bank|WHO,33.4,33.7,33.67,33.81,33.96,34.09,34.2,34.31,34.39,34.47,34.53
+Germany,Health Indicators,Life Expectancy,Life Expectancy,years,Statista Market Insights|World Bank,80.85,80.66,80.6,80.6,80.55,80.5,80.45,80.39,80.34,80.29,80.24
+France,Health Indicators,Life Expectancy,Life Expectancy,years,Statista Market Insights|World Bank,82.38,82.19,82.99,82.95,82.92,82.92,82.93,82.95,82.97,82.99,83.02
+Germany,Health Indicators,Alcohol Consumption,Alcohol Consumption,liters,Statista Market Insights|World Bank,12.21,12.21,12.2,12.2,12.19,12.19,12.19,12.18,12.18,12.18,12.17
+France,Health Indicators,Alcohol Consumption,Alcohol Consumption,liters,Statista Market Insights|World Bank,11.2,11.11,11.01,10.91,10.81,10.71,10.61,10.51,10.41,10.3,10.2
+Germany,Health Indicators,Obesity Rate,Obesity Rate,percent,Statista Market Insights|World Bank,20.38,18.43,18.96,19.25,19.46,19.64,19.8,19.93,20.06,20.18,20.28
+France,Health Indicators,Obesity Rate,Obesity Rate,percent,Statista Market Insights|World Bank,9.88,9.62,9.63,9.49,9.33,9.16,8.99,8.82,8.65,8.47,8.3
+Germany,Health Indicators,Diabetes Prevalence,Diabetes Prevalence,percent,Statista Market Insights|World Bank,6.9,7.19,7.49,7.8,8.43,8.6,8.77,8.95,9.13,9.32,9.5
+France,Health Indicators,Diabetes Prevalence,Diabetes Prevalence,percent,Statista Market Insights|World Bank,5.3,5.67,6.07,6.5,6.52,6.7,6.91,7.12,7.33,7.54,7.76
+Germany,Health Indicators,"Hospital Beds Per 1,000 Inhabitants","Hospital Beds Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,7.71,7.64,7.55,7.57,7.54,7.51,7.48,7.45,7.43,7.41,7.39
+France,Health Indicators,"Hospital Beds Per 1,000 Inhabitants","Hospital Beds Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,5.77,5.65,5.68,5.64,5.6,5.56,5.53,5.5,5.47,5.45,5.43
+Germany,Health Indicators,Average Number Of Beds Per Hospital,Average Number Of Beds Per Hospital,#,Statista Market Insights|World Bank|OECD,691.31,684.37,676.65,678.62,675.89,673.08,670.44,668.01,665.81,663.83,662.07
+France,Health Indicators,Average Number Of Beds Per Hospital,Average Number Of Beds Per Hospital,#,Statista Market Insights|World Bank|OECD,516.7,506.11,508.85,505.45,501.95,498.64,495.62,492.89,490.45,488.26,486.33
+Germany,Health Indicators,"Physician Per 1,000 Inhabitants","Physician Per 1,000 Inhabitants",#,Statista Market Insights|World Bank,4.52,4.51,4.56,4.61,4.67,4.72,4.78,4.84,4.89,4.95,5.01
+France,Health Indicators,"Physician Per 1,000 Inhabitants","Physician Per 1,000 Inhabitants",#,Statista Market Insights|World Bank,3.34,3.34,3.35,3.36,3.37,3.38,3.39,3.4,3.41,3.42,3.43
+Germany,Health Indicators,"Dentists Per 1,000 Inhabitants","Dentists Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.84
+France,Health Indicators,"Dentists Per 1,000 Inhabitants","Dentists Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,0.68,0.69,0.69,0.7,0.71,0.71,0.72,0.72,0.73,0.73,0.74
+Germany,Health Indicators,"Nurses Per 1,000 Inhabitants","Nurses Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,12.3,12.33,12.49,12.64,12.78,12.91,13.02,13.13,13.23,13.32,13.4
+France,Health Indicators,"Nurses Per 1,000 Inhabitants","Nurses Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,9.38,9.63,9.74,9.83,9.9,9.97,10.03,10.09,10.14,10.18,10.22
+Germany,Health Indicators,"Pharmacists Per 1,000 Inhabitants","Pharmacists Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,0.67,0.67,0.67,0.67,0.67,0.68,0.68,0.68,0.68,0.68,0.68
+France,Health Indicators,"Pharmacists Per 1,000 Inhabitants","Pharmacists Per 1,000 Inhabitants",#,Statista Market Insights|World Bank|WHO,0.94,0.93,0.93,0.93,0.93,0.93,0.93,0.93,0.93,0.93,0.93
+Germany,Health Indicators,Physiotherapists Per 100K Inhabitants,Physiotherapists Per 100K Inhabitants,#,Statista Market Insights|World Bank,232.98,234.28,233.72,236.22,240.01,243.54,246.25,248.82,251.25,253.54,255.69
+France,Health Indicators,Physiotherapists Per 100K Inhabitants,Physiotherapists Per 100K Inhabitants,#,Statista Market Insights|World Bank,147.15,151.74,150.17,151.72,153.37,154.94,156.4,157.72,158.91,159.96,160.89

@@ -1,56 +1,41 @@
-const LEFT_HEX  = '#C0392B'  // Rot
-const MID_HEX   = '#EDE7D7'  // Creme
-const RIGHT_HEX = '#1E3A6E'  // Dunkelblau
-const NULL_HEX  = '#F2EEE3'  // Neutral / kein Wert
+const NULL_HEX = '#F2EEE3'
 
+// ─── Party family colors (based on European Parliament group colors) ──────────
+// ParlGov left-right scale: 1 = far left, 10 = far right, mid ≈ 5
+export const PARTY_FAMILIES = [
+  { label: 'Weit links',         max: 2.8,        color: '#8B0000', textColor: '#F7F4EC' },
+  { label: 'Sozialisten / Links',max: 3.8,        color: '#CC2020', textColor: '#F7F4EC' },
+  { label: 'Sozialdemokraten',   max: 4.6,        color: '#E8324A', textColor: '#F7F4EC' },
+  { label: 'Grüne',              max: 5.1,        color: '#3A8A3A', textColor: '#F7F4EC' },
+  { label: 'Liberale',           max: 5.6,        color: '#D4900A', textColor: '#17150F' },
+  { label: 'Konservative (EVP)', max: 7.0,        color: '#1547A0', textColor: '#F7F4EC' },
+  { label: 'Rechts-Konservative',max: 8.2,        color: '#0D3470', textColor: '#F7F4EC' },
+  { label: 'Weit rechts',        max: Infinity,   color: '#2B1A6E', textColor: '#F7F4EC' },
+]
+
+export function partyFamilyColor(value) {
+  if (value === null || value === undefined || isNaN(value)) return NULL_HEX
+  const family = PARTY_FAMILIES.find(f => value < f.max)
+  return family ? family.color : NULL_HEX
+}
+
+export function partyFamilyTextColor(value) {
+  if (value === null || value === undefined || isNaN(value)) return '#17150F'
+  const family = PARTY_FAMILIES.find(f => value < f.max)
+  return family ? family.textColor : '#17150F'
+}
+
+// Legacy: kept for any remaining callers
 function hexToRgb(hex) {
   const h = hex.replace('#', '')
-  return [
-    parseInt(h.slice(0, 2), 16),
-    parseInt(h.slice(2, 4), 16),
-    parseInt(h.slice(4, 6), 16),
-  ]
+  return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)]
 }
-
-function lerp(a, b, t) {
-  return Math.round(a + (b - a) * t)
-}
-
-function rgbToHex(r, g, b) {
-  return '#' + [r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('')
-}
-
-const LEFT_RGB  = hexToRgb(LEFT_HEX)
-const MID_RGB   = hexToRgb(MID_HEX)
-const RIGHT_RGB = hexToRgb(RIGHT_HEX)
-
-export function leftRightColor(value, meta) {
-  if (value === null || value === undefined || isNaN(value)) return NULL_HEX
-
-  const { valueMin, valueMax, mid } = meta
-  let t, from, to
-
-  if (value <= mid) {
-    t    = valueMin === mid ? 1 : (value - valueMin) / (mid - valueMin)
-    from = LEFT_RGB
-    to   = MID_RGB
-  } else {
-    t    = valueMax === mid ? 0 : (value - mid) / (valueMax - mid)
-    from = MID_RGB
-    to   = RIGHT_RGB
-  }
-
-  t = Math.max(0, Math.min(1, t))
-  return rgbToHex(
-    lerp(from[0], to[0], t),
-    lerp(from[1], to[1], t),
-    lerp(from[2], to[2], t),
-  )
-}
-
 export function textColorFor(bgHex) {
   const [r, g, b] = hexToRgb(bgHex)
-  // Relative luminance (sRGB)
-  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
-  return luminance > 0.55 ? '#17150F' : '#F7F4EC'
+  return ((0.299*r + 0.587*g + 0.114*b) / 255) > 0.55 ? '#17150F' : '#F7F4EC'
+}
+
+// Kept for backwards compat if anything still imports it
+export function leftRightColor(value) {
+  return partyFamilyColor(value)
 }

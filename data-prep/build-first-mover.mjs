@@ -110,7 +110,9 @@ function consensusAt(tStr, partyShortcut, excludeInstId = null) {
 
   if (matches.length < 2) return null
   const sumW = matches.reduce((a, b) => a + b.w, 0)
-  return matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  if (sumW <= 0) return null
+  const result = matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  return isFinite(result) ? result : null
 }
 
 /**
@@ -140,7 +142,9 @@ function instituteAt(tStr, partyShortcut, instId) {
 
   if (matches.length < 1) return null
   const sumW = matches.reduce((a, b) => a + b.w, 0)
-  return matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  if (sumW <= 0) return null
+  const result = matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  return isFinite(result) ? result : null
 }
 
 // ── Wöchentliche Zeitreihe aufbauen ─────────────────────────────────────────

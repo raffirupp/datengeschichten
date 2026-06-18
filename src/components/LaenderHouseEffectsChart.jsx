@@ -120,17 +120,17 @@ export default function LaenderHouseEffectsChart({ data }) {
                   return (
                     <td key={party}
                       onMouseEnter={() => {
-                        if (cell) setTooltip({ inst, party, ...cell })
+                        if (cell && cell.mean != null) setTooltip({ inst, party, ...cell })
                       }}
                       onMouseLeave={() => setTooltip(null)}
                       style={{
                         padding: '4px 6px', textAlign: 'center',
                         background: bg, color: fg,
-                        borderRadius: 3, cursor: cell ? 'default' : 'default',
+                        borderRadius: 3, cursor: 'default',
                         fontSize: 10, minWidth: 48, height: 28,
-                        opacity: cell ? 1 : 0.25,
+                        opacity: (cell && cell.mean != null) ? 1 : 0.25,
                       }}>
-                      {cell
+                      {(cell && cell.mean != null)
                         ? `${cell.mean > 0 ? '+' : ''}${cell.mean.toFixed(1)}`
                         : '—'
                       }
@@ -156,12 +156,12 @@ export default function LaenderHouseEffectsChart({ data }) {
           <div style={{ fontWeight: 700, marginBottom: 4 }}>{tooltip.inst} · {tooltip.party}</div>
           <div style={{ color: 'var(--color-muted)', lineHeight: 1.8 }}>
             <div>vs. andere Institute: <span style={{
-              color: tooltip.mean > 0 ? `rgb(${CORAL.join(',')})` : `rgb(${PETROL.join(',')})`,
+              color: (tooltip.mean ?? 0) > 0 ? `rgb(${CORAL.join(',')})` : `rgb(${PETROL.join(',')})`,
               fontWeight: 600,
             }}>
-              {tooltip.mean > 0 ? '+' : ''}{tooltip.mean.toFixed(1)} PP
+              {tooltip.mean != null ? `${tooltip.mean > 0 ? '+' : ''}${tooltip.mean.toFixed(1)} PP` : '—'}
             </span></div>
-            <div>Standardfehler: ±{tooltip.se.toFixed(2)} PP</div>
+            <div>Standardfehler: ±{tooltip.se != null ? tooltip.se.toFixed(2) : '—'} PP</div>
             <div>Stichproben: n = {tooltip.n}</div>
           </div>
         </div>

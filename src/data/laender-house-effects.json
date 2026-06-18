@@ -336,9 +336,9 @@
           "institute": "Institut Wahlkreisprognose",
           "party": "Linke",
           "partyId": "5",
-          "n": 10,
-          "mean": null,
-          "se": null
+          "n": 9,
+          "mean": -0.68,
+          "se": 0.18
         },
         {
           "institute": "Institut Wahlkreisprognose",

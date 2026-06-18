@@ -64,7 +64,9 @@ function rollingAvg(tStr, partyId, stateSurveys, excludeInstId = null) {
 
   if (matches.length < 2) return null
   const sumW = matches.reduce((a, b) => a + b.w, 0)
-  return matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  if (sumW <= 0) return null
+  const result = matches.reduce((a, b) => a + b.pct * b.w, 0) / sumW
+  return isFinite(result) ? result : null
 }
 
 const stateResults = {}

@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom'
-import pollData         from '../../data/polls-bundestag.json'
-import houseData        from '../../data/house-effects.json'
-import accuracyData     from '../../data/election-accuracy.json'
-import leadLagData      from '../../data/lead-lag.json'
-import PollSnapshot          from '../../components/PollSnapshot.jsx'
-import PollTrendChart        from '../../components/PollTrendChart.jsx'
-import HouseEffectsChart     from '../../components/HouseEffectsChart.jsx'
-import ElectionAccuracyChart from '../../components/ElectionAccuracyChart.jsx'
-import LeadLagChart          from '../../components/LeadLagChart.jsx'
+import pollData              from '../../data/polls-bundestag.json'
+import houseData             from '../../data/house-effects.json'
+import accuracyData          from '../../data/election-accuracy.json'
+import leadLagData           from '../../data/lead-lag.json'
+import firstMoverData        from '../../data/first-mover.json'
+import laenderHouseData      from '../../data/laender-house-effects.json'
+import PollSnapshot              from '../../components/PollSnapshot.jsx'
+import PollTrendChart            from '../../components/PollTrendChart.jsx'
+import HouseEffectsChart         from '../../components/HouseEffectsChart.jsx'
+import ElectionAccuracyChart     from '../../components/ElectionAccuracyChart.jsx'
+import LeadLagChart              from '../../components/LeadLagChart.jsx'
+import FirstMoverChart           from '../../components/FirstMoverChart.jsx'
+import LaenderHouseEffectsChart  from '../../components/LaenderHouseEffectsChart.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const { meta, polls, trend } = pollData
@@ -74,7 +78,8 @@ export default function WahltrendStory() {
           style={{ color: 'var(--color-muted)' }}>
           Alle Umfragen seit 2019 — geglättet zum Trend, und darunter:
           was die Institute voneinander unterscheidet, wie nah sie bei echten Wahlen lagen,
-          und wer auf Stimmungsänderungen zuerst reagiert. Stand: {meta.lastUpdated}.
+          wer Trendwenden zuerst erfasst, und wie sich das auf Bundesländer überträgt.
+          Stand: {meta.lastUpdated}.
         </p>
       </header>
 
@@ -128,22 +133,58 @@ export default function WahltrendStory() {
 
       <Divider />
 
-      {/* ── 4: Lead/Lag ── */}
+      {/* ── 4: Lead/Lag (Cross-Korrelation) ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel>Reaktionsgeschwindigkeit</SectionLabel>
+          <SectionLabel>Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
           <SectionHeading>Wer reagiert zuerst auf Stimmungsänderungen?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
-            Wenn sich etwas in der Stimmung bewegt — wessen Umfragen zeigen es als erstes?
-            Wir haben gemessen, bei welchem zeitlichen Versatz die wöchentlichen Änderungen
-            eines Instituts am besten mit dem Rest übereinstimmen. Positive Werte heißen:
-            dieses Institut erfasst Bewegungen früher. Negative Werte: es folgt dem Konsens
-            mit Verzögerung. Ausgefüllte Punkte = hinreichend belegt; Umrisse = wenig Daten,
-            mit Vorsicht lesen.
+            Cross-Korrelation der wöchentlichen Erstdifferenzen: bei welchem zeitlichen Versatz
+            stimmen die Änderungen eines Instituts am besten mit dem Gesamt-Konsens überein?
+            Positive Werte = Institut läuft vor, negative = folgt nach. Ausgefüllte Punkte
+            = hinreichend belegt (r ≥ 0,3, n ≥ 20); Umrisse = wenig Daten.
           </p>
         </header>
         <LeadLagChart data={leadLagData} />
+      </section>
+
+      <Divider />
+
+      {/* ── 4b: First-Mover (Threshold-Crossing) ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
+          <SectionHeading>Wer war bei echten Trendwenden zuerst da?</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose"
+            style={{ color: 'var(--color-muted)' }}>
+            Robusterer Ansatz: Wir suchen Momente, in denen der Gesamt-Konsens sich innerhalb
+            von acht Wochen um mindestens 1,5 Prozentpunkte verschiebt — das ist eine echte
+            Bewegung jenseits normaler Schwankungen. Dann messen wir, wann jedes Institut
+            die Halbzeit dieser Bewegung überschritten hatte. Lead-Zeit positiv = Institut war
+            früher dran. Caveat: häufig publizierende Institute haben strukturell einen Vorteil.
+          </p>
+        </header>
+        <FirstMoverChart data={firstMoverData} />
+      </section>
+
+      <Divider />
+
+      {/* ── 5: Bundesländer House Effects ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel>Bundesländer</SectionLabel>
+          <SectionHeading>House-Effects in Landtags-Umfragen</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose"
+            style={{ color: 'var(--color-muted)' }}>
+            Dieselbe Analyse für Landtagsumfragen: Welches Institut schätzt welche Partei
+            systematisch höher oder niedriger ein als die Kollegen? Nur Bundesländer mit
+            genug Daten (≥ 60 Umfragen, mind. 2 vergleichbare Institute) sind enthalten.
+            Die Datenlage ist deutlich dünner als auf Bundesebene — Zellen mit n &lt; 5
+            werden ausgeblendet.
+          </p>
+        </header>
+        <LaenderHouseEffectsChart data={laenderHouseData} />
       </section>
 
       <footer className="text-xs pt-4" style={{

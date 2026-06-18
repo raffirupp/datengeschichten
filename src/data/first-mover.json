@@ -1,0 +1,1270 @@
+{
+  "meta": {
+    "generated": "2026-06-18",
+    "method": "Threshold-Crossing: Breakout wenn |Δ8w Konsens| >= 1.5 PP. Lead = Institut-Halbzeitpunkt minus Konsens-Breakout-Woche.",
+    "threshold": 1.5,
+    "lookback": 8,
+    "minEvents": 3,
+    "startDate": "2020-01-01",
+    "note": "Positive Lead-Zeit = Institut erfasste Bewegung früher als der Gesamt-Konsens.",
+    "caveat": "Explorative Analyse. Event-Identifikation und Halbzeit-Kriterium sind Modell-Entscheidungen, die das Ergebnis beeinflussen."
+  },
+  "parties": [
+    "CDU/CSU",
+    "SPD",
+    "Grüne",
+    "AfD",
+    "FDP",
+    "Linke",
+    "BSW"
+  ],
+  "results": {
+    "CDU/CSU": {
+      "events": 24,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 1.5,
+          "n": 21,
+          "leads": [
+            -3,
+            -3,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2.9,
+          "n": 24,
+          "leads": [
+            -1,
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 2,
+          "leadMean": 1.9,
+          "n": 22,
+          "leads": [
+            -6,
+            -2,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "institute": "GMS",
+          "leadMedian": -3,
+          "leadMean": -2,
+          "n": 13,
+          "leads": [
+            -8,
+            -5,
+            -4,
+            -3,
+            -3,
+            -3,
+            -3,
+            -1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 2,
+          "leadMean": 2,
+          "n": 24,
+          "leads": [
+            -1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 2,
+          "leadMean": 1.6,
+          "n": 24,
+          "leads": [
+            -8,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5
+          ]
+        },
+        {
+          "institute": "Allensbach",
+          "leadMedian": 2,
+          "leadMean": 1.6,
+          "n": 11,
+          "leads": [
+            -5,
+            -1,
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            4,
+            4,
+            8
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 1,
+          "leadMean": 1.8,
+          "n": 19,
+          "leads": [
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "institute": "Civey",
+          "leadMedian": 2,
+          "leadMean": 2,
+          "n": 4,
+          "leads": [
+            1,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "institute": "Ipsos",
+          "leadMedian": 1,
+          "leadMean": 1.8,
+          "n": 13,
+          "leads": [
+            -1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 3,
+          "leadMean": 2,
+          "n": 12,
+          "leads": [
+            -2,
+            0,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    "SPD": {
+      "events": 16,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 3,
+          "leadMean": 2.9,
+          "n": 14,
+          "leads": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            8
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 2,
+          "leadMean": 2.5,
+          "n": 15,
+          "leads": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 3,
+          "leadMean": 3,
+          "n": 16,
+          "leads": [
+            0,
+            0,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "institute": "GMS",
+          "leadMedian": 0,
+          "leadMean": 0,
+          "n": 9,
+          "leads": [
+            -7,
+            -3,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            3,
+            8
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 2,
+          "leadMean": 1.9,
+          "n": 16,
+          "leads": [
+            -3,
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 3,
+          "leadMean": 2,
+          "n": 16,
+          "leads": [
+            -6,
+            -1,
+            0,
+            0,
+            0,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5,
+            5
+          ]
+        },
+        {
+          "institute": "Allensbach",
+          "leadMedian": -1,
+          "leadMean": -1,
+          "n": 5,
+          "leads": [
+            -5,
+            -2,
+            -1,
+            0,
+            3
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 0,
+          "leadMean": -0.2,
+          "n": 13,
+          "leads": [
+            -7,
+            -5,
+            -3,
+            -1,
+            -1,
+            -1,
+            0,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "Civey",
+          "leadMedian": 1,
+          "leadMean": 0.4,
+          "n": 8,
+          "leads": [
+            -6,
+            -2,
+            -2,
+            0,
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Ipsos",
+          "leadMedian": 0,
+          "leadMean": -0.1,
+          "n": 7,
+          "leads": [
+            -5,
+            -3,
+            0,
+            0,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 2,
+          "leadMean": 3.1,
+          "n": 9,
+          "leads": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            4,
+            4,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    "Grüne": {
+      "events": 18,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 2.6,
+          "n": 16,
+          "leads": [
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2.8,
+          "n": 18,
+          "leads": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 3,
+          "leadMean": 2.4,
+          "n": 16,
+          "leads": [
+            -2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            8
+          ]
+        },
+        {
+          "institute": "GMS",
+          "leadMedian": 1,
+          "leadMean": -0.5,
+          "n": 10,
+          "leads": [
+            -6,
+            -3,
+            -2,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 2,
+          "leadMean": 2.2,
+          "n": 18,
+          "leads": [
+            -1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 3,
+          "leadMean": 1.4,
+          "n": 18,
+          "leads": [
+            -6,
+            -5,
+            -4,
+            -1,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            7
+          ]
+        },
+        {
+          "institute": "Allensbach",
+          "leadMedian": 1,
+          "leadMean": 0.3,
+          "n": 4,
+          "leads": [
+            -3,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 0,
+          "leadMean": 0.6,
+          "n": 14,
+          "leads": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "institute": "Civey",
+          "leadMedian": -1,
+          "leadMean": -2.2,
+          "n": 6,
+          "leads": [
+            -8,
+            -6,
+            -4,
+            -1,
+            2,
+            4
+          ]
+        },
+        {
+          "institute": "Ipsos",
+          "leadMedian": 1,
+          "leadMean": 1.2,
+          "n": 13,
+          "leads": [
+            -6,
+            -3,
+            -3,
+            -1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            4,
+            4,
+            8
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 3,
+          "leadMean": 3.6,
+          "n": 7,
+          "leads": [
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            7
+          ]
+        }
+      ]
+    },
+    "AfD": {
+      "events": 14,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 1.3,
+          "n": 12,
+          "leads": [
+            -5,
+            -4,
+            0,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2.7,
+          "n": 14,
+          "leads": [
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 2,
+          "leadMean": 1.8,
+          "n": 12,
+          "leads": [
+            -1,
+            -1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "GMS",
+          "leadMedian": -2,
+          "leadMean": -3.3,
+          "n": 6,
+          "leads": [
+            -7,
+            -6,
+            -3,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 2,
+          "leadMean": 2,
+          "n": 14,
+          "leads": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 2,
+          "leadMean": 1.2,
+          "n": 14,
+          "leads": [
+            -6,
+            0,
+            0,
+            0,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "institute": "Allensbach",
+          "leadMedian": -1,
+          "leadMean": -1.9,
+          "n": 9,
+          "leads": [
+            -6,
+            -5,
+            -4,
+            -2,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 3,
+          "leadMean": 2.1,
+          "n": 10,
+          "leads": [
+            -3,
+            -1,
+            1,
+            2,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5
+          ]
+        },
+        {
+          "institute": "Ipsos",
+          "leadMedian": 1,
+          "leadMean": 1,
+          "n": 8,
+          "leads": [
+            -2,
+            -1,
+            0,
+            1,
+            1,
+            2,
+            2,
+            5
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 3,
+          "leadMean": 2.4,
+          "n": 8,
+          "leads": [
+            -5,
+            -1,
+            2,
+            3,
+            3,
+            4,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    "FDP": {
+      "events": 8,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 1.8,
+          "n": 8,
+          "leads": [
+            -2,
+            -1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            8
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2.8,
+          "n": 8,
+          "leads": [
+            1,
+            1,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 3,
+          "leadMean": 2.4,
+          "n": 8,
+          "leads": [
+            0,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "GMS",
+          "leadMedian": 0,
+          "leadMean": 0.2,
+          "n": 6,
+          "leads": [
+            -7,
+            -3,
+            -2,
+            0,
+            5,
+            8
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 1,
+          "leadMean": 1.8,
+          "n": 8,
+          "leads": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            5
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 2,
+          "leadMean": 1.1,
+          "n": 8,
+          "leads": [
+            -5,
+            -1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 1,
+          "leadMean": 2,
+          "n": 5,
+          "leads": [
+            -4,
+            1,
+            1,
+            4,
+            8
+          ]
+        },
+        {
+          "institute": "Civey",
+          "leadMedian": 2,
+          "leadMean": -0.2,
+          "n": 4,
+          "leads": [
+            -5,
+            -1,
+            2,
+            3
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 3,
+          "leadMean": 2,
+          "n": 4,
+          "leads": [
+            -2,
+            1,
+            3,
+            6
+          ]
+        }
+      ]
+    },
+    "Linke": {
+      "events": 6,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 1.7,
+          "n": 6,
+          "leads": [
+            -2,
+            1,
+            2,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2.5,
+          "n": 6,
+          "leads": [
+            1,
+            1,
+            2,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": 1,
+          "leadMean": 0.3,
+          "n": 6,
+          "leads": [
+            -3,
+            -2,
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 4,
+          "leadMean": 3,
+          "n": 6,
+          "leads": [
+            2,
+            2,
+            2,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 2,
+          "leadMean": 2.2,
+          "n": 6,
+          "leads": [
+            1,
+            1,
+            2,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 2,
+          "leadMean": 2.8,
+          "n": 5,
+          "leads": [
+            2,
+            2,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "institute": "Institut Wahlkreisprognose",
+          "leadMedian": 2,
+          "leadMean": -0.2,
+          "n": 4,
+          "leads": [
+            -3,
+            -3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "BSW": {
+      "events": 3,
+      "threshold": 1.5,
+      "lookback": 8,
+      "institutes": [
+        {
+          "institute": "Infratest dimap",
+          "leadMedian": 2,
+          "leadMean": 1.7,
+          "n": 3,
+          "leads": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "institute": "Forsa",
+          "leadMedian": 3,
+          "leadMean": 2,
+          "n": 3,
+          "leads": [
+            -1,
+            3,
+            4
+          ]
+        },
+        {
+          "institute": "Verian (Emnid)",
+          "leadMedian": -1,
+          "leadMean": -1,
+          "n": 3,
+          "leads": [
+            -5,
+            -1,
+            3
+          ]
+        },
+        {
+          "institute": "INSA",
+          "leadMedian": 1,
+          "leadMean": 0.7,
+          "n": 3,
+          "leads": [
+            -2,
+            1,
+            3
+          ]
+        },
+        {
+          "institute": "Forschungsgruppe Wahlen",
+          "leadMedian": 4,
+          "leadMean": 3.7,
+          "n": 3,
+          "leads": [
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "institute": "YouGov",
+          "leadMedian": 1,
+          "leadMean": 1,
+          "n": 3,
+          "leads": [
+            -2,
+            1,
+            4
+          ]
+        }
+      ]
+    }
+  }
+}

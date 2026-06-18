@@ -49,6 +49,42 @@ const stories = [
     status: 'experiment',
     isNew: true,
   },
+  {
+    key: 'vergleich-leben',
+    title: 'Zwei Arten zu leben',
+    teaser: 'Frankreich raucht mehr, Deutschland hat häufiger Übergewicht — und trotzdem leben die Nachbarn länger. Vier Kennzahlen, die gängige Annahmen infrage stellen.',
+    category: 'Frankreich & Deutschland im Vergleich',
+    kicker: 'VERGLEICH · LEBEN',
+    status: 'live',
+    isNew: true,
+  },
+  {
+    key: 'vergleich-geld',
+    title: 'Das Schulden-Rennen',
+    teaser: 'Zwei Nachbarn, zwei Richtungen: Deutschland hält seine Schuldenquote, Frankreich zieht davon. Wie weit öffnet sich die Schere bis 2030?',
+    category: 'Frankreich & Deutschland im Vergleich',
+    kicker: 'VERGLEICH · GELD',
+    status: 'live',
+    isNew: true,
+  },
+  {
+    key: 'vergleich-handel',
+    title: 'Gleiches Bild, anderes Vorzeichen',
+    teaser: 'Deutschland verkauft der Welt mehr, als es einkauft — Frankreich genau umgekehrt. Dieselbe Bilanz, einmal gespiegelt.',
+    category: 'Frankreich & Deutschland im Vergleich',
+    kicker: 'VERGLEICH · HANDEL',
+    status: 'live',
+    isNew: true,
+  },
+  {
+    key: 'vergleich-menschen',
+    title: 'Die Welle, die durch Deutschland rollt',
+    teaser: 'Deutschlands geburtenstarke Jahrgänge nähern sich der Rente, Frankreich bleibt jünger. Zwei Altersstrukturen im Zeitverlauf.',
+    category: 'Frankreich & Deutschland im Vergleich',
+    kicker: 'VERGLEICH · MENSCHEN',
+    status: 'live',
+    isNew: true,
+  },
 ]
 
 export default stories

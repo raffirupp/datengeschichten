@@ -42,7 +42,6 @@ export default function LaenderHouseEffectsChart({ data }) {
     stateNames.find(s => s.includes('Bayerisch')) || stateNames[0]
   )
   const [tooltip, setTooltip] = useState(null)
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
 
   const stateData = data.states[state]
 
@@ -120,12 +119,8 @@ export default function LaenderHouseEffectsChart({ data }) {
                   const fg   = cellFg(cell?.mean)
                   return (
                     <td key={party}
-                      onMouseEnter={(e) => {
-                        if (cell) {
-                          setTooltip({ inst, party, ...cell })
-                          const r = e.currentTarget.getBoundingClientRect()
-                          setTooltipPos({ x: r.left, y: r.bottom })
-                        }
+                      onMouseEnter={() => {
+                        if (cell) setTooltip({ inst, party, ...cell })
                       }}
                       onMouseLeave={() => setTooltip(null)}
                       style={{

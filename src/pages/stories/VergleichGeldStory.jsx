@@ -206,7 +206,7 @@ export default function VergleichGeldStory() {
   const frDefizit = (indicators.staatsausgaben.FR['2024'] - indicators.staatseinnahmen.FR['2024']).toFixed(1)
 
   return (
-    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '720px' }}>
+    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <div>
         <Link to="/" style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: MUTED, textDecoration: 'none' }}>
           ← Zurück

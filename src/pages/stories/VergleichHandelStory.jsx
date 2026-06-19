@@ -204,7 +204,7 @@ function HandelChart() {
 
 export default function VergleichHandelStory() {
   return (
-    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '720px' }}>
+    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <div>
         <Link to="/" style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: MUTED, textDecoration: 'none' }}>
           ← Zurück

@@ -176,7 +176,7 @@ export default function VergleichMenschenStory() {
   const isForecast = year > LAST_ACTUAL
 
   return (
-    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '720px' }}>
+    <article style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <div>
         <Link to="/" style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: MUTED, textDecoration: 'none' }}>
           ← Zurück

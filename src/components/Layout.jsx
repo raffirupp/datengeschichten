@@ -19,14 +19,14 @@ export default function Layout({ children }) {
         className="px-6 py-3"
         style={{ borderBottom: '1px solid var(--color-rule)' }}
       >
-        <nav className="max-w-5xl mx-auto flex items-center gap-5">
+        <nav className="max-w-4xl mx-auto flex items-center gap-5">
           <NavLink to="/">Geschichten</NavLink>
           <NavLink to="/werkstatt">Werkstatt</NavLink>
         </nav>
       </div>
 
       <main className="flex-1 px-6 py-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {children}
         </div>
       </main>
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
           color: 'var(--color-muted)',
         }}
       >
-        <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
+        <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
           <span>Daten, Karten, Experimente — datengeschichten.eu</span>
           <div className="flex items-center gap-4">
             <NavLink to="/werkstatt">Werkstatt</NavLink>

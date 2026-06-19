@@ -195,7 +195,7 @@ function Methodik() {
 
 export default function VergleichLebenStory() {
   return (
-    <article style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', maxWidth: '720px' }}>
+    <article style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
       <div>
         <Link to="/" style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: MUTED, textDecoration: 'none' }}>
           ← Zurück

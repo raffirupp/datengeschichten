@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 480" font-family="serif">
+  <rect width="620" height="480" fill="#F7F4EC"/>
+
+  <!-- Kicker -->
+  <text x="48" y="28" font-family="monospace" font-size="11" fill="#8A8579" letter-spacing="2">VERGLEICH · LEBEN</text>
+
+  <!-- Headline -->
+  <text x="48" y="60" font-size="28" fill="#17150F">Zwei Arten zu <tspan font-weight="700">leben</tspan></text>
+  <text x="48" y="84" font-size="14" fill="#6B6658">Frankreich raucht mehr — und lebt trotzdem länger.</text>
+
+  <!-- ── Held: Lebenserwartung ── -->
+  <text x="48" y="116" font-family="monospace" font-size="10" fill="#8A8579" letter-spacing="1.5">LEBENSERWARTUNG (JAHRE, 2024) · ACHSE 70–85</text>
+
+  <!-- Achse 70-85 = 420px breit (x:48..468) -->
+  <line x1="48" y1="145" x2="468" y2="145" stroke="#D8D2C4" stroke-width="0.8"/>
+  <text x="48" y="158" font-family="monospace" font-size="9" fill="#A39E90">70</text>
+  <text x="468" y="158" font-family="monospace" font-size="9" fill="#A39E90" text-anchor="end">85</text>
+
+  <!-- FR: 82,95 → x = 48 + (82.95-70)/15*420 = 48+362 = 410 -->
+  <rect x="48" y="125" width="362" height="14" rx="3" fill="#E6C6BA"/>
+  <rect x="48" y="125" width="362" height="14" rx="3" fill="#BE5A3C" opacity="0.0"/>
+  <line x1="48" y1="125" x2="410" y2="125" stroke="#BE5A3C" stroke-width="0"/>
+  <rect x="48" y="126" width="362" height="12" rx="3" fill="#BE5A3C" opacity="0.8"/>
+  <circle cx="410" cy="132" r="5" fill="#BE5A3C"/>
+  <text x="416" y="137" font-size="16" fill="#9A4225" font-weight="700">83,0 J.</text>
+  <text x="48" y="123" font-family="monospace" font-size="9" fill="#9A4225">Frankreich</text>
+
+  <!-- DE: 80,6 → x = 48 + (80.6-70)/15*420 = 48+297 = 345 -->
+  <rect x="48" y="149" width="297" height="12" rx="3" fill="#AEC6C2" opacity="0.9"/>
+  <circle cx="345" cy="155" r="5" fill="#1C5D57"/>
+  <text x="351" y="160" font-size="16" fill="#0E3D38" font-weight="700">80,6 J.</text>
+  <text x="48" y="147" font-family="monospace" font-size="9" fill="#0E3D38">Deutschland</text>
+
+  <!-- ── Dumbbell Rows ── -->
+  <!-- Row: Raucheranteil (FR 34.6%, DE 20.9%) Achse 0-40% -->
+  <text x="48" y="205" font-family="monospace" font-size="10" fill="#8A8579" letter-spacing="1.5">RAUCHERANTEIL (% ERWACHSENE)</text>
+
+  <!-- Achse 0-40 = 420px (x:48..468) -->
+  <line x1="48" y1="228" x2="468" y2="228" stroke="#E4DECF" stroke-width="0.8"/>
+  <!-- FR: 34.6 → x = 48 + 34.6/40*420 = 48+363 = 411 -->
+  <!-- DE: 20.9 → x = 48 + 20.9/40*420 = 48+219 = 267 -->
+  <line x1="267" y1="222" x2="411" y2="222" stroke="#D8D2C4" stroke-width="1.5"/>
+  <circle cx="411" cy="222" r="6" fill="#BE5A3C"/>
+  <text x="418" y="226" font-family="monospace" font-size="11" fill="#9A4225" font-weight="600">34,6 %</text>
+  <circle cx="267" cy="222" r="6" fill="#1C5D57"/>
+  <text x="200" y="226" font-family="monospace" font-size="11" fill="#0E3D38" font-weight="600" text-anchor="end">20,9 %</text>
+  <text x="48" y="242" font-family="monospace" font-size="9" fill="#A39E90">0</text>
+  <text x="468" y="242" font-family="monospace" font-size="9" fill="#A39E90" text-anchor="end">40 %</text>
+
+  <!-- Row: Übergewicht (FR 9.5%, DE 19.3%) Achse 0-25% -->
+  <text x="48" y="268" font-family="monospace" font-size="10" fill="#8A8579" letter-spacing="1.5">ADIPOSITAS, SELBSTBERICHTET (% ERWACHSENE)</text>
+  <line x1="48" y1="290" x2="468" y2="290" stroke="#E4DECF" stroke-width="0.8"/>
+  <!-- FR: 9.5 → x = 48 + 9.5/25*420 = 48+159 = 207 -->
+  <!-- DE: 19.3 → x = 48 + 19.3/25*420 = 48+324 = 372 -->
+  <line x1="207" y1="284" x2="372" y2="284" stroke="#D8D2C4" stroke-width="1.5"/>
+  <circle cx="207" cy="284" r="6" fill="#BE5A3C"/>
+  <text x="200" y="288" font-family="monospace" font-size="11" fill="#9A4225" font-weight="600" text-anchor="end">9,5 %</text>
+  <circle cx="372" cy="284" r="6" fill="#1C5D57"/>
+  <text x="378" y="288" font-family="monospace" font-size="11" fill="#0E3D38" font-weight="600">19,3 %</text>
+  <text x="48" y="304" font-family="monospace" font-size="9" fill="#A39E90">0</text>
+  <text x="468" y="304" font-family="monospace" font-size="9" fill="#A39E90" text-anchor="end">25 %</text>
+
+  <!-- Row: Alkohol (FR 10.9L, DE 12.2L) Achse 0-14L -->
+  <text x="48" y="328" font-family="monospace" font-size="10" fill="#8A8579" letter-spacing="1.5">ALKOHOL PRO KOPF (LITER REINER ALKOHOL / JAHR)</text>
+  <line x1="48" y1="350" x2="468" y2="350" stroke="#E4DECF" stroke-width="0.8"/>
+  <!-- FR: 10.91 → x = 48 + 10.91/14*420 = 48+327 = 375 -->
+  <!-- DE: 12.2 → x = 48 + 12.2/14*420 = 48+366 = 414 -->
+  <line x1="375" y1="344" x2="414" y2="344" stroke="#D8D2C4" stroke-width="1.5"/>
+  <circle cx="375" cy="344" r="6" fill="#BE5A3C"/>
+  <text x="368" y="348" font-family="monospace" font-size="11" fill="#9A4225" font-weight="600" text-anchor="end">10,9 L</text>
+  <circle cx="414" cy="344" r="6" fill="#1C5D57"/>
+  <text x="420" y="348" font-family="monospace" font-size="11" fill="#0E3D38" font-weight="600">12,2 L</text>
+  <text x="48" y="364" font-family="monospace" font-size="9" fill="#A39E90">0</text>
+  <text x="468" y="364" font-family="monospace" font-size="9" fill="#A39E90" text-anchor="end">14 L</text>
+
+  <!-- Paradox-Annotation -->
+  <path d="M411,222 Q440,200 430,175 Q420,155 416,138" stroke="#D8D2C4" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+  <text x="445" y="185" font-family="monospace" font-size="9" fill="#A39E90">Raucht mehr,</text>
+  <text x="445" y="197" font-family="monospace" font-size="9" fill="#A39E90">lebt länger?</text>
+
+  <!-- Quelle -->
+  <text x="48" y="470" font-family="monospace" font-size="9" fill="#A39E90">Quelle: Statista Market Insights (Eurostat, OECD, WHO)</text>
+</svg>

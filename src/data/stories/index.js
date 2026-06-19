@@ -52,7 +52,7 @@ const stories = [
   {
     key: 'vergleich-leben',
     title: 'Zwei Arten zu leben',
-    teaser: 'Frankreich raucht mehr, Deutschland hat häufiger Übergewicht — und trotzdem leben die Nachbarn länger. Vier Kennzahlen, die gängige Annahmen infrage stellen.',
+    teaser: 'Frankreich raucht mehr, Deutschland ist häufiger übergewichtig — und trotzdem leben die Nachbarn länger. Vier Kennzahlen, die gängige Annahmen infrage stellen.',
     category: 'Frankreich & Deutschland im Vergleich',
     kicker: 'VERGLEICH · LEBEN',
     status: 'live',

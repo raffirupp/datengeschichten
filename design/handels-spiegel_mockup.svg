@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="serif">
+  <!-- Background -->
+  <rect width="640" height="400" fill="#F7F4EC"/>
+
+  <!-- Kicker -->
+  <text x="56" y="28" font-family="monospace" font-size="11" fill="#8A8579" letter-spacing="2">VERGLEICH · HANDEL</text>
+
+  <!-- Headline: "Gleiches Bild, anderes Vorzeichen" -->
+  <text x="56" y="58" font-size="28" fill="#17150F" font-weight="400">Gleiches Bild, anderes <tspan font-weight="700">Vorzeichen</tspan></text>
+
+  <!-- Chart area: top=90, left=56, right=560, bottom=360 -->
+  <!-- y-axis: ±250 Mrd, zero at y=225 -->
+  <!-- x-axis: 2021-2031, x=56..560 (500px wide) -->
+
+  <!-- Y-Gridlines -->
+  <line x1="56" y1="135" x2="560" y2="135" stroke="#E4DECF" stroke-width="0.5"/>
+  <line x1="56" y1="180" x2="560" y2="180" stroke="#E4DECF" stroke-width="0.5"/>
+  <line x1="56" y1="270" x2="560" y2="270" stroke="#E4DECF" stroke-width="0.5"/>
+  <line x1="56" y1="315" x2="560" y2="315" stroke="#E4DECF" stroke-width="0.5"/>
+
+  <!-- Null-Linie -->
+  <line x1="56" y1="225" x2="560" y2="225" stroke="#17150F" stroke-width="1.5"/>
+  <text x="44" y="229" font-family="monospace" font-size="10" fill="#A39E90" text-anchor="end">0</text>
+  <text x="44" y="139" font-family="monospace" font-size="10" fill="#A39E90" text-anchor="end">+200</text>
+  <text x="44" y="319" font-family="monospace" font-size="10" fill="#A39E90" text-anchor="end">−200</text>
+
+  <!-- Ist/Prognose Trennlinie bei 2024 (x ≈ 379) -->
+  <line x1="379" y1="85" x2="379" y2="360" stroke="#D8D2C4" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="370" y="82" font-family="monospace" font-size="9" fill="#A39E90" text-anchor="end">bis 2024: Ist</text>
+  <text x="388" y="82" font-family="monospace" font-size="9" fill="#A39E90">ab 2025: Prognose</text>
+
+  <!-- DE Fläche (über Null) Ist: 2021→2024 -->
+  <!-- x(2021)=56, x(2022)=167, x(2023)=278, x(2024)=379 -->
+  <!-- DE Werte: 182, 88, 217, 240 → y = 225 - val*(135/250) -->
+  <!-- y(182)=127, y(88)=177, y(217)=107, y(240)=95 -->
+  <path d="M56,225 L56,127 Q111,102 167,177 Q222,207 278,107 Q328,75 379,95 L379,225 Z"
+        fill="#AEC6C2" opacity="0.75"/>
+  <!-- DE Linie Ist -->
+  <path d="M56,127 Q111,102 167,177 Q222,207 278,107 Q328,75 379,95"
+        fill="none" stroke="#1C5D57" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- DE Fläche Prognose: 2024→2031 (lighter) -->
+  <!-- x(2025)=434, x(2027)=490, x(2031)=560 -->
+  <!-- DE Prognose: 234,231,223,215,208,201,194 → y≈97,100,106,112,117,122,130 -->
+  <path d="M379,95 L434,97 L490,106 L560,130 L560,225 L379,225 Z"
+        fill="#CFDAD7" opacity="0.55"/>
+  <!-- DE Linie Prognose -->
+  <path d="M379,95 L434,97 L490,106 L560,130"
+        fill="none" stroke="#1C5D57" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
+
+  <!-- FR Fläche (unter Null) Ist: 2021→2024 -->
+  <!-- FR Werte: -110,-192,-127,-102 → y = 225 + |val|*(135/250) -->
+  <!-- y(−110)=284, y(−192)=329, y(−127)=294, y(−102)=280 -->
+  <path d="M56,225 L56,284 Q111,354 167,329 Q222,299 278,294 Q328,282 379,280 L379,225 Z"
+        fill="#E6C6BA" opacity="0.75"/>
+  <!-- FR Linie Ist -->
+  <path d="M56,284 Q111,354 167,329 Q222,299 278,294 Q328,282 379,280"
+        fill="none" stroke="#BE5A3C" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- FR Fläche Prognose: 2024→2031 (lighter) -->
+  <!-- FR Prognose: -127,-144,-157,-170,-182,-195,-206 → y≈294,303,310,317,323,330,336 -->
+  <path d="M379,280 L434,294 L490,310 L560,336 L560,225 L379,225 Z"
+        fill="#F0DAD1" opacity="0.55"/>
+  <!-- FR Linie Prognose -->
+  <path d="M379,280 L434,294 L490,310 L560,336"
+        fill="none" stroke="#BE5A3C" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
+
+  <!-- Direkte Labels in den Flächen -->
+  <text x="180" y="155" font-family="monospace" font-size="11" fill="#0E3D38" font-weight="600">Deutschland — Überschuss</text>
+  <text x="180" y="310" font-family="monospace" font-size="11" fill="#9A4225" font-weight="600">Frankreich — Defizit</text>
+
+  <!-- Endpunkt-Marker 2024 (groß) -->
+  <circle cx="379" cy="95" r="4.5" fill="#1C5D57"/>
+  <text x="369" y="86" font-size="18" fill="#0E3D38" font-weight="700" text-anchor="end">+240 Mrd €</text>
+
+  <circle cx="379" cy="280" r="4.5" fill="#BE5A3C"/>
+  <text x="369" y="298" font-size="18" fill="#9A4225" font-weight="700" text-anchor="end">−102 Mrd €</text>
+
+  <!-- Prognose-Endpunkt 2031 (klein) -->
+  <circle cx="560" cy="130" r="3" fill="#1C5D57" opacity="0.6"/>
+  <text x="565" y="134" font-family="monospace" font-size="10" fill="#0E3D38" opacity="0.8">194 Mrd €</text>
+
+  <circle cx="560" cy="336" r="3" fill="#BE5A3C" opacity="0.6"/>
+  <text x="565" y="340" font-family="monospace" font-size="10" fill="#9A4225" opacity="0.8">−206 Mrd €</text>
+
+  <!-- X-Achse Labels -->
+  <text x="56" y="378" font-family="monospace" font-size="10" fill="#A39E90">2021</text>
+  <text x="379" y="378" font-family="monospace" font-size="10" fill="#A39E90" text-anchor="middle">2024</text>
+  <text x="560" y="378" font-family="monospace" font-size="10" fill="#A39E90" text-anchor="end">2031</text>
+
+  <!-- Quelle -->
+  <text x="56" y="395" font-family="monospace" font-size="9" fill="#A39E90">Quelle: Statista Market Insights</text>
+</svg>

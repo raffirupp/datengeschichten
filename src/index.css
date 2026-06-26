@@ -14,6 +14,7 @@
   --color-muted: #6B6658;
   --color-accentWarm: #BE5A3C;
   --color-accentGold: #C08A1E;
+  --color-hero: #111110;
 
   --font-display: "Fraunces Variable", Georgia, serif;
   --font-sans: "Geist", system-ui, sans-serif;
@@ -21,7 +22,7 @@
 }
 
 html {
-  background-color: var(--color-paper);
+  background-color: #FFFFFF;
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

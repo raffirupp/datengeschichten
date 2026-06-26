@@ -1,49 +1,33 @@
 import { Link } from 'react-router-dom'
-
-function NavLink({ to, children }) {
-  return (
-    <Link
-      to={to}
-      className="no-underline"
-      style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-muted)' }}
-    >
-      {children}
-    </Link>
-  )
-}
+import NavBar from './NavBar.jsx'
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-paper)', color: 'var(--color-ink)' }}>
-      <div
-        className="px-6 py-3"
-        style={{ borderBottom: '1px solid var(--color-rule)' }}
-      >
-        <nav className="max-w-4xl mx-auto flex items-center gap-5">
-          <NavLink to="/">Geschichten</NavLink>
-          <NavLink to="/werkstatt">Werkstatt</NavLink>
-        </nav>
-      </div>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FFFFFF', color: 'var(--color-ink)' }}>
+      <NavBar />
 
       <main className="flex-1 px-6 py-10">
-        <div className="max-w-4xl mx-auto">
+        <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
           {children}
         </div>
       </main>
 
       <footer
-        className="px-6 py-6 text-xs"
+        className="px-6 py-5 text-xs"
         style={{
-          borderTop: '1px solid var(--color-rule)',
+          backgroundColor: 'var(--color-hero)',
           fontFamily: 'var(--font-mono)',
-          color: 'var(--color-muted)',
+          color: 'rgba(255,255,255,0.3)',
         }}
       >
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
-          <span>Daten, Karten, Experimente — datengeschichten.eu</span>
-          <div className="flex items-center gap-4">
-            <NavLink to="/werkstatt">Werkstatt</NavLink>
-          </div>
+        <div style={{ maxWidth: '80rem', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+          <span>datengeschichten.eu · © 2026</span>
+          <Link
+            to="/werkstatt"
+            style={{ color: 'rgba(255,255,255,0.3)', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+          >
+            Werkstatt
+          </Link>
         </div>
       </footer>
     </div>

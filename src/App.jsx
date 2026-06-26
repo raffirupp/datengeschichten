@@ -6,12 +6,10 @@ import WerkstattPage from './pages/WerkstattPage.jsx'
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Gallery />} />
-        <Route path="/story/:key" element={<StoryPage />} />
-        <Route path="/werkstatt" element={<WerkstattPage />} />
-      </Routes>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Gallery />} />
+      <Route path="/story/:key" element={<Layout><StoryPage /></Layout>} />
+      <Route path="/werkstatt" element={<Layout><WerkstattPage /></Layout>} />
+    </Routes>
   )
 }

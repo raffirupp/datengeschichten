@@ -16,7 +16,6 @@ const PATHS = geojson.features.map((feat) => ({
 }))
 
 // ─── Deutsche Parteifarben für Länder-Karte ──────────────────────────────────
-// Werte kommen aus partyLeftRight.js — jeder Wert = eindeutige Partei
 const PARTY_BY_VALUE = {
   1.3:  { label: 'Die Linke',     color: '#BE3075', text: '#F7F4EC' },
   3.2:  { label: 'Grüne',         color: '#46962B', text: '#F7F4EC' },
@@ -35,19 +34,17 @@ const NULL_TEXT   = '#17150F'
 
 function partyForValue(value) {
   if (value == null) return { label: '—', color: NULL_COLOR, text: NULL_TEXT }
-  // Round to 1 decimal to match map keys
   const key = Math.round(value * 10) / 10
   return PARTY_BY_VALUE[key] ?? { label: '?', color: NULL_COLOR, text: NULL_TEXT }
 }
 
-// ─── Legend ──────────────────────────────────────────────────────────────────
-function LaenderLegend({ presentValues }) {
+// ─── Legend — alle Parteien immer anzeigen ───────────────────────────────────
+function LaenderLegend() {
   const items = Object.entries(PARTY_BY_VALUE)
-    .filter(([v]) => presentValues.has(Number(v)))
     .sort((a, b) => Number(a[0]) - Number(b[0]))
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 12px' }}>
       {items.map(([, { label, color }]) => (
         <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
           <span style={{
@@ -76,14 +73,6 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
     return map
   }, [dataForYear])
 
-  const presentValues = useMemo(() => {
-    const s = new Set()
-    for (const { value } of Object.values(fills)) {
-      if (value != null) s.add(Math.round(value * 10) / 10)
-    }
-    return s
-  }, [fills])
-
   return (
     <div className="flex flex-col gap-4">
       <svg
@@ -104,8 +93,8 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
               key={code}
               d={d}
               fill={color}
-              stroke="#F7F4EC"
-              strokeWidth={isHovered ? 0 : 0.8}
+              stroke="#FFFFFF"
+              strokeWidth={isHovered ? 0 : 1.2}
               opacity={isDimmed ? 0.45 : 1}
               style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(code)}
@@ -149,34 +138,9 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
             />
           )
         })()}
-
-        {/* Code-Labels */}
-        {PATHS.map(({ code, d, centroid }) => {
-          if (!d) return null
-          const { text, value } = fills[code] ?? { text: NULL_TEXT, value: null }
-          const isDimmed = highlightCode && highlightCode !== code
-          return (
-            <text
-              key={`label-${code}`}
-              x={centroid[0]}
-              y={centroid[1]}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill={text}
-              opacity={isDimmed ? 0.45 : 1}
-              style={{
-                fontFamily: 'var(--font-mono)', fontSize: '11px',
-                letterSpacing: '-0.01em', pointerEvents: 'none', userSelect: 'none',
-                transition: 'opacity 0.5s ease, fill 0.5s ease',
-              }}
-            >
-              {code}
-            </text>
-          )
-        })}
       </svg>
 
-      <LaenderLegend presentValues={presentValues} />
+      <LaenderLegend />
     </div>
   )
 }

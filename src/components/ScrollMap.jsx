@@ -10,7 +10,7 @@ export default function ScrollMap({ beats, manualYear, onActiveBeatChange, highl
     scroller
       .setup({
         step: '.scrollmap-step',
-        offset: 0.6,
+        offset: 0.5,
       })
       .onStepEnter(({ index }) => setActiveIndex(index))
 
@@ -33,19 +33,21 @@ export default function ScrollMap({ beats, manualYear, onActiveBeatChange, highl
 
   return (
     <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div style={{ position: 'sticky', top: '1.5rem', alignSelf: 'start', height: 'fit-content' }}>
+      {/* Sticky map — top offset accounts for fixed NavBar (52px) */}
+      <div style={{ position: 'sticky', top: '5rem', alignSelf: 'start', height: 'fit-content' }}>
         {renderMap(effectiveYear, effectiveHighlight)}
       </div>
 
+      {/* Scrollable text steps */}
       <div className="flex flex-col">
         {beats.map((beat, i) => (
           <div
             key={i}
             className="scrollmap-step flex flex-col gap-2 justify-center"
             style={{
-              minHeight: '60vh',
-              opacity: i === activeIndex ? 1 : 0.4,
-              transition: 'opacity 0.4s ease',
+              minHeight: '50vh',
+              opacity: i === activeIndex ? 1 : 0.35,
+              transition: 'opacity 0.35s ease',
             }}
           >
             <span
@@ -80,6 +82,8 @@ export default function ScrollMap({ beats, manualYear, onActiveBeatChange, highl
             </p>
           </div>
         ))}
+        {/* Spacer so last step can reach center without map unsticking */}
+        <div style={{ height: '40vh' }} />
       </div>
     </div>
   )

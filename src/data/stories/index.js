@@ -4,8 +4,7 @@ const stories = [
     title: 'Europa wechselt die Farbe',
     teaser: '25 Jahre Regierungswechsel auf einer Karte — wie die politische Mitte Europas wandert, Jahr für Jahr.',
     category: 'Europa',
-    kicker: 'Leitgeschichte · Europa',
-    featured: true,
+    kicker: 'Europa · Karte',
     status: 'live',
   },
   {
@@ -14,6 +13,7 @@ const stories = [
     teaser: 'Alle Sonntagsfragen auf einen Blick, geglättet zu einem Trend — wird laufend aktualisiert.',
     category: 'Deutschland',
     kicker: 'Wahltrend · Bundestag',
+    featured: true,
     status: 'live',
   },
   {

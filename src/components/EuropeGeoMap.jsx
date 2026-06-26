@@ -1,13 +1,12 @@
 import { useMemo, useState } from 'react'
 import { geoIdentity, geoPath } from 'd3-geo'
 import geojson from '../data/europe-geo.json'
-import { partyFamilyColor } from '../lib/leftRightColor.js'
+import { partyFamilyColor, leftRightGradientColor } from '../lib/leftRightColor.js'
 import MapLegend from './MapLegend.jsx'
 
 const W = 800
 const H = 720
 
-// Compute projection + path strings once (geometry is static)
 const projection = geoIdentity().reflectY(true).fitSize([W, H], geojson)
 const pathGen = geoPath(projection)
 
@@ -17,17 +16,19 @@ const PATHS = geojson.features.map((feat) => ({
   d: pathGen(feat),
 }))
 
-export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }) {
+export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null, colorMode = 'family' }) {
   const [hovered, setHovered] = useState(null)
+
+  const colorFn = colorMode === 'spectrum' ? leftRightGradientColor : partyFamilyColor
 
   const fills = useMemo(() => {
     const map = {}
     for (const { iso3 } of PATHS) {
       const value = dataForYear?.[iso3]
-      map[iso3] = { color: partyFamilyColor(value ?? null), value: value ?? null }
+      map[iso3] = { color: colorFn(value ?? null), value: value ?? null }
     }
     return map
-  }, [dataForYear, meta])
+  }, [dataForYear, colorMode])
 
   return (
     <div className="flex flex-col gap-4">
@@ -48,8 +49,8 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }
               key={iso3}
               d={d}
               fill={color}
-              stroke="#F7F4EC"
-              strokeWidth={isHovered ? 0 : 0.8}
+              stroke="#FFFFFF"
+              strokeWidth={isHovered ? 0 : 1.0}
               opacity={isDimmed ? 0.45 : 1}
               style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(iso3)}
@@ -61,7 +62,8 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }
             </path>
           )
         })}
-        {/* Highlight-Overlay: gehört zum aktiven Scroll-Beat */}
+
+        {/* Highlight-Overlay */}
         {highlightIso3 && (() => {
           const feat = PATHS.find(p => p.iso3 === highlightIso3)
           if (!feat?.d) return null
@@ -83,7 +85,8 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }
             />
           )
         })()}
-        {/* Hover-Overlay: drawn on top with ink stroke */}
+
+        {/* Hover-Overlay */}
         {hovered && hovered !== highlightIso3 && (() => {
           const feat = PATHS.find(p => p.iso3 === hovered)
           if (!feat?.d) return null
@@ -101,7 +104,7 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null }
         })()}
       </svg>
 
-      <MapLegend />
+      <MapLegend mode={colorMode} />
     </div>
   )
 }

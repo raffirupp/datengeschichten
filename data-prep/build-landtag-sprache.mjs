@@ -2,8 +2,8 @@
  * Pipeline: Landtags-Themenverlauf
  *
  * Liest StateParl v3 paragraphs.csv (16 Landesparlamente, 2000–2025),
- * zählt Keyword-Treffer pro Thema, Bundesland und Jahr (Treffer/Mio. Tokens),
- * schreibt topics.json + national.json + states.json nach src/data/.
+ * zählt Keyword-Treffer pro Thema, Bundesland/Partei und Jahr (Treffer/Mio. Tokens),
+ * schreibt topics.json + national.json + states.json + parties.json nach src/data/.
  *
  * Datenquelle: Beltermann, E., Souris, A., Nguyen, C., & Kropp, S. (2026).
  * StateParl (Version 3.0.0) [Data set]. GESIS, Cologne. https://doi.org/10.7802/3062
@@ -22,10 +22,28 @@ const CSV_PATH = path.join(__dirname, 'raw', 'stateparl', 'csv', 'stateparl_v3_p
 const OUT_TOPICS = path.join(ROOT, 'src', 'data', 'landtag-sprache-topics.json')
 const OUT_NATIONAL = path.join(ROOT, 'src', 'data', 'landtag-sprache-national.json')
 const OUT_STATES = path.join(ROOT, 'src', 'data', 'landtag-sprache-states.json')
+const OUT_PARTIES = path.join(ROOT, 'src', 'data', 'landtag-sprache-parties.json')
+const OUT_PARTIES_TOTAL = path.join(ROOT, 'src', 'data', 'landtag-sprache-parties-total.json')
 
 // Regieanweisungen/Verfahrensteile ohne inhaltliche Aussage — nicht mitzählen
 const EXCLUDED_AFFILIATIONS = new Set(['nsc', 'pre'])
 const MIN_WORDS = 5
+
+// StateParl-affiliation-Codes → Fraktionen aus partyColors.js. Regierungsbank
+// ("gov", Minister-Antworten, keine Fraktion) und kleine/historische Parteien
+// (npd, dvu, rep, ssw, pir, ind, oth, …) bleiben außen vor — sonst kaum lesbar.
+// "lin" bekommt die historische PDS-Vorläuferin dazu (Fusion 2007), sonst
+// wirkt Die Linke in den 2000ern künstlich klein.
+const PARTY_MAP = {
+  cdu: 'CDU/CSU', csu: 'CDU/CSU',
+  spd: 'SPD',
+  grn: 'Grüne',
+  fdp: 'FDP',
+  afd: 'AfD',
+  lin: 'Linke', pds: 'Linke',
+  bsw: 'BSW',
+  frw: 'Freie Wähler',
+}
 
 // Vorberechnete RegExps pro Thema (einmalig, nicht pro Zeile)
 const topicPatterns = topics.map(({ key, keywords }) => ({
@@ -42,16 +60,28 @@ function escapeRegex(str) {
 
 // state → year → { _tokens, _paragraphs, topicKey: hitCount }
 const byStateYear = new Map()
+// party → year → { _tokens, _paragraphs, topicKey: hitCount }
+const byPartyYear = new Map()
 
-function getOrCreate(state, year) {
-  if (!byStateYear.has(state)) byStateYear.set(state, new Map())
-  const byYear = byStateYear.get(state)
+function getOrCreate(map, groupKey, year) {
+  if (!map.has(groupKey)) map.set(groupKey, new Map())
+  const byYear = map.get(groupKey)
   if (!byYear.has(year)) {
     const entry = { _tokens: 0, _paragraphs: 0 }
     for (const { key } of topics) entry[key] = 0
     byYear.set(year, entry)
   }
   return byYear.get(year)
+}
+
+function accumulate(entry, wordCount, lc) {
+  entry._tokens += wordCount
+  entry._paragraphs++
+  for (const { key, re } of topicPatterns) {
+    const matches = lc.match(re)
+    if (matches) entry[key] += matches.length
+    re.lastIndex = 0
+  }
 }
 
 let rowCount = 0
@@ -86,15 +116,15 @@ await new Promise((resolve, reject) => {
       const wordCount = text.split(/\s+/).filter(Boolean).length
       if (wordCount < MIN_WORDS) { skipped++; return }
 
-      const entry = getOrCreate(state.toUpperCase(), year)
-      entry._tokens += wordCount
-      entry._paragraphs++
-
       const lc = text.toLowerCase()
-      for (const { key, re } of topicPatterns) {
-        const matches = lc.match(re)
-        if (matches) entry[key] += matches.length
-        re.lastIndex = 0
+
+      const stateEntry = getOrCreate(byStateYear, state.toUpperCase(), year)
+      accumulate(stateEntry, wordCount, lc)
+
+      const party = PARTY_MAP[affiliation]
+      if (party) {
+        const partyEntry = getOrCreate(byPartyYear, party, year)
+        accumulate(partyEntry, wordCount, lc)
       }
 
       kept++
@@ -131,6 +161,35 @@ for (const state of states) {
   }
 }
 
+// ── parties.json: flache Liste { party, year, _tokens, topicKey... } ──────
+
+const partiesOut = []
+const parties = [...byPartyYear.keys()].sort()
+for (const party of parties) {
+  const byYear = byPartyYear.get(party)
+  const years = [...byYear.keys()].sort()
+  for (const year of years) {
+    const entry = byYear.get(year)
+    partiesOut.push({ party, year: parseInt(year, 10), _paragraphs: entry._paragraphs, ...normalize(entry) })
+  }
+}
+
+// ── parties-total.json: über alle Jahre summiert, aus den rohen (noch nicht
+// normalisierten) Jahreswerten — vermeidet Rundungsfehler durch nachträgliches
+// Aufsummieren bereits normalisierter Werte ───────────────────────────────
+
+const partiesTotalOut = parties.map(party => {
+  const byYear = byPartyYear.get(party)
+  const acc = { _tokens: 0, _paragraphs: 0 }
+  for (const { key } of topics) acc[key] = 0
+  for (const entry of byYear.values()) {
+    acc._tokens += entry._tokens
+    acc._paragraphs += entry._paragraphs
+    for (const { key } of topics) acc[key] += entry[key]
+  }
+  return { party, _paragraphs: acc._paragraphs, ...normalize(acc) }
+})
+
 // ── national.json: über alle Bundesländer summierte Jahreswerte ───────────
 
 const nationalByYear = new Map()
@@ -164,11 +223,18 @@ const topicsMeta = topics.map(({ key, label, color }) => ({ key, label, color })
 fs.writeFileSync(OUT_TOPICS, JSON.stringify(topicsMeta, null, 2), 'utf-8')
 fs.writeFileSync(OUT_NATIONAL, JSON.stringify(nationalOut, null, 2), 'utf-8')
 fs.writeFileSync(OUT_STATES, JSON.stringify(statesOut, null, 2), 'utf-8')
+fs.writeFileSync(OUT_PARTIES, JSON.stringify(partiesOut, null, 2), 'utf-8')
+fs.writeFileSync(OUT_PARTIES_TOTAL, JSON.stringify(partiesTotalOut, null, 2), 'utf-8')
 
 console.log(`\nGeschrieben:`)
 console.log(`  ${OUT_TOPICS}`)
 console.log(`  ${OUT_NATIONAL}`)
 console.log(`  ${OUT_STATES}`)
+console.log(`  ${OUT_PARTIES}`)
+console.log(`  ${OUT_PARTIES_TOTAL}`)
 console.log(`\nBundesländer: ${states.join(', ')}`)
+console.log(`Parteien: ${parties.join(', ')}`)
 console.log('Stichprobe national[0]:', JSON.stringify(nationalOut[0]))
 console.log('Stichprobe states[0]:', JSON.stringify(statesOut[0]))
+console.log('Stichprobe parties[0]:', JSON.stringify(partiesOut[0]))
+console.log('parties-total:', JSON.stringify(partiesTotalOut, null, 1))

@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import TopicTrendChart from '../../components/TopicTrendChart.jsx'
 import LandtagThemenGeoMap from '../../components/LandtagThemenGeoMap.jsx'
 import YearTimeline from '../../components/YearTimeline.jsx'
+import PartyTopicHeatmap from '../../components/PartyTopicHeatmap.jsx'
 import topics from '../../data/landtag-sprache-topics.json'
 import nationalSeries from '../../data/landtag-sprache-national.json'
 import statesSeries from '../../data/landtag-sprache-states.json'
+import partiesSeries from '../../data/landtag-sprache-parties-total.json'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const catColors = colorsFor('Deutschland')
@@ -234,6 +236,33 @@ export default function LandtagSpracheStory() {
         <YearTimeline years={YEARS} year={mapYear} onChange={setMapYear} />
       </section>
 
+      {/* Wer spricht worüber? Partei-Heatmap */}
+      <section className="flex flex-col gap-3">
+        <h2
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '11px',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: 'var(--color-muted)',
+            margin: 0,
+          }}
+        >
+          Wer spricht worüber?
+        </h2>
+        <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)', margin: 0 }}>
+          Acht Fraktionen, neun Themen, alle Jahre 2000–2025 zusammengefasst — parteieigen
+          normalisiert, damit große Fraktionen wie CDU/CSU nicht automatisch führen.
+        </p>
+        <PartyTopicHeatmap parties={partiesSeries} topics={topics} />
+        <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)', margin: 0 }}>
+          <strong style={{ color: 'var(--color-ink)' }}>Auffällig:</strong> Bei Klima &amp; Energie
+          liegen AfD und Grüne fast gleichauf vorn — die Keyword-Suche erkennt nur, dass über
+          Windkraft oder Energiewende geredet wird, nicht in welchem Ton. Bei Kommunales führt mit
+          Abstand die Freie Wähler-Fraktion, deren Basis traditionell aus der Kommunalpolitik kommt.
+        </p>
+      </section>
+
       {/* Editorial highlights */}
       <section className="flex flex-col gap-4">
         <h2
@@ -311,6 +340,24 @@ export default function LandtagSpracheStory() {
             Ein zehn Themen breites Lexikon, redaktionell auf Länderkompetenzen zugeschnitten
             (Bildung, Innere Sicherheit, Kommunales statt Bundeswehr oder EU-Ratspolitik) — andere
             Zuschnitte wären möglich, die Auswahl ist keine linguistische Norm.
+          </li>
+          <li>
+            Die Partei-Heatmap zeigt nur 8 von rund 30 im Datensatz vorkommenden Fraktionscodes
+            (CDU/CSU, SPD, Grüne, FDP, AfD, Linke, BSW, Freie Wähler) — kleinere und historische
+            Parteien (NPD, DVU, SSW u. a.) sowie die Regierungsbank („gov", Minister-Antworten,
+            keine Fraktion) sind ausgeblendet. Die Linke schließt ihre PDS-Vorläuferin vor der
+            Fusion 2007 ein.
+          </li>
+          <li>
+            Die Partei-Werte sind über die jeweils eigene Redezeit normalisiert, nicht über
+            denselben Zeitraum: AfD (Landtage erst ab ca. 2013) und BSW (erst ab 2024) spiegeln
+            nur ihre eigene, kürzere aktive Zeit — während CDU/CSU, SPD & Co. den vollen Zeitraum
+            2000–2025 einschließen. Das ist bei der Interpretation der Heatmap zu bedenken.
+          </li>
+          <li>
+            BSW steht erst seit 2024 in Landtagen und liefert entsprechend wenig Datenbasis
+            (gut 8.000 von insgesamt knapp 9 Millionen ausgewerteten Abschnitten) — die BSW-Zeile
+            ist deutlich unsicherer als die der etablierten Parteien.
           </li>
         </ul>
       </section>

@@ -14,7 +14,8 @@
     "data:laender-geo": "node data-prep/build-laender-geo.mjs",
     "data:laender": "node data-prep/build-laender-governments.mjs",
     "data:gdelt": "node data-prep/build-gdelt-signal.mjs",
-    "data:bundestag-sprache": "node data-prep/build-bundestag-sprache.mjs"
+    "data:bundestag-sprache": "node data-prep/build-bundestag-sprache.mjs",
+    "data:landtag-sprache": "node data-prep/build-landtag-sprache.mjs"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",

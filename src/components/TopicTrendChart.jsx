@@ -34,7 +34,12 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
     })
 
     const yTicks = yScale.ticks(5)
-    const xTicks = series.map(d => d.year)
+    // Bei vielen Jahren (z. B. 26 Jahre Landtags-Story) nur jedes 5. Jahr
+    // beschriften, sonst laufen die Achsenlabels ineinander.
+    const allYears = series.map(d => d.year)
+    const xTicks = allYears.length > 15
+      ? allYears.filter(yr => yr % 5 === 0 || yr === allYears[allYears.length - 1])
+      : allYears
 
     return { xScale, yScale, topicLines, yTicks, xTicks }
   }, [series, topics])
@@ -53,6 +58,23 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
   }
 
   const isHighlighted = key => !highlighted || highlighted.length === 0 || highlighted.includes(key)
+
+  // End-Label-Y-Positionen mit Mindestabstand, damit eng beieinanderliegende
+  // Endwerte (z. B. mehrere Themen um dieselbe Größenordnung) nicht verschmelzen.
+  const labelPositions = useMemo(() => {
+    const MIN_GAP = 13
+    const visible = topicLines
+      .filter(t => isHighlighted(t.key))
+      .map(t => ({ key: t.key, label: t.label, color: t.color, y: yScale(t.points[t.points.length - 1].value ?? 0) }))
+      .sort((a, b) => a.y - b.y)
+    for (let i = 1; i < visible.length; i++) {
+      if (visible[i].y - visible[i - 1].y < MIN_GAP) {
+        visible[i].y = visible[i - 1].y + MIN_GAP
+      }
+    }
+    return visible
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [topicLines, yScale, highlighted])
 
   return (
     <div style={{ position: 'relative' }}>
@@ -103,7 +125,7 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
               textAnchor="middle"
               style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: 'var(--color-muted)' }}
             >
-              {yr}
+              &rsquo;{String(yr).slice(-2)}
             </text>
           ))}
 
@@ -122,21 +144,17 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
           ))}
 
           {/* End labels */}
-          {topicLines.map(({ key, label, color, points }) => {
-            if (!isHighlighted(key)) return null
-            const last = points[points.length - 1]
-            return (
-              <text
-                key={key}
-                x={IW + 8}
-                y={yScale(last.value)}
-                dominantBaseline="middle"
-                style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: color, fontWeight: 600 }}
-              >
-                {label}
-              </text>
-            )
-          })}
+          {labelPositions.map(({ key, label, color, y }) => (
+            <text
+              key={key}
+              x={IW + 8}
+              y={y}
+              dominantBaseline="middle"
+              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: color, fontWeight: 600 }}
+            >
+              {label}
+            </text>
+          ))}
 
           {/* Tooltip hairline */}
           {tooltip && (

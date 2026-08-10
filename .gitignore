@@ -18,6 +18,9 @@ data-prep/raw/cpp-bt/
 # GDELT-Rohdaten — BigQuery-Exporte, lokal halten
 data-prep/raw/gdelt-ngrams/
 
+# StateParl-Rohkorpus (Landtags-Plenarprotokolle) — GESIS, nicht ins Repo
+data-prep/raw/stateparl/
+
 # Scratch-Skripte (temporär, nicht produktiv)
 data-prep/scratch/
 

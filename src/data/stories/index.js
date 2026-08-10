@@ -77,6 +77,15 @@ const stories = [
     isNew: true,
   },
   {
+    key: 'landtag-sprache',
+    title: 'Worüber die Landtage sprechen',
+    teaser: 'Fast 9 Millionen Redeabschnitte aus 16 Landesparlamenten seit 2000 — Bildung, Innere Sicherheit und Kommunales dominieren, nicht Bundespolitik.',
+    category: 'Deutschland',
+    kicker: 'Deutschland · Landtage',
+    status: 'experiment',
+    isNew: true,
+  },
+  {
     key: 'vergleich-menschen',
     title: 'Die Welle, die durch Deutschland rollt',
     teaser: 'Deutschlands geburtenstarke Jahrgänge nähern sich der Rente, Frankreich bleibt jünger. Zwei Altersstrukturen im Zeitverlauf.',

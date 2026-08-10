@@ -6,6 +6,7 @@ const storyComponents = {
   'laender-faerben':     lazy(() => import('../pages/stories/LaenderStory.jsx')),
   'nachrichten-signal':  lazy(() => import('../pages/stories/NachrichtenSignalStory.jsx')),
   'bundestag-sprache':   lazy(() => import('../pages/stories/BundestagSpracheStory.jsx')),
+  'landtag-sprache':      lazy(() => import('../pages/stories/LandtagSpracheStory.jsx')),
   'nachrichten-quellen':  lazy(() => import('../pages/stories/NachrichtenQuellenStory.jsx')),
   'vergleich-leben':      lazy(() => import('../pages/stories/VergleichLebenStory.jsx')),
   'vergleich-geld':       lazy(() => import('../pages/stories/VergleichGeldStory.jsx')),

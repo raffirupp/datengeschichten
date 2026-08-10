@@ -125,6 +125,32 @@ const werkstatt = [
     ],
   },
   {
+    id: 'landtag-sprache',
+    title: 'Worüber die Landtage sprechen',
+    storyKey: 'landtag-sprache',
+    summary: 'Fast 9 Millionen Redeabschnitte aus den 16 Landesparlamenten (2000–2025), analysiert nach Keyword-Häufigkeiten in zehn auf Länderkompetenzen zugeschnittenen Themenfeldern — plus eine Karte, die zeigt, wo welches Thema besonders stark ist.',
+    sources: [
+      {
+        name: 'Beltermann, Souris, Nguyen & Kropp (2026): StateParl v3.0.0. GESIS, Cologne.',
+        url: 'https://doi.org/10.7802/3062',
+        license: 'Freier Zugang (mit Registrierung)',
+      },
+    ],
+    steps: [
+      'StateParl-v3-Datensatz lokal eingelesen: paragraphs.csv mit gut 16 Millionen Zeilen, eine pro Redeabschnitt aus allen 16 Landtagen 2000–2025.',
+      'Regieanweisungen (Beifall, Zwischenrufe) und Wortmeldungen der Sitzungsleitung herausgefiltert, ebenso Fragmente unter 5 Wörtern — verbleiben rund 9 Millionen Abschnitte.',
+      'Pro Abschnitt per regulärem Ausdruck Keyword-Treffer für 9 Themen gezählt; eigenes Lexikon mit 13–17 Keywords pro Thema, zugeschnitten auf Länderkompetenzen statt auf die Bundestags-Themen.',
+      'Je Bundesland und Jahr: Treffer pro Thema durch Gesamtwortzahl dividiert, mal eine Million — macht Länder und Jahre mit unterschiedlichem Rede-Aufkommen vergleichbar. Für den bundesweiten Trend werden alle 16 Länder vor der Normalisierung aufsummiert.',
+      'Die Karte zeigt für ein wählbares Thema und Jahr die Intensität je Bundesland auf einer durchgehenden Farbskala (nicht diskret wie bei den Regierungsfarben-Karten).',
+    ],
+    caveats: [
+      'Keyword-Suche, keine Sprachverarbeitung: ein Wort zählt unabhängig von der vertretenen Position.',
+      'Ungleiche Datenabdeckung: Hessen ist erst ab April 2003 erfasst, Saarland erst ab Oktober 2007, Hamburg endet im Dezember 2024 — diese Länder fehlen für die jeweiligen Randjahre in der Karte.',
+      'Das Themen-Lexikon ist eine redaktionelle Auswahl auf Länderkompetenzen zugeschnitten (Bildung, Innere Sicherheit, Kommunales statt Bundeswehr oder EU-Ratspolitik) — eine andere Auswahl hätte andere Schwerpunkte ergeben.',
+      'Die Farbskala pro Thema ist über den gesamten Datensatz (alle Länder, alle Jahre) fix skaliert, damit Werte über die Zeit vergleichbar bleiben — einzelne Ausreißerjahre können die Skala stauchen.',
+    ],
+  },
+  {
     id: 'nachrichten-quellen',
     title: 'Wer schreibt worüber?',
     storyKey: 'nachrichten-quellen',

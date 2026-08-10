@@ -11,10 +11,6 @@ import PollTrendChart from '../../components/PollTrendChart.jsx'
 const catColors = colorsFor('Labor')
 
 // ─── Config ──────────────────────────────────────────────────────────────────
-const PARTY_TO_DAWUM = {
-  CDU: 'CDU/CSU', CSU: 'CDU/CSU', SPD: 'SPD', GRÜNE: 'Grüne',
-  FDP: 'FDP', AfD: 'AfD', LINKE: 'Linke', BSW: 'BSW',
-}
 
 // Show CDU/CSU merged; others individually
 const DISPLAY_PARTIES = [
@@ -115,7 +111,7 @@ function EventCard({ peak, color }) {
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {peak.quellen.map((url, i) => {
                 let domain = url
-                try { domain = new URL(url).hostname.replace('www.', '') } catch {}
+                try { domain = new URL(url).hostname.replace('www.', '') } catch { /* invalid URL, zeige Rohstring */ }
                 return (
                   <a key={i} href={url} target="_blank" rel="noopener noreferrer"
                     onClick={e => e.stopPropagation()}
@@ -295,7 +291,7 @@ export default function NachrichtenSignalStory() {
             <BewertungBadge val={selectedPeak.bewertung} />
             {selectedPeak.quellen?.map((url, i) => {
               let domain = url
-              try { domain = new URL(url).hostname.replace('www.', '') } catch {}
+              try { domain = new URL(url).hostname.replace('www.', '') } catch { /* invalid URL, zeige Rohstring */ }
               return (
                 <a key={i} href={url} target="_blank" rel="noopener noreferrer"
                   style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--color-muted)', textDecoration: 'underline' }}>

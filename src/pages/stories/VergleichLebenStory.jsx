@@ -109,7 +109,6 @@ function DumbbellRow({ label, unit, frVal, deVal, domainMax, note }) {
   const xSc = scaleLinear().domain([0, domainMax]).range([0, BAR_W])
   const frX = xSc(frVal)
   const deX = xSc(deVal)
-  const midX = (frX + deX) / 2
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>

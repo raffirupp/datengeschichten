@@ -16,7 +16,7 @@ const PATHS = geojson.features.map((feat) => ({
   d: pathGen(feat),
 }))
 
-export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null, colorMode = 'family' }) {
+export default function EuropeGeoMap({ dataForYear, highlightIso3 = null, colorMode = 'family' }) {
   const [hovered, setHovered] = useState(null)
 
   const colorFn = colorMode === 'spectrum' ? leftRightGradientColor : partyFamilyColor
@@ -28,7 +28,7 @@ export default function EuropeGeoMap({ dataForYear, meta, highlightIso3 = null, 
       map[iso3] = { color: colorFn(value ?? null), value: value ?? null }
     }
     return map
-  }, [dataForYear, colorMode])
+  }, [dataForYear, colorFn])
 
   return (
     <div className="flex flex-col gap-4">

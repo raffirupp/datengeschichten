@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { scaleLinear } from 'd3-scale'
-import { area, line, curveMonotoneX } from 'd3-shape'
+import { line, curveMonotoneX } from 'd3-shape'
 import data from '../../data/fr-ge.json'
 import { colorsFor } from '../../lib/categoryColors.js'
 import {
-  DE_COLOR, DE_DARK, DE_FILL, DE_FILL_SOFT,
-  FR_COLOR, FR_DARK, FR_FILL, FR_FILL_SOFT,
+  DE_COLOR, DE_DARK,
+  FR_COLOR, FR_DARK,
   RULE_SOFT, AXIS_MUTED, LABEL_MUTED, INK, RULE, MUTED, OCKER,
   splitActualForecast,
 } from '../../lib/frGeUtils.js'

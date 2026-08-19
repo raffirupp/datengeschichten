@@ -6,14 +6,14 @@ export default function Layout({ children }) {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FFFFFF', color: 'var(--color-ink)' }}>
       <NavBar />
 
-      <main className="flex-1 px-6 py-10">
+      <main className="flex-1 px-4 py-6 sm:px-6 sm:py-10">
         <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
           {children}
         </div>
       </main>
 
       <footer
-        className="px-6 py-5 text-xs"
+        className="px-4 py-5 text-xs sm:px-6"
         style={{
           backgroundColor: 'var(--color-hero)',
           fontFamily: 'var(--font-mono)',

@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import { geoIdentity, geoPath } from 'd3-geo'
 import geojson from '../data/laender-geo.json'
+import useIsMobile from '../hooks/useIsMobile.js'
 
 const W = 800
 const H = 720
@@ -63,6 +64,8 @@ function LaenderLegend() {
 // ─── Map ─────────────────────────────────────────────────────────────────────
 export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
   const [hovered, setHovered] = useState(null)
+  const isMobile = useIsMobile()
+  const wrapperRef = useRef(null)
 
   const fills = useMemo(() => {
     const map = {}
@@ -73,8 +76,21 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
     return map
   }, [dataForYear])
 
+  // Tap outside the map dismisses the touch tooltip (native hover/leave doesn't fire on touch)
+  useEffect(() => {
+    if (!hovered) return
+    function handleOutside(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) setHovered(null)
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => document.removeEventListener('pointerdown', handleOutside)
+  }, [hovered])
+
+  const hoveredParty = hovered ? fills[hovered] : null
+  const hoveredName = hovered ? PATHS.find(p => p.code === hovered)?.name : null
+
   return (
-    <div className="flex flex-col gap-4">
+    <div ref={wrapperRef} className="flex flex-col gap-4" style={{ position: 'relative' }}>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         width="100%"
@@ -99,6 +115,7 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
               style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(code)}
               onMouseLeave={() => setHovered(null)}
+              onClick={() => setHovered(prev => (prev === code ? null : code))}
             >
               <title>{name}{party.label !== '—' ? `: ${party.label}` : ' — keine Daten'}</title>
             </path>
@@ -139,6 +156,27 @@ export default function LaenderGeoMap({ dataForYear, highlightCode = null }) {
           )
         })()}
       </svg>
+
+      {isMobile && hoveredName && (
+        <div
+          style={{
+            position: 'absolute',
+            left: '8px',
+            bottom: '8px',
+            backgroundColor: 'var(--color-paper)',
+            border: '1px solid var(--color-rule)',
+            borderRadius: '6px',
+            padding: '6px 10px',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '12px',
+            color: 'var(--color-ink)',
+            pointerEvents: 'none',
+            maxWidth: '85%',
+          }}
+        >
+          {hoveredName}{hoveredParty && hoveredParty.label !== '—' ? `: ${hoveredParty.label}` : ' — keine Daten'}
+        </div>
+      )}
 
       <LaenderLegend />
     </div>

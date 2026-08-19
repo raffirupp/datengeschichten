@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import { geoIdentity, geoPath } from 'd3-geo'
 import geojson from '../data/europe-geo.json'
 import { partyFamilyColor, leftRightGradientColor } from '../lib/leftRightColor.js'
 import MapLegend from './MapLegend.jsx'
+import useIsMobile from '../hooks/useIsMobile.js'
 
 const W = 800
 const H = 720
@@ -18,6 +19,8 @@ const PATHS = geojson.features.map((feat) => ({
 
 export default function EuropeGeoMap({ dataForYear, highlightIso3 = null, colorMode = 'family' }) {
   const [hovered, setHovered] = useState(null)
+  const isMobile = useIsMobile()
+  const wrapperRef = useRef(null)
 
   const colorFn = colorMode === 'spectrum' ? leftRightGradientColor : partyFamilyColor
 
@@ -30,8 +33,21 @@ export default function EuropeGeoMap({ dataForYear, highlightIso3 = null, colorM
     return map
   }, [dataForYear, colorFn])
 
+  // Tap outside the map dismisses the touch tooltip (native hover/leave doesn't fire on touch)
+  useEffect(() => {
+    if (!hovered) return
+    function handleOutside(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) setHovered(null)
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => document.removeEventListener('pointerdown', handleOutside)
+  }, [hovered])
+
+  const hoveredInfo = hovered ? fills[hovered] : null
+  const hoveredName = hovered ? PATHS.find(p => p.iso3 === hovered)?.name : null
+
   return (
-    <div className="flex flex-col gap-4">
+    <div ref={wrapperRef} className="flex flex-col gap-4" style={{ position: 'relative' }}>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         width="100%"
@@ -55,6 +71,7 @@ export default function EuropeGeoMap({ dataForYear, highlightIso3 = null, colorM
               style={{ transition: 'fill 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(iso3)}
               onMouseLeave={() => setHovered(null)}
+              onClick={() => setHovered(prev => (prev === iso3 ? null : iso3))}
             >
               <title>
                 {name}{value != null ? `: ${value.toFixed(2)}` : ' — keine Daten'}
@@ -103,6 +120,27 @@ export default function EuropeGeoMap({ dataForYear, highlightIso3 = null, colorM
           )
         })()}
       </svg>
+
+      {isMobile && hoveredName && (
+        <div
+          style={{
+            position: 'absolute',
+            left: '8px',
+            bottom: '8px',
+            backgroundColor: 'var(--color-paper)',
+            border: '1px solid var(--color-rule)',
+            borderRadius: '6px',
+            padding: '6px 10px',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '12px',
+            color: 'var(--color-ink)',
+            pointerEvents: 'none',
+            maxWidth: '85%',
+          }}
+        >
+          {hoveredName}{hoveredInfo?.value != null ? `: ${hoveredInfo.value.toFixed(2)}` : ' — keine Daten'}
+        </div>
+      )}
 
       <MapLegend mode={colorMode} />
     </div>

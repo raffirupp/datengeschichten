@@ -91,7 +91,7 @@ function CardInner({ story, variant }) {
         <>
           {/* Thin top color bar for lead card */}
           <div style={{ height: '3px', backgroundColor: colors.color }} />
-          <div style={{ display: 'flex', gap: '2rem', padding: '2rem', alignItems: 'flex-start' }}>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-6 p-6 sm:gap-8 sm:p-8">
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
               <CategoryPill category={story.category} />
               {story.kicker && (
@@ -128,7 +128,7 @@ function CardInner({ story, variant }) {
                 </div>
               )}
             </div>
-            <div style={{ width: '180px', flexShrink: 0, alignSelf: 'center' }}>
+            <div style={{ width: '180px', maxWidth: '100%', flexShrink: 0, alignSelf: 'center' }}>
               <StoryMotif />
             </div>
           </div>

@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import { geoIdentity, geoPath } from 'd3-geo'
 import { scaleLinear } from 'd3-scale'
 import geojson from '../data/laender-geo.json'
+import useIsMobile from '../hooks/useIsMobile.js'
 
 const W = 800
 const H = 720
@@ -18,6 +19,8 @@ const PATHS = geojson.features.map((feat) => ({
 
 export default function LandtagThemenGeoMap({ dataForYear, topicLabel, topicColor, maxValue }) {
   const [hovered, setHovered] = useState(null)
+  const isMobile = useIsMobile()
+  const wrapperRef = useRef(null)
 
   const colorScale = useMemo(
     () => scaleLinear().domain([0, maxValue || 1]).range([NULL_COLOR, topicColor]).clamp(true),
@@ -33,8 +36,21 @@ export default function LandtagThemenGeoMap({ dataForYear, topicLabel, topicColo
     return map
   }, [dataForYear, colorScale])
 
+  // Tap outside the map dismisses the touch tooltip (native hover/leave doesn't fire on touch)
+  useEffect(() => {
+    if (!hovered) return
+    function handleOutside(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) setHovered(null)
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => document.removeEventListener('pointerdown', handleOutside)
+  }, [hovered])
+
+  const hoveredInfo = hovered ? fills[hovered] : null
+  const hoveredName = hovered ? PATHS.find(p => p.code === hovered)?.name : null
+
   return (
-    <div className="flex flex-col gap-4">
+    <div ref={wrapperRef} className="flex flex-col gap-4" style={{ position: 'relative' }}>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         width="100%"
@@ -56,6 +72,7 @@ export default function LandtagThemenGeoMap({ dataForYear, topicLabel, topicColo
               style={{ transition: 'fill 0.5s ease', cursor: 'default' }}
               onMouseEnter={() => setHovered(code)}
               onMouseLeave={() => setHovered(null)}
+              onClick={() => setHovered(prev => (prev === code ? null : code))}
             >
               <title>
                 {name}
@@ -65,6 +82,27 @@ export default function LandtagThemenGeoMap({ dataForYear, topicLabel, topicColo
           )
         })}
       </svg>
+
+      {isMobile && hoveredName && (
+        <div
+          style={{
+            position: 'absolute',
+            left: '8px',
+            bottom: '8px',
+            backgroundColor: 'var(--color-paper)',
+            border: '1px solid var(--color-rule)',
+            borderRadius: '6px',
+            padding: '6px 10px',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '12px',
+            color: 'var(--color-ink)',
+            pointerEvents: 'none',
+            maxWidth: '85%',
+          }}
+        >
+          {hoveredName}{hoveredInfo?.value != null ? `: ${hoveredInfo.value.toFixed(1)} Erwähnungen/Mio. Tokens` : ' — keine Daten'}
+        </div>
+      )}
 
       {/* Gradient-Legende */}
       <div className="flex items-center gap-3">

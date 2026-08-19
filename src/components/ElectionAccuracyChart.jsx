@@ -5,9 +5,6 @@ const CORAL  = [190, 90, 60]
 const PETROL = [28, 93, 87]
 const MUTED  = [107, 102, 88]
 
-// Parteien, die in die Gesamt-Fehlerberechnung eingehen
-const CORE_PARTIES = ['CDU/CSU', 'SPD', 'Grüne', 'AfD', 'FDP', 'Linke']
-
 function dotColor(dev) {
   if (dev == null) return `rgb(${MUTED.join(',')})`
   return dev > 0 ? `rgb(${CORAL.join(',')})` : `rgb(${PETROL.join(',')})`
@@ -25,14 +22,14 @@ function rankColor(rmse, minR, maxR) {
 }
 
 // ── Gesamt-Ranking für ein Jahr ─────────────────────────────────────────────
-function OverviewRanking({ year, entries }) {
+function OverviewRanking({ year, entries, parties }) {
   const [tooltip, setTooltip] = useState(null)
 
   const stats = useMemo(() => {
     const insts = [...new Set(entries.filter(e => e.year === year).map(e => e.institute))]
     return insts.map(inst => {
       const rows = entries.filter(e =>
-        e.year === year && e.institute === inst && CORE_PARTIES.includes(e.party)
+        e.year === year && e.institute === inst && parties.includes(e.party)
       )
       if (!rows.length) return null
       const mae  = rows.reduce((s, r) => s + Math.abs(r.deviation), 0) / rows.length
@@ -41,7 +38,7 @@ function OverviewRanking({ year, entries }) {
     })
       .filter(Boolean)
       .sort((a, b) => a.rmse - b.rmse)
-  }, [year, entries])
+  }, [year, entries, parties])
 
   if (!stats.length) return null
 
@@ -57,7 +54,7 @@ function OverviewRanking({ year, entries }) {
         color: 'var(--color-muted)', marginBottom: 8,
         letterSpacing: '0.08em', textTransform: 'uppercase',
       }}>
-        Rangfolge nach mittlerem Fehler (RMSE über {CORE_PARTIES.length} Parteien)
+        Rangfolge nach mittlerem Fehler (RMSE über {parties.length} Parteien)
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
@@ -161,7 +158,8 @@ function DetailPanel({ year, party, entries, meta }) {
   )
 
   const H   = rows.length * ROW_H + 28 + 28
-  const xSc = scaleLinear().domain([-5, 5]).range([0, DP_IW])
+  const maxAbsDev = Math.ceil(Math.max(5, ...rows.map(r => Math.abs(r.deviation))))
+  const xSc = scaleLinear().domain([-maxAbsDev, maxAbsDev]).range([0, DP_IW])
   const x0  = xSc(0)
   const ticks = xSc.ticks(6)
 
@@ -172,7 +170,7 @@ function DetailPanel({ year, party, entries, meta }) {
         color: 'var(--color-muted)', marginBottom: 4,
         paddingLeft: DP_ML,
       }}>
-        BTW {year}
+        {election?.name ?? year}
         {election?.date && (
           <span style={{ marginLeft: 8, opacity: 0.6 }}>
             ({new Date(election.date + 'T12:00:00Z')
@@ -257,8 +255,10 @@ function DetailPanel({ year, party, entries, meta }) {
 export default function ElectionAccuracyChart({ data }) {
   const { meta, parties, entries } = data
   const years  = meta.elections.map(e => e.year)
-  const [year,  setYear]  = useState(2025)
-  const [party, setParty] = useState('CDU/CSU')
+  const [year,  setYear]  = useState(() => years.at(-1) ?? null)
+  const [party, setParty] = useState(() =>
+    ['CDU/CSU', 'CDU', 'CSU'].find((p) => parties.includes(p)) ?? parties[0] ?? null
+  )
   const [view,  setView]  = useState('overview')  // 'overview' | 'detail'
 
   return (
@@ -277,7 +277,7 @@ export default function ElectionAccuracyChart({ data }) {
             cursor: 'pointer', fontWeight: y === year ? 700 : 400,
             marginBottom: -1,
           }}>
-            BTW {y}
+            {y}
           </button>
         ))}
         <div style={{ flex: 1 }} />
@@ -299,7 +299,7 @@ export default function ElectionAccuracyChart({ data }) {
 
       {/* Überblick-Ansicht */}
       {view === 'overview' && (
-        <OverviewRanking year={year} entries={entries} />
+        <OverviewRanking year={year} entries={entries} parties={parties} />
       )}
 
       {/* Detail-Ansicht */}

@@ -13,6 +13,7 @@ import ElectionAccuracyChart     from '../../components/ElectionAccuracyChart.js
 import LeadLagChart              from '../../components/LeadLagChart.jsx'
 import GrangerChart              from '../../components/GrangerChart.jsx'
 import CurrentGovernmentNote     from '../../components/CurrentGovernmentNote.jsx'
+import CoalitionHistory          from '../../components/CoalitionHistory.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const { meta, polls, trend } = pollData
@@ -91,8 +92,8 @@ export default function WahltrendStory() {
         border: '1px solid var(--color-rule)',
       }}>
         {[
-          '01 Aktuell', '02 Regierung vs. Opposition', '03 Institute im Vergleich',
-          '04 Wahlgenauigkeit', '05 Reaktionsgeschwindigkeit',
+          '01 Aktuell', '02 Regierung vs. Opposition', '03 Wahlgenauigkeit',
+          '04 Institute im Vergleich', '05 Reaktionsgeschwindigkeit',
         ].map((item) => (
           <span key={item} style={{
             fontFamily: 'var(--font-mono)', fontSize: '10px',
@@ -122,7 +123,6 @@ export default function WahltrendStory() {
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel number="02">Regierung vs. Opposition</SectionLabel>
-          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Wie schneiden Regierungs- und Oppositionsparteien in Summe ab?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -131,17 +131,34 @@ export default function WahltrendStory() {
             Meinungsumschwünge, sondern dadurch, dass sich die Zusammensetzung der Regierung
             ändert — markiert an jedem Regierungswechsel.
           </p>
+          <CoalitionHistory periods={govData.governments} />
         </header>
         <GovOppositionChart trend={trend} governmentPeriods={govData.governments} parties={meta.parties} />
       </section>
 
       <Divider />
 
-      {/* ── 3: House Effects ── */}
+      {/* ── 3: Wahlgenauigkeit ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel number="03">Institute im Vergleich</SectionLabel>
-          <CurrentGovernmentNote periods={govData.governments} />
+          <SectionLabel number="03">Vergleich mit echten Wahlergebnissen</SectionLabel>
+          <SectionHeading>Wie nah lagen die Institute bei der Wahl?</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose"
+            style={{ color: 'var(--color-muted)' }}>
+            Hier der externe Prüfstein: letzte Umfrage je Institut vor der Wahl gegen
+            das amtliche Ergebnis. Wer lag wie weit daneben, und in welche Richtung?
+            Daten für 2017, 2021 und 2025 — aufbereitet aus wahlrecht.de.
+          </p>
+        </header>
+        <ElectionAccuracyChart data={accuracyData} />
+      </section>
+
+      <Divider />
+
+      {/* ── 4: House Effects ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel number="04">Institute im Vergleich</SectionLabel>
           <SectionHeading>Wer schätzt wen wie ein?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -157,29 +174,10 @@ export default function WahltrendStory() {
 
       <Divider />
 
-      {/* ── 4: Wahlgenauigkeit ── */}
-      <section className="flex flex-col gap-6">
-        <header className="flex flex-col gap-3">
-          <SectionLabel number="04">Vergleich mit echten Wahlergebnissen</SectionLabel>
-          <CurrentGovernmentNote periods={govData.governments} />
-          <SectionHeading>Wie nah lagen die Institute bei der Wahl?</SectionHeading>
-          <p className="text-sm leading-relaxed max-w-prose"
-            style={{ color: 'var(--color-muted)' }}>
-            Hier der externe Prüfstein: letzte Umfrage je Institut vor der Wahl gegen
-            das amtliche Ergebnis. Wer lag wie weit daneben, und in welche Richtung?
-            Daten für 2017, 2021 und 2025 — aufbereitet aus wahlrecht.de.
-          </p>
-        </header>
-        <ElectionAccuracyChart data={accuracyData} />
-      </section>
-
-      <Divider />
-
       {/* ── 5: Lead/Lag (Cross-Korrelation) ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel number="05">Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
-          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Wer reagiert zuerst auf Stimmungsänderungen?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -198,7 +196,6 @@ export default function WahltrendStory() {
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
-          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Welches Institut bewegt den Konsens — und welches folgt ihm?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>

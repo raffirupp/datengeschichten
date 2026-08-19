@@ -1,18 +1,21 @@
 {
   "meta": {
-    "generated": "2026-06-17",
+    "generated": "2026-08-19",
     "elections": [
       {
         "year": 2017,
-        "date": "2017-09-24"
+        "date": "2017-09-24",
+        "name": "Bundestagswahl 2017"
       },
       {
         "year": 2021,
-        "date": "2021-09-26"
+        "date": "2021-09-26",
+        "name": "Bundestagswahl 2021"
       },
       {
         "year": 2025,
-        "date": "2025-02-23"
+        "date": "2025-02-23",
+        "name": "Bundestagswahl 2025"
       }
     ],
     "parties": [

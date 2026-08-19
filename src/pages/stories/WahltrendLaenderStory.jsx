@@ -5,13 +5,16 @@ import coalitions       from '../../data/laender-coalitions.json'
 import houseEffects     from '../../data/laender-house-effects.json'
 import leadLag          from '../../data/laender-lead-lag.json'
 import granger          from '../../data/laender-granger.json'
+import electionAccuracy from '../../data/laender-election-accuracy.json'
 import PollSnapshot          from '../../components/PollSnapshot.jsx'
 import PollTrendChart        from '../../components/PollTrendChart.jsx'
 import GovOppositionChart    from '../../components/GovOppositionChart.jsx'
 import HouseEffectsChart     from '../../components/HouseEffectsChart.jsx'
+import ElectionAccuracyChart from '../../components/ElectionAccuracyChart.jsx'
 import LeadLagChart          from '../../components/LeadLagChart.jsx'
 import GrangerChart          from '../../components/GrangerChart.jsx'
 import CurrentGovernmentNote from '../../components/CurrentGovernmentNote.jsx'
+import CoalitionHistory      from '../../components/CoalitionHistory.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const catColors = colorsFor('Deutschland')
@@ -106,6 +109,7 @@ export default function WahltrendLaenderStory() {
   const houseData = houseEffects.states[state.parliamentName]
   const leadLagState = leadLag.states[state.shortcut]
   const grangerState = granger.states[state.shortcut]
+  const accuracyState = electionAccuracy.byState[stateCode]
 
   const { meta, polls, trend } = pollData
 
@@ -159,13 +163,13 @@ export default function WahltrendLaenderStory() {
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel number="02">Regierung vs. Opposition</SectionLabel>
-          <CurrentGovernmentNote periods={govPeriods} />
           <SectionHeading>Wie schneiden Regierungs- und Oppositionsparteien in Summe ab?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
             Für jeden Zeitpunkt summiert: die Umfragewerte der zu diesem Datum amtierenden
             Koalitionsparteien in {state.name} gegen alle anderen. Basiert auf der vollständigen
             Koalitionszusammensetzung (nicht nur der Regierungschef-Partei).
           </p>
+          <CoalitionHistory periods={govPeriods} />
         </header>
         {govPeriods.length > 0 ? (
           <GovOppositionChart key={stateCode} trend={trend} governmentPeriods={govPeriods} parties={meta.parties} />
@@ -176,11 +180,34 @@ export default function WahltrendLaenderStory() {
 
       <Divider />
 
-      {/* ── 3: House Effects ── */}
+      {/* ── 3: Wahlgenauigkeit ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel number="03">Institute im Vergleich</SectionLabel>
-          <CurrentGovernmentNote periods={govPeriods} />
+          <SectionLabel number="03">Vergleich mit echten Wahlergebnissen</SectionLabel>
+          <SectionHeading>Wie nah lagen die Institute bei der Wahl?</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
+            Letzte Umfrage je Institut vor der Landtagswahl gegen das Wahlergebnis. Anders
+            als im Bund aus marktforschung.de-Artikeln aufbereitet, nicht aus wahlrecht.de
+            (für drei Länder ohne passenden Artikel ersatzweise aus wahlrecht.de/DAWUM
+            rekonstruiert). Berlin zeigt zwei Wahlen: die wegen Organisationspannen
+            annullierte 2021er-Wahl und ihre Wiederholung 2023.
+          </p>
+        </header>
+        {accuracyState ? (
+          <ElectionAccuracyChart key={stateCode} data={accuracyState} />
+        ) : (
+          <NoDataNote>
+            Für {state.name} liegt noch keine Wahlgenauigkeits-Auswertung vor.
+          </NoDataNote>
+        )}
+      </section>
+
+      <Divider />
+
+      {/* ── 4: House Effects ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel number="04">Institute im Vergleich</SectionLabel>
           <SectionHeading>Wer schätzt wen wie ein?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
             Abweichung jedes Instituts vom gleichzeitigen Durchschnitt der anderen, in
@@ -200,11 +227,10 @@ export default function WahltrendLaenderStory() {
 
       <Divider />
 
-      {/* ── 4: Reaktionsgeschwindigkeit ── */}
+      {/* ── 5: Reaktionsgeschwindigkeit ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel number="04">Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
-          <CurrentGovernmentNote periods={govPeriods} />
+          <SectionLabel number="05">Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
           <SectionHeading>Wer reagiert zuerst auf Stimmungsänderungen?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
             Cross-Korrelation der wöchentlichen Erstdifferenzen zwischen Institut und
@@ -225,7 +251,6 @@ export default function WahltrendLaenderStory() {
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
-          <CurrentGovernmentNote periods={govPeriods} />
           <SectionHeading>Welches Institut bewegt den Konsens — und welches folgt ihm?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
             Granger-Kausalität, gleiche Methode wie im Bund: sagen die vergangenen Werte
@@ -251,7 +276,11 @@ export default function WahltrendLaenderStory() {
           style={{ color: 'var(--color-muted)', textDecoration: 'underline' }}>
           DAWUM (dawum.de)
         </a>
-        {' '}(ODbL)
+        {' '}(ODbL){' · '}
+        <a href="https://www.marktforschung.de" target="_blank" rel="noopener noreferrer"
+          style={{ color: 'var(--color-muted)', textDecoration: 'underline' }}>
+          marktforschung.de
+        </a>
       </footer>
     </article>
   )

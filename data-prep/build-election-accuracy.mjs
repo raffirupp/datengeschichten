@@ -133,7 +133,7 @@ Object.entries(instYears)
 const out = {
   meta: {
     generated:   new Date().toISOString().slice(0, 10),
-    elections:   ELECTIONS.map(e => ({ year: e.year, date: electionDates[e.year] })),
+    elections:   ELECTIONS.map(e => ({ year: e.year, date: electionDates[e.year], name: `Bundestagswahl ${e.year}` })),
     parties:     PARTIES,
     note:        'Abweichung = letzte Umfrage vor der Wahl minus amtliches Wahlergebnis in Prozentpunkten. Positiv = Institut lag zu hoch.',
     caveat2017:  'Für 2017 lagen keine genauen Umfragedaten vor — Abweichungen sind vorhanden, Umfragedaten jedoch unbekannt.',

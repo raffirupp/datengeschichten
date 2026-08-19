@@ -57,7 +57,7 @@ function Bar({ value, max, color, label, total, group }) {
   const pct = max > 0 ? (value / max) * 100 : 0
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', minHeight: '28px' }}>
-      <div style={{ width: '140px', flexShrink: 0, textAlign: 'right' }}>
+      <div style={{ width: 'clamp(90px, 28vw, 140px)', flexShrink: 0, textAlign: 'right' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--color-ink)' }}>
           {label}
         </span>
@@ -70,7 +70,7 @@ function Bar({ value, max, color, label, total, group }) {
       <div style={{ flex: 1, backgroundColor: 'var(--color-rule)', borderRadius: '3px', height: '14px', overflow: 'hidden' }}>
         <div style={{ width: `${pct}%`, height: '100%', backgroundColor: color, borderRadius: '3px', transition: 'width 0.3s' }} />
       </div>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--color-muted)', width: '60px', flexShrink: 0 }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--color-muted)', width: 'clamp(40px, 12vw, 60px)', flexShrink: 0 }}>
         {total.toLocaleString('de-DE')}
       </span>
     </div>

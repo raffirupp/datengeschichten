@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
   return (
     <header style={{ backgroundColor: 'var(--color-hero)', position: 'sticky', top: 0, zIndex: 50 }}>
-      <div style={{
-        maxWidth: '80rem',
-        margin: '0 auto',
-        padding: '0 1.5rem',
-        height: '52px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
+      <div
+        className="px-4 sm:px-6"
+        style={{
+          maxWidth: '80rem',
+          margin: '0 auto',
+          height: '52px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
         <Link
           to="/"
           style={{
@@ -20,11 +22,12 @@ export default function NavBar() {
             letterSpacing: '0.06em',
             color: '#FFFFFF',
             textDecoration: 'none',
+            padding: '10px 0',
           }}
         >
           datengeschichten
         </Link>
-        <nav style={{ display: 'flex', gap: '1.5rem' }}>
+        <nav style={{ display: 'flex', gap: '1.25rem' }}>
           {[['/', 'Geschichten'], ['/werkstatt', 'Werkstatt']].map(([to, label]) => (
             <Link
               key={to}
@@ -36,6 +39,7 @@ export default function NavBar() {
                 textTransform: 'uppercase',
                 color: 'rgba(255,255,255,0.45)',
                 textDecoration: 'none',
+                padding: '10px 2px',
               }}
             >
               {label}

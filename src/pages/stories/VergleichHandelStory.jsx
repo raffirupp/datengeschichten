@@ -7,7 +7,7 @@ import { colorsFor } from '../../lib/categoryColors.js'
 import {
   DE_COLOR, DE_DARK, DE_FILL, DE_FILL_SOFT,
   FR_COLOR, FR_DARK, FR_FILL, FR_FILL_SOFT,
-  RULE_SOFT, AXIS_MUTED, LABEL_MUTED, INK, RULE, MUTED,
+  RULE_SOFT, AXIS_MUTED, INK, RULE, MUTED,
   splitActualForecast,
 } from '../../lib/frGeUtils.js'
 

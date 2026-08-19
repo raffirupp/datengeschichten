@@ -1,7 +1,8 @@
-import { useMemo, useState, useRef } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import { scaleLinear } from 'd3-scale'
 import { line, curveMonotoneX } from 'd3-shape'
 import { max } from 'd3-array'
+import useIsMobile from '../hooks/useIsMobile.js'
 
 const W = 760
 const H = 400
@@ -12,6 +13,8 @@ const IH = H - MARGIN.top - MARGIN.bottom
 export default function TopicTrendChart({ series, topics, highlighted }) {
   const [tooltip, setTooltip] = useState(null)
   const svgRef = useRef(null)
+  const isMobile = useIsMobile()
+  const labelFontSize = isMobile ? '13px' : '10px'
 
   const { xScale, yScale, topicLines, yTicks, xTicks } = useMemo(() => {
     const xMin = series[0].year
@@ -34,12 +37,22 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
     })
 
     const yTicks = yScale.ticks(5)
-    const xTicks = series.map(d => d.year)
+    // Bei vielen Jahren (z. B. 26 Jahre Landtags-Story) nur jedes 5. Jahr
+    // beschriften, sonst laufen die Achsenlabels ineinander. Auf Mobile
+    // (größere Labelschrift) zusätzlich jedes zweite Jahr überspringen.
+    const allYears = series.map(d => d.year)
+    const thinThreshold = isMobile ? 8 : 15
+    let xTicks = allYears.length > thinThreshold
+      ? allYears.filter(yr => yr % 5 === 0 || yr === allYears[allYears.length - 1])
+      : allYears
+    if (isMobile && xTicks.length === allYears.length && allYears.length > 5) {
+      xTicks = allYears.filter((yr, i) => i % 2 === 0 || yr === allYears[allYears.length - 1])
+    }
 
     return { xScale, yScale, topicLines, yTicks, xTicks }
-  }, [series, topics])
+  }, [series, topics, isMobile])
 
-  function handleMouseMove(e) {
+  function handlePointerMove(e) {
     const svg = svgRef.current
     if (!svg) return
     const rect = svg.getBoundingClientRect()
@@ -52,7 +65,34 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
     setTooltip({ year, values: d, x: xScale(year) })
   }
 
+  // Tap outside the chart dismisses the tooltip (native hover/leave doesn't fire on touch)
+  useEffect(() => {
+    if (!tooltip) return
+    function handleOutside(e) {
+      if (svgRef.current && !svgRef.current.contains(e.target)) setTooltip(null)
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => document.removeEventListener('pointerdown', handleOutside)
+  }, [tooltip])
+
   const isHighlighted = key => !highlighted || highlighted.length === 0 || highlighted.includes(key)
+
+  // End-Label-Y-Positionen mit Mindestabstand, damit eng beieinanderliegende
+  // Endwerte (z. B. mehrere Themen um dieselbe Größenordnung) nicht verschmelzen.
+  const labelPositions = useMemo(() => {
+    const MIN_GAP = 13
+    const visible = topicLines
+      .filter(t => isHighlighted(t.key))
+      .map(t => ({ key: t.key, label: t.label, color: t.color, y: yScale(t.points[t.points.length - 1].value ?? 0) }))
+      .sort((a, b) => a.y - b.y)
+    for (let i = 1; i < visible.length; i++) {
+      if (visible[i].y - visible[i - 1].y < MIN_GAP) {
+        visible[i].y = visible[i - 1].y + MIN_GAP
+      }
+    }
+    return visible
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [topicLines, yScale, highlighted])
 
   return (
     <div style={{ position: 'relative' }}>
@@ -62,9 +102,10 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
         width="100%"
         role="img"
         aria-label="Thementrends in Bundestagsreden 2014–2025"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => setTooltip(null)}
-        style={{ cursor: 'crosshair', overflow: 'visible' }}
+        onPointerMove={handlePointerMove}
+        onPointerDown={handlePointerMove}
+        onPointerLeave={() => { if (!isMobile) setTooltip(null) }}
+        style={{ cursor: 'crosshair', overflow: 'visible', touchAction: 'pan-y' }}
       >
         <g transform={`translate(${MARGIN.left},${MARGIN.top})`}>
           {/* y grid */}
@@ -81,7 +122,7 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
               key={v}
               x={-8} y={yScale(v)}
               textAnchor="end" dominantBaseline="middle"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: 'var(--color-muted)' }}
+              style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: 'var(--color-muted)' }}
             >
               {v.toLocaleString('de-DE')}
             </text>
@@ -101,9 +142,9 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
               key={yr}
               x={xScale(yr)} y={IH + 20}
               textAnchor="middle"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: 'var(--color-muted)' }}
+              style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: 'var(--color-muted)' }}
             >
-              {yr}
+              &rsquo;{String(yr).slice(-2)}
             </text>
           ))}
 
@@ -122,21 +163,17 @@ export default function TopicTrendChart({ series, topics, highlighted }) {
           ))}
 
           {/* End labels */}
-          {topicLines.map(({ key, label, color, points }) => {
-            if (!isHighlighted(key)) return null
-            const last = points[points.length - 1]
-            return (
-              <text
-                key={key}
-                x={IW + 8}
-                y={yScale(last.value)}
-                dominantBaseline="middle"
-                style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: color, fontWeight: 600 }}
-              >
-                {label}
-              </text>
-            )
-          })}
+          {labelPositions.map(({ key, label, color, y }) => (
+            <text
+              key={key}
+              x={IW + 8}
+              y={y}
+              dominantBaseline="middle"
+              style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: color, fontWeight: 600 }}
+            >
+              {label}
+            </text>
+          ))}
 
           {/* Tooltip hairline */}
           {tooltip && (

@@ -1,8 +1,9 @@
-import { useMemo, useState, useRef } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import { scaleTime, scaleLinear } from 'd3-scale'
 import { line, curveMonotoneX } from 'd3-shape'
 import { extent, max } from 'd3-array'
 import { partyColor } from '../lib/partyColors.js'
+import useIsMobile from '../hooks/useIsMobile.js'
 
 const W = 760
 const H = 380
@@ -15,6 +16,8 @@ function parseDate(str) { return new Date(str + 'T12:00:00Z') }
 export default function PollTrendChart({ polls, trend, parties, markerDate }) {
   const [tooltip, setTooltip] = useState(null)
   const svgRef = useRef(null)
+  const isMobile = useIsMobile()
+  const labelFontSize = isMobile ? '13px' : '10px'
 
   const { xScale, yScale, partyLines, yTicks, xTicks } = useMemo(() => {
     const allDates = trend.map(d => parseDate(d.date))
@@ -41,12 +44,12 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
     })
 
     const yTicks = yScale.ticks(6)
-    const xTicks = xScale.ticks(6)
+    const xTicks = xScale.ticks(isMobile ? 3 : 6)
 
     return { xScale, yScale, partyLines, yTicks, xTicks }
-  }, [polls, trend, parties])
+  }, [polls, trend, parties, isMobile])
 
-  function handleMouseMove(e) {
+  function handlePointerMove(e) {
     const svg = svgRef.current
     if (!svg) return
     const rect = svg.getBoundingClientRect()
@@ -64,6 +67,16 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
     setTooltip({ date: nearest.d.date, values: nearest.d.values, x: svgX })
   }
 
+  // Tap outside the chart dismisses the tooltip (native hover/leave doesn't fire on touch)
+  useEffect(() => {
+    if (!tooltip) return
+    function handleOutside(e) {
+      if (svgRef.current && !svgRef.current.contains(e.target)) setTooltip(null)
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => document.removeEventListener('pointerdown', handleOutside)
+  }, [tooltip])
+
   const tooltipX = tooltip ? MARGIN.left + tooltip.x : 0
 
   return (
@@ -74,9 +87,10 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
         width="100%"
         role="img"
         aria-label="Verlauf der Wahlumfragen"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => setTooltip(null)}
-        style={{ cursor: 'crosshair', overflow: 'visible' }}
+        onPointerMove={handlePointerMove}
+        onPointerDown={handlePointerMove}
+        onPointerLeave={() => { if (!isMobile) setTooltip(null) }}
+        style={{ cursor: 'crosshair', overflow: 'visible', touchAction: 'pan-y' }}
       >
         <g transform={`translate(${MARGIN.left},${MARGIN.top})`}>
           {/* y grid lines */}
@@ -93,7 +107,7 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
               key={v}
               x={-6} y={yScale(v)}
               textAnchor="end" dominantBaseline="middle"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: 'var(--color-muted)' }}
+              style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: 'var(--color-muted)' }}
             >
               {v}%
             </text>
@@ -104,7 +118,7 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
               key={i}
               x={xScale(d)} y={IH + 20}
               textAnchor="middle"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: 'var(--color-muted)' }}
+              style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: 'var(--color-muted)' }}
             >
               {d.toLocaleDateString('de-DE', { month: 'short', year: '2-digit' })}
             </text>
@@ -150,7 +164,7 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
                 <text
                   x={8} y={0}
                   dominantBaseline="middle"
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', fill: color, fontWeight: 600 }}
+                  style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: color, fontWeight: 600 }}
                 >
                   {key} {last.value.toFixed(1)}
                 </text>

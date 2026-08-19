@@ -5,7 +5,7 @@ import MapLegend from './MapLegend.jsx'
 const MAX_COL = Math.max(...Object.values(layout).map(([c]) => c))
 const MAX_ROW = Math.max(...Object.values(layout).map(([, r]) => r))
 
-export default function EuropeColorMap({ dataForYear, meta, highlightIso3 = null }) {
+export default function EuropeColorMap({ dataForYear, highlightIso3 = null }) {
   const cols = MAX_COL + 1
   const rows = MAX_ROW + 1
 

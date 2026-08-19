@@ -250,12 +250,10 @@ export default function VergleichMenschenStory() {
 
       {/* ── Scroll reveal section ────────────────────────────────── */}
       <section style={{ position: 'relative' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.5fr)',
-          gap: '2rem',
-          alignItems: 'start',
-        }}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]"
+          style={{ gap: '2rem', alignItems: 'start' }}
+        >
           {/* Text steps column */}
           <div>
             {SCROLL_STEPS.map((step, i) => (
@@ -309,8 +307,8 @@ export default function VergleichMenschenStory() {
             <div style={{ height: '40vh' }} />
           </div>
 
-          {/* Sticky chart column */}
-          <div style={{ position: 'sticky', top: '5rem' }}>
+          {/* Sticky chart column — only sticky once side-by-side (md+); stacks in normal flow on mobile */}
+          <div className="static md:sticky" style={{ top: '5rem' }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',

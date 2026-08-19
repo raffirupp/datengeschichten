@@ -38,7 +38,7 @@ function fmt(v, digits = 1) {
 
 function CellTooltip({ cell, meta, rect }) {
   if (!cell || !rect) return null
-  const validPeriods = cell.periods.filter(p => p.n >= MIN_N && p.mean !== null)
+  const validPeriods = (cell.periods ?? []).filter(p => p.n >= MIN_N && p.mean !== null)
   const style = {
     position: 'fixed',
     top:  rect.bottom + 6,
@@ -72,7 +72,7 @@ function CellTooltip({ cell, meta, rect }) {
               (±{cell.se.toFixed(2)}, n={cell.n})
             </span>
           </div>
-          {validPeriods.length >= 2 && (
+          {meta.periods && validPeriods.length >= 2 && (
             <>
               <div style={{ color: 'var(--color-muted)', marginBottom: 4 }}>
                 Nach Zeitabschnitt:
@@ -92,14 +92,14 @@ function CellTooltip({ cell, meta, rect }) {
                   </div>
                 )
               })}
-              {!cell.stable && (
+              {cell.stable === false && (
                 <div style={{ marginTop: 6, color: '#BE5A3C', fontSize: 10 }}>
                   Richtung wechselt über Zeitabschnitte — mit Vorsicht lesen.
                 </div>
               )}
             </>
           )}
-          {validPeriods.length < 2 && (
+          {meta.periods && validPeriods.length < 2 && (
             <div style={{ color: 'var(--color-muted)', fontSize: 10 }}>
               Zu wenige Daten für Perioden-Vergleich.
             </div>
@@ -231,7 +231,7 @@ function DotPlot({ cells, institutes, party, meta }) {
                 />
 
                 {/* unstable marker */}
-                {!thin && !cell.stable && (
+                {!thin && cell.stable === false && (
                   <text
                     x={cx + 9} y={y}
                     dominantBaseline="middle"
@@ -283,8 +283,8 @@ function DotPlot({ cells, institutes, party, meta }) {
               ±{tooltip.se.toFixed(2)}, n={tooltip.n}
             </span>
           </div>
-          {meta.periods.map(pd => {
-            const p = tooltip.periods.find(x => x.id === pd.id)
+          {meta.periods?.map(pd => {
+            const p = tooltip.periods?.find(x => x.id === pd.id)
             if (!p || p.n === 0) return null
             return (
               <div key={pd.id} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, lineHeight: 1.7, color: 'var(--color-muted)' }}>
@@ -295,7 +295,7 @@ function DotPlot({ cells, institutes, party, meta }) {
               </div>
             )
           })}
-          {!tooltip.stable && (
+          {tooltip.stable === false && (
             <div style={{ marginTop: 6, fontSize: 10, color: '#BE5A3C' }}>
               Richtung nicht stabil über alle Perioden
             </div>
@@ -330,7 +330,9 @@ function DotPlot({ cells, institutes, party, meta }) {
 // ── Hauptkomponente ──────────────────────────────────────────────────────────
 
 export default function HouseEffectsChart({ data }) {
-  const [selectedParty, setSelectedParty] = useState('CDU/CSU')
+  const [selectedParty, setSelectedParty] = useState(() =>
+    data.parties.includes('CDU/CSU') ? 'CDU/CSU' : (data.parties[0] ?? null)
+  )
   const [hoveredCell, setHoveredCell]     = useState(null)
   const [cellRect,    setCellRect]        = useState(null)
   const cellRefs = useRef({})

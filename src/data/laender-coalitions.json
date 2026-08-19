@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "title": "Regierungskoalitionen der 16 Bundesländer, 2000–2026",
+    "description": "Für jedes Bundesland: Liste der Regierungsperioden (Kabinette) mit Amtszeit und vollständiger Koalition (alle Regierungsparteien, nicht nur die Partei des Regierungschefs/der Regierungschefin). Ergänzt src/data/laender-governments.json, das nur die Partei des Ministerpräsidenten/der Regierenden Bürgermeisterin abbildet.",
+    "compiledDate": "2026-08-19",
+    "codes": ["BW", "BY", "BE", "BB", "HB", "HH", "HE", "MV", "NI", "NW", "RP", "SL", "SN", "ST", "SH", "TH"],
+    "partyCodesUsed": ["CDU", "CSU", "SPD", "GRÜNE", "FDP", "LINKE", "AfD", "FW", "BSW", "SSW"],
+    "partyNamingNotes": [
+      "Kürzel folgen partyLeftRight.js / laender-governments.json: CDU, CSU, SPD, GRÜNE, FDP, LINKE, AfD, FW, BSW, SSW.",
+      "'LINKE' steht auch für die historischen Vorläufer PDS bzw. Linkspartei.PDS (vor der Fusion mit der WASG 2007) — gleiche Zuordnung wie in data-prep/build-laender-governments.mjs (normalizePartyLabel).",
+      "Hamburgs GAL (Grün-Alternative Liste, bis zur Fusion 2012 eigenständige Landespartei) ist als 'GRÜNE' erfasst.",
+      "Die Hamburger 'Schill-Partei' (Partei Rechtsstaatlicher Offensive, 2001–2004) ist NICHT Teil des Standard-Parteisets aus partyLeftRight.js und wörtlich als 'Schill-Partei' erfasst — beim Verbrauch dieses Datensatzes gesondert behandeln."
+    ],
+    "sources": [
+      "Deutschsprachige Wikipedia, je Bundesland: 'Landesregierung [Land]' bzw. 'Kabinett [Name]'-Artikel und 'Liste der Ministerpräsidenten des Landes [Land]' (abgerufen 2026-08-19)",
+      "Berlin: 'Senat von Berlin' und 'Governing Mayor of Berlin' (englische Wikipedia, für Datumspräzision)",
+      "Bremen: 'Senat der Freien Hansestadt Bremen'",
+      "Hamburg: 'Senat (Hamburg)'",
+      "Ergänzende Web-Recherche (Presseberichte/Wikipedia) zur Verifikation aktueller/jüngerer Koalitionen 2024–2026: Sachsen (Kretschmer III, CDU/SPD-Minderheitsregierung, Dez. 2024), Thüringen (Kabinett Voigt, CDU/BSW/SPD 'Brombeer-Koalition', Dez. 2024), Brandenburg (Ende der SPD/BSW-Koalition Jan. 2026, neue SPD/CDU-Koalition März 2026), Baden-Württemberg (Landtagswahl März 2026, Kabinett Özdemir CDU/GRÜNE ab Mai 2026), Schleswig-Holstein (Kabinett Günther II, CDU/GRÜNE ab Juni 2022), Saarland (Landtagswahl 2022, SPD-Alleinregierung Rehlinger)"
+    ],
+    "coverage": {
+      "status": "Erste Kompilierung, alle 16 Länder mit durchgehender Kabinettsfolge 2000–2026 (teils mit Rückgriff auf Amtszeiten, die kurz vor 2000 begannen, damit die Zeitreihe lückenlos beginnt).",
+      "datePrecision": "Jeder Eintrag trägt ein Feld 'datePrecision' ('day' | 'month' | 'year'). 'day' wurde per Web-Recherche verifiziert; 'month'/'year' beruht auf allgemein bekannten, aber nicht einzeln nachverifizierten Übergangszeitpunkten (meist Landtagswahl- oder Rücktrittsmonat). Bei 'month'/'year' ist der Tag im Datumsstring ein Platzhalter (01) und NICHT wörtlich zu nehmen.",
+      "uncertain": [
+        "Brandenburg 2024–2026: Übergänge (Kenia-Koalition → SPD/BSW → SPD/CDU) sind in der Reihenfolge und grob im Zeitraum gesichert, exakte Tagesdaten der Kabinettswechsel Ende 2024 und der SPD/CDU-Koalitionsbildung März 2026 sind nicht tagesgenau verifiziert.",
+        "Baden-Württemberg, Hessen, Niedersachsen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen vor ca. 2010: Übergangsdaten zwischen Kabinetten sind auf Monatsebene rekonstruiert, nicht einzeln pro Tag nachverifiziert.",
+        "Berlin 2001/2002: Der kurze Übergang von der Diepgen-Groko zur SPD/PDS-Koalition (SPD-Minderheitsregierung Wowereit I, toleriert von Grünen, Juni 2001 – Jan. 2002) ist vereinfacht als eigene Ein-Partei-Periode erfasst.",
+        "Alle 'end: null'-Einträge sind der Stand zum Kompilierungsdatum (2026-08-19); nicht erneut auf Aktualität geprüft."
+      ],
+      "recommendedNextStep": "Für tagesgenaue Daten: einzelne 'Kabinett X'-Wikipedia-Artikel bzw. Wikidata-Objekte (Amtszeit-Qualifier P580/P582) je Regierungsperiode nachschlagen, oder eine SPARQL-Abfrage analog build-laender-governments.mjs, aber über alle Regierungsmitglieder/Koalitionsparteien statt nur P6."
+    }
+  },
+  "byState": {
+    "BW": [
+      { "cabinet": "Teufel II", "headOfGovernment": "Erwin Teufel", "start": "1996-06-21", "end": "2001-06-25", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Teufel III", "headOfGovernment": "Erwin Teufel", "start": "2001-06-25", "end": "2005-04-21", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Oettinger I", "headOfGovernment": "Günther Oettinger", "start": "2005-04-21", "end": "2006-06-19", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Oettinger II", "headOfGovernment": "Günther Oettinger", "start": "2006-06-19", "end": "2010-02-10", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Mappus", "headOfGovernment": "Stefan Mappus", "start": "2010-02-10", "end": "2011-05-12", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Kretschmann I", "headOfGovernment": "Winfried Kretschmann", "start": "2011-05-12", "end": "2016-05-12", "parties": ["GRÜNE", "SPD"], "datePrecision": "day" },
+      { "cabinet": "Kretschmann II", "headOfGovernment": "Winfried Kretschmann", "start": "2016-05-12", "end": "2021-05-12", "parties": ["GRÜNE", "CDU"], "datePrecision": "day" },
+      { "cabinet": "Kretschmann III", "headOfGovernment": "Winfried Kretschmann", "start": "2021-05-12", "end": "2026-05-13", "parties": ["GRÜNE", "CDU"], "datePrecision": "day" },
+      { "cabinet": "Özdemir", "headOfGovernment": "Cem Özdemir", "start": "2026-05-13", "end": null, "parties": ["GRÜNE", "CDU"], "datePrecision": "day" }
+    ],
+    "BY": [
+      { "cabinet": "Stoiber III", "headOfGovernment": "Edmund Stoiber", "start": "1998-09-29", "end": "2003-10-14", "parties": ["CSU"], "datePrecision": "day" },
+      { "cabinet": "Stoiber IV", "headOfGovernment": "Edmund Stoiber", "start": "2003-10-14", "end": "2007-10-09", "parties": ["CSU"], "datePrecision": "day" },
+      { "cabinet": "Beckstein", "headOfGovernment": "Günther Beckstein", "start": "2007-10-09", "end": "2008-10-27", "parties": ["CSU"], "datePrecision": "day" },
+      { "cabinet": "Seehofer I", "headOfGovernment": "Horst Seehofer", "start": "2008-10-27", "end": "2013-10-08", "parties": ["CSU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Seehofer II", "headOfGovernment": "Horst Seehofer", "start": "2013-10-08", "end": "2018-03-16", "parties": ["CSU"], "datePrecision": "day" },
+      { "cabinet": "Söder I", "headOfGovernment": "Markus Söder", "start": "2018-03-16", "end": "2018-11-06", "parties": ["CSU"], "datePrecision": "day" },
+      { "cabinet": "Söder II", "headOfGovernment": "Markus Söder", "start": "2018-11-06", "end": "2023-10-31", "parties": ["CSU", "FW"], "datePrecision": "day" },
+      { "cabinet": "Söder III", "headOfGovernment": "Markus Söder", "start": "2023-10-31", "end": null, "parties": ["CSU", "FW"], "datePrecision": "day" }
+    ],
+    "BE": [
+      { "cabinet": "Diepgen IV", "headOfGovernment": "Eberhard Diepgen", "start": "1999-11-02", "end": "2001-06-16", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Wowereit I", "headOfGovernment": "Klaus Wowereit", "start": "2001-06-16", "end": "2002-01-17", "parties": ["SPD"], "datePrecision": "day", "note": "Minderheitsregierung, informell von Grünen/PDS toleriert, bis zur SPD-PDS-Koalitionsbildung nach der Wahl vom 21.10.2001." },
+      { "cabinet": "Wowereit II", "headOfGovernment": "Klaus Wowereit", "start": "2002-01-17", "end": "2006-11-23", "parties": ["SPD", "LINKE"], "datePrecision": "month", "note": "LINKE = PDS/Linkspartei.PDS (Landesverband Berlin)." },
+      { "cabinet": "Wowereit III", "headOfGovernment": "Klaus Wowereit", "start": "2006-11-23", "end": "2011-04-19", "parties": ["SPD", "LINKE"], "datePrecision": "month" },
+      { "cabinet": "Wowereit IV", "headOfGovernment": "Klaus Wowereit", "start": "2011-04-19", "end": "2014-12-11", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Müller I", "headOfGovernment": "Michael Müller", "start": "2014-12-11", "end": "2016-12-08", "parties": ["SPD", "CDU"], "datePrecision": "day" },
+      { "cabinet": "Müller II", "headOfGovernment": "Michael Müller", "start": "2016-12-08", "end": "2021-12-21", "parties": ["SPD", "LINKE", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Giffey", "headOfGovernment": "Franziska Giffey", "start": "2021-12-21", "end": "2023-04-27", "parties": ["SPD", "GRÜNE", "LINKE"], "datePrecision": "day" },
+      { "cabinet": "Wegner", "headOfGovernment": "Kai Wegner", "start": "2023-04-27", "end": null, "parties": ["CDU", "SPD"], "datePrecision": "day" }
+    ],
+    "BB": [
+      { "cabinet": "Stolpe III", "headOfGovernment": "Manfred Stolpe", "start": "1999-10-13", "end": "2002-06-26", "parties": ["SPD", "CDU"], "datePrecision": "day" },
+      { "cabinet": "Platzeck I", "headOfGovernment": "Matthias Platzeck", "start": "2002-06-26", "end": "2004-11-04", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Platzeck II", "headOfGovernment": "Matthias Platzeck", "start": "2004-11-04", "end": "2009-11-06", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Platzeck III", "headOfGovernment": "Matthias Platzeck", "start": "2009-11-06", "end": "2013-08-28", "parties": ["SPD", "LINKE"], "datePrecision": "day" },
+      { "cabinet": "Woidke I", "headOfGovernment": "Dietmar Woidke", "start": "2013-08-28", "end": "2014-11-05", "parties": ["SPD", "LINKE"], "datePrecision": "day" },
+      { "cabinet": "Woidke II", "headOfGovernment": "Dietmar Woidke", "start": "2014-11-05", "end": "2019-11-20", "parties": ["SPD", "LINKE"], "datePrecision": "day" },
+      { "cabinet": "Woidke III", "headOfGovernment": "Dietmar Woidke", "start": "2019-11-20", "end": "2024-12-11", "parties": ["SPD", "CDU", "GRÜNE"], "datePrecision": "day", "note": "'Kenia-Koalition'. Regierte nach der Landtagswahl 2024 geschäftsführend weiter, bis Woidke IV gebildet war — keine eigene Übergangskabinettsnummer (analog zur Bundesebene)." },
+      { "cabinet": "Woidke IV", "headOfGovernment": "Dietmar Woidke", "start": "2024-12-11", "end": "2026-01-06", "parties": ["SPD", "BSW"], "datePrecision": "day", "note": "Erste SPD/BSW-Koalition Deutschlands; Koalitionsbruch von Woidke am 06.01.2026 verkündet." },
+      { "cabinet": "Woidke IV (Minderheitsregierung)", "headOfGovernment": "Dietmar Woidke", "start": "2026-01-06", "end": "2026-03-18", "parties": ["SPD"], "datePrecision": "day", "note": "Weiterhin offiziell 'Viertes Kabinett Woidke', aber nach BSW-Bruch nur noch SPD-Minderheitsregierung bis zur SPD/CDU-Koalition." },
+      { "cabinet": "Woidke V", "headOfGovernment": "Dietmar Woidke", "start": "2026-03-18", "end": null, "parties": ["SPD", "CDU"], "datePrecision": "day", "note": "Koalitionsvertrag am 05.03.2026 vorgestellt, von beiden Parteitagen am 14.03.2026 bestätigt, Kabinett am 18.03.2026 vereidigt." }
+    ],
+    "HB": [
+      { "cabinet": "Scherf II", "headOfGovernment": "Henning Scherf", "start": "1999-07-01", "end": "2003-07-01", "parties": ["SPD", "CDU"], "datePrecision": "year" },
+      { "cabinet": "Scherf III", "headOfGovernment": "Henning Scherf", "start": "2003-07-01", "end": "2005-11-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Böhrnsen I", "headOfGovernment": "Jens Böhrnsen", "start": "2005-11-01", "end": "2007-07-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Böhrnsen II", "headOfGovernment": "Jens Böhrnsen", "start": "2007-07-01", "end": "2011-07-01", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Böhrnsen III", "headOfGovernment": "Jens Böhrnsen", "start": "2011-07-01", "end": "2015-07-01", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Sieling", "headOfGovernment": "Carsten Sieling", "start": "2015-07-01", "end": "2019-08-01", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Bovenschulte I", "headOfGovernment": "Andreas Bovenschulte", "start": "2019-08-01", "end": "2023-08-01", "parties": ["SPD", "GRÜNE", "LINKE"], "datePrecision": "month", "note": "Erste Rot-Grün-Rot-Koalition in einem westdeutschen Flächen-/Stadtstaat." },
+      { "cabinet": "Bovenschulte II", "headOfGovernment": "Andreas Bovenschulte", "start": "2023-08-01", "end": null, "parties": ["SPD", "GRÜNE", "LINKE"], "datePrecision": "month" }
+    ],
+    "HH": [
+      { "cabinet": "Runde", "headOfGovernment": "Ortwin Runde", "start": "1997-11-01", "end": "2001-10-31", "parties": ["SPD", "GRÜNE"], "datePrecision": "year", "note": "GRÜNE = GAL (Grün-Alternative Liste Hamburg)." },
+      { "cabinet": "von Beust I", "headOfGovernment": "Ole von Beust", "start": "2001-10-31", "end": "2004-03-01", "parties": ["CDU", "Schill-Partei", "FDP"], "datePrecision": "month", "note": "'Schill-Partei' (Partei Rechtsstaatlicher Offensive) ist kein Standard-Parteikürzel dieses Projekts." },
+      { "cabinet": "von Beust II", "headOfGovernment": "Ole von Beust", "start": "2004-03-01", "end": "2008-04-01", "parties": ["CDU"], "datePrecision": "month", "note": "CDU-Alleinregierung mit absoluter Mehrheit." },
+      { "cabinet": "von Beust III", "headOfGovernment": "Ole von Beust", "start": "2008-04-01", "end": "2010-07-01", "parties": ["CDU", "GRÜNE"], "datePrecision": "month", "note": "GRÜNE = GAL." },
+      { "cabinet": "Ahlhaus", "headOfGovernment": "Christoph Ahlhaus", "start": "2010-07-01", "end": "2011-03-01", "parties": ["CDU"], "datePrecision": "month" },
+      { "cabinet": "Scholz I", "headOfGovernment": "Olaf Scholz", "start": "2011-03-01", "end": "2015-03-01", "parties": ["SPD"], "datePrecision": "month", "note": "SPD-Alleinregierung mit absoluter Mehrheit." },
+      { "cabinet": "Scholz II", "headOfGovernment": "Olaf Scholz", "start": "2015-03-01", "end": "2018-03-28", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Tschentscher I", "headOfGovernment": "Peter Tschentscher", "start": "2018-03-28", "end": "2020-06-01", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Tschentscher II", "headOfGovernment": "Peter Tschentscher", "start": "2020-06-01", "end": "2025-03-01", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Tschentscher III", "headOfGovernment": "Peter Tschentscher", "start": "2025-03-01", "end": null, "parties": ["SPD", "GRÜNE"], "datePrecision": "month" }
+    ],
+    "HE": [
+      { "cabinet": "Koch I", "headOfGovernment": "Roland Koch", "start": "1999-04-07", "end": "2003-04-05", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Koch II", "headOfGovernment": "Roland Koch", "start": "2003-04-05", "end": "2009-02-05", "parties": ["CDU"], "datePrecision": "day", "note": "CDU-Alleinregierung mit absoluter Mehrheit 2003–2008; ab Frühjahr 2008 geschäftsführend nach unklarem Wahlausgang (Hessen-Krise/Ypsilanti-Episode), bis zur Neuwahl Jan. 2009." },
+      { "cabinet": "Koch III", "headOfGovernment": "Roland Koch", "start": "2009-02-05", "end": "2010-08-31", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Bouffier I", "headOfGovernment": "Volker Bouffier", "start": "2010-08-31", "end": "2014-01-18", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Bouffier II", "headOfGovernment": "Volker Bouffier", "start": "2014-01-18", "end": "2019-01-18", "parties": ["CDU", "GRÜNE"], "datePrecision": "month", "note": "Erste schwarz-grüne Koalition in einem deutschen Flächenland." },
+      { "cabinet": "Bouffier III", "headOfGovernment": "Volker Bouffier", "start": "2019-01-18", "end": "2022-05-31", "parties": ["CDU", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Rhein I", "headOfGovernment": "Boris Rhein", "start": "2022-05-31", "end": "2024-01-18", "parties": ["CDU", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Rhein II", "headOfGovernment": "Boris Rhein", "start": "2024-01-18", "end": null, "parties": ["CDU", "SPD"], "datePrecision": "day" }
+    ],
+    "MV": [
+      { "cabinet": "Ringstorff I", "headOfGovernment": "Harald Ringstorff", "start": "1998-11-04", "end": "2002-10-01", "parties": ["SPD", "LINKE"], "datePrecision": "month", "note": "LINKE = PDS." },
+      { "cabinet": "Ringstorff II", "headOfGovernment": "Harald Ringstorff", "start": "2002-10-01", "end": "2006-10-01", "parties": ["SPD", "LINKE"], "datePrecision": "month" },
+      { "cabinet": "Ringstorff III", "headOfGovernment": "Harald Ringstorff", "start": "2006-10-01", "end": "2008-10-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Sellering I", "headOfGovernment": "Erwin Sellering", "start": "2008-10-01", "end": "2011-10-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Sellering II", "headOfGovernment": "Erwin Sellering", "start": "2011-10-01", "end": "2016-10-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Sellering III", "headOfGovernment": "Erwin Sellering", "start": "2016-10-01", "end": "2017-07-01", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Schwesig I", "headOfGovernment": "Manuela Schwesig", "start": "2017-07-01", "end": "2021-11-15", "parties": ["SPD", "CDU"], "datePrecision": "month" },
+      { "cabinet": "Schwesig II", "headOfGovernment": "Manuela Schwesig", "start": "2021-11-15", "end": null, "parties": ["SPD", "LINKE"], "datePrecision": "day" }
+    ],
+    "NI": [
+      { "cabinet": "Glogowski", "headOfGovernment": "Gerhard Glogowski", "start": "1998-03-01", "end": "1999-12-01", "parties": ["SPD"], "datePrecision": "month" },
+      { "cabinet": "Gabriel", "headOfGovernment": "Sigmar Gabriel", "start": "1999-12-01", "end": "2003-03-04", "parties": ["SPD"], "datePrecision": "month", "note": "SPD-Alleinregierung." },
+      { "cabinet": "Wulff I", "headOfGovernment": "Christian Wulff", "start": "2003-03-04", "end": "2008-02-01", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Wulff II", "headOfGovernment": "Christian Wulff", "start": "2008-02-01", "end": "2010-06-30", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "McAllister", "headOfGovernment": "David McAllister", "start": "2010-06-30", "end": "2013-02-19", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Weil I", "headOfGovernment": "Stephan Weil", "start": "2013-02-19", "end": "2017-11-22", "parties": ["SPD", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Weil II", "headOfGovernment": "Stephan Weil", "start": "2017-11-22", "end": "2022-11-08", "parties": ["SPD", "CDU"], "datePrecision": "day" },
+      { "cabinet": "Weil III", "headOfGovernment": "Stephan Weil", "start": "2022-11-08", "end": null, "parties": ["SPD", "GRÜNE"], "datePrecision": "day" }
+    ],
+    "NW": [
+      { "cabinet": "Clement II", "headOfGovernment": "Wolfgang Clement", "start": "2000-06-01", "end": "2002-11-06", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Steinbrück", "headOfGovernment": "Peer Steinbrück", "start": "2002-11-06", "end": "2005-06-21", "parties": ["SPD", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Rüttgers", "headOfGovernment": "Jürgen Rüttgers", "start": "2005-06-21", "end": "2010-07-14", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Kraft I", "headOfGovernment": "Hannelore Kraft", "start": "2010-07-14", "end": "2012-07-20", "parties": ["SPD", "GRÜNE"], "datePrecision": "day", "note": "Minderheitsregierung." },
+      { "cabinet": "Kraft II", "headOfGovernment": "Hannelore Kraft", "start": "2012-07-20", "end": "2017-06-27", "parties": ["SPD", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Laschet", "headOfGovernment": "Armin Laschet", "start": "2017-06-27", "end": "2021-10-27", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Wüst I", "headOfGovernment": "Hendrik Wüst", "start": "2021-10-27", "end": "2022-06-29", "parties": ["CDU", "FDP"], "datePrecision": "day" },
+      { "cabinet": "Wüst II", "headOfGovernment": "Hendrik Wüst", "start": "2022-06-29", "end": null, "parties": ["CDU", "GRÜNE"], "datePrecision": "day" }
+    ],
+    "RP": [
+      { "cabinet": "Beck II", "headOfGovernment": "Kurt Beck", "start": "2001-05-01", "end": "2006-05-01", "parties": ["SPD", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Beck III", "headOfGovernment": "Kurt Beck", "start": "2006-05-01", "end": "2011-05-01", "parties": ["SPD"], "datePrecision": "month", "note": "SPD-Alleinregierung mit absoluter Mehrheit." },
+      { "cabinet": "Beck IV", "headOfGovernment": "Kurt Beck", "start": "2011-05-01", "end": "2013-01-16", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Dreyer I", "headOfGovernment": "Malu Dreyer", "start": "2013-01-16", "end": "2016-05-18", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Dreyer II", "headOfGovernment": "Malu Dreyer", "start": "2016-05-18", "end": "2021-05-18", "parties": ["SPD", "GRÜNE", "FDP"], "datePrecision": "month", "note": "'Ampel'-Koalition." },
+      { "cabinet": "Dreyer III", "headOfGovernment": "Malu Dreyer", "start": "2021-05-18", "end": null, "parties": ["SPD", "GRÜNE", "FDP"], "datePrecision": "month" }
+    ],
+    "SL": [
+      { "cabinet": "Müller II", "headOfGovernment": "Peter Müller", "start": "1999-09-01", "end": "2004-09-01", "parties": ["CDU"], "datePrecision": "year", "note": "CDU-Alleinregierung." },
+      { "cabinet": "Müller III", "headOfGovernment": "Peter Müller", "start": "2004-09-01", "end": "2009-08-01", "parties": ["CDU"], "datePrecision": "year" },
+      { "cabinet": "Müller IV / Kramp-Karrenbauer I", "headOfGovernment": "Peter Müller / Annegret Kramp-Karrenbauer", "start": "2009-08-01", "end": "2012-04-01", "parties": ["CDU", "FDP", "GRÜNE"], "datePrecision": "month", "note": "Erste 'Jamaika-Koalition' auf Landesebene in Deutschland; Kramp-Karrenbauer übernahm im Aug. 2011 von Müller, Koalition zerbrach Anfang 2012." },
+      { "cabinet": "Kramp-Karrenbauer II", "headOfGovernment": "Annegret Kramp-Karrenbauer", "start": "2012-04-01", "end": "2017-06-01", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Kramp-Karrenbauer III / Hans I", "headOfGovernment": "Annegret Kramp-Karrenbauer / Tobias Hans", "start": "2017-06-01", "end": "2022-04-01", "parties": ["CDU", "SPD"], "datePrecision": "month", "note": "Kramp-Karrenbauer übergab im März 2018 an Hans." },
+      { "cabinet": "Rehlinger", "headOfGovernment": "Anke Rehlinger", "start": "2022-04-01", "end": null, "parties": ["SPD"], "datePrecision": "month", "note": "SPD-Alleinregierung mit absoluter Mehrheit seit der Landtagswahl vom 27.03.2022." }
+    ],
+    "SN": [
+      { "cabinet": "Biedenkopf III", "headOfGovernment": "Kurt Biedenkopf", "start": "1999-10-01", "end": "2002-04-18", "parties": ["CDU"], "datePrecision": "month", "note": "CDU-Alleinregierung." },
+      { "cabinet": "Milbradt I", "headOfGovernment": "Georg Milbradt", "start": "2002-04-18", "end": "2004-10-01", "parties": ["CDU"], "datePrecision": "month" },
+      { "cabinet": "Milbradt II", "headOfGovernment": "Georg Milbradt", "start": "2004-10-01", "end": "2008-06-01", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Tillich I", "headOfGovernment": "Stanislaw Tillich", "start": "2008-06-01", "end": "2009-10-01", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Tillich II", "headOfGovernment": "Stanislaw Tillich", "start": "2009-10-01", "end": "2014-10-01", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Tillich III", "headOfGovernment": "Stanislaw Tillich", "start": "2014-10-01", "end": "2017-12-13", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Kretschmer I", "headOfGovernment": "Michael Kretschmer", "start": "2017-12-13", "end": "2019-12-20", "parties": ["CDU", "SPD"], "datePrecision": "day" },
+      { "cabinet": "Kretschmer II", "headOfGovernment": "Michael Kretschmer", "start": "2019-12-20", "end": "2024-12-18", "parties": ["CDU", "GRÜNE", "SPD"], "datePrecision": "day", "note": "'Kenia-Koalition'." },
+      { "cabinet": "Kretschmer III", "headOfGovernment": "Michael Kretschmer", "start": "2024-12-18", "end": null, "parties": ["CDU", "SPD"], "datePrecision": "day", "note": "Minderheitsregierung ohne eigene Mehrheit im Landtag — erste Minderheitsregierung in Sachsen seit 1990. Sondierungen mit BSW ('Brombeer-Koalition') waren zuvor gescheitert." }
+    ],
+    "ST": [
+      { "cabinet": "Höppner II", "headOfGovernment": "Reinhard Höppner", "start": "1998-06-01", "end": "2002-04-16", "parties": ["SPD"], "datePrecision": "month", "note": "SPD-Minderheitsregierung, informell von der PDS toleriert ('Magdeburger Modell')." },
+      { "cabinet": "Böhmer I", "headOfGovernment": "Wolfgang Böhmer", "start": "2002-04-16", "end": "2006-04-01", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Böhmer II", "headOfGovernment": "Wolfgang Böhmer", "start": "2006-04-01", "end": "2011-04-19", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Haseloff I", "headOfGovernment": "Reiner Haseloff", "start": "2011-04-19", "end": "2016-04-01", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Haseloff II", "headOfGovernment": "Reiner Haseloff", "start": "2016-04-01", "end": "2021-09-01", "parties": ["CDU", "SPD", "GRÜNE"], "datePrecision": "month", "note": "'Kenia-Koalition'." },
+      { "cabinet": "Haseloff III", "headOfGovernment": "Reiner Haseloff", "start": "2021-09-01", "end": null, "parties": ["CDU", "SPD", "FDP"], "datePrecision": "month", "note": "'Deutschland-Koalition'." }
+    ],
+    "SH": [
+      { "cabinet": "Simonis III", "headOfGovernment": "Heide Simonis", "start": "2000-04-01", "end": "2005-04-27", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
+      { "cabinet": "Carstensen I", "headOfGovernment": "Peter Harry Carstensen", "start": "2005-04-27", "end": "2009-09-27", "parties": ["CDU", "SPD"], "datePrecision": "month", "note": "Große Koalition nach unklarem Wahlausgang 2005." },
+      { "cabinet": "Carstensen II", "headOfGovernment": "Peter Harry Carstensen", "start": "2009-09-27", "end": "2012-06-12", "parties": ["CDU", "FDP"], "datePrecision": "month" },
+      { "cabinet": "Albig", "headOfGovernment": "Torsten Albig", "start": "2012-06-12", "end": "2017-06-28", "parties": ["SPD", "GRÜNE", "SSW"], "datePrecision": "month", "note": "'Küstenkoalition'." },
+      { "cabinet": "Günther I", "headOfGovernment": "Daniel Günther", "start": "2017-06-28", "end": "2022-06-29", "parties": ["CDU", "GRÜNE", "FDP"], "datePrecision": "day", "note": "'Jamaika-Koalition'." },
+      { "cabinet": "Günther II", "headOfGovernment": "Daniel Günther", "start": "2022-06-29", "end": null, "parties": ["CDU", "GRÜNE"], "datePrecision": "day" }
+    ],
+    "TH": [
+      { "cabinet": "Vogel", "headOfGovernment": "Bernhard Vogel", "start": "1999-09-01", "end": "2003-06-01", "parties": ["CDU"], "datePrecision": "year", "note": "CDU-Alleinregierung." },
+      { "cabinet": "Althaus", "headOfGovernment": "Dieter Althaus", "start": "2003-06-01", "end": "2009-09-01", "parties": ["CDU"], "datePrecision": "month" },
+      { "cabinet": "Lieberknecht", "headOfGovernment": "Christine Lieberknecht", "start": "2009-09-01", "end": "2014-12-05", "parties": ["CDU", "SPD"], "datePrecision": "month" },
+      { "cabinet": "Ramelow I", "headOfGovernment": "Bodo Ramelow", "start": "2014-12-05", "end": "2019-09-01", "parties": ["LINKE", "SPD", "GRÜNE"], "datePrecision": "day", "note": "Erste von der LINKEN geführte Landesregierung Deutschlands." },
+      { "cabinet": "Ramelow II", "headOfGovernment": "Bodo Ramelow", "start": "2019-09-01", "end": "2024-09-01", "parties": ["LINKE", "SPD", "GRÜNE"], "datePrecision": "month", "note": "Minderheitsregierung ohne eigene Mehrheit; ab 2020 informell durch einen 'Stabilitätspakt' mit der CDU bei Haushaltsfragen unterstützt." },
+      { "cabinet": "Voigt", "headOfGovernment": "Mario Voigt", "start": "2024-12-12", "end": null, "parties": ["CDU", "BSW", "SPD"], "datePrecision": "day", "note": "'Brombeer-Koalition' — erste Regierungsbeteiligung des BSW gemeinsam mit CDU/SPD; keine eigene Mehrheit im Landtag." }
+    ]
+  }
+}

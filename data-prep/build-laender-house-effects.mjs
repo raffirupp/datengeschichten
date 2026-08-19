@@ -143,10 +143,25 @@ for (const [pid, parl] of Object.entries(parlaments)) {
 
   if (cells.length < 4) continue
 
+  // Institute/Parteien, für die am Ende gar keine Zelle die MIN_N-Schwelle erreicht hat,
+  // aus der Achsenliste entfernen — sonst zeigt die Heatmap eine komplett leere Zeile/Spalte
+  // (Institut "wird angezeigt, hat aber nirgends einen Wert").
+  const instsWithCells   = new Set(cells.map(c => c.institute))
+  const partiesWithCells = new Set(cells.map(c => c.party))
+  const finalInsts    = stateInsts.map(id => instNames[id]).filter(name => instsWithCells.has(name))
+  const finalParties  = stateParties.map(id => partyShortcut[id] || partyName[id]).filter(p => partiesWithCells.has(p))
+
+  // Mit nur einem verbleibenden Institut gibt es nichts zu vergleichen — dann lieber
+  // die ganze Auswertung für dieses Bundesland weglassen (Story zeigt NoDataNote).
+  if (finalInsts.length < 2) {
+    console.warn(`⚠ ${parl.Name}: nach Filterung nur noch ${finalInsts.length} Institut(e) mit echten Daten — übersprungen`)
+    continue
+  }
+
   stateResults[parl.Name] = {
     n:          stateSurveys.length,
-    institutes: stateInsts.map(id => instNames[id]),
-    parties:    stateParties.map(id => partyShortcut[id] || partyName[id]),
+    institutes: finalInsts,
+    parties:    finalParties,
     cells,
   }
 

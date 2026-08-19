@@ -13,11 +13,105 @@ const IH = H - MARGIN.top - MARGIN.bottom
 
 function parseDate(str) { return new Date(str + 'T12:00:00Z') }
 
-export default function PollTrendChart({ polls, trend, parties, markerDate }) {
+// Welche Regierungsperiode war zu einem Datum aktiv?
+function activePeriod(date, sortedPeriods) {
+  for (const p of sortedPeriods) {
+    if (date >= p.start && (p.end == null || date < p.end)) return p
+  }
+  return null
+}
+
+// Punkte, zwischen denen mehr als GAP_DAYS ohne Umfrage liegen, werden nicht
+// verbunden — sonst suggeriert die geglättete Linie einen kontinuierlichen Verlauf
+// über Monate, in denen schlicht keine Umfrage stattfand (z. B. Bremen zwischen Wahlen).
+const GAP_DAYS = 150
+
+function splitByGap(points) {
+  const segments = []
+  let current = []
+  let prevDate = null
+  for (const p of points) {
+    const d = parseDate(p.date)
+    if (prevDate && (d - prevDate) / 86_400_000 > GAP_DAYS) {
+      if (current.length) segments.push(current)
+      current = []
+    }
+    current.push(p)
+    prevDate = d
+  }
+  if (current.length) segments.push(current)
+  return segments
+}
+
+// Verbindet die Lücken zwischen Segmenten mit einer sanften S-Kurve statt einer geraden
+// Linie — Kontrollpunkte auf halbem Weg mit horizontaler Tangente an beiden Enden, damit
+// die Brücke wie ein ausgeglichener Verlauf wirkt statt wie ein abrupter Knick.
+function smoothBridge(from, to, xAccessor, yAccessor) {
+  const x0 = xAccessor(from), y0 = yAccessor(from)
+  const x1 = xAccessor(to),   y1 = yAccessor(to)
+  const mx = (x0 + x1) / 2
+  return `M${x0},${y0} C${mx},${y0} ${mx},${y1} ${x1},${y1}`
+}
+
+function bridgesBetween(segments, xAccessor, yAccessor) {
+  const bridges = []
+  for (let i = 0; i < segments.length - 1; i++) {
+    const from = segments[i].at(-1)
+    const to = segments[i + 1][0]
+    bridges.push(smoothBridge(from, to, xAccessor, yAccessor))
+  }
+  return bridges
+}
+
+// Verteilt Endpunkt-Beschriftungen vertikal neu, wenn Parteiwerte nah beieinander liegen —
+// sonst überlappen sich die Textlabels bei knappen Werten.
+function declutterY(items, minGap) {
+  const sorted = [...items].sort((a, b) => a.y - b.y)
+  for (let i = 1; i < sorted.length; i++) {
+    if (sorted[i].y - sorted[i - 1].y < minGap) {
+      sorted[i].y = sorted[i - 1].y + minGap
+    }
+  }
+  return sorted
+}
+
+// Staffelt Regierungswechsel-Beschriftungen in mehrere Zeilen, wenn Wechsel zeitlich zu
+// dicht aufeinanderfolgen (z.B. Koalitionsbruch + Neubildung innerhalb weniger Wochen) —
+// sonst überschreiben sich die Kabinettsnamen gegenseitig.
+function layoutTransitionLabels(items, xOf, textOf, fontSize) {
+  const charWidth = fontSize * 0.62
+  const rowEndX = []
+  return items.map((item) => {
+    const x = xOf(item)
+    const w = textOf(item).length * charWidth + 8
+    let row = 0
+    while (rowEndX[row] != null && x < rowEndX[row] + 6) row++
+    rowEndX[row] = x + w
+    return { ...item, row }
+  })
+}
+
+export default function PollTrendChart({ polls, trend, parties, markerDate, governmentPeriods = [] }) {
   const [tooltip, setTooltip] = useState(null)
   const svgRef = useRef(null)
   const isMobile = useIsMobile()
   const labelFontSize = isMobile ? '13px' : '10px'
+
+  const transitions = useMemo(() => {
+    const trendStart = trend[0]?.date
+    const trendEnd = trend.at(-1)?.date
+    if (!trendStart || !trendEnd) return []
+    const sorted = [...governmentPeriods].sort((a, b) => (a.start < b.start ? -1 : 1))
+    const withinRange = sorted.filter((p) => p.start >= trendStart && p.start <= trendEnd)
+
+    // Regierung, die schon im Amt war, als die sichtbaren Daten beginnen — an den
+    // linken Rand gesetzt, sonst fehlt am Anfang jeder Hinweis, wer zu dem Zeitpunkt regierte.
+    const initial = activePeriod(trendStart, sorted)
+    if (initial && !withinRange.includes(initial)) {
+      return [{ ...initial, start: trendStart }, ...withinRange]
+    }
+    return withinRange
+  }, [governmentPeriods, trend])
 
   const { xScale, yScale, partyLines, yTicks, xTicks } = useMemo(() => {
     const allDates = trend.map(d => parseDate(d.date))
@@ -40,7 +134,14 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
       const points = trend
         .filter(d => d.values[key] != null)
         .map(d => ({ date: d.date, value: d.values[key] }))
-      return { key, color: partyColor(key), d: lineGen(points), points }
+      const rawSegments = splitByGap(points)
+      const segments = rawSegments.map(seg => lineGen(seg))
+      const bridges = bridgesBetween(
+        rawSegments,
+        d => xScale(parseDate(d.date)),
+        d => yScale(d.value),
+      )
+      return { key, color: partyColor(key), segments, bridges, points }
     })
 
     const yTicks = yScale.ticks(6)
@@ -78,6 +179,23 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
   }, [tooltip])
 
   const tooltipX = tooltip ? MARGIN.left + tooltip.x : 0
+
+  const endLabels = declutterY(
+    partyLines
+      .filter(({ points }) => points.length > 0)
+      .map(({ key, color, points }) => {
+        const last = points[points.length - 1]
+        return { key, color, value: last.value, x: xScale(parseDate(last.date)), y: yScale(last.value) }
+      }),
+    isMobile ? 16 : 13,
+  )
+
+  const transitionLabels = layoutTransitionLabels(
+    transitions,
+    (p) => xScale(parseDate(p.start)),
+    (p) => p.cabinet,
+    9,
+  )
 
   return (
     <div style={{ position: 'relative' }}>
@@ -142,35 +260,49 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
             })
           )}
 
-          {/* Trend lines */}
-          {partyLines.map(({ key, color, d }) => d && (
-            <path
-              key={key}
-              d={d}
-              fill="none"
-              stroke={color}
-              strokeWidth={2.2}
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            />
-          ))}
+          {/* Brücken über Umfragelücken: gestrichelt, dünn, gedämpfte Farbe */}
+          {partyLines.map(({ key, color, bridges }) =>
+            bridges.map((d, i) => d && (
+              <path
+                key={`${key}-bridge-${i}`}
+                d={d}
+                fill="none"
+                stroke={color}
+                strokeWidth={1.3}
+                strokeDasharray="4,3"
+                opacity={0.45}
+                strokeLinecap="round"
+              />
+            ))
+          )}
 
-          {/* End labels */}
-          {partyLines.map(({ key, color, points }) => {
-            if (points.length === 0) return null
-            const last = points[points.length - 1]
-            return (
-              <g key={key} transform={`translate(${xScale(parseDate(last.date))},${yScale(last.value)})`}>
-                <text
-                  x={8} y={0}
-                  dominantBaseline="middle"
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: color, fontWeight: 600 }}
-                >
-                  {key} {last.value.toFixed(1)}
-                </text>
-              </g>
-            )
-          })}
+          {/* Trend lines (echte Umfragedaten, in Segmente gebrochen wo Lücken > GAP_DAYS liegen) */}
+          {partyLines.map(({ key, color, segments }) =>
+            segments.map((d, i) => d && (
+              <path
+                key={`${key}-${i}`}
+                d={d}
+                fill="none"
+                stroke={color}
+                strokeWidth={2.2}
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            ))
+          )}
+
+          {/* End labels (vertikal entzerrt, wenn Werte nah beieinander liegen) */}
+          {endLabels.map(({ key, color, value, x, y }) => (
+            <g key={key} transform={`translate(${x},${y})`}>
+              <text
+                x={8} y={0}
+                dominantBaseline="middle"
+                style={{ fontFamily: 'var(--font-mono)', fontSize: labelFontSize, fill: color, fontWeight: 600 }}
+              >
+                {key} {value.toFixed(1)}
+              </text>
+            </g>
+          ))}
 
           {/* Ereignis-Marker */}
           {markerDate && (() => {
@@ -185,6 +317,21 @@ export default function PollTrendChart({ polls, trend, parties, markerDate }) {
               </g>
             )
           })()}
+
+          {/* Regierungswechsel-Markierungen (Beschriftung in mehreren Zeilen gestaffelt,
+              wenn Wechsel zeitlich zu dicht aufeinanderfolgen) */}
+          {transitionLabels.map((p) => {
+            const x = xScale(parseDate(p.start))
+            if (x < 0 || x > IW) return null
+            return (
+              <g key={p.start} pointerEvents="none">
+                <line x1={x} x2={x} y1={0} y2={IH} stroke="var(--color-ink)" strokeWidth={1} strokeDasharray="3,3" opacity={0.35} />
+                <text x={x + 4} y={10 + p.row * 11} style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', fill: 'var(--color-muted)' }}>
+                  {p.cabinet}
+                </text>
+              </g>
+            )
+          })}
 
           {/* Tooltip hairline */}
           {tooltip && (

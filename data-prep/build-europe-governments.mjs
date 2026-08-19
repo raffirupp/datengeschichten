@@ -139,7 +139,9 @@ for (const country of Object.keys(byCountry)) {
   byCountry[country].sort((a, b) => (a.startDate < b.startDate ? -1 : 1))
 }
 
-// — Step 6: for each year 2000–2025, find active cabinet per country on July 1 —
+// — Step 6: for each year 2000–2025, find active cabinet per country on Dec 31 —
+// (Jahresende statt Jahresmitte: ein Regierungswechsel spät im Jahr, z. B. Scholz
+// im Dezember 2021, soll noch im selben Jahr auf der Karte erscheinen.)
 const years = []
 for (let y = START_YEAR; y <= END_YEAR; y++) years.push(y)
 
@@ -150,13 +152,13 @@ const countriesSet = new Set()
 
 for (const year of years) {
   const snapshot = {}
-  const julFirst = `${year}-07-01`
+  const yearEnd = `${year}-12-31`
 
   for (const [country, cabs] of Object.entries(byCountry)) {
-    // Find the last cabinet that started on or before July 1
+    // Find the last cabinet that started on or before Dec 31
     let active = null
     for (const cab of cabs) {
-      if (cab.startDate <= julFirst) active = cab
+      if (cab.startDate <= yearEnd) active = cab
       else break
     }
     if (!active) continue

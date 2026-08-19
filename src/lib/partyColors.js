@@ -1,5 +1,9 @@
 const colors = {
   'CDU/CSU':       '#1A1A1A',
+  // Landtags-Umfragen führen CDU/CSU je nach Bundesland getrennt (DAWUM-Parteicodes) —
+  // gleiche Farbe wie der kombinierte Bundes-Code.
+  'CDU':           '#1A1A1A',
+  'CSU':           '#1A1A1A',
   'SPD':           '#C0272D',
   'Grüne':         '#46962B',
   'FDP':           '#E8B000',

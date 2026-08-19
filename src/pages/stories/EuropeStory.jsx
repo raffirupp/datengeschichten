@@ -30,15 +30,15 @@ function ColorModeToggle({ mode, onChange }) {
       borderRadius: '99px', border: '1px solid var(--color-rule)',
       backgroundColor: '#FFFFFF',
     }}>
-      {btn('family', 'Parteienfamilien')}
       {btn('spectrum', 'Links–Rechts')}
+      {btn('family', 'Parteienfamilien')}
     </div>
   )
 }
 
 export default function EuropeStory() {
   const [year, setYear] = useState(europeBeats[0].year)
-  const [colorMode, setColorMode] = useState('family')
+  const [colorMode, setColorMode] = useState('spectrum')
   const [manualYear, setManualYear] = useState(null)
 
   const handleChange = useCallback((v) => {

@@ -1,18 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect width="48" height="48" fill="#003399"/>
-  <defs>
-    <path id="s" fill="#FFCC00" d="M0,-2.4 0.558,-0.769 2.283,-0.742 0.904,0.294 1.411,1.942 0,0.95 -1.411,1.942 -0.904,0.294 -2.283,-0.742 -0.558,-0.769Z"/>
-  </defs>
-  <use href="#s" x="24" y="9"/>
-  <use href="#s" x="31.5" y="11.01"/>
-  <use href="#s" x="36.99" y="16.5"/>
-  <use href="#s" x="39" y="24"/>
-  <use href="#s" x="36.99" y="31.5"/>
-  <use href="#s" x="31.5" y="36.99"/>
-  <use href="#s" x="24" y="39"/>
-  <use href="#s" x="16.5" y="36.99"/>
-  <use href="#s" x="11.01" y="31.5"/>
-  <use href="#s" x="9" y="24"/>
-  <use href="#s" x="11.01" y="16.5"/>
-  <use href="#s" x="16.5" y="11.01"/>
+  <rect width="48" height="48" rx="9" fill="#F7F4EC"/>
+  <rect x="9" y="27" width="8" height="13" rx="1.5" fill="#1C5D57"/>
+  <rect x="20" y="19" width="8" height="21" rx="1.5" fill="#BE5A3C"/>
+  <rect x="31" y="9" width="8" height="31" rx="1.5" fill="#C08A1E"/>
 </svg>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-06-17",
+    "generated": "2026-08-19",
     "methodNote": "Cross-Korrelation der wöchentlichen Erstdifferenzen zwischen Institut-Trend und LOO-Konsens (Leave-One-Out). Positiver Lag = Institut reagiert früher auf Stimmungsänderungen als die anderen.",
     "lagRange": [
       -6,
@@ -47,19 +47,19 @@
       "institute": "INSA",
       "party": "CDU/CSU",
       "lagWeeks": 0,
-      "maxCorr": 0.598,
-      "corrAt0": 0.598,
-      "n": 363,
-      "nPolls": 628,
+      "maxCorr": 0.601,
+      "corrAt0": 0.601,
+      "n": 364,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.005
+          "corr": -0.01
         },
         {
           "lag": -5,
-          "corr": 0.052
+          "corr": 0.062
         },
         {
           "lag": -4,
@@ -67,43 +67,43 @@
         },
         {
           "lag": -3,
-          "corr": 0.129
+          "corr": 0.131
         },
         {
           "lag": -2,
-          "corr": 0.274
+          "corr": 0.27
         },
         {
           "lag": -1,
-          "corr": 0.488
+          "corr": 0.492
         },
         {
           "lag": 0,
-          "corr": 0.598
+          "corr": 0.601
         },
         {
           "lag": 1,
-          "corr": 0.533
+          "corr": 0.548
         },
         {
           "lag": 2,
-          "corr": 0.33
+          "corr": 0.337
         },
         {
           "lag": 3,
-          "corr": 0.157
+          "corr": 0.161
         },
         {
           "lag": 4,
-          "corr": 0.115
+          "corr": 0.123
         },
         {
           "lag": 5,
-          "corr": 0.099
+          "corr": 0.103
         },
         {
           "lag": 6,
-          "corr": 0.101
+          "corr": 0.097
         }
       ]
     },
@@ -111,63 +111,63 @@
       "institute": "INSA",
       "party": "SPD",
       "lagWeeks": 0,
-      "maxCorr": 0.532,
-      "corrAt0": 0.532,
-      "n": 363,
-      "nPolls": 628,
+      "maxCorr": 0.523,
+      "corrAt0": 0.523,
+      "n": 364,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.075
+          "corr": 0.073
         },
         {
           "lag": -5,
-          "corr": 0.066
+          "corr": 0.064
         },
         {
           "lag": -4,
-          "corr": 0.016
+          "corr": 0.025
         },
         {
           "lag": -3,
-          "corr": 0.133
+          "corr": 0.148
         },
         {
           "lag": -2,
-          "corr": 0.247
+          "corr": 0.258
         },
         {
           "lag": -1,
-          "corr": 0.438
+          "corr": 0.446
         },
         {
           "lag": 0,
-          "corr": 0.532
+          "corr": 0.523
         },
         {
           "lag": 1,
-          "corr": 0.392
+          "corr": 0.385
         },
         {
           "lag": 2,
-          "corr": 0.173
+          "corr": 0.167
         },
         {
           "lag": 3,
-          "corr": 0.021
+          "corr": 0.025
         },
         {
           "lag": 4,
-          "corr": 0.038
+          "corr": 0.049
         },
         {
           "lag": 5,
-          "corr": 0.02
+          "corr": 0.036
         },
         {
           "lag": 6,
-          "corr": -0.014
+          "corr": -0.004
         }
       ]
     },
@@ -175,19 +175,19 @@
       "institute": "INSA",
       "party": "Grüne",
       "lagWeeks": 0,
-      "maxCorr": 0.469,
-      "corrAt0": 0.469,
-      "n": 363,
-      "nPolls": 628,
+      "maxCorr": 0.466,
+      "corrAt0": 0.466,
+      "n": 364,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.013
+          "corr": 0.012
         },
         {
           "lag": -5,
-          "corr": 0.023
+          "corr": 0.015
         },
         {
           "lag": -4,
@@ -195,43 +195,43 @@
         },
         {
           "lag": -3,
-          "corr": 0.116
-        },
-        {
-          "lag": -2,
-          "corr": 0.226
-        },
-        {
-          "lag": -1,
-          "corr": 0.371
-        },
-        {
-          "lag": 0,
-          "corr": 0.469
-        },
-        {
-          "lag": 1,
-          "corr": 0.372
-        },
-        {
-          "lag": 2,
-          "corr": 0.259
-        },
-        {
-          "lag": 3,
-          "corr": 0.185
-        },
-        {
-          "lag": 4,
           "corr": 0.117
         },
         {
+          "lag": -2,
+          "corr": 0.238
+        },
+        {
+          "lag": -1,
+          "corr": 0.375
+        },
+        {
+          "lag": 0,
+          "corr": 0.466
+        },
+        {
+          "lag": 1,
+          "corr": 0.362
+        },
+        {
+          "lag": 2,
+          "corr": 0.251
+        },
+        {
+          "lag": 3,
+          "corr": 0.186
+        },
+        {
+          "lag": 4,
+          "corr": 0.112
+        },
+        {
           "lag": 5,
-          "corr": 0.101
+          "corr": 0.097
         },
         {
           "lag": 6,
-          "corr": 0.071
+          "corr": 0.065
         }
       ]
     },
@@ -239,19 +239,19 @@
       "institute": "INSA",
       "party": "AfD",
       "lagWeeks": 0,
-      "maxCorr": 0.408,
-      "corrAt0": 0.408,
-      "n": 363,
-      "nPolls": 628,
+      "maxCorr": 0.405,
+      "corrAt0": 0.405,
+      "n": 364,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.093
+          "corr": 0.083
         },
         {
           "lag": -5,
-          "corr": 0.085
+          "corr": 0.084
         },
         {
           "lag": -4,
@@ -259,43 +259,43 @@
         },
         {
           "lag": -3,
-          "corr": 0.269
+          "corr": 0.271
         },
         {
           "lag": -2,
-          "corr": 0.244
+          "corr": 0.25
         },
         {
           "lag": -1,
-          "corr": 0.279
+          "corr": 0.288
         },
         {
           "lag": 0,
-          "corr": 0.408
+          "corr": 0.405
         },
         {
           "lag": 1,
-          "corr": 0.343
+          "corr": 0.332
         },
         {
           "lag": 2,
-          "corr": 0.225
+          "corr": 0.218
         },
         {
           "lag": 3,
-          "corr": 0.132
+          "corr": 0.131
         },
         {
           "lag": 4,
-          "corr": 0.047
+          "corr": 0.051
         },
         {
           "lag": 5,
-          "corr": 0.034
+          "corr": 0.028
         },
         {
           "lag": 6,
-          "corr": 0.012
+          "corr": 0.003
         }
       ]
     },
@@ -303,63 +303,63 @@
       "institute": "INSA",
       "party": "FDP",
       "lagWeeks": 0,
-      "maxCorr": 0.336,
-      "corrAt0": 0.336,
-      "n": 363,
-      "nPolls": 628,
+      "maxCorr": 0.325,
+      "corrAt0": 0.325,
+      "n": 364,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.069
+          "corr": 0.072
         },
         {
           "lag": -5,
-          "corr": 0.109
+          "corr": 0.119
         },
         {
           "lag": -4,
-          "corr": 0.052
+          "corr": 0.054
         },
         {
           "lag": -3,
-          "corr": 0.026
+          "corr": 0.035
         },
         {
           "lag": -2,
-          "corr": 0.145
+          "corr": 0.124
         },
         {
           "lag": -1,
-          "corr": 0.289
+          "corr": 0.291
         },
         {
           "lag": 0,
-          "corr": 0.336
+          "corr": 0.325
         },
         {
           "lag": 1,
-          "corr": 0.285
+          "corr": 0.28
         },
         {
           "lag": 2,
-          "corr": 0.033
+          "corr": 0.026
         },
         {
           "lag": 3,
-          "corr": -0.024
+          "corr": -0.016
         },
         {
           "lag": 4,
-          "corr": 0.001
+          "corr": 0.022
         },
         {
           "lag": 5,
-          "corr": 0.135
+          "corr": 0.147
         },
         {
           "lag": 6,
-          "corr": 0.124
+          "corr": 0.133
         }
       ]
     },
@@ -367,35 +367,35 @@
       "institute": "INSA",
       "party": "Linke",
       "lagWeeks": 1,
-      "maxCorr": 0.381,
+      "maxCorr": 0.38,
       "corrAt0": 0.38,
-      "n": 362,
-      "nPolls": 628,
+      "n": 363,
+      "nPolls": 638,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.013
+          "corr": -0.001
         },
         {
           "lag": -5,
-          "corr": 0.061
+          "corr": 0.067
         },
         {
           "lag": -4,
-          "corr": 0.048
+          "corr": 0.051
         },
         {
           "lag": -3,
-          "corr": 0.166
+          "corr": 0.171
         },
         {
           "lag": -2,
-          "corr": 0.209
+          "corr": 0.223
         },
         {
           "lag": -1,
-          "corr": 0.336
+          "corr": 0.337
         },
         {
           "lag": 0,
@@ -403,27 +403,27 @@
         },
         {
           "lag": 1,
-          "corr": 0.381
+          "corr": 0.38
         },
         {
           "lag": 2,
-          "corr": 0.201
+          "corr": 0.197
         },
         {
           "lag": 3,
-          "corr": 0.146
+          "corr": 0.147
         },
         {
           "lag": 4,
-          "corr": 0.133
+          "corr": 0.127
         },
         {
           "lag": 5,
-          "corr": 0.02
+          "corr": 0.018
         },
         {
           "lag": 6,
-          "corr": 0.013
+          "corr": 0.007
         }
       ]
     },
@@ -431,19 +431,19 @@
       "institute": "INSA",
       "party": "BSW",
       "lagWeeks": 3,
-      "maxCorr": 0.193,
-      "corrAt0": 0.127,
-      "n": 121,
-      "nPolls": 249,
+      "maxCorr": 0.168,
+      "corrAt0": 0.118,
+      "n": 131,
+      "nPolls": 268,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.136
+          "corr": 0.122
         },
         {
           "lag": -5,
-          "corr": -0.022
+          "corr": -0.045
         },
         {
           "lag": -4,
@@ -451,43 +451,43 @@
         },
         {
           "lag": -3,
-          "corr": 0.043
+          "corr": 0.068
         },
         {
           "lag": -2,
-          "corr": 0.082
+          "corr": 0.091
         },
         {
           "lag": -1,
-          "corr": 0.166
+          "corr": 0.143
         },
         {
           "lag": 0,
-          "corr": 0.127
+          "corr": 0.118
         },
         {
           "lag": 1,
-          "corr": 0.082
+          "corr": 0.087
         },
         {
           "lag": 2,
-          "corr": 0.074
+          "corr": 0.066
         },
         {
           "lag": 3,
-          "corr": 0.193
+          "corr": 0.168
         },
         {
           "lag": 4,
-          "corr": 0.125
+          "corr": 0.124
         },
         {
           "lag": 5,
-          "corr": 0.166
+          "corr": 0.167
         },
         {
           "lag": 6,
-          "corr": 0.102
+          "corr": 0.1
         }
       ]
     },
@@ -495,59 +495,123 @@
       "institute": "Forsa",
       "party": "CDU/CSU",
       "lagWeeks": 1,
-      "maxCorr": 0.579,
-      "corrAt0": 0.567,
-      "n": 362,
-      "nPolls": 353,
+      "maxCorr": 0.586,
+      "corrAt0": 0.571,
+      "n": 363,
+      "nPolls": 354,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.069
+          "corr": 0.062
         },
         {
           "lag": -5,
-          "corr": 0.079
+          "corr": 0.077
         },
         {
           "lag": -4,
-          "corr": 0.11
+          "corr": 0.118
         },
         {
           "lag": -3,
-          "corr": 0.105
+          "corr": 0.111
         },
         {
           "lag": -2,
-          "corr": 0.229
+          "corr": 0.23
         },
         {
           "lag": -1,
-          "corr": 0.451
+          "corr": 0.449
         },
         {
           "lag": 0,
-          "corr": 0.567
+          "corr": 0.571
         },
         {
           "lag": 1,
-          "corr": 0.579
+          "corr": 0.586
         },
         {
           "lag": 2,
-          "corr": 0.377
+          "corr": 0.383
         },
         {
           "lag": 3,
-          "corr": 0.201
+          "corr": 0.2
         },
         {
           "lag": 4,
-          "corr": 0.085
+          "corr": 0.089
         },
         {
           "lag": 5,
-          "corr": 0.076
+          "corr": 0.079
+        },
+        {
+          "lag": 6,
+          "corr": 0.026
+        }
+      ]
+    },
+    {
+      "institute": "Forsa",
+      "party": "SPD",
+      "lagWeeks": 0,
+      "maxCorr": 0.519,
+      "corrAt0": 0.519,
+      "n": 364,
+      "nPolls": 354,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.062
+        },
+        {
+          "lag": -5,
+          "corr": 0.09
+        },
+        {
+          "lag": -4,
+          "corr": 0.012
+        },
+        {
+          "lag": -3,
+          "corr": 0.003
+        },
+        {
+          "lag": -2,
+          "corr": 0.122
+        },
+        {
+          "lag": -1,
+          "corr": 0.398
+        },
+        {
+          "lag": 0,
+          "corr": 0.519
+        },
+        {
+          "lag": 1,
+          "corr": 0.442
+        },
+        {
+          "lag": 2,
+          "corr": 0.234
+        },
+        {
+          "lag": 3,
+          "corr": 0.142
+        },
+        {
+          "lag": 4,
+          "corr": 0.092
+        },
+        {
+          "lag": 5,
+          "corr": 0.019
         },
         {
           "lag": 6,
@@ -557,1165 +621,29 @@
     },
     {
       "institute": "Forsa",
-      "party": "SPD",
-      "lagWeeks": 0,
-      "maxCorr": 0.521,
-      "corrAt0": 0.521,
-      "n": 363,
-      "nPolls": 353,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.06
-        },
-        {
-          "lag": -5,
-          "corr": 0.077
-        },
-        {
-          "lag": -4,
-          "corr": -0.001
-        },
-        {
-          "lag": -3,
-          "corr": 0.003
-        },
-        {
-          "lag": -2,
-          "corr": 0.128
-        },
-        {
-          "lag": -1,
-          "corr": 0.407
-        },
-        {
-          "lag": 0,
-          "corr": 0.521
-        },
-        {
-          "lag": 1,
-          "corr": 0.436
-        },
-        {
-          "lag": 2,
-          "corr": 0.229
-        },
-        {
-          "lag": 3,
-          "corr": 0.135
-        },
-        {
-          "lag": 4,
-          "corr": 0.087
-        },
-        {
-          "lag": 5,
-          "corr": 0.014
-        },
-        {
-          "lag": 6,
-          "corr": 0.031
-        }
-      ]
-    },
-    {
-      "institute": "Forsa",
       "party": "Grüne",
       "lagWeeks": 0,
-      "maxCorr": 0.448,
-      "corrAt0": 0.448,
-      "n": 363,
-      "nPolls": 353,
+      "maxCorr": 0.446,
+      "corrAt0": 0.446,
+      "n": 364,
+      "nPolls": 354,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.053
-        },
-        {
-          "lag": -5,
-          "corr": 0.044
-        },
-        {
-          "lag": -4,
-          "corr": 0.1
-        },
-        {
-          "lag": -3,
-          "corr": 0.131
-        },
-        {
-          "lag": -2,
-          "corr": 0.227
-        },
-        {
-          "lag": -1,
-          "corr": 0.333
-        },
-        {
-          "lag": 0,
-          "corr": 0.448
-        },
-        {
-          "lag": 1,
-          "corr": 0.438
-        },
-        {
-          "lag": 2,
-          "corr": 0.316
-        },
-        {
-          "lag": 3,
-          "corr": 0.225
-        },
-        {
-          "lag": 4,
-          "corr": 0.086
-        },
-        {
-          "lag": 5,
-          "corr": 0.046
-        },
-        {
-          "lag": 6,
-          "corr": -0.002
-        }
-      ]
-    },
-    {
-      "institute": "Forsa",
-      "party": "AfD",
-      "lagWeeks": 0,
-      "maxCorr": 0.35,
-      "corrAt0": 0.35,
-      "n": 363,
-      "nPolls": 353,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": -0.034
-        },
-        {
-          "lag": -5,
-          "corr": 0.005
-        },
-        {
-          "lag": -4,
-          "corr": 0.036
-        },
-        {
-          "lag": -3,
-          "corr": 0.071
-        },
-        {
-          "lag": -2,
-          "corr": 0.193
-        },
-        {
-          "lag": -1,
-          "corr": 0.316
-        },
-        {
-          "lag": 0,
-          "corr": 0.35
-        },
-        {
-          "lag": 1,
-          "corr": 0.249
-        },
-        {
-          "lag": 2,
-          "corr": 0.209
-        },
-        {
-          "lag": 3,
-          "corr": 0.265
-        },
-        {
-          "lag": 4,
-          "corr": 0.297
-        },
-        {
-          "lag": 5,
-          "corr": 0.078
-        },
-        {
-          "lag": 6,
-          "corr": 0.077
-        }
-      ]
-    },
-    {
-      "institute": "Forsa",
-      "party": "FDP",
-      "lagWeeks": 0,
-      "maxCorr": 0.38,
-      "corrAt0": 0.38,
-      "n": 360,
-      "nPolls": 349,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.029
-        },
-        {
-          "lag": -5,
-          "corr": -0.005
-        },
-        {
-          "lag": -4,
-          "corr": -0.024
-        },
-        {
-          "lag": -3,
-          "corr": -0.002
-        },
-        {
-          "lag": -2,
-          "corr": 0.158
-        },
-        {
-          "lag": -1,
-          "corr": 0.293
-        },
-        {
-          "lag": 0,
-          "corr": 0.38
-        },
-        {
-          "lag": 1,
-          "corr": 0.285
-        },
-        {
-          "lag": 2,
-          "corr": 0.098
-        },
-        {
-          "lag": 3,
-          "corr": -0.03
-        },
-        {
-          "lag": 4,
-          "corr": 0.004
-        },
-        {
-          "lag": 5,
-          "corr": 0.075
-        },
-        {
-          "lag": 6,
-          "corr": 0.078
-        }
-      ]
-    },
-    {
-      "institute": "Forsa",
-      "party": "Linke",
-      "lagWeeks": 1,
-      "maxCorr": 0.441,
-      "corrAt0": 0.395,
-      "n": 350,
-      "nPolls": 340,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": -0.079
-        },
-        {
-          "lag": -5,
-          "corr": -0.017
-        },
-        {
-          "lag": -4,
-          "corr": 0.047
-        },
-        {
-          "lag": -3,
-          "corr": 0.159
-        },
-        {
-          "lag": -2,
-          "corr": 0.219
-        },
-        {
-          "lag": -1,
-          "corr": 0.322
-        },
-        {
-          "lag": 0,
-          "corr": 0.395
-        },
-        {
-          "lag": 1,
-          "corr": 0.441
-        },
-        {
-          "lag": 2,
-          "corr": 0.244
-        },
-        {
-          "lag": 3,
-          "corr": 0.158
-        },
-        {
-          "lag": 4,
-          "corr": 0.061
-        },
-        {
-          "lag": 5,
-          "corr": 0.052
-        },
-        {
-          "lag": 6,
-          "corr": 0.022
-        }
-      ]
-    },
-    {
-      "institute": "Forsa",
-      "party": "BSW",
-      "lagWeeks": 1,
-      "maxCorr": 0.264,
-      "corrAt0": 0.224,
-      "n": 117,
-      "nPolls": 116,
-      "reliable": false,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.11
-        },
-        {
-          "lag": -5,
-          "corr": 0.068
-        },
-        {
-          "lag": -4,
-          "corr": 0.151
-        },
-        {
-          "lag": -3,
-          "corr": 0.115
-        },
-        {
-          "lag": -2,
-          "corr": 0.099
-        },
-        {
-          "lag": -1,
-          "corr": 0.12
-        },
-        {
-          "lag": 0,
-          "corr": 0.224
-        },
-        {
-          "lag": 1,
-          "corr": 0.264
-        },
-        {
-          "lag": 2,
-          "corr": 0.141
-        },
-        {
-          "lag": 3,
-          "corr": 0.083
-        },
-        {
-          "lag": 4,
-          "corr": 0.009
-        },
-        {
-          "lag": 5,
-          "corr": 0.086
-        },
-        {
-          "lag": 6,
-          "corr": 0.02
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "CDU/CSU",
-      "lagWeeks": -1,
-      "maxCorr": 0.579,
-      "corrAt0": 0.544,
-      "n": 269,
-      "nPolls": 258,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.129
-        },
-        {
-          "lag": -5,
-          "corr": 0.111
-        },
-        {
-          "lag": -4,
-          "corr": 0.077
-        },
-        {
-          "lag": -3,
-          "corr": 0.152
-        },
-        {
-          "lag": -2,
-          "corr": 0.344
-        },
-        {
-          "lag": -1,
-          "corr": 0.579
-        },
-        {
-          "lag": 0,
-          "corr": 0.544
-        },
-        {
-          "lag": 1,
-          "corr": 0.399
-        },
-        {
-          "lag": 2,
-          "corr": 0.178
-        },
-        {
-          "lag": 3,
-          "corr": 0.091
-        },
-        {
-          "lag": 4,
-          "corr": 0.047
-        },
-        {
-          "lag": 5,
-          "corr": 0.001
-        },
-        {
-          "lag": 6,
-          "corr": -0.057
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "SPD",
-      "lagWeeks": 0,
-      "maxCorr": 0.436,
-      "corrAt0": 0.436,
-      "n": 297,
-      "nPolls": 258,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": -0.021
-        },
-        {
-          "lag": -5,
-          "corr": 0.02
-        },
-        {
-          "lag": -4,
-          "corr": 0.031
-        },
-        {
-          "lag": -3,
-          "corr": 0.062
-        },
-        {
-          "lag": -2,
-          "corr": 0.231
-        },
-        {
-          "lag": -1,
-          "corr": 0.385
-        },
-        {
-          "lag": 0,
-          "corr": 0.436
-        },
-        {
-          "lag": 1,
-          "corr": 0.422
-        },
-        {
-          "lag": 2,
-          "corr": 0.297
-        },
-        {
-          "lag": 3,
-          "corr": 0.139
-        },
-        {
-          "lag": 4,
-          "corr": 0.019
-        },
-        {
-          "lag": 5,
-          "corr": 0.084
-        },
-        {
-          "lag": 6,
-          "corr": 0.031
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "Grüne",
-      "lagWeeks": 0,
-      "maxCorr": 0.574,
-      "corrAt0": 0.574,
-      "n": 297,
-      "nPolls": 258,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.075
-        },
-        {
-          "lag": -5,
-          "corr": 0.15
-        },
-        {
-          "lag": -4,
-          "corr": 0.105
-        },
-        {
-          "lag": -3,
-          "corr": 0.116
-        },
-        {
-          "lag": -2,
-          "corr": 0.288
-        },
-        {
-          "lag": -1,
-          "corr": 0.468
-        },
-        {
-          "lag": 0,
-          "corr": 0.574
-        },
-        {
-          "lag": 1,
-          "corr": 0.374
-        },
-        {
-          "lag": 2,
-          "corr": 0.215
-        },
-        {
-          "lag": 3,
-          "corr": 0.007
-        },
-        {
-          "lag": 4,
-          "corr": 0.032
-        },
-        {
-          "lag": 5,
-          "corr": -0.034
-        },
-        {
-          "lag": 6,
-          "corr": 0.014
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "AfD",
-      "lagWeeks": 0,
-      "maxCorr": 0.382,
-      "corrAt0": 0.382,
-      "n": 297,
-      "nPolls": 258,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.072
-        },
-        {
-          "lag": -5,
-          "corr": 0.098
-        },
-        {
-          "lag": -4,
-          "corr": 0.058
-        },
-        {
-          "lag": -3,
-          "corr": 0.096
-        },
-        {
-          "lag": -2,
-          "corr": 0.191
-        },
-        {
-          "lag": -1,
-          "corr": 0.324
-        },
-        {
-          "lag": 0,
-          "corr": 0.382
-        },
-        {
-          "lag": 1,
-          "corr": 0.235
-        },
-        {
-          "lag": 2,
-          "corr": 0.044
-        },
-        {
-          "lag": 3,
-          "corr": 0.039
-        },
-        {
-          "lag": 4,
-          "corr": 0.021
-        },
-        {
-          "lag": 5,
-          "corr": -0.002
-        },
-        {
-          "lag": 6,
-          "corr": -0.008
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "FDP",
-      "lagWeeks": 0,
-      "maxCorr": 0.339,
-      "corrAt0": 0.339,
-      "n": 297,
-      "nPolls": 258,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.082
-        },
-        {
-          "lag": -5,
-          "corr": 0.115
-        },
-        {
-          "lag": -4,
-          "corr": 0.002
-        },
-        {
-          "lag": -3,
-          "corr": -0.071
-        },
-        {
-          "lag": -2,
-          "corr": 0.072
-        },
-        {
-          "lag": -1,
-          "corr": 0.298
-        },
-        {
-          "lag": 0,
-          "corr": 0.339
-        },
-        {
-          "lag": 1,
-          "corr": 0.235
-        },
-        {
-          "lag": 2,
-          "corr": 0.127
-        },
-        {
-          "lag": 3,
-          "corr": 0.072
-        },
-        {
-          "lag": 4,
-          "corr": 0.03
-        },
-        {
-          "lag": 5,
-          "corr": -0.042
-        },
-        {
-          "lag": 6,
-          "corr": -0.019
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "Linke",
-      "lagWeeks": -1,
-      "maxCorr": 0.199,
-      "corrAt0": 0.111,
-      "n": 269,
-      "nPolls": 258,
-      "reliable": false,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": -0.113
-        },
-        {
-          "lag": -5,
-          "corr": -0.025
-        },
-        {
-          "lag": -4,
-          "corr": 0.059
-        },
-        {
-          "lag": -3,
-          "corr": 0.063
-        },
-        {
-          "lag": -2,
-          "corr": 0.051
-        },
-        {
-          "lag": -1,
-          "corr": 0.199
-        },
-        {
-          "lag": 0,
-          "corr": 0.111
-        },
-        {
-          "lag": 1,
-          "corr": 0.11
-        },
-        {
-          "lag": 2,
-          "corr": 0.11
-        },
-        {
-          "lag": 3,
-          "corr": -0.014
-        },
-        {
-          "lag": 4,
-          "corr": 0.032
-        },
-        {
-          "lag": 5,
-          "corr": -0.032
-        },
-        {
-          "lag": 6,
-          "corr": -0.049
-        }
-      ]
-    },
-    {
-      "institute": "Verian (Emnid)",
-      "party": "BSW",
-      "lagWeeks": -3,
-      "maxCorr": -0.57,
-      "corrAt0": 0.113,
-      "n": 26,
-      "nPolls": 31,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -5,
-          "corr": 0.084
-        },
-        {
-          "lag": -4,
-          "corr": -0.028
-        },
-        {
-          "lag": -3,
-          "corr": -0.57
-        },
-        {
-          "lag": -1,
-          "corr": -0.102
-        },
-        {
-          "lag": 0,
-          "corr": 0.113
-        },
-        {
-          "lag": 1,
-          "corr": -0.25
-        },
-        {
-          "lag": 3,
-          "corr": -0.068
-        },
-        {
-          "lag": 4,
-          "corr": 0.032
-        },
-        {
-          "lag": 5,
-          "corr": -0.028
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "CDU/CSU",
-      "lagWeeks": 0,
-      "maxCorr": 0.454,
-      "corrAt0": 0.454,
-      "n": 287,
-      "nPolls": 143,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.042
-        },
-        {
-          "lag": -5,
-          "corr": 0.075
-        },
-        {
-          "lag": -4,
-          "corr": 0.129
-        },
-        {
-          "lag": -3,
-          "corr": 0.121
-        },
-        {
-          "lag": -2,
-          "corr": 0.339
-        },
-        {
-          "lag": -1,
-          "corr": 0.429
-        },
-        {
-          "lag": 0,
-          "corr": 0.454
-        },
-        {
-          "lag": 1,
-          "corr": 0.302
-        },
-        {
-          "lag": 2,
-          "corr": 0.141
-        },
-        {
-          "lag": 3,
-          "corr": 0.107
-        },
-        {
-          "lag": 4,
-          "corr": 0.011
-        },
-        {
-          "lag": 5,
           "corr": 0.054
         },
         {
-          "lag": 6,
-          "corr": 0.039
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "SPD",
-      "lagWeeks": 0,
-      "maxCorr": 0.455,
-      "corrAt0": 0.455,
-      "n": 287,
-      "nPolls": 143,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.043
-        },
-        {
           "lag": -5,
-          "corr": 0.074
+          "corr": 0.037
         },
         {
           "lag": -4,
-          "corr": 0.072
+          "corr": 0.097
         },
         {
           "lag": -3,
-          "corr": 0.049
-        },
-        {
-          "lag": -2,
-          "corr": 0.153
-        },
-        {
-          "lag": -1,
-          "corr": 0.361
-        },
-        {
-          "lag": 0,
-          "corr": 0.455
-        },
-        {
-          "lag": 1,
-          "corr": 0.374
-        },
-        {
-          "lag": 2,
-          "corr": 0.202
-        },
-        {
-          "lag": 3,
-          "corr": 0.06
-        },
-        {
-          "lag": 4,
-          "corr": 0.068
-        },
-        {
-          "lag": 5,
-          "corr": 0.031
-        },
-        {
-          "lag": 6,
-          "corr": 0.059
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "Grüne",
-      "lagWeeks": -2,
-      "maxCorr": 0.358,
-      "corrAt0": 0.279,
-      "n": 223,
-      "nPolls": 143,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.248
-        },
-        {
-          "lag": -5,
-          "corr": 0.124
-        },
-        {
-          "lag": -4,
-          "corr": 0.032
-        },
-        {
-          "lag": -3,
-          "corr": 0.116
-        },
-        {
-          "lag": -2,
-          "corr": 0.358
-        },
-        {
-          "lag": -1,
-          "corr": 0.333
-        },
-        {
-          "lag": 0,
-          "corr": 0.279
-        },
-        {
-          "lag": 1,
-          "corr": 0.123
-        },
-        {
-          "lag": 2,
-          "corr": 0.045
-        },
-        {
-          "lag": 3,
-          "corr": -0.037
-        },
-        {
-          "lag": 4,
-          "corr": -0.023
-        },
-        {
-          "lag": 5,
-          "corr": -0.046
-        },
-        {
-          "lag": 6,
-          "corr": -0.065
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "AfD",
-      "lagWeeks": 0,
-      "maxCorr": 0.271,
-      "corrAt0": 0.271,
-      "n": 287,
-      "nPolls": 143,
-      "reliable": false,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.063
-        },
-        {
-          "lag": -5,
-          "corr": 0.193
-        },
-        {
-          "lag": -4,
-          "corr": 0.146
-        },
-        {
-          "lag": -3,
-          "corr": 0.074
-        },
-        {
-          "lag": -2,
-          "corr": 0.092
-        },
-        {
-          "lag": -1,
-          "corr": 0.174
-        },
-        {
-          "lag": 0,
-          "corr": 0.271
-        },
-        {
-          "lag": 1,
-          "corr": 0.16
-        },
-        {
-          "lag": 2,
-          "corr": 0.124
-        },
-        {
-          "lag": 3,
-          "corr": 0.106
-        },
-        {
-          "lag": 4,
-          "corr": 0.098
-        },
-        {
-          "lag": 5,
-          "corr": 0.02
-        },
-        {
-          "lag": 6,
-          "corr": 0.058
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "FDP",
-      "lagWeeks": 1,
-      "maxCorr": 0.228,
-      "corrAt0": 0.208,
-      "n": 254,
-      "nPolls": 142,
-      "reliable": false,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": 0.033
-        },
-        {
-          "lag": -5,
-          "corr": 0.14
-        },
-        {
-          "lag": -4,
-          "corr": 0.104
-        },
-        {
-          "lag": -3,
-          "corr": 0.038
-        },
-        {
-          "lag": -2,
-          "corr": 0.032
-        },
-        {
-          "lag": -1,
-          "corr": 0.116
-        },
-        {
-          "lag": 0,
-          "corr": 0.208
-        },
-        {
-          "lag": 1,
-          "corr": 0.228
-        },
-        {
-          "lag": 2,
-          "corr": 0.103
-        },
-        {
-          "lag": 3,
-          "corr": -0.01
-        },
-        {
-          "lag": 4,
-          "corr": -0.013
-        },
-        {
-          "lag": 5,
-          "corr": 0.133
-        },
-        {
-          "lag": 6,
-          "corr": 0.09
-        }
-      ]
-    },
-    {
-      "institute": "Infratest dimap",
-      "party": "Linke",
-      "lagWeeks": 0,
-      "maxCorr": 0.316,
-      "corrAt0": 0.316,
-      "n": 279,
-      "nPolls": 139,
-      "reliable": true,
-      "profile": [
-        {
-          "lag": -6,
-          "corr": -0.024
-        },
-        {
-          "lag": -5,
-          "corr": -0.014
-        },
-        {
-          "lag": -4,
-          "corr": 0.07
-        },
-        {
-          "lag": -3,
-          "corr": 0.211
+          "corr": 0.126
         },
         {
           "lag": -2,
@@ -1723,19 +651,1091 @@
         },
         {
           "lag": -1,
-          "corr": 0.297
+          "corr": 0.327
         },
         {
           "lag": 0,
-          "corr": 0.316
+          "corr": 0.446
         },
         {
           "lag": 1,
-          "corr": 0.183
+          "corr": 0.433
         },
         {
           "lag": 2,
+          "corr": 0.306
+        },
+        {
+          "lag": 3,
+          "corr": 0.225
+        },
+        {
+          "lag": 4,
+          "corr": 0.093
+        },
+        {
+          "lag": 5,
+          "corr": 0.053
+        },
+        {
+          "lag": 6,
+          "corr": -0.011
+        }
+      ]
+    },
+    {
+      "institute": "Forsa",
+      "party": "AfD",
+      "lagWeeks": 0,
+      "maxCorr": 0.348,
+      "corrAt0": 0.348,
+      "n": 364,
+      "nPolls": 354,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": -0.048
+        },
+        {
+          "lag": -5,
+          "corr": -0.012
+        },
+        {
+          "lag": -4,
+          "corr": 0.027
+        },
+        {
+          "lag": -3,
+          "corr": 0.066
+        },
+        {
+          "lag": -2,
+          "corr": 0.187
+        },
+        {
+          "lag": -1,
+          "corr": 0.309
+        },
+        {
+          "lag": 0,
+          "corr": 0.348
+        },
+        {
+          "lag": 1,
+          "corr": 0.252
+        },
+        {
+          "lag": 2,
+          "corr": 0.215
+        },
+        {
+          "lag": 3,
+          "corr": 0.257
+        },
+        {
+          "lag": 4,
+          "corr": 0.304
+        },
+        {
+          "lag": 5,
+          "corr": 0.09
+        },
+        {
+          "lag": 6,
+          "corr": 0.083
+        }
+      ]
+    },
+    {
+      "institute": "Forsa",
+      "party": "FDP",
+      "lagWeeks": 0,
+      "maxCorr": 0.389,
+      "corrAt0": 0.389,
+      "n": 361,
+      "nPolls": 350,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.027
+        },
+        {
+          "lag": -5,
+          "corr": -0.004
+        },
+        {
+          "lag": -4,
+          "corr": -0.021
+        },
+        {
+          "lag": -3,
+          "corr": -0.009
+        },
+        {
+          "lag": -2,
+          "corr": 0.146
+        },
+        {
+          "lag": -1,
+          "corr": 0.283
+        },
+        {
+          "lag": 0,
+          "corr": 0.389
+        },
+        {
+          "lag": 1,
+          "corr": 0.289
+        },
+        {
+          "lag": 2,
+          "corr": 0.103
+        },
+        {
+          "lag": 3,
+          "corr": -0.019
+        },
+        {
+          "lag": 4,
+          "corr": 0.014
+        },
+        {
+          "lag": 5,
+          "corr": 0.081
+        },
+        {
+          "lag": 6,
+          "corr": 0.085
+        }
+      ]
+    },
+    {
+      "institute": "Forsa",
+      "party": "Linke",
+      "lagWeeks": 1,
+      "maxCorr": 0.442,
+      "corrAt0": 0.377,
+      "n": 351,
+      "nPolls": 341,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": -0.077
+        },
+        {
+          "lag": -5,
+          "corr": -0.027
+        },
+        {
+          "lag": -4,
+          "corr": 0.032
+        },
+        {
+          "lag": -3,
+          "corr": 0.167
+        },
+        {
+          "lag": -2,
+          "corr": 0.232
+        },
+        {
+          "lag": -1,
+          "corr": 0.305
+        },
+        {
+          "lag": 0,
+          "corr": 0.377
+        },
+        {
+          "lag": 1,
+          "corr": 0.442
+        },
+        {
+          "lag": 2,
+          "corr": 0.254
+        },
+        {
+          "lag": 3,
+          "corr": 0.168
+        },
+        {
+          "lag": 4,
+          "corr": 0.06
+        },
+        {
+          "lag": 5,
+          "corr": 0.05
+        },
+        {
+          "lag": 6,
+          "corr": 0.025
+        }
+      ]
+    },
+    {
+      "institute": "Forsa",
+      "party": "BSW",
+      "lagWeeks": 1,
+      "maxCorr": 0.259,
+      "corrAt0": 0.221,
+      "n": 123,
+      "nPolls": 120,
+      "reliable": false,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.109
+        },
+        {
+          "lag": -5,
+          "corr": 0.067
+        },
+        {
+          "lag": -4,
+          "corr": 0.15
+        },
+        {
+          "lag": -3,
+          "corr": 0.114
+        },
+        {
+          "lag": -2,
+          "corr": 0.098
+        },
+        {
+          "lag": -1,
+          "corr": 0.119
+        },
+        {
+          "lag": 0,
+          "corr": 0.221
+        },
+        {
+          "lag": 1,
+          "corr": 0.259
+        },
+        {
+          "lag": 2,
+          "corr": 0.138
+        },
+        {
+          "lag": 3,
+          "corr": 0.081
+        },
+        {
+          "lag": 4,
+          "corr": 0.009
+        },
+        {
+          "lag": 5,
+          "corr": 0.085
+        },
+        {
+          "lag": 6,
+          "corr": 0.02
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "CDU/CSU",
+      "lagWeeks": -1,
+      "maxCorr": 0.589,
+      "corrAt0": 0.546,
+      "n": 263,
+      "nPolls": 251,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.117
+        },
+        {
+          "lag": -5,
+          "corr": 0.111
+        },
+        {
+          "lag": -4,
+          "corr": 0.077
+        },
+        {
+          "lag": -3,
+          "corr": 0.159
+        },
+        {
+          "lag": -2,
+          "corr": 0.359
+        },
+        {
+          "lag": -1,
+          "corr": 0.589
+        },
+        {
+          "lag": 0,
+          "corr": 0.546
+        },
+        {
+          "lag": 1,
+          "corr": 0.401
+        },
+        {
+          "lag": 2,
+          "corr": 0.182
+        },
+        {
+          "lag": 3,
+          "corr": 0.094
+        },
+        {
+          "lag": 4,
+          "corr": 0.049
+        },
+        {
+          "lag": 5,
+          "corr": -0.001
+        },
+        {
+          "lag": 6,
+          "corr": -0.059
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "SPD",
+      "lagWeeks": 0,
+      "maxCorr": 0.426,
+      "corrAt0": 0.426,
+      "n": 294,
+      "nPolls": 251,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": -0.019
+        },
+        {
+          "lag": -5,
+          "corr": 0.027
+        },
+        {
+          "lag": -4,
+          "corr": 0.04
+        },
+        {
+          "lag": -3,
+          "corr": 0.071
+        },
+        {
+          "lag": -2,
+          "corr": 0.234
+        },
+        {
+          "lag": -1,
+          "corr": 0.386
+        },
+        {
+          "lag": 0,
+          "corr": 0.426
+        },
+        {
+          "lag": 1,
+          "corr": 0.422
+        },
+        {
+          "lag": 2,
+          "corr": 0.299
+        },
+        {
+          "lag": 3,
+          "corr": 0.157
+        },
+        {
+          "lag": 4,
+          "corr": 0.039
+        },
+        {
+          "lag": 5,
+          "corr": 0.098
+        },
+        {
+          "lag": 6,
+          "corr": 0.028
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "Grüne",
+      "lagWeeks": 0,
+      "maxCorr": 0.577,
+      "corrAt0": 0.577,
+      "n": 294,
+      "nPolls": 251,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.077
+        },
+        {
+          "lag": -5,
+          "corr": 0.152
+        },
+        {
+          "lag": -4,
+          "corr": 0.102
+        },
+        {
+          "lag": -3,
+          "corr": 0.111
+        },
+        {
+          "lag": -2,
+          "corr": 0.286
+        },
+        {
+          "lag": -1,
+          "corr": 0.463
+        },
+        {
+          "lag": 0,
+          "corr": 0.577
+        },
+        {
+          "lag": 1,
+          "corr": 0.379
+        },
+        {
+          "lag": 2,
+          "corr": 0.22
+        },
+        {
+          "lag": 3,
+          "corr": 0.011
+        },
+        {
+          "lag": 4,
+          "corr": 0.026
+        },
+        {
+          "lag": 5,
+          "corr": -0.041
+        },
+        {
+          "lag": 6,
+          "corr": 0.012
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "AfD",
+      "lagWeeks": 0,
+      "maxCorr": 0.38,
+      "corrAt0": 0.38,
+      "n": 294,
+      "nPolls": 251,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.068
+        },
+        {
+          "lag": -5,
+          "corr": 0.098
+        },
+        {
+          "lag": -4,
+          "corr": 0.056
+        },
+        {
+          "lag": -3,
+          "corr": 0.097
+        },
+        {
+          "lag": -2,
+          "corr": 0.196
+        },
+        {
+          "lag": -1,
+          "corr": 0.326
+        },
+        {
+          "lag": 0,
+          "corr": 0.38
+        },
+        {
+          "lag": 1,
+          "corr": 0.235
+        },
+        {
+          "lag": 2,
+          "corr": 0.051
+        },
+        {
+          "lag": 3,
+          "corr": 0.05
+        },
+        {
+          "lag": 4,
+          "corr": 0.022
+        },
+        {
+          "lag": 5,
+          "corr": -0.009
+        },
+        {
+          "lag": 6,
+          "corr": -0.01
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "FDP",
+      "lagWeeks": 0,
+      "maxCorr": 0.336,
+      "corrAt0": 0.336,
+      "n": 294,
+      "nPolls": 251,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.088
+        },
+        {
+          "lag": -5,
+          "corr": 0.124
+        },
+        {
+          "lag": -4,
+          "corr": 0.006
+        },
+        {
+          "lag": -3,
+          "corr": -0.059
+        },
+        {
+          "lag": -2,
+          "corr": 0.08
+        },
+        {
+          "lag": -1,
+          "corr": 0.296
+        },
+        {
+          "lag": 0,
+          "corr": 0.336
+        },
+        {
+          "lag": 1,
+          "corr": 0.232
+        },
+        {
+          "lag": 2,
+          "corr": 0.117
+        },
+        {
+          "lag": 3,
+          "corr": 0.064
+        },
+        {
+          "lag": 4,
+          "corr": 0.024
+        },
+        {
+          "lag": 5,
+          "corr": -0.035
+        },
+        {
+          "lag": 6,
+          "corr": 0.003
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "Linke",
+      "lagWeeks": -1,
+      "maxCorr": 0.197,
+      "corrAt0": 0.097,
+      "n": 263,
+      "nPolls": 251,
+      "reliable": false,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": -0.109
+        },
+        {
+          "lag": -5,
+          "corr": -0.047
+        },
+        {
+          "lag": -4,
+          "corr": 0.055
+        },
+        {
+          "lag": -3,
+          "corr": 0.074
+        },
+        {
+          "lag": -2,
+          "corr": 0.068
+        },
+        {
+          "lag": -1,
+          "corr": 0.197
+        },
+        {
+          "lag": 0,
+          "corr": 0.097
+        },
+        {
+          "lag": 1,
+          "corr": 0.099
+        },
+        {
+          "lag": 2,
+          "corr": 0.127
+        },
+        {
+          "lag": 3,
+          "corr": 0.021
+        },
+        {
+          "lag": 4,
+          "corr": 0.037
+        },
+        {
+          "lag": 5,
+          "corr": -0.056
+        },
+        {
+          "lag": 6,
+          "corr": -0.056
+        }
+      ]
+    },
+    {
+      "institute": "Verian (Emnid)",
+      "party": "BSW",
+      "lagWeeks": -3,
+      "maxCorr": -0.543,
+      "corrAt0": 0.102,
+      "n": 29,
+      "nPolls": 33,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -5,
+          "corr": 0.093
+        },
+        {
+          "lag": -4,
+          "corr": -0.025
+        },
+        {
+          "lag": -3,
+          "corr": -0.543
+        },
+        {
+          "lag": -1,
+          "corr": -0.093
+        },
+        {
+          "lag": 0,
+          "corr": 0.102
+        },
+        {
+          "lag": 1,
+          "corr": -0.241
+        },
+        {
+          "lag": 3,
+          "corr": -0.053
+        },
+        {
+          "lag": 4,
+          "corr": 0.025
+        },
+        {
+          "lag": 5,
+          "corr": -0.019
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "CDU/CSU",
+      "lagWeeks": 0,
+      "maxCorr": 0.456,
+      "corrAt0": 0.456,
+      "n": 284,
+      "nPolls": 141,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.04
+        },
+        {
+          "lag": -5,
+          "corr": 0.076
+        },
+        {
+          "lag": -4,
           "corr": 0.131
+        },
+        {
+          "lag": -3,
+          "corr": 0.124
+        },
+        {
+          "lag": -2,
+          "corr": 0.342
+        },
+        {
+          "lag": -1,
+          "corr": 0.426
+        },
+        {
+          "lag": 0,
+          "corr": 0.456
+        },
+        {
+          "lag": 1,
+          "corr": 0.308
+        },
+        {
+          "lag": 2,
+          "corr": 0.148
+        },
+        {
+          "lag": 3,
+          "corr": 0.111
+        },
+        {
+          "lag": 4,
+          "corr": 0.007
+        },
+        {
+          "lag": 5,
+          "corr": 0.05
+        },
+        {
+          "lag": 6,
+          "corr": 0.035
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "SPD",
+      "lagWeeks": 0,
+      "maxCorr": 0.453,
+      "corrAt0": 0.453,
+      "n": 284,
+      "nPolls": 141,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.023
+        },
+        {
+          "lag": -5,
+          "corr": 0.085
+        },
+        {
+          "lag": -4,
+          "corr": 0.079
+        },
+        {
+          "lag": -3,
+          "corr": 0.07
+        },
+        {
+          "lag": -2,
+          "corr": 0.161
+        },
+        {
+          "lag": -1,
+          "corr": 0.364
+        },
+        {
+          "lag": 0,
+          "corr": 0.453
+        },
+        {
+          "lag": 1,
+          "corr": 0.369
+        },
+        {
+          "lag": 2,
+          "corr": 0.203
+        },
+        {
+          "lag": 3,
+          "corr": 0.063
+        },
+        {
+          "lag": 4,
+          "corr": 0.082
+        },
+        {
+          "lag": 5,
+          "corr": 0.061
+        },
+        {
+          "lag": 6,
+          "corr": 0.07
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "Grüne",
+      "lagWeeks": -2,
+      "maxCorr": 0.37,
+      "corrAt0": 0.287,
+      "n": 215,
+      "nPolls": 141,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.243
+        },
+        {
+          "lag": -5,
+          "corr": 0.117
+        },
+        {
+          "lag": -4,
+          "corr": 0.035
+        },
+        {
+          "lag": -3,
+          "corr": 0.117
+        },
+        {
+          "lag": -2,
+          "corr": 0.37
+        },
+        {
+          "lag": -1,
+          "corr": 0.341
+        },
+        {
+          "lag": 0,
+          "corr": 0.287
+        },
+        {
+          "lag": 1,
+          "corr": 0.127
+        },
+        {
+          "lag": 2,
+          "corr": 0.045
+        },
+        {
+          "lag": 3,
+          "corr": -0.041
+        },
+        {
+          "lag": 4,
+          "corr": -0.025
+        },
+        {
+          "lag": 5,
+          "corr": -0.038
+        },
+        {
+          "lag": 6,
+          "corr": -0.07
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "AfD",
+      "lagWeeks": 0,
+      "maxCorr": 0.264,
+      "corrAt0": 0.264,
+      "n": 284,
+      "nPolls": 141,
+      "reliable": false,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.068
+        },
+        {
+          "lag": -5,
+          "corr": 0.184
+        },
+        {
+          "lag": -4,
+          "corr": 0.15
+        },
+        {
+          "lag": -3,
+          "corr": 0.081
+        },
+        {
+          "lag": -2,
+          "corr": 0.107
+        },
+        {
+          "lag": -1,
+          "corr": 0.165
+        },
+        {
+          "lag": 0,
+          "corr": 0.264
+        },
+        {
+          "lag": 1,
+          "corr": 0.176
+        },
+        {
+          "lag": 2,
+          "corr": 0.141
+        },
+        {
+          "lag": 3,
+          "corr": 0.113
+        },
+        {
+          "lag": 4,
+          "corr": 0.09
+        },
+        {
+          "lag": 5,
+          "corr": 0.007
+        },
+        {
+          "lag": 6,
+          "corr": 0.056
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "FDP",
+      "lagWeeks": 1,
+      "maxCorr": 0.232,
+      "corrAt0": 0.202,
+      "n": 248,
+      "nPolls": 140,
+      "reliable": false,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": 0.044
+        },
+        {
+          "lag": -5,
+          "corr": 0.15
+        },
+        {
+          "lag": -4,
+          "corr": 0.122
+        },
+        {
+          "lag": -3,
+          "corr": 0.068
+        },
+        {
+          "lag": -2,
+          "corr": 0.026
+        },
+        {
+          "lag": -1,
+          "corr": 0.124
+        },
+        {
+          "lag": 0,
+          "corr": 0.202
+        },
+        {
+          "lag": 1,
+          "corr": 0.232
+        },
+        {
+          "lag": 2,
+          "corr": 0.099
+        },
+        {
+          "lag": 3,
+          "corr": -0.024
+        },
+        {
+          "lag": 4,
+          "corr": 0.005
+        },
+        {
+          "lag": 5,
+          "corr": 0.136
+        },
+        {
+          "lag": 6,
+          "corr": 0.117
+        }
+      ]
+    },
+    {
+      "institute": "Infratest dimap",
+      "party": "Linke",
+      "lagWeeks": 0,
+      "maxCorr": 0.317,
+      "corrAt0": 0.317,
+      "n": 276,
+      "nPolls": 137,
+      "reliable": true,
+      "profile": [
+        {
+          "lag": -6,
+          "corr": -0.023
+        },
+        {
+          "lag": -5,
+          "corr": -0.015
+        },
+        {
+          "lag": -4,
+          "corr": 0.081
+        },
+        {
+          "lag": -3,
+          "corr": 0.217
+        },
+        {
+          "lag": -2,
+          "corr": 0.217
+        },
+        {
+          "lag": -1,
+          "corr": 0.29
+        },
+        {
+          "lag": 0,
+          "corr": 0.317
+        },
+        {
+          "lag": 1,
+          "corr": 0.185
+        },
+        {
+          "lag": 2,
+          "corr": 0.135
         },
         {
           "lag": 3,
@@ -1743,25 +1743,25 @@
         },
         {
           "lag": 4,
-          "corr": 0.12
+          "corr": 0.103
         },
         {
           "lag": 5,
-          "corr": 0.066
+          "corr": 0.061
         },
         {
           "lag": 6,
-          "corr": -0.064
+          "corr": -0.059
         }
       ]
     },
     {
       "institute": "Infratest dimap",
       "party": "BSW",
-      "lagWeeks": -4,
+      "lagWeeks": 1,
       "maxCorr": 0.437,
-      "corrAt0": 0.159,
-      "n": 54,
+      "corrAt0": 0.16,
+      "n": 45,
       "nPolls": 34,
       "reliable": true,
       "profile": [
@@ -1771,11 +1771,11 @@
         },
         {
           "lag": -5,
-          "corr": 0.041
+          "corr": 0.04
         },
         {
           "lag": -4,
-          "corr": 0.437
+          "corr": 0.435
         },
         {
           "lag": -3,
@@ -1787,11 +1787,11 @@
         },
         {
           "lag": -1,
-          "corr": -0.044
+          "corr": -0.039
         },
         {
           "lag": 0,
-          "corr": 0.159
+          "corr": 0.16
         },
         {
           "lag": 1,
@@ -1803,15 +1803,15 @@
         },
         {
           "lag": 3,
-          "corr": 0.2
+          "corr": 0.204
         },
         {
           "lag": 4,
-          "corr": 0.138
+          "corr": 0.142
         },
         {
           "lag": 5,
-          "corr": 0.196
+          "corr": 0.198
         },
         {
           "lag": 6,
@@ -1823,9 +1823,9 @@
       "institute": "Forschungsgruppe Wahlen",
       "party": "CDU/CSU",
       "lagWeeks": -1,
-      "maxCorr": 0.412,
-      "corrAt0": 0.377,
-      "n": 286,
+      "maxCorr": 0.413,
+      "corrAt0": 0.376,
+      "n": 288,
       "nPolls": 136,
       "reliable": true,
       "profile": [
@@ -1835,15 +1835,15 @@
         },
         {
           "lag": -5,
-          "corr": 0.107
+          "corr": 0.111
         },
         {
           "lag": -4,
-          "corr": 0.151
+          "corr": 0.153
         },
         {
           "lag": -3,
-          "corr": 0.188
+          "corr": 0.189
         },
         {
           "lag": -2,
@@ -1851,15 +1851,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.412
+          "corr": 0.413
         },
         {
           "lag": 0,
-          "corr": 0.377
+          "corr": 0.376
         },
         {
           "lag": 1,
-          "corr": 0.276
+          "corr": 0.271
         },
         {
           "lag": 2,
@@ -1867,7 +1867,7 @@
         },
         {
           "lag": 3,
-          "corr": 0.032
+          "corr": 0.036
         },
         {
           "lag": 4,
@@ -1875,11 +1875,11 @@
         },
         {
           "lag": 5,
-          "corr": -0.081
+          "corr": -0.082
         },
         {
           "lag": 6,
-          "corr": -0.024
+          "corr": -0.022
         }
       ]
     },
@@ -1887,27 +1887,27 @@
       "institute": "Forschungsgruppe Wahlen",
       "party": "SPD",
       "lagWeeks": 0,
-      "maxCorr": 0.407,
-      "corrAt0": 0.407,
-      "n": 310,
+      "maxCorr": 0.41,
+      "corrAt0": 0.41,
+      "n": 311,
       "nPolls": 136,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.086
+          "corr": 0.092
         },
         {
           "lag": -5,
-          "corr": 0.103
+          "corr": 0.119
         },
         {
           "lag": -4,
-          "corr": 0.108
+          "corr": 0.103
         },
         {
           "lag": -3,
-          "corr": 0.133
+          "corr": 0.129
         },
         {
           "lag": -2,
@@ -1915,15 +1915,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.365
+          "corr": 0.368
         },
         {
           "lag": 0,
-          "corr": 0.407
+          "corr": 0.41
         },
         {
           "lag": 1,
-          "corr": 0.324
+          "corr": 0.327
         },
         {
           "lag": 2,
@@ -1931,7 +1931,7 @@
         },
         {
           "lag": 3,
-          "corr": 0.16
+          "corr": 0.161
         },
         {
           "lag": 4,
@@ -1943,7 +1943,7 @@
         },
         {
           "lag": 6,
-          "corr": 0.062
+          "corr": 0.061
         }
       ]
     },
@@ -1951,35 +1951,35 @@
       "institute": "Forschungsgruppe Wahlen",
       "party": "Grüne",
       "lagWeeks": -2,
-      "maxCorr": 0.297,
+      "maxCorr": 0.29,
       "corrAt0": 0.23,
-      "n": 262,
+      "n": 265,
       "nPolls": 136,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.03
+          "corr": -0.027
         },
         {
           "lag": -5,
-          "corr": 0.145
+          "corr": 0.142
         },
         {
           "lag": -4,
-          "corr": 0.169
+          "corr": 0.158
         },
         {
           "lag": -3,
-          "corr": 0.159
+          "corr": 0.148
         },
         {
           "lag": -2,
-          "corr": 0.297
+          "corr": 0.29
         },
         {
           "lag": -1,
-          "corr": 0.242
+          "corr": 0.238
         },
         {
           "lag": 0,
@@ -1987,23 +1987,23 @@
         },
         {
           "lag": 1,
-          "corr": 0.097
+          "corr": 0.101
         },
         {
           "lag": 2,
-          "corr": 0.126
+          "corr": 0.123
         },
         {
           "lag": 3,
-          "corr": -0.062
+          "corr": -0.059
         },
         {
           "lag": 4,
-          "corr": 0
+          "corr": -0.011
         },
         {
           "lag": 5,
-          "corr": -0.042
+          "corr": -0.054
         },
         {
           "lag": 6,
@@ -2015,19 +2015,19 @@
       "institute": "Forschungsgruppe Wahlen",
       "party": "AfD",
       "lagWeeks": -1,
-      "maxCorr": 0.311,
+      "maxCorr": 0.302,
       "corrAt0": 0.219,
-      "n": 286,
+      "n": 288,
       "nPolls": 136,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.013
+          "corr": 0.017
         },
         {
           "lag": -5,
-          "corr": 0.132
+          "corr": 0.135
         },
         {
           "lag": -4,
@@ -2035,7 +2035,7 @@
         },
         {
           "lag": -3,
-          "corr": 0.166
+          "corr": 0.167
         },
         {
           "lag": -2,
@@ -2043,7 +2043,7 @@
         },
         {
           "lag": -1,
-          "corr": 0.311
+          "corr": 0.302
         },
         {
           "lag": 0,
@@ -2051,27 +2051,27 @@
         },
         {
           "lag": 1,
-          "corr": 0.281
+          "corr": 0.282
         },
         {
           "lag": 2,
-          "corr": 0.181
+          "corr": 0.178
         },
         {
           "lag": 3,
-          "corr": 0.134
+          "corr": 0.125
         },
         {
           "lag": 4,
-          "corr": 0.054
+          "corr": 0.046
         },
         {
           "lag": 5,
-          "corr": -0.085
+          "corr": -0.082
         },
         {
           "lag": 6,
-          "corr": 0.008
+          "corr": 0.018
         }
       ]
     },
@@ -2079,51 +2079,51 @@
       "institute": "Forschungsgruppe Wahlen",
       "party": "FDP",
       "lagWeeks": 1,
-      "maxCorr": 0.249,
-      "corrAt0": 0.184,
-      "n": 266,
+      "maxCorr": 0.258,
+      "corrAt0": 0.187,
+      "n": 268,
       "nPolls": 128,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.043
+          "corr": -0.036
         },
         {
           "lag": -5,
-          "corr": -0.091
+          "corr": -0.106
         },
         {
           "lag": -4,
-          "corr": 0.019
+          "corr": 0.023
         },
         {
           "lag": -3,
-          "corr": 0.088
+          "corr": 0.095
         },
         {
           "lag": -2,
-          "corr": 0.015
+          "corr": 0.03
         },
         {
           "lag": -1,
-          "corr": 0.165
+          "corr": 0.175
         },
         {
           "lag": 0,
-          "corr": 0.184
+          "corr": 0.187
         },
         {
           "lag": 1,
-          "corr": 0.249
+          "corr": 0.258
         },
         {
           "lag": 2,
-          "corr": 0.127
+          "corr": 0.106
         },
         {
           "lag": 3,
-          "corr": 0.107
+          "corr": 0.108
         },
         {
           "lag": 4,
@@ -2131,11 +2131,11 @@
         },
         {
           "lag": 5,
-          "corr": 0.016
+          "corr": 0.002
         },
         {
           "lag": 6,
-          "corr": -0.128
+          "corr": -0.116
         }
       ]
     },
@@ -2145,21 +2145,21 @@
       "lagWeeks": 0,
       "maxCorr": 0.281,
       "corrAt0": 0.281,
-      "n": 308,
+      "n": 309,
       "nPolls": 135,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.019
+          "corr": -0.026
         },
         {
           "lag": -5,
-          "corr": -0.002
+          "corr": 0.003
         },
         {
           "lag": -4,
-          "corr": 0.122
+          "corr": 0.12
         },
         {
           "lag": -3,
@@ -2167,11 +2167,11 @@
         },
         {
           "lag": -2,
-          "corr": 0.202
+          "corr": 0.192
         },
         {
           "lag": -1,
-          "corr": 0.269
+          "corr": 0.264
         },
         {
           "lag": 0,
@@ -2179,27 +2179,27 @@
         },
         {
           "lag": 1,
-          "corr": 0.272
+          "corr": 0.263
         },
         {
           "lag": 2,
-          "corr": 0.2
+          "corr": 0.188
         },
         {
           "lag": 3,
-          "corr": 0.127
+          "corr": 0.13
         },
         {
           "lag": 4,
-          "corr": 0.046
+          "corr": 0.039
         },
         {
           "lag": 5,
-          "corr": 0.126
+          "corr": 0.132
         },
         {
           "lag": 6,
-          "corr": 0.024
+          "corr": 0.031
         }
       ]
     },
@@ -2274,7 +2274,7 @@
       "maxCorr": 0.302,
       "corrAt0": 0.094,
       "n": 45,
-      "nPolls": 91,
+      "nPolls": 92,
       "reliable": true,
       "profile": [
         {
@@ -2287,11 +2287,11 @@
         },
         {
           "lag": -4,
-          "corr": 0.105
+          "corr": 0.106
         },
         {
           "lag": -3,
-          "corr": 0.157
+          "corr": 0.158
         },
         {
           "lag": -2,
@@ -2327,7 +2327,7 @@
         },
         {
           "lag": 6,
-          "corr": 0.009
+          "corr": 0.01
         }
       ]
     },
@@ -2336,26 +2336,26 @@
       "party": "SPD",
       "lagWeeks": 2,
       "maxCorr": -0.307,
-      "corrAt0": 0.17,
+      "corrAt0": 0.172,
       "n": 45,
-      "nPolls": 91,
+      "nPolls": 92,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.182
+          "corr": 0.186
         },
         {
           "lag": -5,
-          "corr": -0.165
+          "corr": -0.16
         },
         {
           "lag": -4,
-          "corr": -0.033
+          "corr": -0.032
         },
         {
           "lag": -3,
-          "corr": 0.011
+          "corr": 0.01
         },
         {
           "lag": -2,
@@ -2363,11 +2363,11 @@
         },
         {
           "lag": -1,
-          "corr": 0.271
+          "corr": 0.275
         },
         {
           "lag": 0,
-          "corr": 0.17
+          "corr": 0.172
         },
         {
           "lag": 1,
@@ -2383,7 +2383,7 @@
         },
         {
           "lag": 4,
-          "corr": 0.038
+          "corr": 0.039
         },
         {
           "lag": 5,
@@ -2391,19 +2391,19 @@
         },
         {
           "lag": 6,
-          "corr": -0.126
+          "corr": -0.138
         }
       ]
     },
     {
       "institute": "YouGov",
       "party": "Grüne",
-      "lagWeeks": 6,
-      "maxCorr": -0.344,
+      "lagWeeks": 3,
+      "maxCorr": 0.266,
       "corrAt0": -0.015,
-      "n": 57,
-      "nPolls": 91,
-      "reliable": true,
+      "n": 72,
+      "nPolls": 92,
+      "reliable": false,
       "profile": [
         {
           "lag": -6,
@@ -2411,15 +2411,15 @@
         },
         {
           "lag": -5,
-          "corr": 0.06
+          "corr": 0.061
         },
         {
           "lag": -4,
-          "corr": -0.018
+          "corr": -0.016
         },
         {
           "lag": -3,
-          "corr": -0.02
+          "corr": -0.018
         },
         {
           "lag": -2,
@@ -2435,7 +2435,7 @@
         },
         {
           "lag": 1,
-          "corr": 0.066
+          "corr": 0.068
         },
         {
           "lag": 2,
@@ -2447,7 +2447,7 @@
         },
         {
           "lag": 4,
-          "corr": 0.21
+          "corr": 0.208
         },
         {
           "lag": 5,
@@ -2455,31 +2455,31 @@
         },
         {
           "lag": 6,
-          "corr": -0.344
+          "corr": -0.177
         }
       ]
     },
     {
       "institute": "YouGov",
       "party": "AfD",
-      "lagWeeks": 6,
-      "maxCorr": -0.216,
+      "lagWeeks": -2,
+      "maxCorr": 0.208,
       "corrAt0": 0.039,
-      "n": 57,
-      "nPolls": 91,
+      "n": 45,
+      "nPolls": 92,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.052
+          "corr": -0.051
         },
         {
           "lag": -5,
-          "corr": -0.164
+          "corr": -0.16
         },
         {
           "lag": -4,
-          "corr": -0.028
+          "corr": -0.027
         },
         {
           "lag": -3,
@@ -2511,15 +2511,15 @@
         },
         {
           "lag": 4,
-          "corr": 0.078
+          "corr": 0.079
         },
         {
           "lag": 5,
-          "corr": -0.03
+          "corr": -0.029
         },
         {
           "lag": 6,
-          "corr": -0.216
+          "corr": -0.187
         }
       ]
     },
@@ -2527,27 +2527,27 @@
       "institute": "YouGov",
       "party": "FDP",
       "lagWeeks": 3,
-      "maxCorr": -0.512,
-      "corrAt0": 0.154,
+      "maxCorr": -0.51,
+      "corrAt0": 0.153,
       "n": 72,
-      "nPolls": 91,
+      "nPolls": 92,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.124
+          "corr": -0.122
         },
         {
           "lag": -5,
-          "corr": -0.038
+          "corr": -0.04
         },
         {
           "lag": -4,
-          "corr": 0.076
+          "corr": 0.075
         },
         {
           "lag": -3,
-          "corr": -0.016
+          "corr": -0.019
         },
         {
           "lag": -2,
@@ -2559,7 +2559,7 @@
         },
         {
           "lag": 0,
-          "corr": 0.154
+          "corr": 0.153
         },
         {
           "lag": 1,
@@ -2571,11 +2571,11 @@
         },
         {
           "lag": 3,
-          "corr": -0.512
+          "corr": -0.51
         },
         {
           "lag": 4,
-          "corr": -0.374
+          "corr": -0.372
         },
         {
           "lag": 5,
@@ -2592,18 +2592,18 @@
       "party": "Linke",
       "lagWeeks": 3,
       "maxCorr": 0.731,
-      "corrAt0": 0.282,
+      "corrAt0": 0.283,
       "n": 72,
-      "nPolls": 91,
+      "nPolls": 92,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.15
+          "corr": -0.147
         },
         {
           "lag": -5,
-          "corr": 0.068
+          "corr": 0.067
         },
         {
           "lag": -4,
@@ -2611,7 +2611,7 @@
         },
         {
           "lag": -3,
-          "corr": 0.244
+          "corr": 0.243
         },
         {
           "lag": -2,
@@ -2619,11 +2619,11 @@
         },
         {
           "lag": -1,
-          "corr": 0.249
+          "corr": 0.25
         },
         {
           "lag": 0,
-          "corr": 0.282
+          "corr": 0.283
         },
         {
           "lag": 1,
@@ -2643,11 +2643,11 @@
         },
         {
           "lag": 5,
-          "corr": 0.324
+          "corr": 0.325
         },
         {
           "lag": 6,
-          "corr": 0.264
+          "corr": 0.233
         }
       ]
     },
@@ -2655,19 +2655,19 @@
       "institute": "YouGov",
       "party": "BSW",
       "lagWeeks": -3,
-      "maxCorr": 0.375,
-      "corrAt0": 0.012,
-      "n": 23,
-      "nPolls": 34,
+      "maxCorr": 0.378,
+      "corrAt0": 0.018,
+      "n": 24,
+      "nPolls": 37,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.031
+          "corr": -0.032
         },
         {
           "lag": -5,
-          "corr": -0.046
+          "corr": -0.043
         },
         {
           "lag": -4,
@@ -2675,35 +2675,35 @@
         },
         {
           "lag": -3,
-          "corr": 0.375
+          "corr": 0.378
         },
         {
           "lag": -1,
-          "corr": -0.004
+          "corr": -0.005
         },
         {
           "lag": 0,
-          "corr": 0.012
+          "corr": 0.018
         },
         {
           "lag": 1,
-          "corr": 0.272
+          "corr": 0.276
         },
         {
           "lag": 3,
-          "corr": 0.126
+          "corr": 0.109
         },
         {
           "lag": 4,
-          "corr": 0.207
+          "corr": 0.195
         },
         {
           "lag": 5,
-          "corr": 0.037
+          "corr": 0.053
         },
         {
           "lag": 6,
-          "corr": -0.037
+          "corr": -0.002
         }
       ]
     },
@@ -2711,15 +2711,15 @@
       "institute": "Allensbach",
       "party": "CDU/CSU",
       "lagWeeks": -2,
-      "maxCorr": 0.463,
-      "corrAt0": 0.167,
+      "maxCorr": 0.461,
+      "corrAt0": 0.166,
       "n": 47,
       "nPolls": 88,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.066
+          "corr": 0.06
         },
         {
           "lag": -5,
@@ -2731,23 +2731,23 @@
         },
         {
           "lag": -3,
-          "corr": 0.307
+          "corr": 0.306
         },
         {
           "lag": -2,
-          "corr": 0.463
+          "corr": 0.461
         },
         {
           "lag": -1,
-          "corr": 0.275
+          "corr": 0.276
         },
         {
           "lag": 0,
-          "corr": 0.167
+          "corr": 0.166
         },
         {
           "lag": 1,
-          "corr": 0.174
+          "corr": 0.172
         },
         {
           "lag": 2,
@@ -2755,19 +2755,19 @@
         },
         {
           "lag": 3,
-          "corr": 0.197
+          "corr": 0.195
         },
         {
           "lag": 4,
-          "corr": 0.106
+          "corr": 0.104
         },
         {
           "lag": 5,
-          "corr": -0.024
+          "corr": -0.026
         },
         {
           "lag": 6,
-          "corr": -0.054
+          "corr": -0.052
         }
       ]
     },
@@ -2775,19 +2775,19 @@
       "institute": "Allensbach",
       "party": "SPD",
       "lagWeeks": -2,
-      "maxCorr": 0.543,
-      "corrAt0": 0.374,
+      "maxCorr": 0.54,
+      "corrAt0": 0.376,
       "n": 47,
       "nPolls": 88,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.038
+          "corr": 0.069
         },
         {
           "lag": -5,
-          "corr": 0.047
+          "corr": 0.052
         },
         {
           "lag": -4,
@@ -2795,23 +2795,23 @@
         },
         {
           "lag": -3,
-          "corr": 0.289
+          "corr": 0.291
         },
         {
           "lag": -2,
-          "corr": 0.543
+          "corr": 0.54
         },
         {
           "lag": -1,
-          "corr": 0.484
+          "corr": 0.485
         },
         {
           "lag": 0,
-          "corr": 0.374
+          "corr": 0.376
         },
         {
           "lag": 1,
-          "corr": 0.313
+          "corr": 0.314
         },
         {
           "lag": 2,
@@ -2819,15 +2819,15 @@
         },
         {
           "lag": 3,
-          "corr": 0.148
+          "corr": 0.153
         },
         {
           "lag": 4,
-          "corr": 0.101
+          "corr": 0.104
         },
         {
           "lag": 5,
-          "corr": 0.09
+          "corr": 0.091
         },
         {
           "lag": 6,
@@ -2839,43 +2839,43 @@
       "institute": "Allensbach",
       "party": "Grüne",
       "lagWeeks": -1,
-      "maxCorr": 0.261,
-      "corrAt0": 0.241,
+      "maxCorr": 0.264,
+      "corrAt0": 0.242,
       "n": 117,
       "nPolls": 88,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.047
+          "corr": -0.062
         },
         {
           "lag": -5,
-          "corr": -0.082
+          "corr": -0.102
         },
         {
           "lag": -4,
-          "corr": -0.027
+          "corr": -0.025
         },
         {
           "lag": -3,
-          "corr": 0.003
+          "corr": 0.002
         },
         {
           "lag": -2,
-          "corr": 0.133
+          "corr": 0.152
         },
         {
           "lag": -1,
-          "corr": 0.261
+          "corr": 0.264
         },
         {
           "lag": 0,
-          "corr": 0.241
+          "corr": 0.242
         },
         {
           "lag": 1,
-          "corr": 0.195
+          "corr": 0.196
         },
         {
           "lag": 2,
@@ -2883,19 +2883,19 @@
         },
         {
           "lag": 3,
-          "corr": 0.09
+          "corr": 0.093
         },
         {
           "lag": 4,
-          "corr": -0.02
+          "corr": -0.018
         },
         {
           "lag": 5,
-          "corr": -0.051
+          "corr": -0.05
         },
         {
           "lag": 6,
-          "corr": -0.001
+          "corr": 0.004
         }
       ]
     },
@@ -2903,23 +2903,23 @@
       "institute": "Allensbach",
       "party": "AfD",
       "lagWeeks": -6,
-      "maxCorr": 0.321,
-      "corrAt0": 0.079,
-      "n": 71,
+      "maxCorr": 0.287,
+      "corrAt0": 0.08,
+      "n": 69,
       "nPolls": 88,
-      "reliable": true,
+      "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.321
+          "corr": 0.287
         },
         {
           "lag": -5,
-          "corr": 0.08
+          "corr": 0.081
         },
         {
           "lag": -4,
-          "corr": 0.064
+          "corr": 0.065
         },
         {
           "lag": -3,
@@ -2927,15 +2927,15 @@
         },
         {
           "lag": -2,
-          "corr": 0.264
+          "corr": 0.237
         },
         {
           "lag": -1,
-          "corr": 0.058
+          "corr": 0.056
         },
         {
           "lag": 0,
-          "corr": 0.079
+          "corr": 0.08
         },
         {
           "lag": 1,
@@ -2947,7 +2947,7 @@
         },
         {
           "lag": 3,
-          "corr": -0.014
+          "corr": -0.016
         },
         {
           "lag": 4,
@@ -2955,11 +2955,11 @@
         },
         {
           "lag": 5,
-          "corr": -0.14
+          "corr": -0.142
         },
         {
           "lag": 6,
-          "corr": -0.184
+          "corr": -0.177
         }
       ]
     },
@@ -2967,27 +2967,27 @@
       "institute": "Allensbach",
       "party": "FDP",
       "lagWeeks": 6,
-      "maxCorr": -0.254,
+      "maxCorr": -0.256,
       "corrAt0": 0.01,
-      "n": 71,
+      "n": 69,
       "nPolls": 88,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.072
+          "corr": -0.073
         },
         {
           "lag": -5,
-          "corr": 0.095
+          "corr": 0.096
         },
         {
           "lag": -4,
-          "corr": -0.063
+          "corr": -0.062
         },
         {
           "lag": -3,
-          "corr": -0.109
+          "corr": -0.107
         },
         {
           "lag": -2,
@@ -3003,7 +3003,7 @@
         },
         {
           "lag": 1,
-          "corr": 0.054
+          "corr": 0.055
         },
         {
           "lag": 2,
@@ -3011,19 +3011,19 @@
         },
         {
           "lag": 3,
-          "corr": -0.18
+          "corr": -0.179
         },
         {
           "lag": 4,
-          "corr": -0.218
+          "corr": -0.219
         },
         {
           "lag": 5,
-          "corr": -0.154
+          "corr": -0.156
         },
         {
           "lag": 6,
-          "corr": -0.254
+          "corr": -0.256
         }
       ]
     },
@@ -3032,7 +3032,7 @@
       "party": "Linke",
       "lagWeeks": 2,
       "maxCorr": 0.381,
-      "corrAt0": 0.258,
+      "corrAt0": 0.257,
       "n": 44,
       "nPolls": 82,
       "reliable": true,
@@ -3047,27 +3047,27 @@
         },
         {
           "lag": -4,
-          "corr": -0.044
+          "corr": -0.042
         },
         {
           "lag": -3,
-          "corr": 0.119
+          "corr": 0.124
         },
         {
           "lag": -2,
-          "corr": 0.077
+          "corr": 0.078
         },
         {
           "lag": -1,
-          "corr": 0.126
+          "corr": 0.127
         },
         {
           "lag": 0,
-          "corr": 0.258
+          "corr": 0.257
         },
         {
           "lag": 1,
-          "corr": 0.262
+          "corr": 0.259
         },
         {
           "lag": 2,
@@ -3075,19 +3075,19 @@
         },
         {
           "lag": 3,
-          "corr": -0.029
+          "corr": -0.028
         },
         {
           "lag": 4,
-          "corr": 0.081
+          "corr": 0.085
         },
         {
           "lag": 5,
-          "corr": 0.245
+          "corr": 0.248
         },
         {
           "lag": 6,
-          "corr": -0.022
+          "corr": -0.02
         }
       ]
     },
@@ -3097,8 +3097,8 @@
       "lagWeeks": -1,
       "maxCorr": 0.226,
       "corrAt0": 0.141,
-      "n": 73,
-      "nPolls": 63,
+      "n": 75,
+      "nPolls": 65,
       "reliable": false,
       "profile": [
         {
@@ -3107,7 +3107,7 @@
         },
         {
           "lag": -5,
-          "corr": 0.069
+          "corr": 0.07
         },
         {
           "lag": -4,
@@ -3115,7 +3115,7 @@
         },
         {
           "lag": -3,
-          "corr": -0.175
+          "corr": -0.173
         },
         {
           "lag": -2,
@@ -3139,11 +3139,11 @@
         },
         {
           "lag": 3,
-          "corr": -0.046
+          "corr": -0.045
         },
         {
           "lag": 4,
-          "corr": -0.093
+          "corr": -0.092
         },
         {
           "lag": 5,
@@ -3162,7 +3162,7 @@
       "maxCorr": 0.588,
       "corrAt0": -0.008,
       "n": 21,
-      "nPolls": 63,
+      "nPolls": 65,
       "reliable": true,
       "profile": [
         {
@@ -3171,15 +3171,15 @@
         },
         {
           "lag": -5,
-          "corr": 0.285
+          "corr": 0.283
         },
         {
           "lag": -4,
-          "corr": -0.182
+          "corr": -0.183
         },
         {
           "lag": -3,
-          "corr": -0.245
+          "corr": -0.25
         },
         {
           "lag": -2,
@@ -3187,7 +3187,7 @@
         },
         {
           "lag": -1,
-          "corr": 0.283
+          "corr": 0.282
         },
         {
           "lag": 0,
@@ -3203,7 +3203,7 @@
         },
         {
           "lag": 3,
-          "corr": 0.382
+          "corr": 0.379
         },
         {
           "lag": 4,
@@ -3224,9 +3224,9 @@
       "party": "Grüne",
       "lagWeeks": -2,
       "maxCorr": 0.253,
-      "corrAt0": 0.095,
+      "corrAt0": 0.093,
       "n": 21,
-      "nPolls": 63,
+      "nPolls": 65,
       "reliable": false,
       "profile": [
         {
@@ -3235,15 +3235,15 @@
         },
         {
           "lag": -5,
-          "corr": 0.045
+          "corr": 0.044
         },
         {
           "lag": -4,
-          "corr": 0.162
+          "corr": 0.158
         },
         {
           "lag": -3,
-          "corr": 0.238
+          "corr": 0.242
         },
         {
           "lag": -2,
@@ -3251,15 +3251,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.25
+          "corr": 0.246
         },
         {
           "lag": 0,
-          "corr": 0.095
+          "corr": 0.093
         },
         {
           "lag": 1,
-          "corr": 0.216
+          "corr": 0.215
         },
         {
           "lag": 2,
@@ -3267,15 +3267,15 @@
         },
         {
           "lag": 3,
-          "corr": 0.123
+          "corr": 0.118
         },
         {
           "lag": 4,
-          "corr": 0.098
+          "corr": 0.096
         },
         {
           "lag": 5,
-          "corr": -0.156
+          "corr": -0.155
         },
         {
           "lag": 6,
@@ -3290,7 +3290,7 @@
       "maxCorr": 0.359,
       "corrAt0": 0.116,
       "n": 21,
-      "nPolls": 63,
+      "nPolls": 65,
       "reliable": true,
       "profile": [
         {
@@ -3303,7 +3303,7 @@
         },
         {
           "lag": -4,
-          "corr": 0.004
+          "corr": 0.003
         },
         {
           "lag": -3,
@@ -3331,7 +3331,7 @@
         },
         {
           "lag": 3,
-          "corr": 0.184
+          "corr": 0.181
         },
         {
           "lag": 4,
@@ -3351,10 +3351,10 @@
       "institute": "Ipsos",
       "party": "FDP",
       "lagWeeks": 3,
-      "maxCorr": -0.622,
-      "corrAt0": 0.192,
-      "n": 46,
-      "nPolls": 63,
+      "maxCorr": -0.617,
+      "corrAt0": 0.19,
+      "n": 49,
+      "nPolls": 65,
       "reliable": true,
       "profile": [
         {
@@ -3371,7 +3371,7 @@
         },
         {
           "lag": -3,
-          "corr": -0.176
+          "corr": -0.181
         },
         {
           "lag": -2,
@@ -3383,11 +3383,11 @@
         },
         {
           "lag": 0,
-          "corr": 0.192
+          "corr": 0.19
         },
         {
           "lag": 1,
-          "corr": 0.251
+          "corr": 0.25
         },
         {
           "lag": 2,
@@ -3395,15 +3395,15 @@
         },
         {
           "lag": 3,
-          "corr": -0.622
+          "corr": -0.617
         },
         {
           "lag": 4,
-          "corr": 0.032
+          "corr": 0.03
         },
         {
           "lag": 5,
-          "corr": -0.025
+          "corr": -0.024
         },
         {
           "lag": 6,
@@ -3416,9 +3416,9 @@
       "party": "Linke",
       "lagWeeks": -1,
       "maxCorr": 0.563,
-      "corrAt0": 0.446,
-      "n": 73,
-      "nPolls": 63,
+      "corrAt0": 0.444,
+      "n": 75,
+      "nPolls": 65,
       "reliable": true,
       "profile": [
         {
@@ -3427,11 +3427,11 @@
         },
         {
           "lag": -5,
-          "corr": 0.208
+          "corr": 0.207
         },
         {
           "lag": -4,
-          "corr": 0.38
+          "corr": 0.377
         },
         {
           "lag": -3,
@@ -3447,11 +3447,11 @@
         },
         {
           "lag": 0,
-          "corr": 0.446
+          "corr": 0.444
         },
         {
           "lag": 1,
-          "corr": 0.453
+          "corr": 0.452
         },
         {
           "lag": 2,
@@ -3463,7 +3463,7 @@
         },
         {
           "lag": 4,
-          "corr": 0.09
+          "corr": 0.089
         },
         {
           "lag": 5,
@@ -3478,12 +3478,12 @@
     {
       "institute": "Ipsos",
       "party": "BSW",
-      "lagWeeks": 3,
-      "maxCorr": 0.346,
-      "corrAt0": 0.285,
-      "n": 24,
-      "nPolls": 32,
-      "reliable": true,
+      "lagWeeks": 4,
+      "maxCorr": 0.274,
+      "corrAt0": 0.263,
+      "n": 45,
+      "nPolls": 34,
+      "reliable": false,
       "profile": [
         {
           "lag": -6,
@@ -3491,39 +3491,39 @@
         },
         {
           "lag": -5,
-          "corr": 0.037
+          "corr": 0.034
         },
         {
           "lag": -4,
-          "corr": 0.125
+          "corr": 0.115
         },
         {
           "lag": -3,
-          "corr": -0.027
+          "corr": -0.011
         },
         {
           "lag": -1,
-          "corr": 0.043
+          "corr": 0.033
         },
         {
           "lag": 0,
-          "corr": 0.285
+          "corr": 0.263
         },
         {
           "lag": 1,
-          "corr": -0.016
+          "corr": -0.002
         },
         {
           "lag": 3,
-          "corr": 0.346
+          "corr": 0.257
         },
         {
           "lag": 4,
-          "corr": 0.316
+          "corr": 0.274
         },
         {
           "lag": 5,
-          "corr": 0.131
+          "corr": 0.137
         },
         {
           "lag": 6,
@@ -3920,9 +3920,9 @@
       "party": "CDU/CSU",
       "lagWeeks": 1,
       "maxCorr": 0.481,
-      "corrAt0": 0.449,
-      "n": 64,
-      "nPolls": 56,
+      "corrAt0": 0.453,
+      "n": 63,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -3947,11 +3947,11 @@
         },
         {
           "lag": -1,
-          "corr": 0.336
+          "corr": 0.339
         },
         {
           "lag": 0,
-          "corr": 0.449
+          "corr": 0.453
         },
         {
           "lag": 1,
@@ -3983,10 +3983,10 @@
       "institute": "Civey",
       "party": "SPD",
       "lagWeeks": 0,
-      "maxCorr": 0.619,
-      "corrAt0": 0.619,
-      "n": 80,
-      "nPolls": 56,
+      "maxCorr": 0.618,
+      "corrAt0": 0.618,
+      "n": 78,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -4015,11 +4015,11 @@
         },
         {
           "lag": 0,
-          "corr": 0.619
+          "corr": 0.618
         },
         {
           "lag": 1,
-          "corr": 0.377
+          "corr": 0.376
         },
         {
           "lag": 2,
@@ -4047,10 +4047,10 @@
       "institute": "Civey",
       "party": "Grüne",
       "lagWeeks": 0,
-      "maxCorr": 0.422,
-      "corrAt0": 0.422,
-      "n": 80,
-      "nPolls": 56,
+      "maxCorr": 0.425,
+      "corrAt0": 0.425,
+      "n": 78,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -4075,15 +4075,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.303
+          "corr": 0.307
         },
         {
           "lag": 0,
-          "corr": 0.422
+          "corr": 0.425
         },
         {
           "lag": 1,
-          "corr": 0.41
+          "corr": 0.409
         },
         {
           "lag": 2,
@@ -4112,9 +4112,9 @@
       "party": "AfD",
       "lagWeeks": 2,
       "maxCorr": 0.309,
-      "corrAt0": 0.255,
+      "corrAt0": 0.258,
       "n": 48,
-      "nPolls": 56,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -4139,15 +4139,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.113
+          "corr": 0.115
         },
         {
           "lag": 0,
-          "corr": 0.255
+          "corr": 0.258
         },
         {
           "lag": 1,
-          "corr": 0.195
+          "corr": 0.196
         },
         {
           "lag": 2,
@@ -4175,10 +4175,10 @@
       "institute": "Civey",
       "party": "FDP",
       "lagWeeks": 0,
-      "maxCorr": 0.431,
-      "corrAt0": 0.431,
-      "n": 80,
-      "nPolls": 56,
+      "maxCorr": 0.436,
+      "corrAt0": 0.436,
+      "n": 78,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -4203,15 +4203,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.396
+          "corr": 0.398
         },
         {
           "lag": 0,
-          "corr": 0.431
+          "corr": 0.436
         },
         {
           "lag": 1,
-          "corr": 0.411
+          "corr": 0.415
         },
         {
           "lag": 2,
@@ -4240,9 +4240,9 @@
       "party": "Linke",
       "lagWeeks": 5,
       "maxCorr": 0.329,
-      "corrAt0": 0.114,
+      "corrAt0": 0.119,
       "n": 46,
-      "nPolls": 56,
+      "nPolls": 55,
       "reliable": true,
       "profile": [
         {
@@ -4267,15 +4267,15 @@
         },
         {
           "lag": -1,
-          "corr": 0.053
+          "corr": 0.054
         },
         {
           "lag": 0,
-          "corr": 0.114
+          "corr": 0.119
         },
         {
           "lag": 1,
-          "corr": 0.092
+          "corr": 0.098
         },
         {
           "lag": 2,
@@ -4303,23 +4303,23 @@
       "institute": "GMS",
       "party": "CDU/CSU",
       "lagWeeks": 4,
-      "maxCorr": 0.282,
+      "maxCorr": 0.253,
       "corrAt0": -0.024,
-      "n": 23,
-      "nPolls": 55,
+      "n": 21,
+      "nPolls": 54,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.205
+          "corr": -0.204
         },
         {
           "lag": -5,
-          "corr": -0.117
+          "corr": -0.116
         },
         {
           "lag": -4,
-          "corr": 0.177
+          "corr": 0.163
         },
         {
           "lag": -1,
@@ -4335,11 +4335,11 @@
         },
         {
           "lag": 4,
-          "corr": 0.282
+          "corr": 0.253
         },
         {
           "lag": 5,
-          "corr": -0.051
+          "corr": -0.037
         },
         {
           "lag": 6,
@@ -4352,14 +4352,14 @@
       "party": "SPD",
       "lagWeeks": -5,
       "maxCorr": -0.264,
-      "corrAt0": 0.077,
-      "n": 39,
-      "nPolls": 55,
+      "corrAt0": 0.079,
+      "n": 38,
+      "nPolls": 54,
       "reliable": false,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.193
+          "corr": 0.194
         },
         {
           "lag": -5,
@@ -4367,7 +4367,7 @@
         },
         {
           "lag": -4,
-          "corr": 0.05
+          "corr": 0.057
         },
         {
           "lag": -1,
@@ -4375,19 +4375,19 @@
         },
         {
           "lag": 0,
-          "corr": 0.077
+          "corr": 0.079
         },
         {
           "lag": 1,
-          "corr": -0.023
+          "corr": -0.02
         },
         {
           "lag": 4,
-          "corr": 0.047
+          "corr": 0.07
         },
         {
           "lag": 5,
-          "corr": -0.022
+          "corr": 0.054
         },
         {
           "lag": 6,
@@ -4399,10 +4399,10 @@
       "institute": "GMS",
       "party": "Grüne",
       "lagWeeks": 1,
-      "maxCorr": 0.303,
-      "corrAt0": 0.218,
+      "maxCorr": 0.306,
+      "corrAt0": 0.222,
       "n": 59,
-      "nPolls": 55,
+      "nPolls": 54,
       "reliable": true,
       "profile": [
         {
@@ -4411,35 +4411,35 @@
         },
         {
           "lag": -5,
-          "corr": -0.105
+          "corr": -0.101
         },
         {
           "lag": -4,
-          "corr": 0.063
+          "corr": 0.08
         },
         {
           "lag": -1,
-          "corr": -0.05
+          "corr": -0.047
         },
         {
           "lag": 0,
-          "corr": 0.218
+          "corr": 0.222
         },
         {
           "lag": 1,
-          "corr": 0.303
+          "corr": 0.306
         },
         {
           "lag": 4,
-          "corr": 0.127
+          "corr": 0.155
         },
         {
           "lag": 5,
-          "corr": -0.025
+          "corr": -0.033
         },
         {
           "lag": 6,
-          "corr": 0.077
+          "corr": 0.079
         }
       ]
     },
@@ -4447,31 +4447,31 @@
       "institute": "GMS",
       "party": "AfD",
       "lagWeeks": -6,
-      "maxCorr": -0.353,
-      "corrAt0": 0.021,
-      "n": 42,
-      "nPolls": 55,
+      "maxCorr": -0.352,
+      "corrAt0": 0.022,
+      "n": 43,
+      "nPolls": 54,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.353
+          "corr": -0.352
         },
         {
           "lag": -5,
-          "corr": 0.013
+          "corr": 0.016
         },
         {
           "lag": -4,
-          "corr": 0.008
+          "corr": 0.011
         },
         {
           "lag": -1,
-          "corr": -0.073
+          "corr": -0.072
         },
         {
           "lag": 0,
-          "corr": 0.021
+          "corr": 0.022
         },
         {
           "lag": 1,
@@ -4479,15 +4479,15 @@
         },
         {
           "lag": 4,
-          "corr": -0.083
+          "corr": -0.1
         },
         {
           "lag": 5,
-          "corr": 0.191
+          "corr": 0.109
         },
         {
           "lag": 6,
-          "corr": -0.278
+          "corr": -0.279
         }
       ]
     },
@@ -4497,25 +4497,25 @@
       "lagWeeks": 4,
       "maxCorr": -0.359,
       "corrAt0": -0.028,
-      "n": 23,
-      "nPolls": 55,
+      "n": 21,
+      "nPolls": 54,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": -0.064
+          "corr": -0.067
         },
         {
           "lag": -5,
-          "corr": 0.05
+          "corr": 0.052
         },
         {
           "lag": -4,
-          "corr": -0.11
+          "corr": -0.119
         },
         {
           "lag": -1,
-          "corr": 0.071
+          "corr": 0.078
         },
         {
           "lag": 0,
@@ -4523,7 +4523,7 @@
         },
         {
           "lag": 1,
-          "corr": -0.177
+          "corr": -0.183
         },
         {
           "lag": 4,
@@ -4531,11 +4531,11 @@
         },
         {
           "lag": 5,
-          "corr": -0.05
+          "corr": -0.049
         },
         {
           "lag": 6,
-          "corr": 0.213
+          "corr": 0.214
         }
       ]
     },
@@ -4544,30 +4544,30 @@
       "party": "Linke",
       "lagWeeks": 1,
       "maxCorr": 0.363,
-      "corrAt0": 0.184,
+      "corrAt0": 0.186,
       "n": 59,
-      "nPolls": 55,
+      "nPolls": 54,
       "reliable": true,
       "profile": [
         {
           "lag": -6,
-          "corr": 0.039
+          "corr": 0.037
         },
         {
           "lag": -5,
-          "corr": 0.053
+          "corr": 0.051
         },
         {
           "lag": -4,
-          "corr": -0.088
+          "corr": -0.093
         },
         {
           "lag": -1,
-          "corr": 0.303
+          "corr": 0.307
         },
         {
           "lag": 0,
-          "corr": 0.184
+          "corr": 0.186
         },
         {
           "lag": 1,
@@ -4575,7 +4575,7 @@
         },
         {
           "lag": 4,
-          "corr": 0.049
+          "corr": 0.04
         },
         {
           "lag": 5,

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Bundesregierungen seit 1998",
+    "description": "Für jede Bundesregierung: Amtszeit und vollständige Koalition (alle Regierungsparteien, nicht nur die Partei der Kanzlerin/des Kanzlers).",
+    "compiledDate": "2026-08-19",
+    "partyCodesUsed": [
+      "CDU/CSU",
+      "FDP",
+      "Grüne",
+      "SPD"
+    ],
+    "partyNamingNotes": [
+      "Kürzel passend zu partyColors.js: \"CDU/CSU\" als kombinierter Code (ParlGov führt CDU/CSU auf Bundesebene nie getrennt, anders als die Länder-Daten)."
+    ],
+    "sources": [
+      "ParlGov (Döring & Manow), data-prep/raw/view_cabinet.csv — für Kabinette bis Scholz (Dez. 2021).",
+      "Kabinett Merz (2025) manuell ergänzt, da nicht in dieser ParlGov-Version enthalten — analog zu data-prep/raw/europe-recent-changes.json."
+    ]
+  },
+  "governments": [
+    {
+      "cabinet": "Schroeder I",
+      "headOfGovernment": "Schroeder",
+      "start": "1998-10-27",
+      "end": "2002-10-22",
+      "parties": [
+        "Grüne",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Schroeder II",
+      "headOfGovernment": "Schroeder",
+      "start": "2002-10-22",
+      "end": "2005-11-22",
+      "parties": [
+        "Grüne",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Merkel I",
+      "headOfGovernment": "Merkel",
+      "start": "2005-11-22",
+      "end": "2009-10-28",
+      "parties": [
+        "CDU/CSU",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Merkel II",
+      "headOfGovernment": "Merkel",
+      "start": "2009-10-28",
+      "end": "2013-12-17",
+      "parties": [
+        "CDU/CSU",
+        "FDP"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Merkel III",
+      "headOfGovernment": "Merkel",
+      "start": "2013-12-17",
+      "end": "2018-03-14",
+      "parties": [
+        "CDU/CSU",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Merkel V",
+      "headOfGovernment": "Merkel",
+      "start": "2018-03-14",
+      "end": "2021-12-08",
+      "parties": [
+        "CDU/CSU",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Scholz",
+      "headOfGovernment": "Scholz",
+      "start": "2021-12-08",
+      "end": "2025-05-06",
+      "parties": [
+        "FDP",
+        "Grüne",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    },
+    {
+      "cabinet": "Merz",
+      "headOfGovernment": "Merz",
+      "start": "2025-05-06",
+      "end": null,
+      "parties": [
+        "CDU/CSU",
+        "SPD"
+      ],
+      "datePrecision": "day"
+    }
+  ]
+}

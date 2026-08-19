@@ -1,82 +1,15 @@
 {
   "meta": {
-    "generated": "2026-06-18",
+    "generated": "2026-08-19",
     "method": "Leave-One-Out, 21-Tage-Gewichtungsfenster. Min. 5 Messungen pro Zelle.",
     "minN": 5,
     "note": "Abweichung vom Instituts-Konsens (LOO) — kein Wahrheitsurteil."
   },
   "states": {
-    "Landtag von Baden-Württemberg": {
-      "n": 75,
-      "institutes": [
-        "Infratest dimap",
-        "INSA",
-        "Institut Wahlkreisprognose"
-      ],
-      "parties": [
-        "SPD",
-        "FDP",
-        "Grüne",
-        "Linke",
-        "AfD",
-        "CDU"
-      ],
-      "cells": [
-        {
-          "institute": "INSA",
-          "party": "SPD",
-          "partyId": "2",
-          "n": 6,
-          "mean": -0.71,
-          "se": 0.55
-        },
-        {
-          "institute": "INSA",
-          "party": "FDP",
-          "partyId": "3",
-          "n": 6,
-          "mean": 0.49,
-          "se": 0.35
-        },
-        {
-          "institute": "INSA",
-          "party": "Grüne",
-          "partyId": "4",
-          "n": 6,
-          "mean": -1.1,
-          "se": 0.69
-        },
-        {
-          "institute": "INSA",
-          "party": "Linke",
-          "partyId": "5",
-          "n": 5,
-          "mean": 0.21,
-          "se": 0.28
-        },
-        {
-          "institute": "INSA",
-          "party": "AfD",
-          "partyId": "7",
-          "n": 6,
-          "mean": 0.35,
-          "se": 0.41
-        },
-        {
-          "institute": "INSA",
-          "party": "CDU",
-          "partyId": "101",
-          "n": 6,
-          "mean": 0.59,
-          "se": 0.67
-        }
-      ]
-    },
     "Bayerischer Landtag": {
-      "n": 180,
+      "n": 186,
       "institutes": [
         "Infratest dimap",
-        "Forsa",
         "GMS",
         "INSA",
         "Civey",
@@ -367,10 +300,9 @@
       ]
     },
     "Berliner Abgeordnetenhaus": {
-      "n": 140,
+      "n": 146,
       "institutes": [
         "Infratest dimap",
-        "Forsa",
         "INSA",
         "Civey",
         "Institut Wahlkreisprognose"
@@ -436,97 +368,97 @@
           "institute": "INSA",
           "party": "SPD",
           "partyId": "2",
-          "n": 8,
-          "mean": 0.26,
-          "se": 0.39
+          "n": 9,
+          "mean": 0.28,
+          "se": 0.34
         },
         {
           "institute": "INSA",
           "party": "FDP",
           "partyId": "3",
-          "n": 8,
-          "mean": 0.35,
-          "se": 0.37
+          "n": 9,
+          "mean": 0.36,
+          "se": 0.32
         },
         {
           "institute": "INSA",
           "party": "Grüne",
           "partyId": "4",
-          "n": 8,
-          "mean": -0.13,
-          "se": 0.66
+          "n": 9,
+          "mean": -0.23,
+          "se": 0.59
         },
         {
           "institute": "INSA",
           "party": "Linke",
           "partyId": "5",
-          "n": 8,
-          "mean": -0.15,
-          "se": 0.46
+          "n": 9,
+          "mean": -0.39,
+          "se": 0.48
         },
         {
           "institute": "INSA",
           "party": "AfD",
           "partyId": "7",
-          "n": 8,
-          "mean": 1.15,
+          "n": 9,
+          "mean": 1.29,
           "se": 0.28
         },
         {
           "institute": "INSA",
           "party": "CDU",
           "partyId": "101",
-          "n": 8,
-          "mean": -0.33,
-          "se": 0.43
+          "n": 9,
+          "mean": -0.46,
+          "se": 0.4
         },
         {
           "institute": "Civey",
           "party": "SPD",
           "partyId": "2",
-          "n": 6,
-          "mean": 0.84,
+          "n": 7,
+          "mean": 0.6,
           "se": 0.48
         },
         {
           "institute": "Civey",
           "party": "FDP",
           "partyId": "3",
-          "n": 5,
-          "mean": 0.33,
-          "se": 0.66
+          "n": 6,
+          "mean": 0.13,
+          "se": 0.57
         },
         {
           "institute": "Civey",
           "party": "Grüne",
           "partyId": "4",
-          "n": 6,
-          "mean": -0.05,
-          "se": 0.68
+          "n": 7,
+          "mean": 0.08,
+          "se": 0.59
         },
         {
           "institute": "Civey",
           "party": "Linke",
           "partyId": "5",
-          "n": 6,
-          "mean": 0.09,
-          "se": 0.53
+          "n": 7,
+          "mean": 0.44,
+          "se": 0.56
         },
         {
           "institute": "Civey",
           "party": "AfD",
           "partyId": "7",
-          "n": 6,
-          "mean": -1.32,
-          "se": 0.37
+          "n": 7,
+          "mean": -1.22,
+          "se": 0.32
         },
         {
           "institute": "Civey",
           "party": "CDU",
           "partyId": "101",
-          "n": 6,
-          "mean": -0.31,
-          "se": 0.18
+          "n": 7,
+          "mean": -0.15,
+          "se": 0.22
         },
         {
           "institute": "Institut Wahlkreisprognose",
@@ -581,8 +513,6 @@
     "Hessischer Landtag": {
       "n": 75,
       "institutes": [
-        "Infratest dimap",
-        "INSA",
         "Forschungsgruppe Wahlen",
         "Institut Wahlkreisprognose"
       ],
@@ -592,7 +522,6 @@
         "Grüne",
         "Linke",
         "AfD",
-        "Freie Wähler",
         "CDU"
       ],
       "cells": [
@@ -694,75 +623,8 @@
         }
       ]
     },
-    "Niedersächsischer Landtag": {
-      "n": 71,
-      "institutes": [
-        "Infratest dimap",
-        "Forsa",
-        "INSA",
-        "Institut Wahlkreisprognose"
-      ],
-      "parties": [
-        "SPD",
-        "FDP",
-        "Grüne",
-        "Linke",
-        "AfD",
-        "CDU"
-      ],
-      "cells": [
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "SPD",
-          "partyId": "2",
-          "n": 8,
-          "mean": 3.41,
-          "se": 0.28
-        },
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "FDP",
-          "partyId": "3",
-          "n": 8,
-          "mean": -0.16,
-          "se": 0.25
-        },
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "Grüne",
-          "partyId": "4",
-          "n": 8,
-          "mean": -1.94,
-          "se": 0.4
-        },
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "Linke",
-          "partyId": "5",
-          "n": 8,
-          "mean": -0.94,
-          "se": 0.13
-        },
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "AfD",
-          "partyId": "7",
-          "n": 8,
-          "mean": 0.6,
-          "se": 0.4
-        },
-        {
-          "institute": "Institut Wahlkreisprognose",
-          "party": "CDU",
-          "partyId": "101",
-          "n": 8,
-          "mean": -0.65,
-          "se": 0.55
-        }
-      ]
-    },
     "Landtag von Nordrhein-Westfalen": {
-      "n": 96,
+      "n": 97,
       "institutes": [
         "Infratest dimap",
         "Forsa",
@@ -969,64 +831,6 @@
           "n": 7,
           "mean": 1.13,
           "se": 0.84
-        }
-      ]
-    },
-    "Thüringischer Landtag": {
-      "n": 94,
-      "institutes": [
-        "Infratest dimap",
-        "INSA",
-        "Institut Wahlkreisprognose"
-      ],
-      "parties": [
-        "SPD",
-        "FDP",
-        "Grüne",
-        "Linke",
-        "AfD",
-        "CDU"
-      ],
-      "cells": [
-        {
-          "institute": "INSA",
-          "party": "SPD",
-          "partyId": "2",
-          "n": 5,
-          "mean": -0.21,
-          "se": 0.58
-        },
-        {
-          "institute": "INSA",
-          "party": "Grüne",
-          "partyId": "4",
-          "n": 5,
-          "mean": 0.13,
-          "se": 0.18
-        },
-        {
-          "institute": "INSA",
-          "party": "Linke",
-          "partyId": "5",
-          "n": 5,
-          "mean": 1.16,
-          "se": 0.74
-        },
-        {
-          "institute": "INSA",
-          "party": "AfD",
-          "partyId": "7",
-          "n": 5,
-          "mean": 1.1,
-          "se": 0.24
-        },
-        {
-          "institute": "INSA",
-          "party": "CDU",
-          "partyId": "101",
-          "n": 5,
-          "mean": -0.57,
-          "se": 0.36
         }
       ]
     }

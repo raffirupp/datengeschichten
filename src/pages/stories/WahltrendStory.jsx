@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
 import pollData              from '../../data/polls-bundestag.json'
+import govData                from '../../data/bundestag-governments.json'
 import houseData             from '../../data/house-effects.json'
 import accuracyData          from '../../data/election-accuracy.json'
 import leadLagData           from '../../data/lead-lag.json'
 import grangerData           from '../../data/granger.json'
 import PollSnapshot              from '../../components/PollSnapshot.jsx'
 import PollTrendChart            from '../../components/PollTrendChart.jsx'
+import GovOppositionChart        from '../../components/GovOppositionChart.jsx'
 import HouseEffectsChart         from '../../components/HouseEffectsChart.jsx'
 import ElectionAccuracyChart     from '../../components/ElectionAccuracyChart.jsx'
 import LeadLagChart              from '../../components/LeadLagChart.jsx'
 import GrangerChart              from '../../components/GrangerChart.jsx'
+import CurrentGovernmentNote     from '../../components/CurrentGovernmentNote.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
 
 const { meta, polls, trend } = pollData
@@ -19,7 +22,7 @@ const Divider = () => (
   <hr style={{ border: 'none', borderTop: '1px solid var(--color-rule)', margin: 0 }} />
 )
 
-const SectionLabel = ({ children }) => (
+const SectionLabel = ({ number, children }) => (
   <h2 style={{
     fontFamily: 'var(--font-mono)',
     fontSize: '11px',
@@ -28,6 +31,7 @@ const SectionLabel = ({ children }) => (
     color: 'var(--color-muted)',
     margin: 0,
   }}>
+    {number && <span style={{ color: catColors.text, fontWeight: 600 }}>{number} · </span>}
     {children}
   </h2>
 )
@@ -60,7 +64,7 @@ export default function WahltrendStory() {
       <header className="flex flex-col gap-3">
         <span className="text-xs tracking-[.12em] uppercase"
           style={{ fontFamily: 'var(--font-mono)', color: catColors.text }}>
-          Wahltrend · Bundestag
+          Wahltrends · Bund
         </span>
         <h1 style={{
           fontFamily: 'var(--font-display)',
@@ -70,35 +74,74 @@ export default function WahltrendStory() {
           letterSpacing: '-0.02em',
           color: 'var(--color-ink)', margin: 0,
         }}>
-          Wahltrend zur Bundestagswahl
+          Untersuchung der Wahltrends im Bund
         </h1>
         <p className="text-base leading-relaxed max-w-prose"
           style={{ color: 'var(--color-muted)' }}>
-          Alle Umfragen seit 2019 — geglättet zum Trend, und darunter:
-          was die Institute voneinander unterscheidet, wie nah sie bei echten Wahlen lagen,
-          wer Trendwenden zuerst erfasst und welche Institute systematisch abweichen.
-          Stand: {meta.lastUpdated}.
+          Alle Umfragen seit 2019 — geglättet zum Trend. Fünf Fragen an die Daten: wie
+          stehen Regierung und Opposition zueinander, welche Institute weichen systematisch
+          voneinander ab, wie nah lagen sie bei echten Wahlen, und wer erfasst Stimmungswechsel
+          zuerst? Stand: {meta.lastUpdated}.
         </p>
       </header>
+
+      <nav aria-label="Abschnitte dieser Untersuchung" style={{
+        display: 'flex', flexWrap: 'wrap', gap: '0.4rem 1.2rem',
+        padding: '0.75rem 1rem', borderRadius: '8px',
+        border: '1px solid var(--color-rule)',
+      }}>
+        {[
+          '01 Aktuell', '02 Regierung vs. Opposition', '03 Institute im Vergleich',
+          '04 Wahlgenauigkeit', '05 Reaktionsgeschwindigkeit',
+        ].map((item) => (
+          <span key={item} style={{
+            fontFamily: 'var(--font-mono)', fontSize: '10px',
+            letterSpacing: '0.04em', color: 'var(--color-muted)',
+          }}>
+            {item}
+          </span>
+        ))}
+      </nav>
 
       {/* ── 1: Sonntagsfrage ── */}
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-3">
-          <SectionLabel>Aktuell</SectionLabel>
+          <SectionLabel number="01">Aktuell</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
           <PollSnapshot trend={trend} parties={meta.parties} />
         </div>
         <div className="flex flex-col gap-3">
           <SectionLabel>Verlauf · 7 Jahre</SectionLabel>
-          <PollTrendChart polls={polls} trend={trend} parties={meta.parties} />
+          <PollTrendChart polls={polls} trend={trend} parties={meta.parties} governmentPeriods={govData.governments} />
         </div>
       </section>
 
       <Divider />
 
-      {/* ── 2: House Effects ── */}
+      {/* ── 2: Regierung vs. Opposition ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel>Institute im Vergleich</SectionLabel>
+          <SectionLabel number="02">Regierung vs. Opposition</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
+          <SectionHeading>Wie schneiden Regierungs- und Oppositionsparteien in Summe ab?</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose"
+            style={{ color: 'var(--color-muted)' }}>
+            Für jeden Zeitpunkt summiert: die Umfragewerte der zu diesem Datum amtierenden
+            Koalitionsparteien gegen alle anderen. Sprünge entstehen nicht durch plötzliche
+            Meinungsumschwünge, sondern dadurch, dass sich die Zusammensetzung der Regierung
+            ändert — markiert an jedem Regierungswechsel.
+          </p>
+        </header>
+        <GovOppositionChart trend={trend} governmentPeriods={govData.governments} parties={meta.parties} />
+      </section>
+
+      <Divider />
+
+      {/* ── 3: House Effects ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel number="03">Institute im Vergleich</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Wer schätzt wen wie ein?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -114,10 +157,11 @@ export default function WahltrendStory() {
 
       <Divider />
 
-      {/* ── 3: Wahlgenauigkeit ── */}
+      {/* ── 4: Wahlgenauigkeit ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel>Vergleich mit echten Wahlergebnissen</SectionLabel>
+          <SectionLabel number="04">Vergleich mit echten Wahlergebnissen</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Wie nah lagen die Institute bei der Wahl?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -131,10 +175,11 @@ export default function WahltrendStory() {
 
       <Divider />
 
-      {/* ── 4: Lead/Lag (Cross-Korrelation) ── */}
+      {/* ── 5: Lead/Lag (Cross-Korrelation) ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel>Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
+          <SectionLabel number="05">Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Wer reagiert zuerst auf Stimmungsänderungen?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>
@@ -153,6 +198,7 @@ export default function WahltrendStory() {
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
           <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
+          <CurrentGovernmentNote periods={govData.governments} />
           <SectionHeading>Welches Institut bewegt den Konsens — und welches folgt ihm?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose"
             style={{ color: 'var(--color-muted)' }}>

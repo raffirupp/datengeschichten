@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-06-18",
+    "generated": "2026-08-19",
     "method": "Bivariate Granger-Kausalität, VAR(2), wöchentliche erste Differenzen, LOO-Konsens",
     "lags": 2,
     "windowDays": 21,

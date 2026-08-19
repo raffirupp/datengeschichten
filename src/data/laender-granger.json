@@ -1,0 +1,2252 @@
+{
+  "meta": {
+    "generated": "2026-08-19",
+    "method": "Bivariate Granger-Kausalität, VAR(2), wöchentliche erste Differenzen, LOO-Konsens, pro Bundesland",
+    "lags": 2,
+    "windowDays": 21,
+    "stepDays": 7,
+    "minObs": 20,
+    "alpha": 0.1,
+    "interpretation": {
+      "leadsConsensus": "Institut → Konsens sig (p<0.1), Konsens → Institut nicht sig",
+      "followsConsensus": "Konsens → Institut sig (p<0.1), Institut → Konsens nicht sig",
+      "bidirectional": "Beide Richtungen sig",
+      "none": "Keine Richtung sig"
+    }
+  },
+  "states": {
+    "Baden-Württemberg": {
+      "parties": [
+        "SPD",
+        "FDP",
+        "Grüne",
+        "Linke",
+        "AfD",
+        "CDU"
+      ],
+      "institutes": [
+        "Infratest dimap",
+        "INSA",
+        "Institut Wahlkreisprognose"
+      ],
+      "results": {
+        "SPD": [
+          {
+            "institute": "Infratest dimap",
+            "n": 37,
+            "instToLoo": {
+              "f": 1.06,
+              "p": 0.359,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.06,
+              "p": 0.944,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 32,
+            "instToLoo": {
+              "f": 0,
+              "p": 0.999,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.98,
+              "p": 0.391,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "FDP": [
+          {
+            "institute": "INSA",
+            "n": 32,
+            "instToLoo": {
+              "f": 1.95,
+              "p": 0.164,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.27,
+              "p": 0.763,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 37,
+            "instToLoo": {
+              "f": 1.63,
+              "p": 0.214,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.13,
+              "p": 0.875,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Grüne": [
+          {
+            "institute": "INSA",
+            "n": 32,
+            "instToLoo": {
+              "f": 1.29,
+              "p": 0.295,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 1.69,
+              "p": 0.206,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 37,
+            "instToLoo": {
+              "f": 0.67,
+              "p": 0.52,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.05,
+              "p": 0.953,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Linke": [
+          {
+            "institute": "Infratest dimap",
+            "n": 27,
+            "instToLoo": {
+              "f": 0.52,
+              "p": 0.601,
+              "df1": 2,
+              "df2": 19,
+              "n": 26
+            },
+            "looToInst": {
+              "f": 0.06,
+              "p": 0.946,
+              "df1": 2,
+              "df2": 19,
+              "n": 26
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 26,
+            "instToLoo": {
+              "f": 0.02,
+              "p": 0.984,
+              "df1": 2,
+              "df2": 18,
+              "n": 25
+            },
+            "looToInst": {
+              "f": 0.02,
+              "p": 0.985,
+              "df1": 2,
+              "df2": 18,
+              "n": 25
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "AfD": [
+          {
+            "institute": "Infratest dimap",
+            "n": 37,
+            "instToLoo": {
+              "f": 0.15,
+              "p": 0.861,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.04,
+              "p": 0.962,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 32,
+            "instToLoo": {
+              "f": 0.15,
+              "p": 0.857,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.15,
+              "p": 0.863,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "CDU": [
+          {
+            "institute": "INSA",
+            "n": 32,
+            "instToLoo": {
+              "f": 0.54,
+              "p": 0.59,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 4.81,
+              "p": 0.017,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": true,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 37,
+            "instToLoo": {
+              "f": 0.27,
+              "p": 0.768,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.21,
+              "p": 0.816,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ]
+      }
+    },
+    "Bayern": {
+      "parties": [
+        "SPD",
+        "FDP",
+        "Grüne",
+        "Linke",
+        "AfD",
+        "Freie Wähler",
+        "CSU"
+      ],
+      "institutes": [
+        "Infratest dimap",
+        "Forsa",
+        "GMS",
+        "INSA",
+        "Civey",
+        "Institut Wahlkreisprognose"
+      ],
+      "results": {
+        "SPD": [
+          {
+            "institute": "GMS",
+            "n": 57,
+            "instToLoo": {
+              "f": 1.61,
+              "p": 0.211,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "looToInst": {
+              "f": 0.16,
+              "p": 0.854,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 0.71,
+              "p": 0.504,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 2.48,
+              "p": 0.108,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 41,
+            "instToLoo": {
+              "f": 0.39,
+              "p": 0.681,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "looToInst": {
+              "f": 4.25,
+              "p": 0.023,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "leadsConsensus": false,
+            "followsConsensus": true,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 33,
+            "instToLoo": {
+              "f": 0.07,
+              "p": 0.931,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 0.2,
+              "p": 0.816,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.04,
+              "p": 0.96,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 1.4,
+              "p": 0.263,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "FDP": [
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 6.78,
+              "p": 0.005,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 1.28,
+              "p": 0.3,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.89,
+              "p": 0.423,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 0.4,
+              "p": 0.673,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 27,
+            "instToLoo": {
+              "f": 0.4,
+              "p": 0.679,
+              "df1": 2,
+              "df2": 19,
+              "n": 26
+            },
+            "looToInst": {
+              "f": 1.14,
+              "p": 0.342,
+              "df1": 2,
+              "df2": 19,
+              "n": 26
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "GMS",
+            "n": 56,
+            "instToLoo": {
+              "f": 0.07,
+              "p": 0.93,
+              "df1": 2,
+              "df2": 48,
+              "n": 55
+            },
+            "looToInst": {
+              "f": 1.7,
+              "p": 0.193,
+              "df1": 2,
+              "df2": 48,
+              "n": 55
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 33,
+            "instToLoo": {
+              "f": 0.01,
+              "p": 0.993,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 0.3,
+              "p": 0.742,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Grüne": [
+          {
+            "institute": "GMS",
+            "n": 57,
+            "instToLoo": {
+              "f": 4.21,
+              "p": 0.021,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "looToInst": {
+              "f": 2.53,
+              "p": 0.09,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": true
+          },
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 0.95,
+              "p": 0.404,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 0.47,
+              "p": 0.633,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 41,
+            "instToLoo": {
+              "f": 0.57,
+              "p": 0.568,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "looToInst": {
+              "f": 1.74,
+              "p": 0.192,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.23,
+              "p": 0.799,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 0.27,
+              "p": 0.762,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 33,
+            "instToLoo": {
+              "f": 0.15,
+              "p": 0.864,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 0.23,
+              "p": 0.798,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Linke": [
+          {
+            "institute": "GMS",
+            "n": 54,
+            "instToLoo": {
+              "f": 5.37,
+              "p": 0.008,
+              "df1": 2,
+              "df2": 46,
+              "n": 53
+            },
+            "looToInst": {
+              "f": 0.46,
+              "p": 0.637,
+              "df1": 2,
+              "df2": 46,
+              "n": 53
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 37,
+            "instToLoo": {
+              "f": 0.46,
+              "p": 0.636,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "looToInst": {
+              "f": 0.42,
+              "p": 0.66,
+              "df1": 2,
+              "df2": 29,
+              "n": 36
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 28,
+            "instToLoo": {
+              "f": 0.36,
+              "p": 0.702,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "looToInst": {
+              "f": 0.01,
+              "p": 0.994,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 34,
+            "instToLoo": {
+              "f": 0.01,
+              "p": 0.995,
+              "df1": 2,
+              "df2": 26,
+              "n": 33
+            },
+            "looToInst": {
+              "f": 0.17,
+              "p": 0.846,
+              "df1": 2,
+              "df2": 26,
+              "n": 33
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "AfD": [
+          {
+            "institute": "GMS",
+            "n": 57,
+            "instToLoo": {
+              "f": 1.9,
+              "p": 0.161,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "looToInst": {
+              "f": 0.86,
+              "p": 0.43,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.9,
+              "p": 0.418,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 0.19,
+              "p": 0.831,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 33,
+            "instToLoo": {
+              "f": 0.29,
+              "p": 0.75,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 0.28,
+              "p": 0.758,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 41,
+            "instToLoo": {
+              "f": 0.27,
+              "p": 0.764,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "looToInst": {
+              "f": 0.21,
+              "p": 0.814,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 0.18,
+              "p": 0.836,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 0.63,
+              "p": 0.544,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Freie Wähler": [
+          {
+            "institute": "Infratest dimap",
+            "n": 33,
+            "instToLoo": {
+              "f": 8.41,
+              "p": 0.002,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 1,
+              "p": 0.384,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "GMS",
+            "n": 57,
+            "instToLoo": {
+              "f": 3.72,
+              "p": 0.031,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "looToInst": {
+              "f": 1.91,
+              "p": 0.159,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 1.15,
+              "p": 0.337,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 0.01,
+              "p": 0.99,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.59,
+              "p": 0.562,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 2.09,
+              "p": 0.141,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 41,
+            "instToLoo": {
+              "f": 0.24,
+              "p": 0.79,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "looToInst": {
+              "f": 0.11,
+              "p": 0.897,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "CSU": [
+          {
+            "institute": "GMS",
+            "n": 57,
+            "instToLoo": {
+              "f": 2.1,
+              "p": 0.133,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "looToInst": {
+              "f": 0.33,
+              "p": 0.723,
+              "df1": 2,
+              "df2": 49,
+              "n": 56
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 39,
+            "instToLoo": {
+              "f": 0.6,
+              "p": 0.556,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "looToInst": {
+              "f": 0.86,
+              "p": 0.433,
+              "df1": 2,
+              "df2": 31,
+              "n": 38
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 33,
+            "instToLoo": {
+              "f": 0.37,
+              "p": 0.692,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "looToInst": {
+              "f": 0.09,
+              "p": 0.911,
+              "df1": 2,
+              "df2": 25,
+              "n": 32
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 29,
+            "instToLoo": {
+              "f": 0.25,
+              "p": 0.781,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "looToInst": {
+              "f": 1.22,
+              "p": 0.315,
+              "df1": 2,
+              "df2": 21,
+              "n": 28
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 41,
+            "instToLoo": {
+              "f": 0.2,
+              "p": 0.818,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "looToInst": {
+              "f": 1.92,
+              "p": 0.163,
+              "df1": 2,
+              "df2": 33,
+              "n": 40
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ]
+      }
+    },
+    "Berlin": {
+      "parties": [
+        "SPD",
+        "FDP",
+        "Grüne",
+        "Linke",
+        "AfD",
+        "CDU"
+      ],
+      "institutes": [
+        "Infratest dimap",
+        "Forsa",
+        "INSA",
+        "Civey",
+        "Institut Wahlkreisprognose"
+      ],
+      "results": {
+        "SPD": [
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 3.08,
+              "p": 0.072,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.36,
+              "p": 0.703,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 36,
+            "instToLoo": {
+              "f": 0.53,
+              "p": 0.597,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "looToInst": {
+              "f": 0.74,
+              "p": 0.484,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 31,
+            "instToLoo": {
+              "f": 0.45,
+              "p": 0.644,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "looToInst": {
+              "f": 0.1,
+              "p": 0.908,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 32,
+            "instToLoo": {
+              "f": 0.26,
+              "p": 0.775,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.02,
+              "p": 0.977,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "FDP": [
+          {
+            "institute": "INSA",
+            "n": 34,
+            "instToLoo": {
+              "f": 4.49,
+              "p": 0.021,
+              "df1": 2,
+              "df2": 26,
+              "n": 33
+            },
+            "looToInst": {
+              "f": 0.28,
+              "p": 0.758,
+              "df1": 2,
+              "df2": 26,
+              "n": 33
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.56,
+              "p": 0.582,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.23,
+              "p": 0.795,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 30,
+            "instToLoo": {
+              "f": 0.28,
+              "p": 0.76,
+              "df1": 2,
+              "df2": 22,
+              "n": 29
+            },
+            "looToInst": {
+              "f": 0.12,
+              "p": 0.886,
+              "df1": 2,
+              "df2": 22,
+              "n": 29
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 28,
+            "instToLoo": {
+              "f": 0.02,
+              "p": 0.98,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "looToInst": {
+              "f": 0.27,
+              "p": 0.767,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Grüne": [
+          {
+            "institute": "Infratest dimap",
+            "n": 32,
+            "instToLoo": {
+              "f": 1.86,
+              "p": 0.178,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.5,
+              "p": 0.615,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 36,
+            "instToLoo": {
+              "f": 1.32,
+              "p": 0.283,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "looToInst": {
+              "f": 2.23,
+              "p": 0.126,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.7,
+              "p": 0.513,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.99,
+              "p": 0.391,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 31,
+            "instToLoo": {
+              "f": 0.09,
+              "p": 0.912,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "looToInst": {
+              "f": 1.82,
+              "p": 0.184,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Linke": [
+          {
+            "institute": "INSA",
+            "n": 36,
+            "instToLoo": {
+              "f": 5.48,
+              "p": 0.01,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "looToInst": {
+              "f": 0.83,
+              "p": 0.446,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 32,
+            "instToLoo": {
+              "f": 0.25,
+              "p": 0.783,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0,
+              "p": 0.997,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.2,
+              "p": 0.822,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.04,
+              "p": 0.957,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 31,
+            "instToLoo": {
+              "f": 0.07,
+              "p": 0.931,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "looToInst": {
+              "f": 0.63,
+              "p": 0.543,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "AfD": [
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 1.22,
+              "p": 0.32,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.29,
+              "p": 0.75,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 32,
+            "instToLoo": {
+              "f": 0.66,
+              "p": 0.524,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.67,
+              "p": 0.521,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 36,
+            "instToLoo": {
+              "f": 0.5,
+              "p": 0.613,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "looToInst": {
+              "f": 0.11,
+              "p": 0.898,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 31,
+            "instToLoo": {
+              "f": 0.33,
+              "p": 0.719,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "looToInst": {
+              "f": 0.41,
+              "p": 0.666,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "CDU": [
+          {
+            "institute": "Infratest dimap",
+            "n": 32,
+            "instToLoo": {
+              "f": 2.39,
+              "p": 0.113,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "looToInst": {
+              "f": 0.29,
+              "p": 0.75,
+              "df1": 2,
+              "df2": 24,
+              "n": 31
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 36,
+            "instToLoo": {
+              "f": 2.07,
+              "p": 0.145,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "looToInst": {
+              "f": 0.04,
+              "p": 0.964,
+              "df1": 2,
+              "df2": 28,
+              "n": 35
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.31,
+              "p": 0.737,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 1.24,
+              "p": 0.315,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Civey",
+            "n": 31,
+            "instToLoo": {
+              "f": 0.07,
+              "p": 0.936,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "looToInst": {
+              "f": 0.68,
+              "p": 0.515,
+              "df1": 2,
+              "df2": 23,
+              "n": 30
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ]
+      }
+    },
+    "Nordrhein-Westfalen (NRW)": {
+      "parties": [
+        "SPD",
+        "FDP",
+        "Grüne",
+        "Linke",
+        "AfD",
+        "CDU"
+      ],
+      "institutes": [
+        "Infratest dimap",
+        "Forsa",
+        "INSA",
+        "Institut Wahlkreisprognose"
+      ],
+      "results": {
+        "SPD": [
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 21,
+            "instToLoo": {
+              "f": 1.01,
+              "p": 0.39,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 0.13,
+              "p": 0.879,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 0.57,
+              "p": 0.576,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 2.55,
+              "p": 0.111,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.54,
+              "p": 0.597,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 1.56,
+              "p": 0.248,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "FDP": [
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 0.93,
+              "p": 0.417,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 1.53,
+              "p": 0.248,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.84,
+              "p": 0.454,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 1.5,
+              "p": 0.26,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.46,
+              "p": 0.643,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 0.09,
+              "p": 0.918,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Grüne": [
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 5.66,
+              "p": 0.015,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 0.94,
+              "p": 0.414,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 21,
+            "instToLoo": {
+              "f": 1.01,
+              "p": 0.392,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 0.91,
+              "p": 0.427,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.27,
+              "p": 0.767,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 0.48,
+              "p": 0.631,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Linke": [
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 0.81,
+              "p": 0.461,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 0.3,
+              "p": 0.743,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 20,
+            "instToLoo": {
+              "f": 0.39,
+              "p": 0.688,
+              "df1": 2,
+              "df2": 12,
+              "n": 19
+            },
+            "looToInst": {
+              "f": 0.28,
+              "p": 0.764,
+              "df1": 2,
+              "df2": 12,
+              "n": 19
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 20,
+            "instToLoo": {
+              "f": 0.13,
+              "p": 0.881,
+              "df1": 2,
+              "df2": 12,
+              "n": 19
+            },
+            "looToInst": {
+              "f": 0.06,
+              "p": 0.943,
+              "df1": 2,
+              "df2": 12,
+              "n": 19
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "AfD": [
+          {
+            "institute": "Infratest dimap",
+            "n": 21,
+            "instToLoo": {
+              "f": 1.03,
+              "p": 0.384,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 2.13,
+              "p": 0.158,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 0.56,
+              "p": 0.582,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 0.84,
+              "p": 0.452,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.01,
+              "p": 0.994,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 0.02,
+              "p": 0.976,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "CDU": [
+          {
+            "institute": "Forsa",
+            "n": 23,
+            "instToLoo": {
+              "f": 5.81,
+              "p": 0.014,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "looToInst": {
+              "f": 0.58,
+              "p": 0.572,
+              "df1": 2,
+              "df2": 15,
+              "n": 22
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Institut Wahlkreisprognose",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.1,
+              "p": 0.908,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 1.05,
+              "p": 0.377,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 21,
+            "instToLoo": {
+              "f": 0.02,
+              "p": 0.975,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "looToInst": {
+              "f": 1,
+              "p": 0.395,
+              "df1": 2,
+              "df2": 13,
+              "n": 20
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ]
+      }
+    },
+    "Thüringen": {
+      "parties": [
+        "SPD",
+        "FDP",
+        "Grüne",
+        "Linke",
+        "AfD",
+        "CDU"
+      ],
+      "institutes": [
+        "Infratest dimap",
+        "INSA",
+        "Institut Wahlkreisprognose"
+      ],
+      "results": {
+        "SPD": [
+          {
+            "institute": "INSA",
+            "n": 35,
+            "instToLoo": {
+              "f": 1.91,
+              "p": 0.167,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "looToInst": {
+              "f": 0.18,
+              "p": 0.84,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 25,
+            "instToLoo": {
+              "f": 1.78,
+              "p": 0.199,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 2.47,
+              "p": 0.114,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "FDP": [
+          {
+            "institute": "INSA",
+            "n": 28,
+            "instToLoo": {
+              "f": 1.59,
+              "p": 0.229,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "looToInst": {
+              "f": 0.09,
+              "p": 0.916,
+              "df1": 2,
+              "df2": 20,
+              "n": 27
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Grüne": [
+          {
+            "institute": "INSA",
+            "n": 35,
+            "instToLoo": {
+              "f": 2.9,
+              "p": 0.072,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "looToInst": {
+              "f": 0.38,
+              "p": 0.69,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "leadsConsensus": true,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.35,
+              "p": 0.71,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 1.95,
+              "p": 0.173,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "Linke": [
+          {
+            "institute": "Infratest dimap",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.24,
+              "p": 0.789,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.09,
+              "p": 0.917,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 35,
+            "instToLoo": {
+              "f": 0.13,
+              "p": 0.879,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "looToInst": {
+              "f": 2.12,
+              "p": 0.139,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "AfD": [
+          {
+            "institute": "Infratest dimap",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.71,
+              "p": 0.508,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 1.05,
+              "p": 0.372,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          },
+          {
+            "institute": "INSA",
+            "n": 35,
+            "instToLoo": {
+              "f": 0.09,
+              "p": 0.911,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "looToInst": {
+              "f": 0.18,
+              "p": 0.837,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ],
+        "CDU": [
+          {
+            "institute": "INSA",
+            "n": 35,
+            "instToLoo": {
+              "f": 1.08,
+              "p": 0.353,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "looToInst": {
+              "f": 5.56,
+              "p": 0.009,
+              "df1": 2,
+              "df2": 27,
+              "n": 34
+            },
+            "leadsConsensus": false,
+            "followsConsensus": true,
+            "bidirectional": false
+          },
+          {
+            "institute": "Infratest dimap",
+            "n": 25,
+            "instToLoo": {
+              "f": 0.63,
+              "p": 0.547,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "looToInst": {
+              "f": 0.17,
+              "p": 0.847,
+              "df1": 2,
+              "df2": 17,
+              "n": 24
+            },
+            "leadsConsensus": false,
+            "followsConsensus": false,
+            "bidirectional": false
+          }
+        ]
+      }
+    }
+  }
+}

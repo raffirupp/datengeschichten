@@ -60,7 +60,7 @@ const stories = [
     key: 'vergleich-frankreich-deutschland',
     title: 'Gleiche Nachbarschaft, andere Wege',
     teaser: 'Wie Frankreich und Deutschland leben, wirtschaften, sich verschulden und altern — vier Vergleiche, eine Geschichte.',
-    category: 'Frankreich & Deutschland im Vergleich',
+    category: 'Europa',
     kicker: 'VERGLEICH · FRANKREICH & DEUTSCHLAND',
     status: 'live',
     isNew: true,

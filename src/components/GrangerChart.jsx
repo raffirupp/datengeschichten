@@ -73,8 +73,8 @@ export default function GrangerChart({ data }) {
       {/* Chart */}
       <div style={{ overflowX: 'auto' }}>
         <svg
-          width={DP_W}
-          height={svgH}
+          viewBox={`0 0 ${DP_W} ${svgH}`}
+          width="100%"
           style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', display: 'block' }}
         >
           {/* Column headers */}

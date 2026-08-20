@@ -255,7 +255,7 @@ export default function NachrichtenQuellenStory() {
   const [tab, setTab] = useState('partei')
 
   return (
-    <article className="flex flex-col gap-8 max-w-4xl">
+    <article className="flex flex-col gap-8 max-w-5xl">
       <div>
         <Link to="/" className="no-underline text-sm" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}>
           ← Zurück

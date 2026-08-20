@@ -72,7 +72,7 @@ export default function LandtagSpracheStory() {
   const activeTopic = topics.find((t) => t.key === mapTopic)
 
   return (
-    <article className="flex flex-col gap-8 max-w-3xl">
+    <article className="flex flex-col gap-8 max-w-5xl">
       <div>
         <Link
           to="/"

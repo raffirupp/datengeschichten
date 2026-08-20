@@ -178,7 +178,7 @@ export default function NachrichtenSignalStory() {
   }, [myPeaks])
 
   return (
-    <article className="flex flex-col gap-10 max-w-4xl">
+    <article className="flex flex-col gap-10 max-w-5xl">
       <div>
         <Link to="/" className="no-underline text-sm" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted)' }}>
           ← Zurück

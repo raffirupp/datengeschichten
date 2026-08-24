@@ -11,11 +11,20 @@ import PollTrendChart        from '../../components/PollTrendChart.jsx'
 import GovOppositionChart    from '../../components/GovOppositionChart.jsx'
 import HouseEffectsChart     from '../../components/HouseEffectsChart.jsx'
 import ElectionAccuracyChart from '../../components/ElectionAccuracyChart.jsx'
+import PartyAccuracySwarmChart from '../../components/PartyAccuracySwarmChart.jsx'
 import LeadLagChart          from '../../components/LeadLagChart.jsx'
 import GrangerChart          from '../../components/GrangerChart.jsx'
 import CurrentGovernmentNote from '../../components/CurrentGovernmentNote.jsx'
 import CoalitionHistory      from '../../components/CoalitionHistory.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
+
+// Landesflaggen (echte Wikimedia-Commons-Dateien, verlinkt aus den jeweiligen
+// Wikipedia-Bundesland-Infoboxen — nicht selbst nachgebaut, um Fehler bei
+// Streifenreihenfolge/-ausrichtung zu vermeiden).
+const flagModules = import.meta.glob('../../assets/flags/*.svg', { eager: true, query: '?url', import: 'default' })
+const FLAG_URL = Object.fromEntries(
+  Object.entries(flagModules).map(([path, url]) => [path.match(/([a-z]{2})\.svg$/)[1].toUpperCase(), url])
+)
 
 const catColors = colorsFor('Deutschland')
 
@@ -77,6 +86,17 @@ function NoDataNote({ children }) {
   )
 }
 
+function FlagIcon({ code }) {
+  const url = FLAG_URL[code]
+  if (!url) return null
+  return (
+    <img src={url} alt="" width={20} height={14} style={{
+      flexShrink: 0, objectFit: 'cover', borderRadius: 1.5,
+      border: '1px solid var(--color-rule)',
+    }} />
+  )
+}
+
 function StateSelector({ selected, onChange }) {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -85,6 +105,7 @@ function StateSelector({ selected, onChange }) {
           key={s.code}
           onClick={() => onChange(s.code)}
           style={{
+            display: 'flex', alignItems: 'center', gap: '7px',
             fontFamily: 'var(--font-mono)', fontSize: '12px',
             padding: '5px 12px', borderRadius: '20px', cursor: 'pointer',
             border: `1px solid ${s.code === selected ? 'var(--color-ink)' : 'var(--color-rule)'}`,
@@ -93,12 +114,15 @@ function StateSelector({ selected, onChange }) {
             transition: 'background-color 0.15s, color 0.15s',
           }}
         >
+          <FlagIcon code={s.code} />
           {s.name}
         </button>
       ))}
     </div>
   )
 }
+
+const STATE_NAMES = Object.fromEntries(STATES.map((s) => [s.code, s.name]))
 
 export default function WahltrendLaenderStory() {
   const [stateCode, setStateCode] = useState('BY')
@@ -142,6 +166,39 @@ export default function WahltrendLaenderStory() {
         </p>
       </header>
 
+      {/* ── 0: Alle Länder auf einen Blick — bewusst vor dem Bundesland-Selector, damit
+          klar bleibt: das gilt für alle 16 Länder, nicht für die Auswahl unten. ── */}
+      <section className="flex flex-col gap-6">
+        <header className="flex flex-col gap-3">
+          <SectionLabel>Erst der Gesamtblick</SectionLabel>
+          <SectionHeading>Wie weit lagen Umfragen über alle Landtagswahlen hinweg daneben?</SectionHeading>
+          <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
+            Alle 16 Bundesländer zusammen, bevor es unten ins Detail geht: jeder Punkt ist
+            die letzte Institutsumfrage vor einer Landtagswahl, verglichen mit dem amtlichen
+            Ergebnis. Darstellung angelehnt an eine{' '}
+            <a href="https://www.spiegel.de/politik/deutschland/wahl-in-sachsen-anhalt-wie-verlaesslich-sind-die-wahlumfragen-wirklich-a-a2e38560-71ec-47eb-89aa-44df7d7ef7b0"
+              target="_blank" rel="noopener noreferrer"
+              style={{ color: 'var(--color-muted)', textDecoration: 'underline' }}>
+              SPIEGEL-Analyse vom 23.8.2026
+            </a>.
+          </p>
+          <p className="text-xs leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}>
+            Zur Einordnung: SPIEGEL wertet Landtagswahlen seit 2010 aus (Quelle wahlrecht.de),
+            unsere Daten decken pro Bundesland meist nur den jüngsten Wahlzyklus ab (2021–2026) —
+            deutlich weniger Wahlen, entsprechend wackliger die Mediane. Zusätzlich andere
+            Institutsabdeckung: wahlrecht.de führt z. B. Civey nicht, unsere aus
+            marktforschung.de-Artikeln aufbereitete Quelle schon (105 von 547 Einträgen) — spot-check
+            gegen amtliche Ergebnisse, keine vollständige Prüfung.
+          </p>
+        </header>
+        <PartyAccuracySwarmChart data={electionAccuracy} stateNames={STATE_NAMES} />
+      </section>
+
+      <Divider />
+
+      <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
+        Und jetzt ein einzelnes Bundesland — für die folgenden Abschnitte auswählen:
+      </p>
       <StateSelector selected={stateCode} onChange={setStateCode} />
 
       {/* ── 1: Sonntagsfrage ── */}

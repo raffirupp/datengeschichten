@@ -4,7 +4,6 @@ import pollsLaender     from '../../data/polls-laender.json'
 import coalitions       from '../../data/laender-coalitions.json'
 import houseEffects     from '../../data/laender-house-effects.json'
 import leadLag          from '../../data/laender-lead-lag.json'
-import granger          from '../../data/laender-granger.json'
 import electionAccuracy from '../../data/laender-election-accuracy.json'
 import PollSnapshot          from '../../components/PollSnapshot.jsx'
 import PollTrendChart        from '../../components/PollTrendChart.jsx'
@@ -13,7 +12,6 @@ import HouseEffectsChart     from '../../components/HouseEffectsChart.jsx'
 import ElectionAccuracyChart from '../../components/ElectionAccuracyChart.jsx'
 import PartyAccuracySwarmChart from '../../components/PartyAccuracySwarmChart.jsx'
 import LeadLagChart          from '../../components/LeadLagChart.jsx'
-import GrangerChart          from '../../components/GrangerChart.jsx'
 import CurrentGovernmentNote from '../../components/CurrentGovernmentNote.jsx'
 import CoalitionHistory      from '../../components/CoalitionHistory.jsx'
 import { colorsFor } from '../../lib/categoryColors.js'
@@ -29,7 +27,7 @@ const FLAG_URL = Object.fromEntries(
 const catColors = colorsFor('Deutschland')
 
 // Ländercode (polls-laender.json / laender-coalitions.json) <-> DAWUM-Parlamentsname
-// (laender-house-effects.json) <-> DAWUM-Shortcut (laender-lead-lag.json / laender-granger.json).
+// (laender-house-effects.json) <-> DAWUM-Shortcut (laender-lead-lag.json).
 // Drei verschiedene Schlüssel für dieselben 16 Länder, weil die Datensätze zu
 // unterschiedlichen Zeitpunkten mit unterschiedlichen Konventionen gebaut wurden.
 const STATES = [
@@ -132,7 +130,6 @@ export default function WahltrendLaenderStory() {
   const govPeriods = coalitions.byState[stateCode] ?? []
   const houseData = houseEffects.states[state.parliamentName]
   const leadLagState = leadLag.states[state.shortcut]
-  const grangerState = granger.states[state.shortcut]
   const accuracyState = electionAccuracy.byState[stateCode]
 
   const { meta, polls, trend } = pollData
@@ -287,7 +284,7 @@ export default function WahltrendLaenderStory() {
       {/* ── 5: Reaktionsgeschwindigkeit ── */}
       <section className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <SectionLabel number="05">Reaktionsgeschwindigkeit · Methode 1</SectionLabel>
+          <SectionLabel number="05">Reaktionsgeschwindigkeit</SectionLabel>
           <SectionHeading>Wer reagiert zuerst auf Stimmungsänderungen?</SectionHeading>
           <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
             Cross-Korrelation der wöchentlichen Erstdifferenzen zwischen Institut und
@@ -299,29 +296,6 @@ export default function WahltrendLaenderStory() {
           <LeadLagChart key={stateCode} data={{ meta: leadLag.meta, ...leadLagState }} />
         ) : (
           <NoDataNote>Für {state.name} reicht die Datenlage nicht für eine Lead-Lag-Analyse.</NoDataNote>
-        )}
-      </section>
-
-      <Divider />
-
-      {/* ── 4b: Granger ── */}
-      <section className="flex flex-col gap-6">
-        <header className="flex flex-col gap-3">
-          <SectionLabel>Reaktionsgeschwindigkeit · Methode 2</SectionLabel>
-          <SectionHeading>Welches Institut bewegt den Konsens — und welches folgt ihm?</SectionHeading>
-          <p className="text-sm leading-relaxed max-w-prose" style={{ color: 'var(--color-muted)' }}>
-            Granger-Kausalität, gleiche Methode wie im Bund: sagen die vergangenen Werte
-            eines Instituts den künftigen Konsens vorher, über das hinaus, was der Konsens
-            selbst vorhersagt?
-          </p>
-        </header>
-        {grangerState ? (
-          <GrangerChart key={stateCode} data={{ meta: granger.meta, ...grangerState }} />
-        ) : (
-          <NoDataNote>
-            Für {state.name} reicht die Datenlage nicht für einen Granger-Test (braucht
-            deutlich mehr Beobachtungen als die Lead-Lag-Analyse).
-          </NoDataNote>
         )}
       </section>
 

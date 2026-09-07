@@ -1,0 +1,39 @@
+name: Umfragedaten aktualisieren
+
+on:
+  schedule:
+    # Jeden Montag, 05:00 UTC (06:00/07:00 MEZ/MESZ)
+    - cron: '0 5 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-polls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: DAWUM-Daten ziehen (Bund + Länder)
+        run: |
+          npm run data:polls
+          npm run data:polls-laender
+
+      - name: Änderungen committen und pushen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/polls-bundestag.json src/data/polls-laender.json data-prep/raw/dawum.json; then
+            echo "Keine neuen Umfragedaten."
+            exit 0
+          fi
+          git add src/data/polls-bundestag.json src/data/polls-laender.json data-prep/raw/dawum.json
+          git commit -m "Umfragedaten aktualisiert ($(date -u +%Y-%m-%d))"
+          git push

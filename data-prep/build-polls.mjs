@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
+import { readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { findParliament, buildPollsData } from './pollsTrendCore.mjs'
@@ -12,20 +12,16 @@ const PARLIAMENT_NAME = process.argv[2] ?? 'Bundestag'
 const WINDOW_YEARS    = 7
 const TREND_DAYS      = 21
 
-// ---- download ----
-if (!existsSync(RAW)) {
-  console.log('Lade DAWUM-API …')
-  let res
-  try { res = await fetch(DAWUM_URL) } catch(e) {
-    console.error(`Netzwerkfehler: ${e.message}`); process.exit(1)
-  }
-  if (!res.ok) { console.error(`HTTP ${res.status}`); process.exit(1) }
-  mkdirSync(resolve(__dir, 'raw'), { recursive: true })
-  writeFileSync(RAW, await res.text(), 'utf-8')
-  console.log('Gespeichert:', RAW)
-} else {
-  console.log('Lokale DAWUM-Datei vorhanden.')
+// ---- download (immer frisch, DAWUM cached selbst serverseitig) ----
+console.log('Lade DAWUM-API …')
+let res
+try { res = await fetch(DAWUM_URL) } catch(e) {
+  console.error(`Netzwerkfehler: ${e.message}`); process.exit(1)
 }
+if (!res.ok) { console.error(`HTTP ${res.status}`); process.exit(1) }
+mkdirSync(resolve(__dir, 'raw'), { recursive: true })
+writeFileSync(RAW, await res.text(), 'utf-8')
+console.log('Gespeichert:', RAW)
 
 const raw = JSON.parse(readFileSync(RAW, 'utf-8'))
 

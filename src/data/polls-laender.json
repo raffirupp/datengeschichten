@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-19",
+    "lastUpdated": "2026-09-07",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -5113,23 +5113,14 @@
           {
             "key": "FDP",
             "name": "Freie Demokratische Partei"
+          },
+          {
+            "key": "BSW",
+            "name": "Bündnis Sahra Wagenknecht"
           }
         ]
       },
       "polls": [
-        {
-          "date": "2019-08-31",
-          "institute": "Forsa",
-          "results": {
-            "Sonstige": 10,
-            "SPD": 16,
-            "FDP": 6,
-            "Grüne": 24,
-            "Linke": 17,
-            "AfD": 11,
-            "CDU": 16
-          }
-        },
         {
           "date": "2019-09-18",
           "institute": "INSA",
@@ -6401,28 +6392,72 @@
             "BSW": 3,
             "CDU": 20
           }
+        },
+        {
+          "date": "2026-08-22",
+          "institute": "Forsa",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 12,
+            "FDP": 3,
+            "Grüne": 16,
+            "Linke": 22,
+            "AfD": 18,
+            "BSW": 4,
+            "CDU": 18
+          }
+        },
+        {
+          "date": "2026-08-31",
+          "institute": "Civey",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 13,
+            "FDP": 4,
+            "Grüne": 15,
+            "Linke": 20,
+            "AfD": 18,
+            "BSW": 4,
+            "CDU": 19
+          }
+        },
+        {
+          "date": "2026-09-02",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 9,
+            "SPD": 11,
+            "Grüne": 18,
+            "Linke": 19,
+            "AfD": 18,
+            "BSW": 4,
+            "CDU": 21
+          }
+        },
+        {
+          "date": "2026-09-04",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 15,
+            "FDP": 3,
+            "Grüne": 15,
+            "Linke": 19,
+            "AfD": 18,
+            "BSW": 3,
+            "CDU": 20
+          }
         }
       ],
       "trend": [
         {
-          "date": "2019-08-31",
-          "values": {
-            "SPD": 16,
-            "Grüne": 24,
-            "Linke": 17,
-            "AfD": 11,
-            "CDU": 16,
-            "FDP": 6
-          }
-        },
-        {
           "date": "2019-09-18",
           "values": {
-            "SPD": 15.1,
+            "SPD": 15,
             "Grüne": 24,
-            "Linke": 17.9,
-            "AfD": 13.6,
-            "CDU": 16.9,
+            "Linke": 18,
+            "AfD": 14,
+            "CDU": 17,
             "FDP": 6
           }
         },
@@ -7083,7 +7118,8 @@
             "Linke": 10,
             "AfD": 12,
             "CDU": 27,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 6
           }
         },
         {
@@ -7094,7 +7130,8 @@
             "Linke": 7,
             "AfD": 12,
             "CDU": 26,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 12
           }
         },
         {
@@ -7105,7 +7142,8 @@
             "Linke": 6,
             "AfD": 15,
             "CDU": 27,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 7
           }
         },
         {
@@ -7116,7 +7154,8 @@
             "Linke": 13,
             "AfD": 16,
             "CDU": 24,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 7
           }
         },
         {
@@ -7127,7 +7166,8 @@
             "Linke": 13,
             "AfD": 13,
             "CDU": 24,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 7
           }
         },
         {
@@ -7137,7 +7177,8 @@
             "Grüne": 15,
             "Linke": 19,
             "AfD": 13,
-            "CDU": 25
+            "CDU": 25,
+            "BSW": 4
           }
         },
         {
@@ -7148,7 +7189,8 @@
             "Linke": 16,
             "AfD": 16,
             "CDU": 25,
-            "FDP": 2
+            "FDP": 2,
+            "BSW": 7
           }
         },
         {
@@ -7159,7 +7201,8 @@
             "Linke": 17,
             "AfD": 15,
             "CDU": 23,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 5
           }
         },
         {
@@ -7169,7 +7212,8 @@
             "Grüne": 16,
             "Linke": 19,
             "AfD": 16,
-            "CDU": 22
+            "CDU": 22,
+            "BSW": 4
           }
         },
         {
@@ -7180,7 +7224,8 @@
             "Linke": 18.2,
             "AfD": 16,
             "CDU": 22.8,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 4.8
           }
         },
         {
@@ -7191,7 +7236,8 @@
             "Linke": 17,
             "AfD": 16,
             "CDU": 22,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 4
           }
         },
         {
@@ -7202,7 +7248,8 @@
             "Linke": 17.5,
             "AfD": 16.5,
             "CDU": 22,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3.5
           }
         },
         {
@@ -7213,7 +7260,8 @@
             "Linke": 17.2,
             "AfD": 16.2,
             "CDU": 22,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3.2
           }
         },
         {
@@ -7224,7 +7272,8 @@
             "Linke": 15,
             "AfD": 17,
             "CDU": 22,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 4
           }
         },
         {
@@ -7235,7 +7284,8 @@
             "Linke": 16.4,
             "AfD": 16.3,
             "CDU": 22.7,
-            "FDP": 3.3
+            "FDP": 3.3,
+            "BSW": 3.3
           }
         },
         {
@@ -7246,7 +7296,8 @@
             "Linke": 16,
             "AfD": 16,
             "CDU": 23,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 4
           }
         },
         {
@@ -7257,7 +7308,8 @@
             "Linke": 15.3,
             "AfD": 16.7,
             "CDU": 21.7,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 4
           }
         },
         {
@@ -7268,7 +7320,8 @@
             "Linke": 17.4,
             "AfD": 17.8,
             "CDU": 19.4,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3.2
           }
         },
         {
@@ -7279,7 +7332,8 @@
             "Linke": 16.6,
             "AfD": 17.3,
             "CDU": 19.7,
-            "FDP": 3.7
+            "FDP": 3.7,
+            "BSW": 3
           }
         },
         {
@@ -7290,7 +7344,8 @@
             "Linke": 15.8,
             "AfD": 17.5,
             "CDU": 19.9,
-            "FDP": 3.9
+            "FDP": 3.9,
+            "BSW": 3.4
           }
         },
         {
@@ -7301,7 +7356,8 @@
             "Linke": 15,
             "AfD": 18,
             "CDU": 22,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 3
           }
         },
         {
@@ -7312,7 +7368,8 @@
             "Linke": 18.6,
             "AfD": 18,
             "CDU": 18.4,
-            "FDP": 3.3
+            "FDP": 3.3,
+            "BSW": 3
           }
         },
         {
@@ -7323,7 +7380,8 @@
             "Linke": 19.2,
             "AfD": 17.2,
             "CDU": 18.6,
-            "FDP": 3.8
+            "FDP": 3.8,
+            "BSW": 3
           }
         },
         {
@@ -7334,7 +7392,8 @@
             "Linke": 20.2,
             "AfD": 16.7,
             "CDU": 19.2,
-            "FDP": 3.5
+            "FDP": 3.5,
+            "BSW": 3
           }
         },
         {
@@ -7345,7 +7404,8 @@
             "Linke": 19.4,
             "AfD": 17.5,
             "CDU": 18.9,
-            "FDP": 3.7
+            "FDP": 3.7,
+            "BSW": 3.4
           }
         },
         {
@@ -7356,7 +7416,8 @@
             "Linke": 20.5,
             "AfD": 18.1,
             "CDU": 18.8,
-            "FDP": 3.2
+            "FDP": 3.2,
+            "BSW": 3.2
           }
         },
         {
@@ -7367,7 +7428,56 @@
             "Linke": 20,
             "AfD": 17.5,
             "CDU": 19.5,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3
+          }
+        },
+        {
+          "date": "2026-08-22",
+          "values": {
+            "SPD": 12.8,
+            "Grüne": 16.2,
+            "Linke": 21,
+            "AfD": 17.7,
+            "CDU": 18.7,
+            "FDP": 3,
+            "BSW": 3.6
+          }
+        },
+        {
+          "date": "2026-08-31",
+          "values": {
+            "SPD": 12.9,
+            "Grüne": 15.3,
+            "Linke": 20.5,
+            "AfD": 17.9,
+            "CDU": 18.8,
+            "FDP": 3.7,
+            "BSW": 3.9
+          }
+        },
+        {
+          "date": "2026-09-02",
+          "values": {
+            "SPD": 12.2,
+            "Grüne": 16.2,
+            "Linke": 20,
+            "AfD": 18,
+            "CDU": 19.5,
+            "FDP": 3.7,
+            "BSW": 4
+          }
+        },
+        {
+          "date": "2026-09-04",
+          "values": {
+            "SPD": 12.9,
+            "Grüne": 15.9,
+            "Linke": 19.7,
+            "AfD": 18,
+            "CDU": 19.7,
+            "FDP": 3.5,
+            "BSW": 3.7
           }
         }
       ]
@@ -7412,75 +7522,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-08-22",
-          "institute": "Infratest dimap",
-          "results": {
-            "Sonstige": 2,
-            "SPD": 22,
-            "FDP": 5,
-            "Grüne": 12,
-            "Linke": 15,
-            "AfD": 22,
-            "BVB/FW": 4,
-            "CDU": 18
-          }
-        },
-        {
-          "date": "2019-08-23",
-          "institute": "Forschungsgruppe Wahlen",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 21,
-            "FDP": 5,
-            "Grüne": 14,
-            "Linke": 14,
-            "AfD": 20,
-            "BVB/FW": 4,
-            "CDU": 18
-          }
-        },
-        {
-          "date": "2019-08-27",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 2,
-            "SPD": 21,
-            "FDP": 5,
-            "Grüne": 14,
-            "Linke": 15,
-            "AfD": 21,
-            "BVB/FW": 5,
-            "CDU": 17
-          }
-        },
-        {
-          "date": "2019-08-28",
-          "institute": "Civey",
-          "results": {
-            "Sonstige": 6.3,
-            "SPD": 20.3,
-            "FDP": 4.9,
-            "Grüne": 14.8,
-            "Linke": 15.5,
-            "AfD": 20.3,
-            "CDU": 17.9
-          }
-        },
-        {
-          "date": "2019-08-29",
-          "institute": "Forschungsgruppe Wahlen",
-          "results": {
-            "Sonstige": 3,
-            "SPD": 22,
-            "FDP": 5,
-            "Grüne": 14.5,
-            "Linke": 14,
-            "AfD": 21,
-            "BVB/FW": 4,
-            "CDU": 16.5
-          }
-        },
         {
           "date": "2019-11-19",
           "institute": "Infratest dimap",
@@ -8236,66 +8277,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-08-22",
-          "values": {
-            "SPD": 22,
-            "Grüne": 12,
-            "Linke": 15,
-            "AfD": 22,
-            "CDU": 18,
-            "BVB/FW": 4,
-            "FDP": 5
-          }
-        },
-        {
-          "date": "2019-08-23",
-          "values": {
-            "SPD": 21.5,
-            "Grüne": 13.1,
-            "Linke": 14.5,
-            "AfD": 20.9,
-            "CDU": 18,
-            "BVB/FW": 4,
-            "FDP": 5
-          }
-        },
-        {
-          "date": "2019-08-27",
-          "values": {
-            "SPD": 21.3,
-            "Grüne": 13.4,
-            "Linke": 14.7,
-            "AfD": 21,
-            "CDU": 17.6,
-            "BVB/FW": 4.4,
-            "FDP": 5
-          }
-        },
-        {
-          "date": "2019-08-28",
-          "values": {
-            "SPD": 20.9,
-            "Grüne": 14,
-            "Linke": 15,
-            "AfD": 20.7,
-            "CDU": 17.7,
-            "BVB/FW": 4.4,
-            "FDP": 5
-          }
-        },
-        {
-          "date": "2019-08-29",
-          "values": {
-            "SPD": 21.2,
-            "Grüne": 14.1,
-            "Linke": 14.7,
-            "AfD": 20.8,
-            "CDU": 17.4,
-            "BVB/FW": 4.3,
-            "FDP": 5
-          }
-        },
         {
           "date": "2019-11-19",
           "values": {
@@ -9253,6 +9234,21 @@
             "BSW": 3,
             "CDU": 24
           }
+        },
+        {
+          "date": "2026-08-19",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 3,
+            "SPD": 20,
+            "FDP": 4,
+            "Grüne": 15,
+            "Linke": 14,
+            "AfD": 17,
+            "BD": 3,
+            "BSW": 3,
+            "CDU": 21
+          }
         }
       ],
       "trend": [
@@ -9506,6 +9502,18 @@
             "Linke": 13,
             "CDU": 24,
             "AfD": 15
+          }
+        },
+        {
+          "date": "2026-08-19",
+          "values": {
+            "SPD": 20,
+            "Grüne": 15,
+            "Linke": 14,
+            "CDU": 21,
+            "FDP": 4,
+            "BD": 3,
+            "AfD": 17
           }
         }
       ]
@@ -12648,6 +12656,32 @@
             "BSW": 4,
             "CDU": 10
           }
+        },
+        {
+          "date": "2026-09-02",
+          "institute": "Forsa",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 28,
+            "Grüne": 5,
+            "Linke": 11,
+            "AfD": 37,
+            "BSW": 4,
+            "CDU": 10
+          }
+        },
+        {
+          "date": "2026-09-03",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 32,
+            "Grüne": 5,
+            "Linke": 11,
+            "AfD": 35,
+            "BSW": 4,
+            "CDU": 8
+          }
         }
       ],
       "trend": [
@@ -13188,6 +13222,29 @@
             "AfD": 36,
             "CDU": 10,
             "FDP": 3,
+            "BSW": 4
+          }
+        },
+        {
+          "date": "2026-09-02",
+          "values": {
+            "SPD": 28,
+            "Grüne": 5,
+            "Linke": 11,
+            "AfD": 37,
+            "CDU": 10,
+            "FDP": 3,
+            "BSW": 4
+          }
+        },
+        {
+          "date": "2026-09-03",
+          "values": {
+            "SPD": 30.1,
+            "Grüne": 5,
+            "Linke": 11,
+            "AfD": 35.9,
+            "CDU": 8.9,
             "BSW": 4
           }
         }
@@ -16893,6 +16950,20 @@
             "Freie Wähler": 4.5,
             "CDU": 29
           }
+        },
+        {
+          "date": "2026-08-20",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 19,
+            "FDP": 3,
+            "Grüne": 11,
+            "Linke": 5,
+            "AfD": 24,
+            "Freie Wähler": 3,
+            "CDU": 28
+          }
         }
       ],
       "trend": [
@@ -17497,6 +17568,18 @@
             "AfD": 19.3,
             "CDU": 28.5,
             "Freie Wähler": 4.7,
+            "Linke": 5
+          }
+        },
+        {
+          "date": "2026-08-20",
+          "values": {
+            "SPD": 19,
+            "Grüne": 11,
+            "AfD": 24,
+            "CDU": 28,
+            "FDP": 3,
+            "Freie Wähler": 3,
             "Linke": 5
           }
         }
@@ -18145,101 +18228,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-08-20",
-          "institute": "IM Field",
-          "results": {
-            "Sonstige": 1,
-            "SPD": 8,
-            "FDP": 5,
-            "Grüne": 13,
-            "Linke": 16,
-            "AfD": 26,
-            "Freie Wähler": 3,
-            "CDU": 28
-          }
-        },
-        {
-          "date": "2019-08-20",
-          "institute": "Civey",
-          "results": {
-            "Sonstige": 6.4,
-            "SPD": 8.5,
-            "FDP": 5.5,
-            "Grüne": 11.4,
-            "Linke": 15,
-            "AfD": 25.2,
-            "CDU": 28
-          }
-        },
-        {
-          "date": "2019-08-22",
-          "institute": "Infratest dimap",
-          "results": {
-            "Sonstige": 3,
-            "SPD": 7,
-            "FDP": 5,
-            "Grüne": 11,
-            "Linke": 16,
-            "AfD": 24,
-            "Freie Wähler": 4,
-            "CDU": 30
-          }
-        },
-        {
-          "date": "2019-08-23",
-          "institute": "Forschungsgruppe Wahlen",
-          "results": {
-            "Sonstige": 3,
-            "SPD": 9,
-            "FDP": 5,
-            "Grüne": 10,
-            "Linke": 14,
-            "AfD": 25,
-            "Freie Wähler": 3,
-            "CDU": 31
-          }
-        },
-        {
-          "date": "2019-08-27",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 3,
-            "SPD": 8,
-            "FDP": 5,
-            "Grüne": 11,
-            "Linke": 15,
-            "AfD": 25,
-            "Freie Wähler": 4,
-            "CDU": 29
-          }
-        },
-        {
-          "date": "2019-08-28",
-          "institute": "Civey",
-          "results": {
-            "Sonstige": 5.6,
-            "SPD": 8.9,
-            "FDP": 5.7,
-            "Grüne": 10.9,
-            "Linke": 15,
-            "AfD": 24.9,
-            "CDU": 29
-          }
-        },
-        {
-          "date": "2019-08-29",
-          "institute": "Forschungsgruppe Wahlen",
-          "results": {
-            "Sonstige": 5,
-            "SPD": 8.5,
-            "FDP": 5,
-            "Grüne": 11,
-            "Linke": 14,
-            "AfD": 24.5,
-            "CDU": 32
-          }
-        },
         {
           "date": "2020-07-08",
           "institute": "INSA",
@@ -18894,78 +18882,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-08-20",
-          "values": {
-            "SPD": 8.4,
-            "Grüne": 11.8,
-            "Linke": 15.3,
-            "AfD": 25.4,
-            "CDU": 28,
-            "FDP": 5.4,
-            "Freie Wähler": 3
-          }
-        },
-        {
-          "date": "2019-08-22",
-          "values": {
-            "SPD": 8,
-            "Grüne": 11.6,
-            "Linke": 15.5,
-            "AfD": 25,
-            "CDU": 28.5,
-            "FDP": 5.3,
-            "Freie Wähler": 3.6
-          }
-        },
-        {
-          "date": "2019-08-23",
-          "values": {
-            "SPD": 8.2,
-            "Grüne": 11.3,
-            "Linke": 15.1,
-            "AfD": 25,
-            "CDU": 29.1,
-            "FDP": 5.2,
-            "Freie Wähler": 3.4
-          }
-        },
-        {
-          "date": "2019-08-27",
-          "values": {
-            "SPD": 8.2,
-            "Grüne": 11.2,
-            "Linke": 15.1,
-            "AfD": 25,
-            "CDU": 29.1,
-            "FDP": 5.2,
-            "Freie Wähler": 3.6
-          }
-        },
-        {
-          "date": "2019-08-28",
-          "values": {
-            "SPD": 8.4,
-            "Grüne": 11.1,
-            "Linke": 15.1,
-            "AfD": 25,
-            "CDU": 29.1,
-            "FDP": 5.3,
-            "Freie Wähler": 3.6
-          }
-        },
-        {
-          "date": "2019-08-29",
-          "values": {
-            "SPD": 8.4,
-            "Grüne": 11.1,
-            "Linke": 14.9,
-            "AfD": 24.9,
-            "CDU": 29.6,
-            "FDP": 5.3,
-            "Freie Wähler": 3.6
-          }
-        },
         {
           "date": "2020-07-08",
           "values": {
@@ -20093,6 +20009,90 @@
             "BSW": 4,
             "CDU": 23
           }
+        },
+        {
+          "date": "2026-08-25",
+          "institute": "Civey",
+          "results": {
+            "Sonstige": 4,
+            "SPD": 7,
+            "FDP": 4,
+            "Grüne": 5,
+            "Linke": 12,
+            "AfD": 43,
+            "BSW": 4,
+            "CDU": 21
+          }
+        },
+        {
+          "date": "2026-08-26",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 4,
+            "SPD": 8,
+            "FDP": 3,
+            "Grüne": 6,
+            "Linke": 11,
+            "AfD": 42,
+            "BSW": 4,
+            "CDU": 22
+          }
+        },
+        {
+          "date": "2026-08-28",
+          "institute": "Forschungsgruppe Wahlen",
+          "results": {
+            "Sonstige": 3,
+            "SPD": 9,
+            "FDP": 3,
+            "Grüne": 6,
+            "Linke": 13,
+            "AfD": 40,
+            "BSW": 3,
+            "CDU": 23
+          }
+        },
+        {
+          "date": "2026-09-02",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 4,
+            "SPD": 7,
+            "FDP": 3,
+            "Grüne": 5,
+            "Linke": 12,
+            "AfD": 43,
+            "BSW": 4,
+            "CDU": 22
+          }
+        },
+        {
+          "date": "2026-09-03",
+          "institute": "Forschungsgruppe Wahlen",
+          "results": {
+            "Sonstige": 3,
+            "SPD": 8.5,
+            "FDP": 3,
+            "Grüne": 6,
+            "Linke": 11.5,
+            "AfD": 41,
+            "BSW": 4,
+            "CDU": 23
+          }
+        },
+        {
+          "date": "2026-09-03",
+          "institute": "Civey",
+          "results": {
+            "Sonstige": 3,
+            "SPD": 9,
+            "FDP": 2,
+            "Grüne": 6,
+            "Linke": 12,
+            "AfD": 41,
+            "BSW": 4,
+            "CDU": 23
+          }
         }
       ],
       "trend": [
@@ -20528,6 +20528,66 @@
             "CDU": 22.8,
             "FDP": 2.7,
             "BSW": 4.3
+          }
+        },
+        {
+          "date": "2026-08-25",
+          "values": {
+            "SPD": 6.9,
+            "Grüne": 4.9,
+            "Linke": 12.4,
+            "AfD": 42.9,
+            "CDU": 21.7,
+            "FDP": 3.4,
+            "BSW": 4.1
+          }
+        },
+        {
+          "date": "2026-08-26",
+          "values": {
+            "SPD": 7.3,
+            "Grüne": 5.3,
+            "Linke": 11.9,
+            "AfD": 42.5,
+            "CDU": 21.8,
+            "FDP": 3.3,
+            "BSW": 4.1
+          }
+        },
+        {
+          "date": "2026-08-28",
+          "values": {
+            "SPD": 7.8,
+            "Grüne": 5.5,
+            "Linke": 12.1,
+            "AfD": 41.8,
+            "CDU": 22.1,
+            "FDP": 3.2,
+            "BSW": 3.8
+          }
+        },
+        {
+          "date": "2026-09-02",
+          "values": {
+            "SPD": 7.7,
+            "Grüne": 5.5,
+            "Linke": 12,
+            "AfD": 42.1,
+            "CDU": 22,
+            "FDP": 3.2,
+            "BSW": 3.8
+          }
+        },
+        {
+          "date": "2026-09-03",
+          "values": {
+            "SPD": 8.2,
+            "Grüne": 5.7,
+            "Linke": 11.9,
+            "AfD": 41.6,
+            "CDU": 22.4,
+            "FDP": 2.9,
+            "BSW": 3.9
           }
         }
       ]
@@ -21463,20 +21523,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-08-22",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 3,
-            "SPD": 9,
-            "FDP": 4,
-            "Grüne": 11,
-            "Linke": 26,
-            "AfD": 21,
-            "Freie Wähler": 2,
-            "CDU": 24
-          }
-        },
         {
           "date": "2019-09-16",
           "institute": "Infratest dimap",
@@ -22490,17 +22536,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-08-22",
-          "values": {
-            "SPD": 9,
-            "Linke": 26,
-            "AfD": 21,
-            "CDU": 24,
-            "Grüne": 11,
-            "FDP": 4
-          }
-        },
         {
           "date": "2019-09-16",
           "values": {

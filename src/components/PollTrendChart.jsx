@@ -101,8 +101,13 @@ export default function PollTrendChart({ polls, trend, parties, markerDate, gove
     const trendStart = trend[0]?.date
     const trendEnd = trend.at(-1)?.date
     if (!trendStart || !trendEnd) return []
+    // Auf "heute" statt auf den letzten Umfrage-Datenpunkt begrenzen — sonst verschwindet
+    // ein Regierungswechsel, der nach der letzten Umfrage liegt (z. B. Baden-Württemberg:
+    // Özdemir seit 13.5.2026, aber DAWUM listet seither keine neue BW-Umfrage mehr).
+    const todayStr = new Date().toISOString().slice(0, 10)
+    const rangeEnd = trendEnd > todayStr ? trendEnd : todayStr
     const sorted = [...governmentPeriods].sort((a, b) => (a.start < b.start ? -1 : 1))
-    const withinRange = sorted.filter((p) => p.start >= trendStart && p.start <= trendEnd)
+    const withinRange = sorted.filter((p) => p.start >= trendStart && p.start <= rangeEnd)
 
     // Regierung, die schon im Amt war, als die sichtbaren Daten beginnen — an den
     // linken Rand gesetzt, sonst fehlt am Anfang jeder Hinweis, wer zu dem Zeitpunkt regierte.
@@ -118,7 +123,9 @@ export default function PollTrendChart({ polls, trend, parties, markerDate, gove
     const allValues = trend.flatMap(d => Object.values(d.values))
     const pollDates = polls.map(p => parseDate(p.date))
 
-    const xDomain = extent([...allDates, ...pollDates])
+    // "heute" mit in die Domain, damit ein Regierungswechsel nach der letzten Umfrage
+    // (siehe transitions-Kommentar oben) auch innerhalb der sichtbaren Achse liegt.
+    const xDomain = extent([...allDates, ...pollDates, new Date()])
     const yMax = Math.ceil((max(allValues) ?? 40) / 5) * 5 + 2
 
     const xScale = scaleTime().domain(xDomain).range([0, IW])

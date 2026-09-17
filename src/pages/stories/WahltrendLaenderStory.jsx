@@ -243,7 +243,9 @@ export default function WahltrendLaenderStory() {
             Letzte Umfrage je Institut vor der Landtagswahl gegen das Wahlergebnis. Anders
             als im Bund aus marktforschung.de-Artikeln aufbereitet, nicht aus wahlrecht.de
             (für drei Länder ohne passenden Artikel ersatzweise aus wahlrecht.de/DAWUM
-            rekonstruiert). Berlin zeigt zwei Wahlen: die wegen Organisationspannen
+            rekonstruiert; Sachsen-Anhalt 2026 komplett aus wahlrecht.de und einer
+            öffentlichen Civey-Veröffentlichung, da der marktforschung.de-Artikel dazu
+            kostenpflichtig ist). Berlin zeigt zwei Wahlen: die wegen Organisationspannen
             annullierte 2021er-Wahl und ihre Wiederholung 2023.
           </p>
         </header>

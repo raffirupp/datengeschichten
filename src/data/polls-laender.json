@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-28",
+    "lastUpdated": "2026-10-05",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -5099,19 +5099,6 @@
       },
       "polls": [
         {
-          "date": "2019-10-02",
-          "institute": "Forsa",
-          "results": {
-            "Sonstige": 10,
-            "SPD": 16,
-            "FDP": 6,
-            "Grüne": 24,
-            "Linke": 16,
-            "AfD": 11,
-            "CDU": 17
-          }
-        },
-        {
           "date": "2019-11-06",
           "institute": "Forsa",
           "results": {
@@ -6508,17 +6495,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-10-02",
-          "values": {
-            "SPD": 16,
-            "Grüne": 24,
-            "Linke": 16,
-            "AfD": 11,
-            "CDU": 17,
-            "FDP": 6
-          }
-        },
         {
           "date": "2019-11-06",
           "values": {
@@ -9653,6 +9629,10 @@
           {
             "key": "FDP",
             "name": "Freie Demokratische Partei"
+          },
+          {
+            "key": "BSW",
+            "name": "Bündnis Sahra Wagenknecht"
           }
         ]
       },
@@ -10165,6 +10145,21 @@
             "AfD": 12,
             "CDU": 16
           }
+        },
+        {
+          "date": "2026-09-30",
+          "institute": "Trend Research Hamburg",
+          "results": {
+            "Sonstige": 3,
+            "SPD": 29,
+            "FDP": 3,
+            "Grüne": 18,
+            "Linke": 15,
+            "AfD": 14,
+            "Volt": 2,
+            "BSW": 3,
+            "CDU": 12
+          }
         }
       ],
       "trend": [
@@ -10407,7 +10402,8 @@
             "Linke": 6,
             "AfD": 8.5,
             "CDU": 18.5,
-            "FDP": 3.5
+            "FDP": 3.5,
+            "BSW": 2
           }
         },
         {
@@ -10418,7 +10414,8 @@
             "Linke": 5,
             "AfD": 8,
             "CDU": 21,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 4
           }
         },
         {
@@ -10429,7 +10426,8 @@
             "Linke": 6,
             "AfD": 9,
             "CDU": 19,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 4
           }
         },
         {
@@ -10440,7 +10438,8 @@
             "Linke": 6.9,
             "AfD": 9.9,
             "CDU": 17.2,
-            "FDP": 3.9
+            "FDP": 3.9,
+            "BSW": 4
           }
         },
         {
@@ -10451,7 +10450,8 @@
             "Linke": 5,
             "AfD": 9,
             "CDU": 17,
-            "FDP": 4
+            "FDP": 4,
+            "BSW": 4
           }
         },
         {
@@ -10462,7 +10462,8 @@
             "Linke": 5.7,
             "AfD": 10.3,
             "CDU": 16.3,
-            "FDP": 3.3
+            "FDP": 3.3,
+            "BSW": 3.3
           }
         },
         {
@@ -10473,7 +10474,8 @@
             "Linke": 7.3,
             "AfD": 9.7,
             "CDU": 17.3,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3
           }
         },
         {
@@ -10484,7 +10486,8 @@
             "Linke": 8.4,
             "AfD": 9.2,
             "CDU": 17.8,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3
           }
         },
         {
@@ -10495,7 +10498,8 @@
             "Linke": 9.4,
             "AfD": 9.5,
             "CDU": 17.5,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3
           }
         },
         {
@@ -10506,7 +10510,8 @@
             "Linke": 11.5,
             "AfD": 9.9,
             "CDU": 17.4,
-            "FDP": 3
+            "FDP": 3,
+            "BSW": 3
           }
         },
         {
@@ -10517,7 +10522,8 @@
             "Linke": 12.1,
             "AfD": 9.7,
             "CDU": 17.6,
-            "FDP": 2.8
+            "FDP": 2.8,
+            "BSW": 2.8
           }
         },
         {
@@ -10539,6 +10545,18 @@
             "AfD": 12,
             "CDU": 16,
             "FDP": 3
+          }
+        },
+        {
+          "date": "2026-09-30",
+          "values": {
+            "SPD": 29,
+            "Grüne": 18,
+            "Linke": 15,
+            "AfD": 14,
+            "CDU": 12,
+            "FDP": 3,
+            "BSW": 3
           }
         }
       ]

@@ -184,7 +184,7 @@ export default function WahltrendLaenderStory() {
             unsere Daten decken pro Bundesland meist nur den jüngsten Wahlzyklus ab (2021–2026) —
             deutlich weniger Wahlen, entsprechend wackliger die Mediane. Zusätzlich andere
             Institutsabdeckung: wahlrecht.de führt z. B. Civey nicht, unsere aus
-            marktforschung.de-Artikeln aufbereitete Quelle schon (105 von 547 Einträgen) — spot-check
+            marktforschung.de-Artikeln aufbereitete Quelle schon (119 von 662 Einträgen) — spot-check
             gegen amtliche Ergebnisse, keine vollständige Prüfung.
           </p>
         </header>

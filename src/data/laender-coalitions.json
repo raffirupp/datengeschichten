@@ -125,7 +125,8 @@
       { "cabinet": "McAllister", "headOfGovernment": "David McAllister", "start": "2010-06-30", "end": "2013-02-19", "parties": ["CDU", "FDP"], "datePrecision": "day" },
       { "cabinet": "Weil I", "headOfGovernment": "Stephan Weil", "start": "2013-02-19", "end": "2017-11-22", "parties": ["SPD", "GRÜNE"], "datePrecision": "day" },
       { "cabinet": "Weil II", "headOfGovernment": "Stephan Weil", "start": "2017-11-22", "end": "2022-11-08", "parties": ["SPD", "CDU"], "datePrecision": "day" },
-      { "cabinet": "Weil III", "headOfGovernment": "Stephan Weil", "start": "2022-11-08", "end": null, "parties": ["SPD", "GRÜNE"], "datePrecision": "day" }
+      { "cabinet": "Weil III", "headOfGovernment": "Stephan Weil", "start": "2022-11-08", "end": "2025-05-21", "parties": ["SPD", "GRÜNE"], "datePrecision": "day" },
+      { "cabinet": "Lies", "headOfGovernment": "Olaf Lies", "start": "2025-05-21", "end": null, "parties": ["SPD", "GRÜNE"], "datePrecision": "day", "note": "Gleiche Koalition wie Weil III, nur Amtsübergabe ohne Neuwahl: Der Landtag wählte Olaf Lies am 21.05.2025 zum Nachfolger des zurückgetretenen Stephan Weil." }
     ],
     "NW": [
       { "cabinet": "Clement II", "headOfGovernment": "Wolfgang Clement", "start": "2000-06-01", "end": "2002-11-06", "parties": ["SPD", "GRÜNE"], "datePrecision": "month" },
@@ -188,7 +189,7 @@
       { "cabinet": "Althaus", "headOfGovernment": "Dieter Althaus", "start": "2003-06-01", "end": "2009-09-01", "parties": ["CDU"], "datePrecision": "month" },
       { "cabinet": "Lieberknecht", "headOfGovernment": "Christine Lieberknecht", "start": "2009-09-01", "end": "2014-12-05", "parties": ["CDU", "SPD"], "datePrecision": "month" },
       { "cabinet": "Ramelow I", "headOfGovernment": "Bodo Ramelow", "start": "2014-12-05", "end": "2019-09-01", "parties": ["LINKE", "SPD", "GRÜNE"], "datePrecision": "day", "note": "Erste von der LINKEN geführte Landesregierung Deutschlands." },
-      { "cabinet": "Ramelow II", "headOfGovernment": "Bodo Ramelow", "start": "2019-09-01", "end": "2024-09-01", "parties": ["LINKE", "SPD", "GRÜNE"], "datePrecision": "month", "note": "Minderheitsregierung ohne eigene Mehrheit; ab 2020 informell durch einen 'Stabilitätspakt' mit der CDU bei Haushaltsfragen unterstützt." },
+      { "cabinet": "Ramelow II", "headOfGovernment": "Bodo Ramelow", "start": "2019-09-01", "end": "2024-12-12", "parties": ["LINKE", "SPD", "GRÜNE"], "datePrecision": "month", "note": "Minderheitsregierung ohne eigene Mehrheit; ab 2020 informell durch einen 'Stabilitätspakt' mit der CDU bei Haushaltsfragen unterstützt." },
       { "cabinet": "Voigt", "headOfGovernment": "Mario Voigt", "start": "2024-12-12", "end": null, "parties": ["CDU", "BSW", "SPD"], "datePrecision": "day", "note": "'Brombeer-Koalition' — erste Regierungsbeteiligung des BSW gemeinsam mit CDU/SPD; keine eigene Mehrheit im Landtag." }
     ]
   }

@@ -4,7 +4,7 @@ import { partyColor } from '../lib/partyColors.js'
 
 const MIN_N = 5
 const RADIUS = 3.2
-const COL_W  = 68
+const COL_W  = 120
 const W_MARGIN = { top: 16, right: 20, bottom: 34, left: 40 }
 
 // CDU und CSU teilen sich ohnehin dieselbe Markenfarbe (partyColors.js) und treten nie im
@@ -37,7 +37,9 @@ function layoutSwarm(points) {
       dx = dir * Math.ceil(step / 2) * (RADIUS * 1.05)
       dir *= -1
       step++
-      if (Math.abs(dx) > maxDx) { dx = Math.sign(dx || 1) * maxDx; break }
+      // Kein freier Platz mehr: in die Spaltenmitte legen, dort liest sich die
+      // Überlagerung (durch die Deckkraft dunkler) als Dichte statt als Randstapel.
+      if (Math.abs(dx) > maxDx) { dx = 0; break }
     }
     placed.push({ ...p, dx })
   }
@@ -72,7 +74,7 @@ export default function PartyAccuracySwarmChart({ data, stateNames }) {
 
   const innerW = parties.length * COL_W
   const W = innerW + W_MARGIN.left + W_MARGIN.right
-  const innerH = 320
+  const innerH = 360
   const H = innerH + W_MARGIN.top + W_MARGIN.bottom
 
   const yScale = scaleLinear().domain([-maxAbs, maxAbs]).range([innerH, 0])

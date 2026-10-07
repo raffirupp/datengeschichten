@@ -19,4 +19,5 @@ export default [
   { year: 2017, code: 'SN', headline: 'Kretschmer hält Sachsen schwarz', text: 'Michael Kretschmer übernimmt von Stanislaw Tillich. Sachsen bleibt damit seit der Wiedervereinigung 1990 durchgehend CDU-geführt — eine Ausnahme unter den ostdeutschen Ländern.' },
   { year: 2020, code: 'TH', headline: 'Kurzes Amt, schneller Rückzug', text: 'Mit Stimmen von CDU, FDP und AfD wird Thomas Kemmerich (FDP) überraschend zum Ministerpräsidenten gewählt — ein bundesweiter Tabubruch, der eine Welle der Empörung auslöst. Nach wenigen Tagen tritt er zurück, Bodo Ramelow kehrt ins Amt zurück.' },
   { year: 2023, code: 'BE', headline: 'Wegner beendet 22 Jahre SPD', text: 'Kai Wegner (CDU) wird Regierender Bürgermeister von Berlin und beendet eine SPD-geführte Regierungszeit, die seit Klaus Wowereits Amtsantritt 2001 ununterbrochen angedauert hatte.' },
+  { year: 2025, code: 'NI', headline: 'Lies folgt auf Weil', text: 'Nach gut zwölf Jahren im Amt tritt Stephan Weil zurück. Der Landtag wählt Olaf Lies (SPD) zum Nachfolger — die rot-grüne Koalition bleibt unverändert, ohne Neuwahl.' },
 ]

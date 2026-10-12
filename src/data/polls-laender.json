@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-05",
+    "lastUpdated": "2026-10-12",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -1635,20 +1635,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-10-08",
-          "institute": "GMS",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 8,
-            "FDP": 5,
-            "Grüne": 22,
-            "Linke": 3,
-            "AfD": 10,
-            "Freie Wähler": 11,
-            "CSU": 37
-          }
-        },
         {
           "date": "2020-01-03",
           "institute": "GMS",
@@ -3531,18 +3517,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-10-08",
-          "values": {
-            "SPD": 8,
-            "Grüne": 22,
-            "AfD": 10,
-            "Freie Wähler": 11,
-            "CSU": 37,
-            "FDP": 5,
-            "Linke": 3
-          }
-        },
         {
           "date": "2020-01-03",
           "values": {
@@ -6492,6 +6466,21 @@
             "BSW": 5,
             "CDU": 20
           }
+        },
+        {
+          "date": "2026-10-08",
+          "institute": "pollytix",
+          "results": {
+            "Sonstige": 4,
+            "SPD": 12,
+            "FDP": 3,
+            "Grüne": 14,
+            "Linke": 25,
+            "AfD": 17,
+            "Volt": 2,
+            "BSW": 5,
+            "CDU": 18
+          }
         }
       ],
       "trend": [
@@ -7562,6 +7551,18 @@
             "FDP": 2.9,
             "BSW": 4.1
           }
+        },
+        {
+          "date": "2026-10-08",
+          "values": {
+            "SPD": 12,
+            "Grüne": 14,
+            "Linke": 24.9,
+            "AfD": 17,
+            "CDU": 18.1,
+            "FDP": 3,
+            "BSW": 5
+          }
         }
       ]
     },
@@ -8357,6 +8358,19 @@
             "BSW": 4,
             "CDU": 12
           }
+        },
+        {
+          "date": "2026-10-09",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 8,
+            "SPD": 20,
+            "Grüne": 7,
+            "Linke": 9,
+            "AfD": 40,
+            "BSW": 7,
+            "CDU": 9
+          }
         }
       ],
       "trend": [
@@ -8982,6 +8996,17 @@
             "AfD": 37,
             "CDU": 12,
             "BSW": 4
+          }
+        },
+        {
+          "date": "2026-10-09",
+          "values": {
+            "SPD": 20,
+            "Grüne": 7,
+            "Linke": 9,
+            "AfD": 40,
+            "CDU": 9,
+            "BSW": 7
           }
         }
       ]

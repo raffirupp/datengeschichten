@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-19",
+    "lastUpdated": "2026-10-26",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -3538,6 +3538,33 @@
             "BSW": 3,
             "CSU": 38
           }
+        },
+        {
+          "date": "2026-10-19",
+          "institute": "GMS",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 6,
+            "FDP": 2,
+            "Grüne": 15,
+            "Linke": 3,
+            "AfD": 22,
+            "Freie Wähler": 10,
+            "CSU": 37
+          }
+        },
+        {
+          "date": "2026-10-20",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 8,
+            "Grüne": 15,
+            "Linke": 4,
+            "AfD": 21,
+            "Freie Wähler": 9,
+            "CSU": 36
+          }
         }
       ],
       "trend": [
@@ -5056,6 +5083,30 @@
             "CSU": 38,
             "FDP": 2,
             "Linke": 3
+          }
+        },
+        {
+          "date": "2026-10-19",
+          "values": {
+            "SPD": 6,
+            "Grüne": 15,
+            "AfD": 22,
+            "Freie Wähler": 10,
+            "CSU": 37,
+            "FDP": 2,
+            "Linke": 3
+          }
+        },
+        {
+          "date": "2026-10-20",
+          "values": {
+            "SPD": 7.1,
+            "Grüne": 15,
+            "AfD": 21.5,
+            "Freie Wähler": 9.5,
+            "CSU": 36.5,
+            "FDP": 2,
+            "Linke": 3.5
           }
         }
       ]
@@ -21800,45 +21851,6 @@
       },
       "polls": [
         {
-          "date": "2019-10-23",
-          "institute": "Civey",
-          "results": {
-            "Sonstige": 3.1,
-            "SPD": 8.2,
-            "FDP": 5,
-            "Grüne": 7.4,
-            "Linke": 30.2,
-            "AfD": 23.2,
-            "CDU": 22.9
-          }
-        },
-        {
-          "date": "2019-10-24",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 2,
-            "SPD": 9,
-            "FDP": 5,
-            "Grüne": 8,
-            "Linke": 28,
-            "AfD": 24,
-            "CDU": 24
-          }
-        },
-        {
-          "date": "2019-10-24",
-          "institute": "Forschungsgruppe Wahlen",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 9,
-            "FDP": 5,
-            "Grüne": 7,
-            "Linke": 28,
-            "AfD": 21,
-            "CDU": 26
-          }
-        },
-        {
           "date": "2020-01-28",
           "institute": "Infratest dimap",
           "results": {
@@ -22747,28 +22759,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-10-23",
-          "values": {
-            "SPD": 8.2,
-            "Linke": 30.2,
-            "AfD": 23.2,
-            "CDU": 22.9,
-            "Grüne": 7.4,
-            "FDP": 5
-          }
-        },
-        {
-          "date": "2019-10-24",
-          "values": {
-            "SPD": 8.6,
-            "Linke": 29,
-            "AfD": 22.8,
-            "CDU": 24.1,
-            "Grüne": 7.4,
-            "FDP": 5
-          }
-        },
         {
           "date": "2020-01-28",
           "values": {

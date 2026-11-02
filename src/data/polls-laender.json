@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-26",
+    "lastUpdated": "2026-11-02",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -54,19 +54,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-10-30",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 6,
-            "SPD": 11,
-            "FDP": 9,
-            "Grüne": 30,
-            "Linke": 4,
-            "AfD": 13,
-            "CDU": 27
-          }
-        },
         {
           "date": "2020-03-12",
           "institute": "Infratest dimap",
@@ -933,17 +920,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-10-30",
-          "values": {
-            "SPD": 11,
-            "FDP": 9,
-            "Grüne": 30,
-            "AfD": 13,
-            "CDU": 27,
-            "Linke": 4
-          }
-        },
         {
           "date": "2020-03-12",
           "values": {
@@ -5142,7 +5118,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },
@@ -7676,7 +7652,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },
@@ -9732,7 +9708,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },
@@ -11469,6 +11445,20 @@
             "Freie Wähler": 4,
             "CDU": 30
           }
+        },
+        {
+          "date": "2026-10-27",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 7,
+            "SPD": 15,
+            "FDP": 4,
+            "Grüne": 16,
+            "Linke": 7,
+            "AfD": 23,
+            "Freie Wähler": 3,
+            "CDU": 25
+          }
         }
       ],
       "trend": [
@@ -12131,6 +12121,18 @@
             "Linke": 7,
             "Freie Wähler": 4
           }
+        },
+        {
+          "date": "2026-10-27",
+          "values": {
+            "SPD": 15,
+            "FDP": 4,
+            "Grüne": 16,
+            "AfD": 23,
+            "CDU": 25,
+            "Linke": 7,
+            "Freie Wähler": 3
+          }
         }
       ]
     },
@@ -12165,7 +12167,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },
@@ -12949,6 +12951,19 @@
             "BSW": 4,
             "CDU": 6
           }
+        },
+        {
+          "date": "2026-10-29",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 32,
+            "Grüne": 5,
+            "Linke": 9,
+            "AfD": 39,
+            "BSW": 5,
+            "CDU": 5
+          }
         }
       ],
       "trend": [
@@ -13550,6 +13565,17 @@
             "CDU": 6.9,
             "FDP": 2,
             "BSW": 4
+          }
+        },
+        {
+          "date": "2026-10-29",
+          "values": {
+            "SPD": 32,
+            "Grüne": 5,
+            "Linke": 9,
+            "AfD": 39,
+            "CDU": 5,
+            "BSW": 5
           }
         }
       ]
@@ -18546,7 +18572,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           },
           {
             "key": "Freie Wähler",
@@ -19804,7 +19830,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },
@@ -21845,7 +21871,7 @@
           },
           {
             "key": "BSW",
-            "name": "Bündnis Sahra Wagenknecht"
+            "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
           }
         ]
       },

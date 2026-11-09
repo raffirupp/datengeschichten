@@ -31,88 +31,10 @@
         "name": "Bündnis für soziale Gerechtigkeit und wirtschaftliche Vernunft"
       }
     ],
-    "lastUpdated": "2026-11-02",
+    "lastUpdated": "2026-11-09",
     "sourceNote": "DAWUM (ODbL)"
   },
   "polls": [
-    {
-      "date": "2019-11-02",
-      "institute": "Forsa",
-      "results": {
-        "Sonstige": 8,
-        "CDU/CSU": 28,
-        "SPD": 13,
-        "FDP": 8,
-        "Grüne": 20,
-        "Linke": 10,
-        "AfD": 13
-      }
-    },
-    {
-      "date": "2019-11-02",
-      "institute": "Verian (Emnid)",
-      "results": {
-        "Sonstige": 6,
-        "CDU/CSU": 27,
-        "SPD": 16,
-        "FDP": 9,
-        "Grüne": 18,
-        "Linke": 9,
-        "AfD": 15
-      }
-    },
-    {
-      "date": "2019-11-04",
-      "institute": "INSA",
-      "results": {
-        "Sonstige": 6,
-        "CDU/CSU": 25.5,
-        "SPD": 13.5,
-        "FDP": 8,
-        "Grüne": 21,
-        "Linke": 10,
-        "AfD": 16
-      }
-    },
-    {
-      "date": "2019-11-06",
-      "institute": "YouGov",
-      "results": {
-        "Sonstige": 7,
-        "CDU/CSU": 27,
-        "SPD": 13,
-        "FDP": 7,
-        "Grüne": 22,
-        "Linke": 10,
-        "AfD": 14
-      }
-    },
-    {
-      "date": "2019-11-07",
-      "institute": "Infratest dimap",
-      "results": {
-        "Sonstige": 7,
-        "CDU/CSU": 26,
-        "SPD": 14,
-        "FDP": 8,
-        "Grüne": 22,
-        "Linke": 9,
-        "AfD": 14
-      }
-    },
-    {
-      "date": "2019-11-08",
-      "institute": "Forschungsgruppe Wahlen",
-      "results": {
-        "Sonstige": 6,
-        "CDU/CSU": 27,
-        "SPD": 14,
-        "FDP": 7,
-        "Grüne": 22,
-        "Linke": 10,
-        "AfD": 14
-      }
-    },
     {
       "date": "2019-11-09",
       "institute": "Forsa",
@@ -26293,94 +26215,94 @@
         "AfD": 29,
         "BSW": 3
       }
+    },
+    {
+      "date": "2026-11-03",
+      "institute": "Forsa",
+      "results": {
+        "Sonstige": 8,
+        "CDU/CSU": 20,
+        "SPD": 14,
+        "FDP": 4,
+        "Grüne": 17,
+        "Linke": 11,
+        "AfD": 26
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "institute": "INSA",
+      "results": {
+        "Sonstige": 4.5,
+        "CDU/CSU": 20,
+        "SPD": 14,
+        "FDP": 5,
+        "Grüne": 15,
+        "Linke": 10,
+        "AfD": 28,
+        "BSW": 3.5
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "institute": "Infratest dimap",
+      "results": {
+        "Sonstige": 7,
+        "CDU/CSU": 20,
+        "SPD": 13,
+        "FDP": 3,
+        "Grüne": 16,
+        "Linke": 11,
+        "AfD": 27,
+        "BSW": 3
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "institute": "INSA",
+      "results": {
+        "Sonstige": 5,
+        "CDU/CSU": 19,
+        "SPD": 14,
+        "FDP": 5,
+        "Grüne": 15,
+        "Linke": 10,
+        "AfD": 29,
+        "BSW": 3
+      }
     }
   ],
   "trend": [
     {
-      "date": "2019-11-02",
-      "values": {
-        "CDU/CSU": 27.5,
-        "SPD": 14.4,
-        "Grüne": 19.1,
-        "AfD": 13.9,
-        "FDP": 8.5,
-        "Linke": 9.5
-      }
-    },
-    {
-      "date": "2019-11-04",
-      "values": {
-        "CDU/CSU": 26.8,
-        "SPD": 14.1,
-        "Grüne": 19.7,
-        "AfD": 14.7,
-        "FDP": 8.3,
-        "Linke": 9.7
-      }
-    },
-    {
-      "date": "2019-11-06",
-      "values": {
-        "CDU/CSU": 26.9,
-        "SPD": 13.8,
-        "Grüne": 20.3,
-        "AfD": 14.5,
-        "FDP": 8,
-        "Linke": 9.8
-      }
-    },
-    {
-      "date": "2019-11-07",
-      "values": {
-        "CDU/CSU": 26.7,
-        "SPD": 13.8,
-        "Grüne": 20.7,
-        "AfD": 14.4,
-        "FDP": 8,
-        "Linke": 9.6
-      }
-    },
-    {
-      "date": "2019-11-08",
-      "values": {
-        "CDU/CSU": 26.7,
-        "SPD": 13.9,
-        "Grüne": 20.9,
-        "AfD": 14.3,
-        "FDP": 7.8,
-        "Linke": 9.7
-      }
-    },
-    {
       "date": "2019-11-09",
       "values": {
-        "CDU/CSU": 26.5,
-        "SPD": 14,
-        "Grüne": 20.5,
-        "AfD": 14.1,
-        "FDP": 8.3,
-        "Linke": 9.8
+        "CDU/CSU": 26,
+        "SPD": 14.3,
+        "Grüne": 19.7,
+        "AfD": 13.4,
+        "FDP": 9.4,
+        "Linke": 10
       }
     },
     {
       "date": "2019-11-12",
       "values": {
-        "CDU/CSU": 26.3,
-        "SPD": 14.2,
-        "Grüne": 20.5,
-        "AfD": 14.2,
-        "FDP": 8.3,
-        "Linke": 9.7
+        "CDU/CSU": 25.8,
+        "SPD": 14.7,
+        "Grüne": 20,
+        "AfD": 14,
+        "FDP": 8.9,
+        "Linke": 9.8
       }
     },
     {
       "date": "2019-11-14",
       "values": {
-        "CDU/CSU": 26.6,
-        "SPD": 14.3,
-        "Grüne": 20.7,
-        "AfD": 13.9,
-        "FDP": 8.3,
+        "CDU/CSU": 26.5,
+        "SPD": 14.6,
+        "Grüne": 20.5,
+        "AfD": 13.6,
+        "FDP": 8.6,
         "Linke": 9.6
       }
     },
@@ -26388,44 +26310,44 @@
       "date": "2019-11-16",
       "values": {
         "CDU/CSU": 26.5,
-        "SPD": 14.7,
-        "Grüne": 20.2,
-        "AfD": 13.8,
-        "FDP": 8.3,
+        "SPD": 15,
+        "Grüne": 19.9,
+        "AfD": 13.6,
+        "FDP": 8.6,
         "Linke": 9.7
       }
     },
     {
       "date": "2019-11-18",
       "values": {
-        "CDU/CSU": 26.3,
-        "SPD": 14.8,
-        "Grüne": 20.3,
-        "AfD": 13.9,
-        "FDP": 8.4,
+        "CDU/CSU": 26.2,
+        "SPD": 15.1,
+        "Grüne": 20.1,
+        "AfD": 13.8,
+        "FDP": 8.5,
         "Linke": 9.8
       }
     },
     {
       "date": "2019-11-19",
       "values": {
-        "CDU/CSU": 26.6,
-        "SPD": 14.8,
-        "Grüne": 20.4,
-        "AfD": 14,
-        "FDP": 8.3,
+        "CDU/CSU": 26.5,
+        "SPD": 15,
+        "Grüne": 20.3,
+        "AfD": 13.9,
+        "FDP": 8.4,
         "Linke": 9.6
       }
     },
     {
       "date": "2019-11-23",
       "values": {
-        "CDU/CSU": 26.6,
-        "SPD": 14.8,
-        "Grüne": 20.5,
+        "CDU/CSU": 26.7,
+        "SPD": 14.9,
+        "Grüne": 20.3,
         "AfD": 13.7,
-        "FDP": 8.5,
-        "Linke": 9.5
+        "FDP": 8.6,
+        "Linke": 9.4
       }
     },
     {
@@ -26446,7 +26368,7 @@
         "SPD": 14.6,
         "Grüne": 20.8,
         "AfD": 13.9,
-        "FDP": 8.3,
+        "FDP": 8.4,
         "Linke": 9.5
       }
     },
@@ -43014,6 +42936,42 @@
         "FDP": 4.2,
         "Linke": 10.6,
         "BSW": 3.2
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "values": {
+        "CDU/CSU": 19.9,
+        "SPD": 13.8,
+        "Grüne": 15.2,
+        "AfD": 27.9,
+        "FDP": 4.3,
+        "Linke": 10.6,
+        "BSW": 3.2
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "values": {
+        "CDU/CSU": 20,
+        "SPD": 13.7,
+        "Grüne": 15.3,
+        "AfD": 27.8,
+        "FDP": 4.2,
+        "Linke": 10.6,
+        "BSW": 3.2
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "values": {
+        "CDU/CSU": 19.9,
+        "SPD": 13.7,
+        "Grüne": 15.3,
+        "AfD": 27.9,
+        "FDP": 4.3,
+        "Linke": 10.5,
+        "BSW": 3.1
       }
     }
   ]

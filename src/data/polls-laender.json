@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-02",
+    "lastUpdated": "2026-11-09",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -3516,6 +3516,21 @@
           }
         },
         {
+          "date": "2026-10-17",
+          "institute": "Civey",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 7,
+            "FDP": 2,
+            "Grüne": 13,
+            "Linke": 3,
+            "AfD": 18,
+            "Freie Wähler": 12,
+            "BSW": 2,
+            "CSU": 38
+          }
+        },
+        {
           "date": "2026-10-19",
           "institute": "GMS",
           "results": {
@@ -5062,13 +5077,25 @@
           }
         },
         {
+          "date": "2026-10-17",
+          "values": {
+            "SPD": 7,
+            "Grüne": 13,
+            "AfD": 18,
+            "Freie Wähler": 12,
+            "CSU": 38,
+            "FDP": 2,
+            "Linke": 3
+          }
+        },
+        {
           "date": "2026-10-19",
           "values": {
-            "SPD": 6,
-            "Grüne": 15,
-            "AfD": 22,
-            "Freie Wähler": 10,
-            "CSU": 37,
+            "SPD": 6.7,
+            "Grüne": 13.7,
+            "AfD": 19.3,
+            "Freie Wähler": 11.3,
+            "CSU": 37.7,
             "FDP": 2,
             "Linke": 3
           }
@@ -5076,13 +5103,13 @@
         {
           "date": "2026-10-20",
           "values": {
-            "SPD": 7.1,
-            "Grüne": 15,
-            "AfD": 21.5,
-            "Freie Wähler": 9.5,
-            "CSU": 36.5,
+            "SPD": 7,
+            "Grüne": 14,
+            "AfD": 19.8,
+            "Freie Wähler": 10.7,
+            "CSU": 37.2,
             "FDP": 2,
-            "Linke": 3.5
+            "Linke": 3.3
           }
         }
       ]
@@ -5123,19 +5150,6 @@
         ]
       },
       "polls": [
-        {
-          "date": "2019-11-06",
-          "institute": "Forsa",
-          "results": {
-            "Sonstige": 10,
-            "SPD": 15,
-            "FDP": 5,
-            "Grüne": 25,
-            "Linke": 16,
-            "AfD": 11,
-            "CDU": 18
-          }
-        },
         {
           "date": "2019-11-20",
           "institute": "Infratest dimap",
@@ -6536,23 +6550,12 @@
       ],
       "trend": [
         {
-          "date": "2019-11-06",
-          "values": {
-            "SPD": 15,
-            "Grüne": 25,
-            "Linke": 16,
-            "AfD": 11,
-            "CDU": 18,
-            "FDP": 5
-          }
-        },
-        {
           "date": "2019-11-20",
           "values": {
-            "SPD": 15.7,
-            "Grüne": 23.5,
-            "Linke": 16.7,
-            "AfD": 13.2,
+            "SPD": 16,
+            "Grüne": 23,
+            "Linke": 17,
+            "AfD": 14,
             "CDU": 18,
             "FDP": 5
           }
@@ -14958,32 +14961,6 @@
       },
       "polls": [
         {
-          "date": "2019-11-02",
-          "institute": "Mentefactum",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 20,
-            "FDP": 10,
-            "Grüne": 21,
-            "Linke": 5,
-            "AfD": 10,
-            "CDU": 31
-          }
-        },
-        {
-          "date": "2019-11-03",
-          "institute": "Infratest dimap",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 20,
-            "FDP": 8,
-            "Grüne": 23,
-            "Linke": 6,
-            "AfD": 7,
-            "CDU": 32
-          }
-        },
-        {
           "date": "2020-04-10",
           "institute": "Forsa",
           "results": {
@@ -15886,28 +15863,6 @@
         }
       ],
       "trend": [
-        {
-          "date": "2019-11-02",
-          "values": {
-            "SPD": 20,
-            "FDP": 10,
-            "Grüne": 21,
-            "AfD": 10,
-            "CDU": 31,
-            "Linke": 5
-          }
-        },
-        {
-          "date": "2019-11-03",
-          "values": {
-            "SPD": 20,
-            "FDP": 9,
-            "Grüne": 22,
-            "AfD": 8.5,
-            "CDU": 31.5,
-            "Linke": 5.5
-          }
-        },
         {
           "date": "2020-04-10",
           "values": {
@@ -18286,6 +18241,20 @@
             "BSW": 3,
             "CDU": 25
           }
+        },
+        {
+          "date": "2026-11-04",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 5,
+            "SPD": 33,
+            "FDP": 3,
+            "Grüne": 9,
+            "Linke": 6,
+            "AfD": 21,
+            "BSW": 3,
+            "CDU": 20
+          }
         }
       ],
       "trend": [
@@ -18537,6 +18506,17 @@
             "AfD": 23,
             "CDU": 25,
             "Linke": 7
+          }
+        },
+        {
+          "date": "2026-11-04",
+          "values": {
+            "SPD": 33,
+            "Grüne": 9,
+            "AfD": 21,
+            "CDU": 20,
+            "Linke": 6,
+            "FDP": 3
           }
         }
       ]
@@ -22782,6 +22762,20 @@
             "BSW": 7,
             "CDU": 22
           }
+        },
+        {
+          "date": "2026-11-06",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 6,
+            "SPD": 8,
+            "Grüne": 4,
+            "Linke": 17,
+            "AfD": 40,
+            "BSW": 5,
+            "Thüringen.Gerecht": 2,
+            "CDU": 18
+          }
         }
       ],
       "trend": [
@@ -23544,6 +23538,17 @@
             "CDU": 22,
             "Grüne": 4,
             "BSW": 7
+          }
+        },
+        {
+          "date": "2026-11-06",
+          "values": {
+            "SPD": 8,
+            "Linke": 17,
+            "AfD": 40,
+            "CDU": 18,
+            "Grüne": 4,
+            "BSW": 5
           }
         }
       ]

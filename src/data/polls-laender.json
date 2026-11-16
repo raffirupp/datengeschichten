@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-09",
+    "lastUpdated": "2026-11-16",
     "sourceNote": "DAWUM (ODbL)",
     "codes": [
       "BB",
@@ -9717,19 +9717,6 @@
       },
       "polls": [
         {
-          "date": "2019-11-12",
-          "institute": "INSA",
-          "results": {
-            "Sonstige": 4,
-            "SPD": 25,
-            "FDP": 8,
-            "Grüne": 26,
-            "Linke": 12,
-            "AfD": 8,
-            "CDU": 17
-          }
-        },
-        {
           "date": "2019-11-18",
           "institute": "Trend Research Hamburg",
           "results": {
@@ -10243,25 +10230,14 @@
       ],
       "trend": [
         {
-          "date": "2019-11-12",
-          "values": {
-            "SPD": 25,
-            "Grüne": 26,
-            "Linke": 12,
-            "AfD": 8,
-            "CDU": 17,
-            "FDP": 8
-          }
-        },
-        {
           "date": "2019-11-18",
           "values": {
-            "SPD": 28.7,
-            "Grüne": 24.4,
+            "SPD": 32,
+            "Grüne": 23,
             "Linke": 12,
             "AfD": 8,
-            "CDU": 14.9,
-            "FDP": 7.5
+            "CDU": 13,
+            "FDP": 7
           }
         },
         {
@@ -15860,6 +15836,20 @@
             "AfD": 21,
             "CDU": 26
           }
+        },
+        {
+          "date": "2026-11-15",
+          "institute": "Infratest dimap",
+          "results": {
+            "Sonstige": 6,
+            "SPD": 16,
+            "FDP": 3,
+            "Grüne": 17,
+            "Linke": 7,
+            "AfD": 18,
+            "BSW": 3,
+            "CDU": 30
+          }
         }
       ],
       "trend": [
@@ -16561,6 +16551,17 @@
             "AfD": 21,
             "CDU": 26,
             "Linke": 10
+          }
+        },
+        {
+          "date": "2026-11-15",
+          "values": {
+            "SPD": 16,
+            "FDP": 3,
+            "Grüne": 17,
+            "AfD": 18,
+            "CDU": 30,
+            "Linke": 7
           }
         }
       ]
@@ -19212,6 +19213,19 @@
             "BSW": 7,
             "CDU": 21
           }
+        },
+        {
+          "date": "2026-11-11",
+          "institute": "INSA",
+          "results": {
+            "Sonstige": 9,
+            "SPD": 7,
+            "Grüne": 6,
+            "Linke": 9,
+            "AfD": 41,
+            "BSW": 8,
+            "CDU": 20
+          }
         }
       ],
       "trend": [
@@ -19775,6 +19789,17 @@
             "AfD": 42,
             "CDU": 21,
             "BSW": 7
+          }
+        },
+        {
+          "date": "2026-11-11",
+          "values": {
+            "SPD": 7,
+            "Grüne": 6,
+            "Linke": 9,
+            "AfD": 41,
+            "CDU": 20,
+            "BSW": 8
           }
         }
       ]
